@@ -23,6 +23,7 @@ const Feedback = ({ backgroundImageUrl }) => {
   const [message, setMessage] = useState('');
   const [rating, setRating] = useState(0);
   const [loading, setLoading] = useState(false);
+  const [isNavbarVisible, setIsNavbarVisible] = useState(false);
   const navigate = useNavigate();
 
   const handleSaveFeedback = () => {
@@ -66,6 +67,73 @@ const Feedback = ({ backgroundImageUrl }) => {
   };
 
   const styles = {
+    app: {
+      textAlign: 'center',
+      fontFamily: 'Arial, sans-serif',
+      backgroundColor: '#e0f7fa',
+      display: 'flex',
+      flexDirection: 'column',
+      minHeight: '100vh',
+    },
+    header: {
+      justifyContent: 'center',
+      padding: '0px',
+      backgroundColor: '#ADD8E6',
+      color: 'black',
+      position: 'relative',
+    },
+    logoImg: {
+      alignItems: 'center',
+      height: '80px',
+      marginRight: '50px',
+    },
+    h1: {
+      fontSize: '4em',
+      margin: '0',
+      color: '#333',
+      padding: '10px',
+      borderRadius: '8px',
+      display: 'inline-block',
+      marginLeft: '-1600px',
+    },
+    para: {
+      color: 'black',
+      marginLeft: '-1600px',
+    },
+    loginButton: {
+      marginLeft: '2000px',
+      padding: '10px',
+      marginTop: '-100px',
+    },
+    navbar: {
+      backgroundColor: '#333',
+      color: 'white',
+      flex: '0 0 auto',
+      transition: 'transform 0.3s ease',
+      transform: isNavbarVisible ? 'translateX(0)' : 'translateX(-90%)',
+      position: 'fixed',
+      left: '0',
+      top: '30%',
+      height: 'auto',
+      width: '200px',
+      overflowY: 'auto',
+      zIndex: '1000',
+    },
+    ul: {
+      listStyleType: 'none',
+      padding: '0',
+      margin: '0',
+    },
+    li: {
+      marginBottom: '20px',
+    },
+    a: {
+      display: 'block',
+      color: 'white',
+      padding: '14px 16px',
+      textDecoration: 'none',
+      transition: 'background-color 0.3s ease',
+    },
     container: {
       padding: '20px',
       backgroundImage: `url(${backgroundImageUrl})`,
@@ -115,9 +183,11 @@ const Feedback = ({ backgroundImageUrl }) => {
     },
     ratingContainer: {
       display: 'flex',
+      justifyContent: 'center',
     },
     ratingStar: {
-      fontSize: '24px',
+    
+      fontSize: '70px',
       cursor: 'pointer',
       color: '#ccc',
     },
@@ -147,105 +217,194 @@ const Feedback = ({ backgroundImageUrl }) => {
       justifyContent: 'center',
       alignItems: 'center',
     },
+    footer: {
+      padding: '20px',
+      backgroundColor: '#0000FF',
+      color: 'white',
+      textAlign: 'left',
+      marginTop: 'auto',
+      width: '100%',
+      display: 'flex',
+      justifyContent: 'space-between',
+      flexWrap: 'wrap',
+      position: 'relative',
+    },
+    footerSection: {
+      marginBottom: '20px',
+      flex: '1 1 200px',
+    },
+    footerSectionTitle: {
+      borderBottom: '1px solid white',
+      paddingBottom: '10px',
+      marginBottom: '10px',
+    },
+    footerList: {
+      listStyleType: 'none',
+      padding: '0',
+      margin: '0',
+    },
+    footerListItem: {
+      marginBottom: '10px',
+    },
+    socialLink: {
+      color: 'white',
+      textDecoration: 'none',
+    },
+  };
+
+  const toggleNavbar = () => {
+    setIsNavbarVisible(!isNavbarVisible);
   };
 
   return (
-    
-    <div style={styles.container}>
-      <div style={styles.wrapper}>
-        <h1 style={styles.title}>Create Feedback</h1>
-        
-
+    <div style={styles.app}>
+      <header style={styles.header}>
         <div>
-          <div style={styles.formGroup}>
-            <label style={styles.formLabel}>First Name</label>
-            <input
-              type="text"
-              value={firstname}
-              onChange={(e) => setFirstname(e.target.value.replace(/[^a-zA-Z\s]/g, ''))}
-              style={styles.formInput}
-            />
-          </div>
+          <img src="https://via.placeholder.com/150" alt="Logo" style={styles.logoImg} />
+          <h1 style={styles.h1}>Lahiru Tours</h1>
+        
+        </div>
+       
+      </header>
+      <nav
+        style={styles.navbar}
+        onMouseEnter={toggleNavbar}
+        onMouseLeave={toggleNavbar}
+      >
+        <ul style={styles.ul}>
+          <li style={styles.li}><a href="/" style={styles.a}>Home</a></li>
+          <li style={styles.li}><a href="/About" style={styles.a}>About</a></li>
+          <li style={styles.li}><a href="/TourPackages" style={styles.a}>Tour Packages</a></li>
+          <li style={styles.li}><a href="/Gallery" style={styles.a}>Gallery</a></li>
+          <li style={styles.li}><a href="/ContactUS" style={styles.a}>Contact Us</a></li>
+          <li style={styles.li}><a href="/Feedback" style={styles.a}>Feedbacks</a></li>
+        </ul>
+      </nav>
+      <div style={styles.container}>
+        <div style={styles.wrapper}>
+          <h1 style={styles.title}>Create Feedback</h1>
 
-          <div style={styles.formGroup}>
-            <label style={styles.formLabel}>Last Name</label>
-            <input
-              type="text"
-              value={lastname}
-              onChange={(e) => setLastname(e.target.value.replace(/[^a-zA-Z\s]/g, ''))}
-              style={styles.formInput}
-            />
-          </div>
+          <div>
+            <div style={styles.formGroup}>
+              <label style={styles.formLabel}>First Name</label>
+              <input
+                type="text"
+                value={firstname}
+                onChange={(e) => setFirstname(e.target.value.replace(/[^a-zA-Z\s]/g, ''))}
+                style={styles.formInput}
+              />
+            </div>
 
-          <div style={styles.formGroup}>
-            <label style={styles.formLabel}>Email</label>
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              style={styles.formInput}
-            />
-          </div>
+            <div style={styles.formGroup}>
+              <label style={styles.formLabel}>Last Name</label>
+              <input
+                type="text"
+                value={lastname}
+                onChange={(e) => setLastname(e.target.value.replace(/[^a-zA-Z\s]/g, ''))}
+                style={styles.formInput}
+              />
+            </div>
 
-          <div style={styles.formGroup}>
-            <label style={styles.formLabel}>Phone Number</label>
-            <input
-              type="tel"
-              value={phonenumber}
-              onChange={(e) => setPhonenumber(e.target.value.replace(/[^0-9]/g, ''))}
-              style={styles.formInput}
-            />
-          </div>
+            <div style={styles.formGroup}>
+              <label style={styles.formLabel}>Email</label>
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                style={styles.formInput}
+              />
+            </div>
 
-          <div style={styles.formGroup}>
-            <label style={styles.formLabel}>Subject</label>
-            <input
-              type="text"
-              value={subject}
-              onChange={(e) => setSubject(e.target.value)}
-              style={styles.formInput}
-            />
-          </div>
+            <div style={styles.formGroup}>
+              <label style={styles.formLabel}>Phone Number</label>
+              <input
+                type="tel"
+                value={phonenumber}
+                onChange={(e) => setPhonenumber(e.target.value.replace(/[^0-9]/g, ''))}
+                style={styles.formInput}
+              />
+            </div>
 
-          <div style={styles.formGroup}>
-            <label style={styles.formLabel}>Message</label>
-            <textarea
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              style={styles.formTextarea}
-            />
-          </div>
+            <div style={styles.formGroup}>
+              <label style={styles.formLabel}>Subject</label>
+              <input
+                type="text"
+                value={subject}
+                onChange={(e) => setSubject(e.target.value)}
+                style={styles.formInput}
+              />
+            </div>
 
-          <div style={styles.formGroup}>
-            <label style={styles.formLabel}>Rating</label>
-            <div style={styles.ratingContainer}>
-              {[...Array(5)].map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setRating(i + 1)}
-                  style={{ ...styles.ratingStar, ...(rating > i && styles.rated) }}
-                >
-                  ★
-                </button>
-              ))}
+            <div style={styles.formGroup}>
+              <label style={styles.formLabel}>Message</label>
+              <textarea
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                style={styles.formTextarea}
+              />
+            </div>
+
+            <div style={styles.formGroup}>
+              <label style={styles.formLabel}>Rating</label>
+              <div style={styles.ratingContainer}>
+                {[...Array(5)].map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setRating(i + 1)}
+                    style={{ ...styles.ratingStar, ...(rating > i && styles.rated) }}
+                  >
+                    ★
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div style={styles.formActions}>
+              <button
+                onClick={handleSaveFeedback}
+                style={{ ...styles.formButton, ...styles.saveButton }}
+                disabled={loading}
+              >
+                {loading ? 'Saving...' : 'Save Feedback'}
+              </button>
+              <Link to="/" style={{ ...styles.formButton, ...styles.cancelButton }}>
+                Cancel
+              </Link>
             </div>
           </div>
-
-          <div style={styles.formActions}>
-            <button
-              onClick={handleSaveFeedback}
-              style={{ ...styles.formButton, ...styles.saveButton }}
-              disabled={loading}
-            >
-              {loading ? 'Saving...' : 'Save Feedback'}
-            </button>
-            <Link to="/" style={{ ...styles.formButton, ...styles.cancelButton }}>
-              Cancel
-            </Link>
-          </div>
         </div>
+        <ToastContainer />
       </div>
-      <ToastContainer />
+      <footer style={styles.footer}>
+        <div style={styles.footerSection}>
+          <h3 style={styles.footerSectionTitle}>Contact Information</h3>
+          <ul style={styles.footerList}>
+            <li style={styles.footerListItem}>Address: Galle Sri Lanka</li>
+            <li style={styles.footerListItem}>Email: lahirowickramasinghe9@gmail.com</li>
+            <li style={styles.footerListItem}>Phone: 0094-91-2267027</li>
+            <li style={styles.footerListItem}>Cell: 0094-77-7614087</li>
+          </ul>
+        </div>
+        <div style={styles.footerSection}>
+          <h3 style={styles.footerSectionTitle}>Quick Links</h3>
+          <ul style={styles.footerList}>
+            <li style={styles.footerListItem}><a href="/" style={styles.socialLink}>Home</a></li>
+            <li style={styles.footerListItem}><a href="/about" style={styles.socialLink}>About Us</a></li>
+            <li style={styles.footerListItem}><a href="/TourPackages" style={styles.socialLink}>Tour Packages</a></li>
+            <li style={styles.footerListItem}><a href="/gallery" style={styles.socialLink}>Gallery</a></li>
+            <li style={styles.footerListItem}><a href="/contactus" style={styles.socialLink}>Contact Us</a></li>
+            <li style={styles.footerListItem}><a href="/feedback" style={styles.socialLink}>Feedbacks</a></li>
+          </ul>
+        </div>
+        <div style={styles.footerSection}>
+          <h3 style={styles.footerSectionTitle}>Follow Us</h3>
+          <ul style={styles.footerList}>
+            <li style={styles.footerListItem}><a href="#" style={styles.socialLink}>Facebook</a></li>
+            <li style={styles.footerListItem}><a href="#" style={styles.socialLink}>Twitter</a></li>
+            <li style={styles.footerListItem}><a href="#" style={styles.socialLink}>Instagram</a></li>
+          </ul>
+        </div>
+      </footer>
     </div>
   );
 };

@@ -14,38 +14,25 @@ function ContactUS() {
 
   const headerStyle = {
     justifyContent: 'center',
-    padding: '0px',
-    backgroundColor: '#ADD8E6',
-    color: 'black',
+    padding: '20px',
+    backgroundColor: '#ADD8E6', // Light blue background color
+    color: '#333', // Darken the color for better visibility
     position: 'relative', // Ensure header content is relative to parent
   };
-  
 
   const logoImgStyle = {
-    alignItems: 'center',
     height: '80px',
-    marginRight: '50px',
+    marginRight: '20px',
+    borderRadius: '50%', // Rounded logo image
   };
 
   const h1Style = {
-    
-    fontSize: '4em',
+    fontSize: '3em',
     margin: '0',
-    color: '#333', // Darken the color for better visibility
-    backgroundColor: '', // Light blue background color
-    padding: '10px', // Add padding for better visual appearance
-    borderRadius: '8px', // Rounded corners for the background
-    display: 'inline-block', // Ensures the background spans the content width
-    marginLeft: '-1600px',
-    
-  };
-  const paraStyle = {
-    color: 'black',
-    marginLeft: '-1600px',
-  };
-
-  const contactInfoStyle = {
-    marginLeft: 'auto', // Pushes contact info to the right
+    padding: '10px',
+    backgroundColor: '#fff', // White background for contrast
+    borderRadius: '8px',
+    display: 'inline-block',
   };
 
   const navbarStyle = {
@@ -66,20 +53,11 @@ function ContactUS() {
   const ulStyle = {
     listStyleType: 'none',
     padding: '0',
-    margin: '0', // Remove default margin
+    margin: '0',
   };
 
   const liStyle = {
     marginBottom: '20px',
-  };
-  const h12Style = {
-    fontSize: '5em',
-    margin: '0',
-    color: '#333', // Darken the color for better visibility
-     // Light blue background color
-    padding: '10px', // Add padding for better visual appearance
-    borderRadius: '8px', // Rounded corners for the background
-    display: 'inline-block', // Ensures the background spans the content width
   };
 
   const aStyle = {
@@ -90,39 +68,9 @@ function ContactUS() {
     transition: 'background-color 0.3s ease',
   };
 
-  const mainContentStyle = {
-    flex: '1', // Allow main content to grow to fill remaining space
-    padding: '20px',
-    backgroundColor: '#ffffff',
-    marginLeft: isNavbarVisible ? '200px' : '0', // Adjust main content margin when navbar is visible
-    transition: 'margin-left 0.3s ease', // Add transition for smooth adjustment
-  };
-
-  const h2Style = {
-    color: '#4CAF50',
-  };
-
-  const pStyle = {
-    fontSize: '1.2em',
-    color: '#333',
-  };
-
   const tourPackagesStyle = {
     padding: '20px',
-    backgroundColor: '#e0f7fa',
-    backgroundImage: 'url()', // Replace with your image URL
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-  };
-
-  const h3Style = {
-    color: '#00796b',
-  };
-
-  const packageOptionsStyle = {
-    display: 'flex',
-    justifyContent: 'space-around',
-    margin: '150px 0',
+    backgroundColor: '#ffffff',
   };
 
   const packageStyle = {
@@ -138,27 +86,22 @@ function ContactUS() {
     borderRadius: '50%',
   };
 
-  const h4Style = {
-    marginTop: '10px',
-    color: '#333',
-  };
-
   const footerStyle = {
     padding: '20px',
     backgroundColor: '#0000FF',
     color: 'white',
     textAlign: 'left',
-    marginTop: 'auto', // Pushes footer to the bottom
-    width: '100%', // Ensure footer spans full width
+    marginTop: 'auto',
+    width: '100%',
     display: 'flex',
-    justifyContent: 'space-between', // Spread out footer content
-    flexWrap: 'wrap', // Allow wrapping for smaller screens
-    position: 'relative', // Ensure footer content is relative to parent
+    justifyContent: 'space-between',
+    flexWrap: 'wrap',
+    position: 'relative',
   };
 
   const footerSectionStyle = {
     marginBottom: '20px',
-    flex: '1 1 200px', // Allow each section to grow and shrink, minimum width 200px
+    flex: '1 1 200px',
   };
 
   const footerSectionTitleStyle = {
@@ -172,33 +115,18 @@ function ContactUS() {
     padding: '0',
     margin: '0',
   };
-
   const footerListItemStyle = {
     marginBottom: '10px',
-  };
-
-  const socialMediaStyle = {
-    display: 'flex',
-    gap: '10px',
   };
 
   const socialLinkStyle = {
     color: 'white',
     textDecoration: 'none',
   };
-  
 
-  const loginButtonStyle = {
-    marginLeft: '2000px', // Adjust as needed
-    padding: '10px',
-    marginTop:'-100px',
-  };
-  // Function to toggle navbar visibility
   const toggleNavbar = () => {
     setIsNavbarVisible(!isNavbarVisible);
   };
-  
-  
 
   return (
     <div style={appStyle}>
@@ -206,13 +134,7 @@ function ContactUS() {
         <div>
           <img src="https://via.placeholder.com/150" alt="Logo" style={logoImgStyle} />
           <h1 style={h1Style}>Lahiru Tours</h1>
-           <p style={paraStyle}>Call Us: 0094-91-2267027 | 0094-77-7614087</p>
         </div>
-        <div style={loginButtonStyle}>
-    <button style={{ padding: '20px',  borderRadius: '10px', border: '5px solid #333' }}>Login</button>
-  </div>
-       
-        
       </header>
       <nav
         style={navbarStyle}
@@ -222,18 +144,31 @@ function ContactUS() {
         <ul style={ulStyle}>
           <li style={liStyle}><a href="/" style={aStyle}>Home</a></li>
           <li style={liStyle}><a href="/About" style={aStyle}>About</a></li>
-          <li style={liStyle}><a href="#" style={aStyle}>Tour Packages</a></li>
+          <li style={liStyle}><a href="/TourPackages" style={aStyle}>Tour Packages</a></li>
           <li style={liStyle}><a href="/Gallery" style={aStyle}>Gallery</a></li>
           <li style={liStyle}><a href="/ContactUS" style={aStyle}>Contact Us</a></li>
           <li style={liStyle}><a href="/Feedback" style={aStyle}>Feedbacks</a></li>
         </ul>
       </nav>
-      
       <section style={tourPackagesStyle}>
-        
-        
-       
-        
+        <h2 style={{ color: '#4CAF50' }}>Tour Packages</h2>
+        <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+          <div style={{ ...packageStyle, backgroundColor: '#FFC107' }}>
+            <img src="https://via.placeholder.com/150" alt="Package 1" style={packageImgStyle} />
+            <h3 style={{ color: '#333' }}>Package 1</h3>
+            <p style={{ color: '#333' }}>Lorem ipsum dolor sit amet.</p>
+          </div>
+          <div style={{ ...packageStyle, backgroundColor: '#FF5722' }}>
+            <img src="https://via.placeholder.com/150" alt="Package 2" style={packageImgStyle} />
+            <h3 style={{ color: '#333' }}>Package 2</h3>
+            <p style={{ color: '#333' }}>Consectetur adipiscing elit.</p>
+          </div>
+          <div style={{ ...packageStyle, backgroundColor: '#E91E63' }}>
+            <img src="https://via.placeholder.com/150" alt="Package 3" style={packageImgStyle} />
+            <h3 style={{ color: '#333' }}>Package 3</h3>
+            <p style={{ color: '#333' }}>Sed do eiusmod tempor incididunt.</p>
+          </div>
+        </div>
       </section>
       <footer style={footerStyle}>
         <div style={footerSectionStyle}>

@@ -66,5 +66,46 @@ const cusfeedback = mongoose.Schema(
         timestamps:true,
     }
 );
+const sendmes = mongoose.Schema(
+    {
+            name:{
+                type:String,
+                required:true,
+                minlength:1,
+                maxlength:100,
+                validate: {
+                    validator: (value) => {
+                        return /^[a-z && A-Z ]{2,30}$/.test(value);
+                    },
+                    message: 'First name must be alphabets only and between 2 and 30 characters long',
+                },
+            },
+            email:{
+                type:String,
+                required:true,
+                minlength:1,
+                maxlength:100,
+               
+            },
+            
+            phonenumber:{
+                type:Number,
+                required:true,
+            
+            },
+           
+            message:{
+                type:String,
+                required:true,
+                minlength:1,
+                maxlength:1000,
+            },
+           
+    },
+    {
+        timestamps:true,
+    }
+);
 
 export const feedback = mongoose.model('feedback', cusfeedback);
+export const saendmes = mongoose.model('saendmes', sendmes);

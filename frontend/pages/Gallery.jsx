@@ -1,25 +1,26 @@
 import React, { useState } from 'react';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-function ContactUS() {
+function Gallery() {
   const [isNavbarVisible, setIsNavbarVisible] = useState(false);
 
   const appStyle = {
     textAlign: 'center',
     fontFamily: 'Arial, sans-serif',
-    backgroundColor: '#e0f7fa', // Light blue background color
+    backgroundColor: '#e0f7fa',
     display: 'flex',
     flexDirection: 'column',
-    minHeight: '100vh', // Ensure app takes up full viewport height
+    minHeight: '100vh',
   };
 
   const headerStyle = {
     justifyContent: 'center',
     padding: '0px',
-    backgroundColor: '#ADD8E6',
+    //backgroundColor: '#ADD8E6',
     color: 'black',
-    position: 'relative', // Ensure header content is relative to parent
+    position: 'relative',
   };
-  
 
   const logoImgStyle = {
     alignItems: 'center',
@@ -28,74 +29,55 @@ function ContactUS() {
   };
 
   const h1Style = {
-    
     fontSize: '4em',
     margin: '0',
-    color: '#333', // Darken the color for better visibility
-    backgroundColor: '', // Light blue background color
-    padding: '10px', // Add padding for better visual appearance
-    borderRadius: '8px', // Rounded corners for the background
-    display: 'inline-block', // Ensures the background spans the content width
+    color: '#333',
+    padding: '10px',
+    borderRadius: '8px',
+    display: 'inline-block',
     marginLeft: '-1600px',
-    
   };
+
   const paraStyle = {
     color: 'black',
     marginLeft: '-1600px',
   };
 
   const contactInfoStyle = {
-    marginLeft: 'auto', // Pushes contact info to the right
+    marginLeft: 'auto',
   };
 
   const navbarStyle = {
     backgroundColor: '#333',
     color: 'white',
-    flex: '0 0 auto', // Allow navbar to grow and shrink as needed
-    transition: 'transform 0.3s ease', // Adding transition for smooth auto-hide effect
-    transform: isNavbarVisible ? 'translateX(0)' : 'translateX(-90%)', // Move navbar in/out of view
-    position: 'fixed', // Fixed positioning to stick to the left
+    flex: '0 0 auto',
+    transition: 'transform 0.3s ease',
+    transform: isNavbarVisible ? 'translateX(0)' : 'translateX(-90%)',
+    position: 'fixed',
     left: '0',
     top: '30%',
-    height: 'auto', // Full height of the viewport
-    width: '200px', // Fixed width for the navbar
-    overflowY: 'auto', // Enable scrolling if navbar content exceeds viewport height
-    zIndex: '1000', // Ensure it's on top of other content
+    height: 'auto',
+    width: '200px',
+    overflowY: 'auto',
+    zIndex: '1000',
   };
 
   const ulStyle = {
     listStyleType: 'none',
     padding: '0',
-    margin: '0', // Remove default margin
+    margin: '0',
   };
 
   const liStyle = {
     marginBottom: '20px',
   };
-  const h12Style = {
-    fontSize: '5em',
-    margin: '0',
-    color: '#333', // Darken the color for better visibility
-     // Light blue background color
-    padding: '10px', // Add padding for better visual appearance
-    borderRadius: '8px', // Rounded corners for the background
-    display: 'inline-block', // Ensures the background spans the content width
-  };
-
-  const aStyle = {
-    display: 'block',
-    color: 'white',
-    padding: '14px 16px',
-    textDecoration: 'none',
-    transition: 'background-color 0.3s ease',
-  };
 
   const mainContentStyle = {
-    flex: '1', // Allow main content to grow to fill remaining space
+    flex: '1',
     padding: '20px',
     backgroundColor: '#ffffff',
-    marginLeft: isNavbarVisible ? '200px' : '0', // Adjust main content margin when navbar is visible
-    transition: 'margin-left 0.3s ease', // Add transition for smooth adjustment
+    marginLeft: isNavbarVisible ? '100px' : '0',
+    transition: 'margin-left 0.3s ease',
   };
 
   const h2Style = {
@@ -110,7 +92,7 @@ function ContactUS() {
   const tourPackagesStyle = {
     padding: '20px',
     backgroundColor: '#e0f7fa',
-    backgroundImage: 'url()', // Replace with your image URL
+    backgroundImage: 'url()',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
   };
@@ -148,17 +130,17 @@ function ContactUS() {
     backgroundColor: '#0000FF',
     color: 'white',
     textAlign: 'left',
-    marginTop: 'auto', // Pushes footer to the bottom
-    width: '100%', // Ensure footer spans full width
+    marginTop: 'auto',
+    width: '100%',
     display: 'flex',
-    justifyContent: 'space-between', // Spread out footer content
-    flexWrap: 'wrap', // Allow wrapping for smaller screens
-    position: 'relative', // Ensure footer content is relative to parent
+    justifyContent: 'space-between',
+    flexWrap: 'wrap',
+    position: 'relative',
   };
 
   const footerSectionStyle = {
     marginBottom: '20px',
-    flex: '1 1 200px', // Allow each section to grow and shrink, minimum width 200px
+    flex: '1 1 200px',
   };
 
   const footerSectionTitleStyle = {
@@ -186,19 +168,30 @@ function ContactUS() {
     color: 'white',
     textDecoration: 'none',
   };
-  
 
   const loginButtonStyle = {
-    marginLeft: '2000px', // Adjust as needed
+    marginLeft: '2000px',
     padding: '10px',
-    marginTop:'-100px',
+    marginTop: '-100px',
   };
-  // Function to toggle navbar visibility
+
+  const aStyle = {
+    display: 'block',
+    color: 'white',
+    padding: '14px 16px',
+    textDecoration: 'none',
+    transition: 'background-color 0.3s ease',
+  };
+
+  const carouselImageStyle = {
+    maxWidth: '100%',
+    maxHeight: '1200px', // Adjust this value to your desired image height
+    objectFit: 'cover', // Ensure the image covers the area
+  };
+
   const toggleNavbar = () => {
     setIsNavbarVisible(!isNavbarVisible);
   };
-  
-  
 
   return (
     <div style={appStyle}>
@@ -206,35 +199,51 @@ function ContactUS() {
         <div>
           <img src="https://via.placeholder.com/150" alt="Logo" style={logoImgStyle} />
           <h1 style={h1Style}>Lahiru Tours</h1>
-           <p style={paraStyle}>Call Us: 0094-91-2267027 | 0094-77-7614087</p>
+         
         </div>
-        <div style={loginButtonStyle}>
-    <button style={{ padding: '20px',  borderRadius: '10px', border: '5px solid #333' }}>Login</button>
-  </div>
        
-        
       </header>
-      <nav
-        style={navbarStyle}
-        onMouseEnter={toggleNavbar}
-        onMouseLeave={toggleNavbar}
-      >
+      <nav style={navbarStyle} onMouseEnter={toggleNavbar} onMouseLeave={toggleNavbar}>
         <ul style={ulStyle}>
-            <li style={liStyle}><a href="/" style={aStyle}>Home</a></li>
-            <li style={liStyle}><a href="/About" style={aStyle}>About</a></li>
-            <li style={liStyle}><a href="#" style={aStyle}>Tour Packages</a></li>
-            <li style={liStyle}><a href="/Gallery" style={aStyle}>Gallery</a></li>
-            <li style={liStyle}><a href="/ContactUS" style={aStyle}>Contact Us</a></li>
-             <li style={liStyle}><a href="/Feedback" style={aStyle}>Feedbacks</a></li>
+          <li style={liStyle}><a href="/" style={aStyle}>Home</a></li>
+          <li style={liStyle}><a href="/About" style={aStyle}>About</a></li>
+          <li style={liStyle}><a href="/TourPackages" style={aStyle}>Tour Packages</a></li>
+          <li style={liStyle}><a href="/Gallery" style={aStyle}>Gallery</a></li>
+          <li style={liStyle}><a href="/ContactUS" style={aStyle}>Contact Us</a></li>
+          <li style={liStyle}><a href="/Feedback" style={aStyle}>Feedbacks</a></li>
         </ul>
       </nav>
-      
+
       <section style={tourPackagesStyle}>
-        
-        
-       
-        
+        <Carousel showArrows autoPlay infiniteLoop>
+          <div>
+            <img src="https://images.unsplash.com/photo-1567157802189-aadc856131dc?q=80&w=2087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Slide 1" style={carouselImageStyle} />
+          </div>
+          <div>
+            <img src="https://images.unsplash.com/photo-1580398469333-5b425875c077?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Slide 2" style={carouselImageStyle} />
+          </div>
+          <div>
+            <img src="https://cdn.pixabay.com/photo/2020/05/01/06/03/galle-5115527_1280.jpg" alt="Slide 3" style={carouselImageStyle} />
+          </div>
+          <div>
+            <img src="https://cdn.pixabay.com/photo/2020/02/22/09/23/green-4869996_1280.jpg" alt="Slide 4" style={carouselImageStyle} />
+          </div>
+          <div>
+            <img src="https://images.unsplash.com/photo-1582103518581-46fe9a449915?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Slide 5" style={carouselImageStyle} />
+          </div>
+          <div>
+            <img src="https://images.unsplash.com/photo-1559038267-bfa6d8d3a160?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Slide 3" style={carouselImageStyle} />
+          </div>
+          <div>
+            <img src="https://images.unsplash.com/photo-1584804431210-6fff43aa8abd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Slide 3" style={carouselImageStyle} />
+          </div>
+          <div>
+            <img src="https://images.unsplash.com/photo-1704797389202-7910a4f002ce?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Slide 3" style={carouselImageStyle} />
+          </div>
+        </Carousel>
       </section>
+
+     
       <footer style={footerStyle}>
         <div style={footerSectionStyle}>
           <h4 style={footerSectionTitleStyle}>Relaxing</h4>
@@ -242,7 +251,7 @@ function ContactUS() {
             <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Hikkaduwa Beach</a></li>
             <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Galle fort</a></li>
             <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Negambo Beach</a></li>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Peradeniya Botnical</a></li>
+            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Peradeniya Botanical</a></li>
             <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Tangalla</a></li>
           </ul>
         </div>
@@ -275,4 +284,4 @@ function ContactUS() {
   );
 }
 
-export default ContactUS;
+export default Gallery;

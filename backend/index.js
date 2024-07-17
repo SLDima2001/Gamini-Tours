@@ -1,44 +1,30 @@
-import Express, { request, response } from "express";
-import { PORT, mongodbURL } from "./config.js";
-import mongoose from "mongoose";
-import Route  from "./routes/Route.js";
+import express from 'express';
+import mongoose from 'mongoose';
 import cors from 'cors';
+import { PORT, mongodbURL } from './config.js';
+import Route from './routes/Route.js';
+import emailRoute from './routes/emailRoute.js';
 
+const app = express();
 
-const app = Express();
-
-
-//Middleware for parsing request body
-app.use(Express.json());
-
-
+// Middleware for parsing request body
+app.use(express.json());
 app.use(cors());
 
-    // app.use(
-    //   cors({
-    //     origin: 'http://localhost:5555',
-    //   methods:['GET','POST','PUT','DELETE'],
-    // allowedHeaders:['Content-Type'],
-    //})
-    // );
-
-
-
-app.get('/', (request, response) => {
-  console.log(request);
-  return response.status(234).send("Welcome to mern stack");
+app.get('/', (req, res) => {
+  console.log(req);
+  return res.status(200).send("Welcome to MERN stack");
 });
 
-app.use('/feedback',Route);
-
-
+app.use('/feedback', Route);
+app.use('/send-email', emailRoute);
 
 mongoose
   .connect(mongodbURL)
   .then(() => {
     console.log("App connected to database");
     app.listen(PORT, () => {
-      console.log(`App is listning to port : ${PORT}`);
+      console.log(`App is listening to port: ${PORT}`);
     });
   })
   .catch((error) => {

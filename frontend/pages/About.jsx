@@ -186,10 +186,7 @@ function About() {
           <img src="https://via.placeholder.com/150" alt="Logo" style={logoImgStyle} />
           <h1 style={h1Style}>Lahiru Tours</h1>
         </div>
-        <div style={contactInfoStyle}>
-          <p style={paraStyle}>Call Us: 0094-91-2267027 | 0094-77-7614087</p>
-        </div>
-        <button style={{ padding: '20px',  borderRadius: '10px', border: '5px solid #333' }}>Login</button>
+        
       </header>
       <nav
         style={navbarStyle}
@@ -199,7 +196,7 @@ function About() {
         <ul style={ulStyle}>
           <li style={liStyle}><a href="/" style={aStyle}>Home</a></li>
           <li style={liStyle}><a href="/About" style={aStyle}>About</a></li>
-          <li style={liStyle}><a href="#" style={aStyle}>Tour Packages</a></li>
+          <li style={liStyle}><a href="/TourPackages" style={aStyle}>Tour Packages</a></li>
           <li style={liStyle}><a href="/Gallery" style={aStyle}>Gallery</a></li>
           <li style={liStyle}><a href="/ContactUS" style={aStyle}>Contact Us</a></li>
           <li style={liStyle}><a href="/Feedback" style={aStyle}>Feedbacks</a></li>
