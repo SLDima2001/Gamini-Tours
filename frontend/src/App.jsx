@@ -15,7 +15,8 @@ import Days15 from '../pages/Days15'
 import Days18 from '../pages/Days18'
 import Days182 from '../pages/Days182'
 import Days20 from '../pages/Days20'
-
+import PaymentSuccess from '../pages/PaymentSuccess'
+import PaymentCancel from '../pages/PaymentCancel'
 
 
 
@@ -41,6 +42,14 @@ const App = () => {
       <Route path="/Days18" element={<Days18 />} />
       <Route path="/Days182" element={<Days182 />} />
       <Route path="/Days20" element={<Days20 />} />
+
+      <Route path="/PaymentSuccess" element={<PaymentSuccess />} />
+      <Route path="/PaymentCancel" element={<PaymentCancel />} />
+
+
+      
+      
+
       
     </Routes>
     

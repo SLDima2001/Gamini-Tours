@@ -2,28 +2,33 @@
 import express from 'express';
 import nodemailer from 'nodemailer';
 
+
 const router = express.Router();
 
 // Route for the first form
 router.post('/form1', async (req, res) => {
-  const { name, email, phone, message } = req.body;
+  const { name, email, phone,subject, message } = req.body;
 
   try {
     // Create a transporter
     let transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: 'lahirurangu@gmail.com', // Your email
-        pass: 'tsdyoxtkmcozrfkb' // Your email password
+        user: 'lahirutoursorg@gmail.com', // Your email
+        pass: 'wnvddlqypbboyutp' // Your email password
       }
     });
 
     // Email options
     let mailOptions = {
-      from: 'lahirurangu@gmail.com',
+      from: 'lahirutoursorg@gmail.com',
       to: 'dimalshapraveen2001@gmail.com', // Recipient email
       subject: 'Contact Form Submission',
-      text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`
+      text: `Name: ${name}\n
+      Email: ${email}\n
+      Phone: ${phone}\n
+      subject: ${subject}\n
+      Message: ${message}`
     };
 
     // Send email
@@ -48,14 +53,14 @@ router.post('/form2', async (req, res) => {
     let transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: 'lahirurangu@gmail.com', // Your email
-        pass: 'tsdyoxtkmcozrfkb' // Your email password
+        user: 'lahirutoursorg@gmail.com', // Your email
+        pass: 'wnvddlqypbboyutp' // Your email password
       }
     });
 
     // Email options
     let mailOptions = {
-      from: 'lahirurangu@gmail.com',
+      from: 'lahirutoursorg@gmail.com',
       to: 'dimalshapraveen2001@gmail.com', // Recipient email for the second form
       subject: 'Tour Booking Form Submission',
       text: `
@@ -81,5 +86,7 @@ router.post('/form2', async (req, res) => {
     return res.status(500).send('An error occurred while sending the email');
   }
 });
+
+
 
 export default router;

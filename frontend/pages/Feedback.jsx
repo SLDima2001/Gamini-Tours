@@ -4,6 +4,12 @@ import Axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+import { useSpring, animated } from 'react-spring';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBed, faUtensils, faCar,faEnvelope,faEnvelopeOpen } from '@fortawesome/free-solid-svg-icons';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { FaFacebook, FaInstagram,FaTiktok } from 'react-icons/fa';
+
 const isValidEmail = (email) => {
   const regex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
   return regex.test(email);
@@ -25,6 +31,7 @@ const Feedback = ({ backgroundImageUrl }) => {
   const [loading, setLoading] = useState(false);
   const [isNavbarVisible, setIsNavbarVisible] = useState(false);
   const navigate = useNavigate();
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const handleSaveFeedback = () => {
     if (!isValidEmail(email)) {
@@ -75,17 +82,33 @@ const Feedback = ({ backgroundImageUrl }) => {
       flexDirection: 'column',
       minHeight: '100vh',
     },
-    header: {
+    headerStyle : {
+      justifyContent: '',
+      padding: '0px',
+      backgroundColor:'#D3D3D3',
+      color: 'black',
+      position: '',
+      width: '100%',
+      top: '',
+      left: '0',
+      zIndex: '1000',
+    },
+    header1style : {
       justifyContent: 'center',
       padding: '0px',
-      backgroundColor: '#ADD8E6',
-      color: 'black',
-      position: 'relative',
+      backgroundColor: isScrolled ? 'rgba(0, 0, 0, 0.8)' : 'rgba(0, 0, 0, 0.5)',
+      color: '',
+      position: '',
+      width: '100%',
+      top: '',
+      left: '0',
+      transition: 'background-color 0.3s ease',
+      zIndex: '',
+      marginTop: '0px',
     },
-    logoImg: {
-      alignItems: 'center',
-      height: '80px',
-      marginRight: '50px',
+    logoImgStyle: {
+      height: '100px',
+      marginTop: '0px',
     },
     h1: {
       fontSize: '4em',
@@ -105,19 +128,54 @@ const Feedback = ({ backgroundImageUrl }) => {
       padding: '10px',
       marginTop: '-100px',
     },
-    navbar: {
-      backgroundColor: '#333',
+    navbarStyle : {
+      backgroundColor: '',
       color: 'white',
-      flex: '0 0 auto',
-      transition: 'transform 0.3s ease',
-      transform: isNavbarVisible ? 'translateX(0)' : 'translateX(-90%)',
-      position: 'fixed',
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      position: '',
+      top: '0',
       left: '0',
-      top: '30%',
-      height: 'auto',
-      width: '200px',
-      overflowY: 'auto',
+      width: '100%',
+      height: '50px',
+      padding: '10px 20px',
+      transition: 'transform 0.3s ease',
+      transform: isNavbarVisible ? 'translateY(0)' : 'translateY()',
       zIndex: '1000',
+    },
+    navbarStyle2 : {
+      backgroundColor: 'white',
+      color: 'white',
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      position: '',
+      top: '0',
+      left: '0',
+      width: '100%',
+      height: '100px',
+      padding: '10px 0px 0px  ',
+      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
+      transition: 'transform 0.3s ease',
+      transform: isNavbarVisible ? 'translateY(0)' : 'translateY()',
+      zIndex: '1000',
+    },
+    
+    linkStyle : {
+      color: 'black',
+      textDecoration: 'none',
+      margin: '0 15px',
+    },
+    
+    navLinksStyle : {
+      display: 'flex',
+      alignItems: 'center',
+    },
+    buttonContainerStyle : {
+      display: 'flex',
+      alignItems: 'center',
+      gap: '10px', // Adds space between buttons
     },
     ul: {
       listStyleType: 'none',
@@ -258,28 +316,64 @@ const Feedback = ({ backgroundImageUrl }) => {
 
   return (
     <div style={styles.app}>
-      <header style={styles.header}>
-        <div>
-          <img src="https://via.placeholder.com/150" alt="Logo" style={styles.logoImg} />
-          <h1 style={styles.h1}>Lahiru Tours</h1>
-        
-        </div>
+      <header style={styles.header1style} >
+      <div style={styles.navbarStyle}>
+      {/* Left Section: Logo */}
+      <div>
+        <h1 style={{ margin: '0', padding: '0', fontSize: '1em' }}>lahirutours@gmail.com</h1>
+      </div>
+      
+      {/* Center Section: Navigation Links */}
+      <div style={styles.navLinksStyle}>
        
+      </div>
+      
+      {/* Right Section: Buttons */}
+      <div style={styles.buttonContainerStyle}>
+      <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
+          <FaFacebook size={24} />
+        </a>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
+          <FaInstagram size={24} />
+        </a>
+        <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" style={{  padding: '10px 20px', cursor: 'pointer' }} >
+          <FaTiktok size={24}  />
+  </a>
+
+        {/* Add more buttons as needed */}
+      </div>
+    </div>
+
+            
       </header>
-      <nav
-        style={styles.navbar}
-        onMouseEnter={toggleNavbar}
-        onMouseLeave={toggleNavbar}
-      >
-        <ul style={styles.ul}>
-          <li style={styles.li}><a href="/" style={styles.a}>Home</a></li>
-          <li style={styles.li}><a href="/About" style={styles.a}>About</a></li>
-          <li style={styles.li}><a href="/TourPackages" style={styles.a}>Tour Packages</a></li>
-          <li style={styles.li}><a href="/Gallery" style={styles.a}>Gallery</a></li>
-          <li style={styles.li}><a href="/ContactUS" style={styles.a}>Contact Us</a></li>
-          <li style={styles.li}><a href="/Feedback" style={styles.a}>Feedbacks</a></li>
-        </ul>
-      </nav>
+      
+      <section style={styles.headerStyle}>
+      <div style={styles.navbarStyle2}>
+  {/* Left Section: Logo */}
+  <div>
+  <img src="/Photos/logo.gif" alt="Logo" style={styles.logoImgStyle} />
+  </div>
+  
+  {/* Center Section: Navigation Links */}
+  <div style={styles.navLinksStyle}>
+    <a href="/" style={styles.linkStyle}>Home</a>
+    <a href="/About" style={styles.linkStyle}>About</a>
+    <a href="/TourPackages" style={styles.linkStyle}>Tour Packages</a>
+    <a href="/ContactUS" style={styles.linkStyle}>Contact</a>
+    <a href="/feedback" style={styles.linkStyle}>FAQ</a>
+  </div>
+  <div style={{ marginRight: '10px',marginTop:'19px' }}> {/* Right-aligned content */}
+  <Link to="/BookingForm" style={styles.bookbuttonstyle}>
+          Book Now !
+            </Link> 
+  </div>
+  
+  
+</div>
+        
+        
+        
+      </section>
       <div style={styles.container}>
         <div style={styles.wrapper}>
           <h1 style={styles.title}>Create Feedback</h1>

@@ -1,15 +1,34 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBed, faUtensils, faCar,faEnvelope,faEnvelopeOpen } from '@fortawesome/free-solid-svg-icons';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { FaFacebook, FaInstagram,FaTiktok } from 'react-icons/fa';
+
 
 function About() {
   const [isNavbarVisible, setIsNavbarVisible] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const appStyle = {
     textAlign: 'center',
     fontFamily: 'Arial, sans-serif',
-    backgroundColor: '#e0f7fa', // Light blue background color
+    backgroundColor: '', // Light blue background color
     display: 'flex',
     flexDirection: 'column',
     minHeight: '100vh', // Ensure app takes up full viewport height
+  };
+  const bookbuttonstyle = {
+    fontSize: '1.6em',
+    backgroundColor: '#00796b',
+    color: 'white',
+    border: 'none',
+    padding: '20px 60px',
+    borderRadius: '5px',
+    cursor: 'hand',
+    transition: 'background-color 0.3s ease',
+    
+    
   };
 
   const headerStyle = {
@@ -49,20 +68,56 @@ function About() {
   };
 
   const navbarStyle = {
-    backgroundColor: '#333',
+    backgroundColor: '',
     color: 'white',
-    flex: '0 0 auto', // Allow navbar to grow and shrink as needed
-    transition: 'transform 0.3s ease', // Adding transition for smooth auto-hide effect
-    transform: isNavbarVisible ? 'translateX(0)' : 'translateX(-90%)', // Move navbar in/out of view
-    position: 'fixed', // Fixed positioning to stick to the left
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    position: '',
+    top: '0',
     left: '0',
-    top: '30%',
-    height: 'auto', // Full height of the viewport
-    width: '200px', // Fixed width for the navbar
-    overflowY: 'auto', // Enable scrolling if navbar content exceeds viewport height
-    zIndex: '1000', // Ensure it's on top of other content
+    width: '100%',
+    height: '50px',
+    padding: '10px 20px',
+    transition: 'transform 0.3s ease',
+    transform: isNavbarVisible ? 'translateY(0)' : 'translateY()',
+    zIndex: '1000',
   };
-
+  const navbarStyle2 = {
+    fontSize:'20px',
+    backgroundColor: 'white',
+    color: 'white',
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    position: '',
+    top: '0',
+    left: '0',
+    width: '100%',
+    height: '100px',
+    padding: '10px 20px',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
+    transition: 'transform 0.3s ease',
+    transform: isNavbarVisible ? 'translateY(0)' : 'translateY()',
+    zIndex: '1000',
+  };
+  
+  const linkStyle = {
+    color: 'black',
+    textDecoration: 'none',
+    margin: '0 15px',
+  };
+  
+  const navLinksStyle = {
+    display: 'flex',
+    alignItems: 'center',
+  };
+  const buttonContainerStyle = {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '10px', // Adds space between buttons
+  };
+  
   const ulStyle = {
     listStyleType: 'none',
     padding: '0',
@@ -90,11 +145,14 @@ function About() {
   };
 
   const h2Style = {
+    fontFamily:'Rockybilly',
     color: '#4CAF50',
+    fontSize:'4em',
   };
 
   const pStyle = {
-    fontSize: '1.2em',
+    fontFamily:'Great Vibes',
+    fontSize: '2em',
     color: '#333',
   };
 
@@ -173,65 +231,94 @@ function About() {
     color: 'white',
     textDecoration: 'none',
   };
+  const header1style = {
+    justifyContent: 'center',
+    padding: '0px',
+    backgroundColor: isScrolled ? 'rgba(0, 0, 0, 0.8)' : 'rgba(0, 0, 0, 0.5)',
+    color: '',
+    position: '',
+    width: '100%',
+    top: '',
+    left: '0',
+    transition: 'background-color 0.3s ease',
+    zIndex: '',
+    marginTop: '0px',
+  }
 
-  // Function to toggle navbar visibility
-  const toggleNavbar = () => {
-    setIsNavbarVisible(!isNavbarVisible);
-  };
 
+  
   return (
     <div style={appStyle}>
-      <header style={headerStyle}>
-        <div>
-          <img src="https://via.placeholder.com/150" alt="Logo" style={logoImgStyle} />
-          <h1 style={h1Style}>Lahiru Tours</h1>
-        </div>
-        
+      <header style={header1style} >
+      <div style={navbarStyle}>
+      {/* Left Section: Logo */}
+      <div>
+        <h1 style={{ margin: '0', padding: '0', fontSize: '1em' }}>lahirutours@gmail.com</h1>
+      </div>
+      
+      {/* Center Section: Navigation Links */}
+      <div style={navLinksStyle}>
+       
+      </div>
+      
+      {/* Right Section: Buttons */}
+      <div style={buttonContainerStyle}>
+      <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
+          <FaFacebook size={24} />
+        </a>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
+          <FaInstagram size={24} />
+        </a>
+        <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" style={{  padding: '10px 20px', cursor: 'pointer' }} >
+          <FaTiktok size={24}  />
+  </a>
+
+        {/* Add more buttons as needed */}
+      </div>
+    </div>
+
+            
       </header>
-      <nav
-        style={navbarStyle}
-        onMouseEnter={toggleNavbar}
-        onMouseLeave={toggleNavbar}
-      >
-        <ul style={ulStyle}>
-          <li style={liStyle}><a href="/" style={aStyle}>Home</a></li>
-          <li style={liStyle}><a href="/About" style={aStyle}>About</a></li>
-          <li style={liStyle}><a href="/TourPackages" style={aStyle}>Tour Packages</a></li>
-          <li style={liStyle}><a href="/Gallery" style={aStyle}>Gallery</a></li>
-          <li style={liStyle}><a href="/ContactUS" style={aStyle}>Contact Us</a></li>
-          <li style={liStyle}><a href="/Feedback" style={aStyle}>Feedbacks</a></li>
-        </ul>
-      </nav>
+      <section style={headerStyle}>
+      <div style={navbarStyle2}>
+  {/* Left Section: Logo */}
+  <div>
+  <img src="/Photos/logo.gif" alt="Logo" style={logoImgStyle} />
+  </div>
+  
+  {/* Center Section: Navigation Links */}
+  <div style={navLinksStyle}>
+    <a href="/" style={linkStyle}>Home</a>
+    <a href="/About" style={linkStyle}>About</a>
+    <a href="/TourPackages" style={linkStyle}>Services</a>
+    <a href="/ContactUS" style={linkStyle}>Contact</a>
+    <a href="/feedback" style={linkStyle}>FAQ</a>
+  </div>
+  <div style={{ marginRight: '10px',marginTop:'19px' }}> {/* Right-aligned content */}
+  <Link to="/BookingForm" style={bookbuttonstyle}>
+          Book Now !
+            </Link> 
+  </div>
+  
+  
+</div>
+        
+        
+        
+      </section>
+     
       <main style={mainContentStyle}>
         <h2 style={h2Style}>Lahiru Tours</h2>
         <p style={pStyle}>
-        Lahiru Tours, in partnership with Gamini, who has over 21 years of touring experience, explores the diverse beauty of Sri Lanka. As a specialist incoming tour operator, we offer tailor-made tours to suit your needs. Independently owned and operating since 1999, we pride ourselves on providing quick responses, accurate information, and reliable, friendly service with traditional Sri Lankan warmth. Our office is located in Hikkaduwa, Sri Lanka.
+        Thank you for choosing Lahiru Tours! We are excited to assist you in planning your perfect Sri Lankan adventure. Our team will promptly get back to you within 24 hours with a customized itinerary tailored to your interests and needs.
+For any immediate questions or additional information, please feel free to contact us directly at info@lahirutours.co.uk.
+We look forward to making your travel dreams come true!
+Warm regards,
+The Lahiru Tours Team
         
         </p>
       </main>
-      <section style={tourPackagesStyle}>
-        <h3 style={h3Style}>Here are Our Tour Packages</h3>
-        <p style={pStyle}>
-          We have very flexible and interesting packages for you. Those made to enjoy your days in Sri Lanka and relax. There are for very reasonable prices. We offer very comfortable hotels and meals for your preferable choice.
-        </p>
-        <div style={packageOptionsStyle}>
-          <div style={packageStyle}>
-            <a href='https://unsplash.com/photos/black-ford-mustang-gt-N9Pf2J656aQ'>
-              <img src="https://via.placeholder.com/150" alt="Vans" style={packageImgStyle} />
-              <h4 style={h4Style}>Vans</h4>
-            </a>
-          </div>
-          <div style={packageStyle}>
-            <a href="https://unsplash.com/photos/running-black-porsche-sedan-3ZUsNJhi_Ik">
-              <img src="https://via.placeholder.com/150" alt="Cars" style={packageImgStyle} />
-              <h4 style={h4Style}>Cars</h4>
-            </a>
-          </div>
-        </div>
-        <p style={pStyle}>
-          We have both cars and vans. You can choose as you prefer. We recommend Cars for couples and vans for small groups. But always we give first place to your choice. Both kinds of vehicles are fully air-conditioned. We always try to give you a very comfortable and safe ride and stay. Hotels are very comfortable and the food is great. Their services are in high demand. We always try our best to give you a great and enjoyable holiday.
-        </p>
-      </section>
+      
       <footer style={footerStyle}>
         <div style={footerSectionStyle}>
           <h4 style={footerSectionTitleStyle}>Relaxing</h4>

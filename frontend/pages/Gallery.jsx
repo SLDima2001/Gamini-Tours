@@ -96,6 +96,13 @@ function Gallery() {
     backgroundSize: 'cover',
     backgroundPosition: 'center',
   };
+  const slideshowstyle = {
+    padding: '20px',
+    backgroundColor: '#e0f7fa',
+    backgroundImage: 'url()',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+  };
 
   const h3Style = {
     color: '#00796b',
@@ -214,7 +221,7 @@ function Gallery() {
         </ul>
       </nav>
 
-      <section style={tourPackagesStyle}>
+      <section style={slideshowstyle}>
         <Carousel showArrows autoPlay infiniteLoop>
           <div>
             <img src="https://images.unsplash.com/photo-1567157802189-aadc856131dc?q=80&w=2087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Slide 1" style={carouselImageStyle} />

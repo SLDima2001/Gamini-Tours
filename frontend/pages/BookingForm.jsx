@@ -1,4 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { loadStripe } from '@stripe/stripe-js';
+
+// Stripe public key
+const stripePromise = loadStripe("pk_test_51Pbr4uRtnVjVgi99iHowxWO26RwsmU19YoADm3iOdfGyPWb9a5whZprGuPv6xv5ssLLddiASMhGKq9YQJu5moFhC004UuUwkRR");
 
 function BookingForm() {
   const [formData, setFormData] = useState({
@@ -18,95 +22,95 @@ function BookingForm() {
     { id: 4, name: '12 Days', price: 250 },
     { id: 5, name: '15 Days', price: 300 },
     { id: 6, name: '18 Days', price: 350 },
-    { id: 7, name: '18 Days', price: 350 },
+    { id: 7, name: '18 Days North &South', price: 370 },
     { id: 8, name: '20 Days', price: 400 },
   ]);
 
   const [totalAmount, setTotalAmount] = useState(0);
   const [timePeriod, setTimePeriod] = useState('');
 
-  const appStyle = {
-    textAlign: 'center',
-    fontFamily: 'Arial, sans-serif',
-    backgroundColor: '#e0f7fa',
-    display: 'flex',
-    flexDirection: 'column',
-    minHeight: '100vh',
-  };
+  // Styles
+  const styles = {
+    app: {
+      textAlign: 'center',
+      fontFamily: 'Arial, sans-serif',
+      backgroundColor: '#e0f7fa',
+      display: 'flex',
+      flexDirection: 'column',
+      minHeight: '100vh',
+    },
+    header: {
+      justifyContent: 'center',
+      padding: '20px',
+      backgroundColor: '#ADD8E6',
+      color: 'black',
+    },
+    logoImg: {
+      height: '80px',
+      marginRight: '20px',
+    },
+    h1: {
+      fontSize: '2em',
+      margin: '0',
+      color: '#333',
+    },
+    para: {
+      color: 'black',
+    },
+    contactInfo: {
+      marginLeft: 'auto',
+    },
+    mainContent: {
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      flex: '1',
+      padding: '20px',
+      backgroundColor: '#ffffff',
+    },
+    formContainer: {
+      maxWidth: '600px',
+      margin: '0 auto',
+      padding: '20px',
+      borderRadius: '8px',
+      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+      backgroundColor: '',
+      fontSize: '1.3em',
+      border: '2px solid #3498db',
+    },
+    input: {
+      width: '100%',
+      padding: '10px',
+      marginBottom: '10px',
+      boxSizing: 'border-box',
+      fontSize: '1em',
+      border: '2px solid #3498db',
+    },
+    button: {
+      backgroundColor: '#333',
+      color: 'white',
+      padding: '15px 20px',
+      border: 'none',
+      borderRadius: '4px',
+      cursor: 'pointer',
+      fontSize: '1em',
+      marginTop: '10px',
+      transition: 'background-color 0.3s ease',
+    },
+    summary: {
+      maxWidth: '400px',
+      margin: '0 auto',
+      padding: '20px',
+      borderRadius: '5px',
+      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+      backgroundColor: '',
+      fontSize: '1.3em',
+      marginBottom:'20%',
+      marginRight:'30%',
+      border: '2px solid #3498db',
 
-  const headerStyle = {
-    justifyContent: 'center',
-    padding: '20px',
-    backgroundColor: '#ADD8E6',
-    color: 'black',
-  };
-
-  const logoImgStyle = {
-    height: '80px',
-    marginRight: '20px',
-  };
-
-  const h1Style = {
-    fontSize: '2em',
-    margin: '0',
-    color: '#333',
-  };
-
-  const paraStyle = {
-    color: 'black',
-  };
-
-  const contactInfoStyle = {
-    marginLeft: 'auto',
-  };
-
-  const mainContentStyle = {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    flex: '1',
-    padding: '20px',
-    backgroundColor: '#ffffff',
-  };
-
-  const formContainerStyle = {
-    maxWidth: '600px',
-    margin: '0 auto',
-    padding: '20px',
-    borderRadius: '8px',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0)',
-    backgroundColor: '#f3f3f3',
-    fontSize: '1.3em',
-  };
-
-  const inputStyle = {
-    width: '100%',
-    padding: '10px',
-    marginBottom: '10px',
-    boxSizing: 'border-box',
-    fontSize: '1em',
-  };
-
-  const buttonStyle = {
-    backgroundColor: '#333',
-    color: 'white',
-    padding: '15px 20px',
-    border: 'none',
-    borderRadius: '4px',
-    cursor: 'pointer',
-    fontSize: '1em',
-    marginTop: '10px',
-    transition: 'background-color 0.3s ease',
-  };
-
-  const summaryStyle = {
-    maxWidth: '300px',
-    margin: '0 auto',
-    padding: '20px',
-    borderRadius: '8px',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-    backgroundColor: '#ffffff',
-    fontSize: '1.3em',
+    },
+    
   };
 
   const handleInputChange = (e) => {
@@ -117,12 +121,33 @@ function BookingForm() {
     });
   };
 
+  const makePayment = async () => {
+    const stripe = await stripePromise;
+
+    const response = await fetch('http://localhost:5555/create-checkout-session', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ totalAmount }),
+    });
+
+    const session = await response.json();
+
+    const result = await stripe.redirectToCheckout({
+      sessionId: session.id,
+    });
+
+    if (result.error) {
+      alert(result.error.message);
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      // Implement your backend API endpoint for handling form submission
-      const response = await fetch(`http://localhost:5555/send-email/form2`, {
+      const response = await fetch('http://localhost:5555/send-email/form2', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -134,12 +159,11 @@ function BookingForm() {
         throw new Error('Failed to book tour');
       }
 
-      // Optionally handle success response
       alert('Booking successful!');
+      await makePayment();
     } catch (error) {
-      console.error('Error booking tour:', error);
-      // Handle error, show message to user, etc.
-      alert('Failed to book tour. Please try again later.');
+      console.alert('Error booking tour:', error);
+      alert('Booking failed!');
     }
   };
 
@@ -185,12 +209,8 @@ function BookingForm() {
     let month = today.getMonth() + 1;
     let day = today.getDate();
 
-    if (month < 10) {
-      month = '0' + month;
-    }
-    if (day < 10) {
-      day = '0' + day;
-    }
+    if (month < 10) month = '0' + month;
+    if (day < 10) day = '0' + day;
 
     return `${year}-${month}-${day}`;
   };
@@ -204,22 +224,22 @@ function BookingForm() {
   }, [formData.fromDate, formData.toDate]);
 
   return (
-    <div style={appStyle}>
-      <header style={headerStyle}>
+    <div style={styles.app}>
+      <header style={styles.header}>
         <div style={{ display: 'flex', alignItems: 'center' }}>
-          <img src="/path_to_your_logo.jpg" alt="Logo" style={logoImgStyle} />
+          <img src="/path_to_your_logo.jpg" alt="Logo" style={styles.logoImg} />
           <div>
-            <h1 style={h1Style}>Booking Form</h1>
-            <p style={paraStyle}>Book your dream tour today!</p>
+            <h1 style={styles.h1}>Booking Form</h1>
+            <p style={styles.para}>Book your dream tour today!</p>
           </div>
         </div>
-        <div style={contactInfoStyle}>
+        <div style={styles.contactInfo}>
           <p>Contact us: info@yourcompany.com | +123 456 7890</p>
         </div>
       </header>
 
-      <div style={mainContentStyle}>
-        <div style={formContainerStyle}>
+      <div style={styles.mainContent}>
+        <div style={styles.formContainer}>
           <h2>Book Your Tour</h2>
           
           <form onSubmit={handleSubmit}>
@@ -229,7 +249,7 @@ function BookingForm() {
               placeholder="Name"
               value={formData.name}
               onChange={handleInputChange}
-              style={inputStyle}
+              style={styles.input}
               required
             />
             <input
@@ -238,7 +258,7 @@ function BookingForm() {
               placeholder="Email"
               value={formData.email}
               onChange={handleInputChange}
-              style={inputStyle}
+              style={styles.input}
               required
             />
             <input
@@ -247,14 +267,14 @@ function BookingForm() {
               placeholder="Phone Number"
               value={formData.phoneNumber}
               onChange={handleInputChange}
-              style={inputStyle}
+              style={styles.input}
               required
             />
             <select
               name="selectedPackage"
               value={formData.selectedPackage}
               onChange={handleInputChange}
-              style={inputStyle}
+              style={styles.input}
               required
             >
               <option value="">Select Package</option>
@@ -266,64 +286,44 @@ function BookingForm() {
             </select>
             <div>
               <label>Number of Persons: </label>
-              <button type="button" onClick={decrementPersons} style={buttonStyle}>
-                -
-              </button>
-              <span style={{ fontSize: '1.5em', margin: '0 10px' }}>{formData.persons}</span>
-              <button type="button" onClick={incrementPersons} style={buttonStyle}>
-                +
-              </button>
+              <button type="button" onClick={decrementPersons}>-</button>
+              <span>{formData.persons}</span>
+              <button type="button" onClick={incrementPersons}>+</button>
             </div>
+            <label>From Date: </label>
             <input
               type="date"
               name="fromDate"
               value={formData.fromDate}
               onChange={handleInputChange}
               min={getTodayDate()}
-              style={inputStyle}
+              style={styles.input}
               required
             />
+            <label>To Date: </label>
             <input
               type="date"
               name="toDate"
               value={formData.toDate}
               onChange={handleInputChange}
-              min={formData.fromDate || getTodayDate()}
-              style={inputStyle}
+              min={getTodayDate()}
+              style={styles.input}
               required
             />
-            <button type="submit" style={buttonStyle}>
+            <button type="submit" style={styles.button}>
               Book Now
             </button>
+           
           </form>
         </div>
-        <div style={summaryStyle}>
-          <h3>Summary</h3>
-          <p>Package: {formData.selectedPackage}</p>
-          <p>Persons: {formData.persons}</p>
-          <p>From: {formData.fromDate}</p>
-          <p>To: {formData.toDate}</p>
+
+        <div style={styles.summary}>
+          <h2>Summary</h2>
           <p>Time Period: {timePeriod}</p>
-          <br />
           <p>Total Amount: ${totalAmount}</p>
+          
         </div>
       </div>
-
-      <footer style={{ padding: '20px', backgroundColor: '#0000FF', color: 'white' }}>
-        <div style={{ marginBottom: '20px' }}>
-          <h4>Contact Us</h4>
-          <p>Email: info@yourcompany.com</p>
-          <p>Phone: +123 456 7890</p>
-        </div>
-        <div style={{ marginBottom: '20px' }}>
-          <h4>Follow Us</h4>
-          <p>Facebook | Twitter | Instagram</p>
-        </div>
-        <div>
-          <h4>Address</h4>
-          <p>123 Your Street, Your City, Your Country</p>
-        </div>
-      </footer>
     </div>
   );
 }

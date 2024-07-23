@@ -1,8 +1,65 @@
 import React, { useState } from 'react';
 
+import { Link } from 'react-router-dom';
+import { useSpring, animated } from 'react-spring';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBed, faUtensils, faCar,faEnvelope,faEnvelopeOpen } from '@fortawesome/free-solid-svg-icons';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { FaFacebook, FaInstagram,FaTiktok } from 'react-icons/fa';
 function ContactUS() {
   const [isNavbarVisible, setIsNavbarVisible] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setsubject] = useState('');
+  const [phone, setPhone] = useState('');
+  const [message, setMessage] = useState('');
 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    window.location.reload();
+
+    try {
+      const response = await fetch(`http://localhost:5555/send-email/form1`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          phone,
+          message,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Error sending email: ${response.status}`);
+      }
+
+      const contentType = response.headers.get('content-type');
+      if (contentType && contentType.includes('application/json')) {
+        const responseData = await response.json();
+
+        if (responseData.success) {
+          alert('Email sent successfully!');
+          setName('');
+          setEmail('');
+          setPhone('');
+          setMessage('');
+          window.location.reload(); // Reload the page
+        } else {
+          alert('Failed to send email.');
+        }
+      } else {
+        const textResponse = await response.text();
+        alert(textResponse);
+      }
+    } catch (error) {
+      console.alert(error);
+      alert('Successfully');
+    }
+  };
   const appStyle = {
     textAlign: 'center',
     fontFamily: 'Arial, sans-serif',
@@ -11,14 +68,76 @@ function ContactUS() {
     flexDirection: 'column',
     minHeight: '100vh', // Ensure app takes up full viewport height
   };
+  const textareaStyle = {
+    width: '100%',
+    padding: '10px',
+    marginBottom: '15px',
+    borderRadius: '5px',
+    border: '1px solid #ccc',
+    boxSizing: 'border-box',
+    minHeight: '120px',
+  };
+  const bookbuttonstyle = {
+    fontSize: '1.6em',
+    backgroundColor: '#00796b',
+    color: 'white',
+    border: 'none',
+    padding: '20px 60px',
+    borderRadius: '5px',
+    cursor: 'hand',
+    transition: 'background-color 0.3s ease',
+    
+    
+  };
+  const buttonStyle = {
+    backgroundColor: '#00796b',
+    color: 'white',
+    border: 'none',
+    padding: '12px 20px',
+    borderRadius: '45%',
+    cursor: 'pointer',
+    transition: 'background-color 0.3s ease',
+  };
+
+  const labelStyle = {
+    fontSize: '2em',
+    display: 'block',
+    marginBottom: '10px',
+    color: '#333',
+  };
+  const inputStyle = {
+    width: '100%',
+    padding: '10px',
+    marginBottom: '15px',
+    borderRadius: '5px',
+    border: '1px solid #ccc',
+    boxSizing: 'border-box',
+  };
 
   const headerStyle = {
-    justifyContent: 'center',
-    padding: '20px',
-    backgroundColor: '#ADD8E6', // Light blue background color
-    color: '#333', // Darken the color for better visibility
-    position: 'relative', // Ensure header content is relative to parent
+    justifyContent: '',
+    padding: '0px',
+    backgroundColor:'#D3D3D3',
+    color: 'black',
+    position: '',
+    width: '100%',
+    top: '',
+    left: '0',
+    zIndex: '1000',
   };
+  const header1style = {
+    justifyContent: 'center',
+    padding: '0px',
+    backgroundColor: isScrolled ? 'rgba(0, 0, 0, 0.8)' : 'rgba(0, 0, 0, 0.5)',
+    color: '',
+    position: '',
+    width: '100%',
+    top: '',
+    left: '0',
+    transition: 'background-color 0.3s ease',
+    zIndex: '',
+    marginTop: '0px',
+  }
 
   const logoImgStyle = {
     height: '80px',
@@ -36,18 +155,56 @@ function ContactUS() {
   };
 
   const navbarStyle = {
-    backgroundColor: '#333',
+    backgroundColor: '',
     color: 'white',
-    flex: '0 0 auto', // Allow navbar to grow and shrink as needed
-    transition: 'transform 0.3s ease', // Adding transition for smooth auto-hide effect
-    transform: isNavbarVisible ? 'translateX(0)' : 'translateX(-90%)', // Move navbar in/out of view
-    position: 'fixed', // Fixed positioning to stick to the left
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    position: '',
+    top: '0',
     left: '0',
-    top: '30%',
-    height: 'auto', // Full height of the viewport
-    width: '200px', // Fixed width for the navbar
-    overflowY: 'auto', // Enable scrolling if navbar content exceeds viewport height
-    zIndex: '1000', // Ensure it's on top of other content
+    width: '100%',
+    height: '50px',
+    padding: '10px 20px 0px',
+    
+    transition: 'transform 0.3s ease',
+    transform: isNavbarVisible ? 'translateY(0)' : 'translateY()',
+    zIndex: '1000',
+  };
+  const navbarStyle2 = {
+    fontSize:'20px',
+    backgroundColor: 'white',
+    color: 'white',
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    position: '',
+    top: '0',
+    left: '0',
+    width: '100%',
+    height: '100px',
+    padding: '10px 0px 0px  ',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
+    transition: 'transform 0.3s ease',
+    transform: isNavbarVisible ? 'translateY(0)' : 'translateY()',
+    zIndex: '1000',
+  };
+
+  
+  const linkStyle = {
+    color: 'black',
+    textDecoration: 'none',
+    margin: '0 15px',
+  };
+  
+  const navLinksStyle = {
+    display: 'flex',
+    alignItems: 'center',
+  };
+  const buttonContainerStyle = {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '10px', // Adds space between buttons
   };
 
   const ulStyle = {
@@ -127,48 +284,139 @@ function ContactUS() {
   const toggleNavbar = () => {
     setIsNavbarVisible(!isNavbarVisible);
   };
+  const h2Style = {
+    fontSize: '4em',
+    margin: '0',
+    color: '#333',
+    padding: '10px',
+    borderRadius: '8px',
+    display: 'inline-block',
+  };
+  const formStyle = {
+    flex: '1',
+    backgroundColor: '#B0E0E6',
+    padding: '100px',
+    borderRadius: '8px',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 1)',
+    maxWidth: '50%',
+    fontFamily: 'Arial, sans-serif',
+    position: 'center',
+    top: '400px', // To align with the header
+    bottom:'20px',
+    right: '20px',
+    zIndex: '999',
+    minHeight:'90%',
+    marginLeft:'450px',
+  };
+
 
   return (
     <div style={appStyle}>
-      <header style={headerStyle}>
-        <div>
-          <img src="https://via.placeholder.com/150" alt="Logo" style={logoImgStyle} />
-          <h1 style={h1Style}>Lahiru Tours</h1>
-        </div>
+      <header style={header1style} >
+      <div style={navbarStyle}>
+      {/* Left Section: Logo */}
+      <div>
+        <h1 style={{ margin: '0', padding: '0', fontSize: '1em' }}>lahirutours@gmail.com</h1>
+      </div>
+      
+      {/* Center Section: Navigation Links */}
+      <div style={navLinksStyle}>
+       
+      </div>
+      
+      {/* Right Section: Buttons */}
+      <div style={buttonContainerStyle}>
+      <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
+          <FaFacebook size={24} />
+        </a>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
+          <FaInstagram size={24} />
+        </a>
+        <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" style={{  padding: '10px 20px', cursor: 'pointer' }} >
+          <FaTiktok size={24}  />
+  </a>
+
+        {/* Add more buttons as needed */}
+      </div>
+    </div>
+
+            
       </header>
-      <nav
-        style={navbarStyle}
-        onMouseEnter={toggleNavbar}
-        onMouseLeave={toggleNavbar}
-      >
-        <ul style={ulStyle}>
-          <li style={liStyle}><a href="/" style={aStyle}>Home</a></li>
-          <li style={liStyle}><a href="/About" style={aStyle}>About</a></li>
-          <li style={liStyle}><a href="/TourPackages" style={aStyle}>Tour Packages</a></li>
-          <li style={liStyle}><a href="/Gallery" style={aStyle}>Gallery</a></li>
-          <li style={liStyle}><a href="/ContactUS" style={aStyle}>Contact Us</a></li>
-          <li style={liStyle}><a href="/Feedback" style={aStyle}>Feedbacks</a></li>
-        </ul>
-      </nav>
+      <section style={headerStyle}>
+      <div style={navbarStyle2}>
+  {/* Left Section: Logo */}
+  <div>
+  <img src="/Photos/logo.gif" alt="Logo" style={logoImgStyle} />
+  </div>
+  
+  {/* Center Section: Navigation Links */}
+  <div style={navLinksStyle}>
+    <a href="/" style={linkStyle}>Home</a>
+    <a href="/About" style={linkStyle}>About</a>
+    <a href="/TourPackages" style={linkStyle}>Tour Packages</a>
+    <a href="/ContactUS" style={linkStyle}>Contact</a>
+    <a href="/feedback" style={linkStyle}>FAQ</a>
+  </div>
+  <div style={{ marginRight: '10px',marginTop:'19px' }}> {/* Right-aligned content */}
+  <Link to="/BookingForm" style={bookbuttonstyle}>
+          Book Now !
+            </Link> 
+  </div>
+  
+  
+</div>
+        
+        
+        
+      </section>
       <section style={tourPackagesStyle}>
-        <h2 style={{ color: '#4CAF50' }}>Tour Packages</h2>
-        <div style={{ display: 'flex', justifyContent: 'space-around' }}>
-          <div style={{ ...packageStyle, backgroundColor: '#FFC107' }}>
-            <img src="https://via.placeholder.com/150" alt="Package 1" style={packageImgStyle} />
-            <h3 style={{ color: '#333' }}>Package 1</h3>
-            <p style={{ color: '#333' }}>Lorem ipsum dolor sit amet.</p>
-          </div>
-          <div style={{ ...packageStyle, backgroundColor: '#FF5722' }}>
-            <img src="https://via.placeholder.com/150" alt="Package 2" style={packageImgStyle} />
-            <h3 style={{ color: '#333' }}>Package 2</h3>
-            <p style={{ color: '#333' }}>Consectetur adipiscing elit.</p>
-          </div>
-          <div style={{ ...packageStyle, backgroundColor: '#E91E63' }}>
-            <img src="https://via.placeholder.com/150" alt="Package 3" style={packageImgStyle} />
-            <h3 style={{ color: '#333' }}>Package 3</h3>
-            <p style={{ color: '#333' }}>Sed do eiusmod tempor incididunt.</p>
-          </div>
-        </div>
+      <form style={formStyle} onSubmit={handleSubmit}>
+          <h2 style={h2Style}>Contact Us</h2>
+          <label style={labelStyle} htmlFor="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            style={inputStyle}
+            required
+          />
+          <label style={labelStyle} htmlFor="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            style={inputStyle}
+            required
+          />
+          <label style={labelStyle} htmlFor="phone">Phone:</label>
+          <input
+            type="tel"
+            id="phone"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            style={inputStyle}
+            required
+          />
+          <label style={labelStyle} htmlFor="subject">Subject:</label>
+          <textarea
+            id="subject"
+            value={subject}
+            onChange={(e) => setsubject(e.target.value)}
+            style={inputStyle}
+            required
+          ></textarea>
+          <label style={labelStyle} htmlFor="message">Message:</label>
+          <textarea
+            id="message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            style={textareaStyle}
+            required
+          ></textarea>
+          <button type="submit" style={buttonStyle}>Inquiry</button>
+        </form>
       </section>
       <footer style={footerStyle}>
         <div style={footerSectionStyle}>
