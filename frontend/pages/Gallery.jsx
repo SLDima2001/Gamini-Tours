@@ -23,9 +23,9 @@ function Gallery() {
   };
 
   const logoImgStyle = {
-    alignItems: 'center',
-    height: '80px',
-    marginRight: '50px',
+    height: '120px',
+    width:'120px',
+    marginTop: '0px',
   };
 
   const h1Style = {
@@ -48,20 +48,39 @@ function Gallery() {
   };
 
   const navbarStyle = {
-    backgroundColor: '#333',
+    backgroundColor: '',
     color: 'white',
-    flex: '0 0 auto',
-    transition: 'transform 0.3s ease',
-    transform: isNavbarVisible ? 'translateX(0)' : 'translateX(-90%)',
-    position: 'fixed',
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    position: '',
+    top: '0',
     left: '0',
-    top: '30%',
-    height: 'auto',
-    width: '200px',
-    overflowY: 'auto',
+    width: '100%',
+    height: '70px',
+    padding: '10px 20px',
+    transition: 'transform 0.3s ease',
+    transform: isNavbarVisible ? 'translateY(0)' : 'translateY()',
     zIndex: '1000',
   };
-
+  const navbarStyle2 = {
+    fontSize:'20px',
+    backgroundColor: 'white',
+    color: 'white',
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    position: '',
+    top: '0',
+    left: '0',
+    width: '100%',
+    height: '120px',
+    padding: '10px 0px 0px  ',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
+    transition: 'transform 0.3s ease',
+    transform: isNavbarVisible ? 'translateY(0)' : 'translateY()',
+    zIndex: '1000',
+  };
   const ulStyle = {
     listStyleType: 'none',
     padding: '0',
@@ -134,7 +153,7 @@ function Gallery() {
 
   const footerStyle = {
     padding: '20px',
-    backgroundColor: '#0000FF',
+    backgroundColor: '#4682B4',
     color: 'white',
     textAlign: 'left',
     marginTop: 'auto',

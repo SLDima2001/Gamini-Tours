@@ -121,7 +121,8 @@ function Home() {
   };
 
   const logoImgStyle = {
-    height: '100px',
+    height: '120px',
+    width:'120px',
     marginTop: '0px',
   };
 
@@ -141,7 +142,6 @@ function Home() {
 
 
   const navbarStyle = {
-    
     backgroundColor: '',
     color: 'white',
     display: 'flex',
@@ -151,7 +151,7 @@ function Home() {
     top: '0',
     left: '0',
     width: '100%',
-    height: '50px',
+    height: '70px',
     padding: '10px 20px',
     transition: 'transform 0.3s ease',
     transform: isNavbarVisible ? 'translateY(0)' : 'translateY()',
@@ -168,7 +168,7 @@ function Home() {
     top: '0',
     left: '0',
     width: '100%',
-    height: '100px',
+    height: '120px',
     padding: '10px 0px 0px  ',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
     transition: 'transform 0.3s ease',
@@ -318,8 +318,8 @@ function Home() {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center',
-    gap: '10px',
-    marginLeft:'30px',
+    gap: '40px',
+    marginLeft:'0px',
     
   };
 
@@ -468,10 +468,10 @@ function Home() {
   };
   const footerStyle = {
     padding: '20px',
-    backgroundColor: '#0000FF',
+    backgroundColor: '#4682B4',
     color: 'white',
     textAlign: 'center',
-    marginTop: '50%',
+    marginTop: '0%',
     display: 'flex',
     justifyContent: 'space-between',
     flexWrap: 'wrap',
@@ -622,7 +622,7 @@ function Home() {
       </section>
       
       <div>
-        <img style={bannerstyle} src="https://images.unsplash.com/photo-1709054952657-10693ad8132c?q=80&w=1954&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Banner Photo" />
+        <img style={bannerstyle} src="/Photos/banner.gif" alt="Banner Photo" />
       </div>
       
 

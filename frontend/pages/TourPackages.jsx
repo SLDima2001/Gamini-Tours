@@ -38,9 +38,9 @@ function TourPackages() {
   };
 
   const logoImgStyle = {
-    alignItems: 'center',
-    height: '80px',
-    marginRight: '50px',
+    height: '120px',
+    width:'120px',
+    marginTop: '0px',
   };
   const bookbuttonstyle = {
     fontSize: '1.6em',
@@ -93,13 +93,14 @@ function TourPackages() {
     top: '0',
     left: '0',
     width: '100%',
-    height: '50px',
+    height: '70px',
     padding: '10px 20px',
     transition: 'transform 0.3s ease',
     transform: isNavbarVisible ? 'translateY(0)' : 'translateY()',
     zIndex: '1000',
   };
   const navbarStyle2 = {
+    fontSize:'20px',
     backgroundColor: 'white',
     color: 'white',
     display: 'flex',
@@ -109,14 +110,13 @@ function TourPackages() {
     top: '0',
     left: '0',
     width: '100%',
-    height: '100px',
+    height: '120px',
     padding: '10px 0px 0px  ',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
     transition: 'transform 0.3s ease',
     transform: isNavbarVisible ? 'translateY(0)' : 'translateY()',
     zIndex: '1000',
   };
-  
   const linkStyle = {
     color: 'black',
     textDecoration: 'none',
@@ -132,7 +132,6 @@ function TourPackages() {
     alignItems: 'center',
     gap: '10px', // Adds space between buttons
   };
-  
   const ulStyle = {
     listStyleType: 'none',
     padding: '0',
@@ -162,7 +161,7 @@ function TourPackages() {
 
   const tourPackagesStyle = {
     padding: '20px',
-    backgroundColor: '#e0f7fa',
+    backgroundColor: '',
     backgroundImage: 'url()',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
@@ -205,7 +204,7 @@ function TourPackages() {
 
   const footerStyle = {
     padding: '20px',
-    backgroundColor: '#0000FF',
+    backgroundColor: '#4682B4',
     color: 'white',
     textAlign: 'left',
     marginTop: 'auto',
@@ -327,7 +326,7 @@ function TourPackages() {
                 <a href={pkg.link}>
                   <img src={pkg.imgSrc} alt={pkg.name} style={packageImgStyle} />
                   <h4 style={h4Style}>{pkg.name}</h4>
-                  <p>Price: ${pkg.price}</p>
+                  
                   {hoveredPackage === pkg.id && <p>{pkg.description}</p>}
                 </a>
               </div>
@@ -361,6 +360,14 @@ function TourPackages() {
             <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Twitter</a></li>
             <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Instagram</a></li>
           </ul>
+        </div>
+        <div style={footerSectionStyle}>
+          <h4 style={footerSectionTitleStyle}>Contact Us</h4>
+          <p>
+            Email: info@lahirutours.com
+            <br />
+            Phone: 0094-91-2267027 | 0094-77-7614087
+          </p>
         </div>
       </footer>
     </div>

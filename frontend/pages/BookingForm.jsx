@@ -227,14 +227,14 @@ function BookingForm() {
     <div style={styles.app}>
       <header style={styles.header}>
         <div style={{ display: 'flex', alignItems: 'center' }}>
-          <img src="/path_to_your_logo.jpg" alt="Logo" style={styles.logoImg} />
+          <img src="/Photos/logo.gif" alt="Logo" style={styles.logoImg} />
           <div>
             <h1 style={styles.h1}>Booking Form</h1>
             <p style={styles.para}>Book your dream tour today!</p>
           </div>
         </div>
         <div style={styles.contactInfo}>
-          <p>Contact us: info@yourcompany.com | +123 456 7890</p>
+          <p></p>
         </div>
       </header>
 

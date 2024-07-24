@@ -107,8 +107,9 @@ const Feedback = ({ backgroundImageUrl }) => {
       marginTop: '0px',
     },
     logoImgStyle: {
-      height: '100px',
-      marginTop: '0px',
+      height: '120px',
+    width:'120px',
+    marginTop: '0px',
     },
     h1: {
       fontSize: '4em',
@@ -138,28 +139,29 @@ const Feedback = ({ backgroundImageUrl }) => {
       top: '0',
       left: '0',
       width: '100%',
-      height: '50px',
+      height: '70px',
       padding: '10px 20px',
       transition: 'transform 0.3s ease',
       transform: isNavbarVisible ? 'translateY(0)' : 'translateY()',
       zIndex: '1000',
     },
     navbarStyle2 : {
-      backgroundColor: 'white',
-      color: 'white',
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      position: '',
-      top: '0',
-      left: '0',
-      width: '100%',
-      height: '100px',
-      padding: '10px 0px 0px  ',
-      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
-      transition: 'transform 0.3s ease',
-      transform: isNavbarVisible ? 'translateY(0)' : 'translateY()',
-      zIndex: '1000',
+      fontSize:'20px',
+    backgroundColor: 'white',
+    color: 'white',
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    position: '',
+    top: '0',
+    left: '0',
+    width: '100%',
+    height: '120px',
+    padding: '10px 0px 0px  ',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
+    transition: 'transform 0.3s ease',
+    transform: isNavbarVisible ? 'translateY(0)' : 'translateY()',
+    zIndex: '1000',
     },
     
     linkStyle : {
@@ -277,7 +279,7 @@ const Feedback = ({ backgroundImageUrl }) => {
     },
     footer: {
       padding: '20px',
-      backgroundColor: '#0000FF',
+      backgroundColor: '#4682B4',
       color: 'white',
       textAlign: 'left',
       marginTop: 'auto',
@@ -308,7 +310,50 @@ const Feedback = ({ backgroundImageUrl }) => {
       color: 'white',
       textDecoration: 'none',
     },
+    footerStyle : {
+      padding: '20px',
+      backgroundColor: '#4682B4',
+      color: 'white',
+      textAlign: 'center',
+      marginTop: '0%',
+      display: 'flex',
+      justifyContent: 'space-between',
+      flexWrap: 'wrap',
+      
+    },
+  
+    footerSectionStyle : {
+      marginBottom: '20px',
+      flex: '1 1 200px',
+    },
+  
+    footerSectionTitleStyle : {
+      borderBottom: '1px solid white',
+      paddingBottom: '10px',
+      marginBottom: '10px',
+    },
+  
+    footerListStyle : {
+      listStyleType: 'none',
+      padding: '0',
+      margin: '0',
+    },
+  
+    footerListItemStyle : {
+      marginBottom: '10px',
+    },
+  
+    socialMediaStyle : {
+      display: 'flex',
+      gap: '10px',
+    },
+  
+    socialLinkStyle : {
+      color: 'white',
+      textDecoration: 'none',
+    },
   };
+
 
   const toggleNavbar = () => {
     setIsNavbarVisible(!isNavbarVisible);
@@ -469,34 +514,40 @@ const Feedback = ({ backgroundImageUrl }) => {
         </div>
         <ToastContainer />
       </div>
-      <footer style={styles.footer}>
-        <div style={styles.footerSection}>
-          <h3 style={styles.footerSectionTitle}>Contact Information</h3>
-          <ul style={styles.footerList}>
-            <li style={styles.footerListItem}>Address: Galle Sri Lanka</li>
-            <li style={styles.footerListItem}>Email: lahirowickramasinghe9@gmail.com</li>
-            <li style={styles.footerListItem}>Phone: 0094-91-2267027</li>
-            <li style={styles.footerListItem}>Cell: 0094-77-7614087</li>
+      <footer style={styles.footerStyle}>
+        <div style={styles.footerSectionStyle}>
+          <h4 style={styles.footerSectionTitleStyle}>Relaxing</h4>
+          <ul style={styles.footerListStyle}>
+            <li style={styles.footerListItemStyle}><a href="#" style={styles.socialLinkStyle}>Hikkaduwa Beach</a></li>
+            <li style={styles.footerListItemStyle}><a href="#" style={styles.socialLinkStyle}>Galle fort</a></li>
+            <li style={styles.footerListItemStyle}><a href="#" style={styles.socialLinkStyle}>Negambo Beach</a></li>
+            <li style={styles.footerListItemStyle}><a href="#" style={styles.socialLinkStyle}>Peradeniya Botnical</a></li>
+            <li style={styles.footerListItemStyle}><a href="#" style={styles.socialLinkStyle}>Tangalla</a></li>
           </ul>
         </div>
-        <div style={styles.footerSection}>
-          <h3 style={styles.footerSectionTitle}>Quick Links</h3>
-          <ul style={styles.footerList}>
-            <li style={styles.footerListItem}><a href="/" style={styles.socialLink}>Home</a></li>
-            <li style={styles.footerListItem}><a href="/about" style={styles.socialLink}>About Us</a></li>
-            <li style={styles.footerListItem}><a href="/TourPackages" style={styles.socialLink}>Tour Packages</a></li>
-            <li style={styles.footerListItem}><a href="/gallery" style={styles.socialLink}>Gallery</a></li>
-            <li style={styles.footerListItem}><a href="/contactus" style={styles.socialLink}>Contact Us</a></li>
-            <li style={styles.footerListItem}><a href="/feedback" style={styles.socialLink}>Feedbacks</a></li>
+        <div style={styles.footerSectionStyle}>
+          <h4 style={styles.footerSectionTitleStyle}>Ancient Places</h4>
+          <ul style={styles.footerListStyle}>
+            <li style={styles.footerListItemStyle}>Sigiriya</li>
+            <li style={styles.footerListItemStyle}>Anuradhapura</li>
+            <li style={styles.footerListItemStyle}>Polonnaruwa</li>
           </ul>
         </div>
-        <div style={styles.footerSection}>
-          <h3 style={styles.footerSectionTitle}>Follow Us</h3>
-          <ul style={styles.footerList}>
-            <li style={styles.footerListItem}><a href="#" style={styles.socialLink}>Facebook</a></li>
-            <li style={styles.footerListItem}><a href="#" style={styles.socialLink}>Twitter</a></li>
-            <li style={styles.footerListItem}><a href="#" style={styles.socialLink}>Instagram</a></li>
+        <div style={styles.footerSectionStyle}>
+          <h4 style={styles.footerSectionTitleStyle}>Become Our Friend</h4>
+          <ul style={styles.footerListStyle}>
+            <li style={styles.footerListItemStyle}><a href="#" style={styles.socialLinkStyle}>Facebook</a></li>
+            <li style={styles.footerListItemStyle}><a href="#" style={styles.socialLinkStyle}>Twitter</a></li>
+            <li style={styles.footerListItemStyle}><a href="#" style={styles.socialLinkStyle}>Instagram</a></li>
           </ul>
+        </div>
+        <div style={styles.footerSectionStyle}>
+          <h4 style={styles.footerSectionTitleStyle}>Contact Us</h4>
+          <p>
+            Email: info@lahirutours.com
+            <br />
+            Phone: 0094-91-2267027 | 0094-77-7614087
+          </p>
         </div>
       </footer>
     </div>

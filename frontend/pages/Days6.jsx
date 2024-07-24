@@ -25,6 +25,12 @@ function Days6() {
   const [message, setMessage] = useState('');
   const [isformvisible, setisformvisible] = useState(false);
 
+  const showAlert = () => {
+    alert('Thank you for choosing Lahiru Tours! We are excited to assist you in planning your perfect Sri Lankan adventure. Our team will promptly get back to you within 24 hours with a customized itinerary tailored to your interests and needs.For any immediate questions or additional information, please feel free to contact us directly at info@lahirutours.co.uk.We look forward to making your travel dreams come true!Warm regards,The Lahiru Tours Team');
+    setTimeout(() => {
+      setNotification(null);
+    }, 2000);
+  };
   const appStyle = {
     textAlign: 'center',
     fontFamily: 'Arial, sans-serif',
@@ -73,7 +79,9 @@ function Days6() {
   };
 
   const logoImgStyle = {
-    height: '100px',
+    height: '120px',
+    width:'120px',
+    marginTop: '0px',
   };
 
   const h1Style = {
@@ -92,7 +100,7 @@ function Days6() {
     top: '0',
     left: '0',
     width: '100%',
-    height: '50px',
+    height: '70px',
     padding: '10px 20px',
     transition: 'transform 0.3s ease',
     transform: isNavbarVisible ? 'translateY(0)' : 'translateY()',
@@ -109,8 +117,9 @@ function Days6() {
     top: '0',
     left: '0',
     width: '100%',
-    height: '100px',
-    padding: '10px 20px',
+    height: '120px',
+    padding: '10px 0px 0px  ',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
     transition: 'transform 0.3s ease',
     transform: isNavbarVisible ? 'translateY(0)' : 'translateY()',
     zIndex: '1000',
@@ -221,7 +230,7 @@ function Days6() {
 
   const footerStyle = {
     padding: '20px 40px',
-    backgroundColor: '#4682b4',
+    backgroundColor: '#4682B4',
     color: 'white',
     textAlign: 'left',
     marginTop: 'auto',
@@ -233,7 +242,7 @@ function Days6() {
     fontSize: '0.9em',  // Adjust the font size
     margin: '10px',   // Add margin around each icon
     color: '#007bff',  // Change the icon color
-    marginRight: '-120px',
+    marginRight: '00px',
     marginTop:'-50px',
   };
 
@@ -287,12 +296,14 @@ function Days6() {
     maxWidth: '400px',
     fontFamily: 'Arial, sans-serif',
     position: 'fixed',
-    top: '60px', // To align with the header
-    bottom:'200px',
+    top: '100px', // To align with the header
+    bottom:'160px',
     display: isformvisible ? 'block' : 'none', // Show/hide based on state
     right: '10px',
     zIndex: '999',
     maxHeight:'100%',
+    marginTop:'100px',
+    marginRight:'90px',
   };
   const labelStyle = {
     display: 'block',
@@ -436,7 +447,7 @@ function Days6() {
   <div style={navLinksStyle}>
     <a href="/" style={linkStyle}>Home</a>
     <a href="/About" style={linkStyle}>About</a>
-    <a href="/TourPackages" style={linkStyle}>Services</a>
+    <a href="/TourPackages" style={linkStyle}>TourPackages</a>
     <a href="/ContactUS" style={linkStyle}>Contact</a>
     <a href="/feedback" style={linkStyle}>FAQ</a>
   </div>
@@ -512,7 +523,7 @@ Enjoy your first day soaking in the vibrant culture and picturesque landscapes 
                 </button>
                 {additionalDescriptions.day2 && (
                   <div>
-                    <h4>Explore the ancient wonders of Sigiriya and Anuradhapura.</h4>
+                    
                     <p>
                     The cultural heart of Sri Lanka, Kandy is surrounded by enchanting green nature and picturesque villages amidst tranquil landscapes. With breathtaking views of the famous Kandy Lake and home to the sacred relic of the Buddhist faith, Kandy is a must-visit destination. Explore the heritage of Sri Lanka’s last kingdom and take a stroll through the stunning Botanical Gardens, created by the British in the 19th century and still one of the most beautiful gardens in Asia. Walk the streets of Kandy, visit the local market, and enjoy performances of traditional Kandyan dances in the evening.
 <br /><br />Activities:<br />
@@ -543,7 +554,7 @@ Enjoy your second day immersed in the cultural and historical richness of Kand
                 </button>
                 {additionalDescriptions.day3 && (
                   <div>
-                    <h4>Visit the historic Dambulla Cave Temple.</h4>
+                    
                     <p>
                     Experience the captivating beauty of Sri Lanka on your journey to Nuwara Eliya. This mist-wrapped region, with its emerald peaks and verdant tea plantations, is sure to enchant you. Known as the "Little England" of South Asia, Nuwara Eliya offers a cool climate, scenic views, Tudor-style hotels, manicured hedgerows, and charming gardens. The rolling hills adorned with lush green tea leaves provide a stunning backdrop for your visit. The sound of waterfalls and the cool breeze create a fairytale-like experience that will leave you spellbound.
 <br /><br />Activities<br />
@@ -577,7 +588,7 @@ Enjoy your second day immersed in the cultural and historical richness of Kand
                 </button>
                 {additionalDescriptions.day4 && (
                   <div>
-                    <h4>Experience the cultural heart of Sri Lanka in Kandy.</h4>
+                   
                     <p>
                     Yala National Park, the largest and most visited national park in Sri Lanka, is a breathtaking highlight of our Sri Lanka tour packages. Home to diverse wildlife, this expansive park features forests, grasslands, and lagoons along the Indian Ocean. Here, you can encounter everything from the largest giants to the smallest creatures of the animal kingdom, providing a wildlife experience you will never forget. The park boasts a variety of habitats, including freshwater lakes, beaches, rocky outcrops, green plains, and jungles. It is renowned worldwide for leopard sightings, as these elusive animals often rest on the park's massive granite boulders. Yala National Park is a must-see destination for any Sri Lanka trip, promising unforgettable memories.
 
@@ -707,7 +718,7 @@ From your luxurious hotel room, you’ll enjoy breathtaking views of the ocean a
             zIndex: '1000',
           }}
         >
-          {isformvisible ? <FontAwesomeIcon  icon={faEnvelopeOpen} size="2x" /> : <FontAwesomeIcon  icon={faEnvelope} size="2x" />}
+          {isformvisible ? <FontAwesomeIcon  icon={faEnvelopeOpen} size="2x" /> : <FontAwesomeIcon  icon={faEnvelope} size="2x" />}<br /> Contact US
         </button>
             <form style={formStyle} onSubmit={handleSubmit}>
           <h2 style={h2Style}>Contact Us</h2>
@@ -754,74 +765,43 @@ From your luxurious hotel room, you’ll enjoy breathtaking views of the ocean a
             style={textareaStyle}
             required
           ></textarea>
-          <button type="submit" style={buttonStyle}>Inquiry</button>
+          <button onClick={showAlert} type="submit" style={buttonStyle}>Inquiry</button>
         </form>
       
-      <footer style={footerStyle}>
+        <footer style={footerStyle}>
+        <div style={footerSectionStyle}>
+          <h4 style={footerSectionTitleStyle}>Relaxing</h4>
+          <ul style={footerListStyle}>
+            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Hikkaduwa Beach</a></li>
+            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Galle fort</a></li>
+            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Negambo Beach</a></li>
+            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Peradeniya Botnical</a></li>
+            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Tangalla</a></li>
+          </ul>
+        </div>
+        <div style={footerSectionStyle}>
+          <h4 style={footerSectionTitleStyle}>Ancient Places</h4>
+          <ul style={footerListStyle}>
+            <li style={footerListItemStyle}>Sigiriya</li>
+            <li style={footerListItemStyle}>Anuradhapura</li>
+            <li style={footerListItemStyle}>Polonnaruwa</li>
+          </ul>
+        </div>
+        <div style={footerSectionStyle}>
+          <h4 style={footerSectionTitleStyle}>Become Our Friend</h4>
+          <ul style={footerListStyle}>
+            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Facebook</a></li>
+            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Twitter</a></li>
+            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Instagram</a></li>
+          </ul>
+        </div>
         <div style={footerSectionStyle}>
           <h4 style={footerSectionTitleStyle}>Contact Us</h4>
-          <ul style={footerListStyle}>
-            <li style={footerListItemStyle}>Phone: 123-456-7890</li>
-            <li style={footerListItemStyle}>Email: info@lahirutours.com</li>
-            <li style={footerListItemStyle}>
-              Address: 123 Main St, Colombo, Sri Lanka
-            </li>
-          </ul>
-        </div>
-        <div style={footerSectionStyle}>
-          <h4 style={footerSectionTitleStyle}>Quick Links</h4>
-          <ul style={footerListStyle}>
-            <li style={footerListItemStyle}>
-              <a href="/" style={socialLinkStyle}>
-                Home
-              </a>
-            </li>
-            <li style={footerListItemStyle}>
-              <a href="/About" style={socialLinkStyle}>
-                About
-              </a>
-            </li>
-            <li style={footerListItemStyle}>
-              <a href="/TourPackages" style={socialLinkStyle}>
-                Tour Packages
-              </a>
-            </li>
-            <li style={footerListItemStyle}>
-              <a href="/Gallery" style={socialLinkStyle}>
-                Gallery
-              </a>
-            </li>
-            <li style={footerListItemStyle}>
-              <a href="/ContactUS" style={socialLinkStyle}>
-                Contact Us
-              </a>
-            </li>
-            <li style={footerListItemStyle}>
-              <a href="/Feedback" style={socialLinkStyle}>
-                Feedbacks
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div style={footerSectionStyle}>
-          <h4 style={footerSectionTitleStyle}>Follow Us</h4>
-          <ul style={footerListStyle}>
-            <li style={footerListItemStyle}>
-              <a href="#" style={socialLinkStyle}>
-                Facebook
-              </a>
-            </li>
-            <li style={footerListItemStyle}>
-              <a href="#" style={socialLinkStyle}>
-                Twitter
-              </a>
-            </li>
-            <li style={footerListItemStyle}>
-              <a href="#" style={socialLinkStyle}>
-                Instagram
-              </a>
-            </li>
-          </ul>
+          <p>
+            Email: info@lahirutours.com
+            <br />
+            Phone: 0094-91-2267027 | 0094-77-7614087
+          </p>
         </div>
       </footer>
     </div>

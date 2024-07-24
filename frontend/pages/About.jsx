@@ -40,9 +40,9 @@ function About() {
   };
 
   const logoImgStyle = {
-    alignItems: 'center',
-    height: '80px',
-    marginRight: '50px',
+    height: '120px',
+    width:'120px',
+    marginTop: '0px',
   };
 
   const h1Style = {
@@ -77,7 +77,7 @@ function About() {
     top: '0',
     left: '0',
     width: '100%',
-    height: '50px',
+    height: '70px',
     padding: '10px 20px',
     transition: 'transform 0.3s ease',
     transform: isNavbarVisible ? 'translateY(0)' : 'translateY()',
@@ -94,8 +94,8 @@ function About() {
     top: '0',
     left: '0',
     width: '100%',
-    height: '100px',
-    padding: '10px 20px',
+    height: '120px',
+    padding: '10px 0px 0px  ',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
     transition: 'transform 0.3s ease',
     transform: isNavbarVisible ? 'translateY(0)' : 'translateY()',
@@ -190,7 +190,7 @@ function About() {
 
   const footerStyle = {
     padding: '20px',
-    backgroundColor: '#0000FF',
+    backgroundColor: '#4682B4',
     color: 'white',
     textAlign: 'left',
     marginTop: 'auto', // Pushes footer to the bottom
@@ -290,7 +290,7 @@ function About() {
   <div style={navLinksStyle}>
     <a href="/" style={linkStyle}>Home</a>
     <a href="/About" style={linkStyle}>About</a>
-    <a href="/TourPackages" style={linkStyle}>Services</a>
+    <a href="/TourPackages" style={linkStyle}>Tour Packages</a>
     <a href="/ContactUS" style={linkStyle}>Contact</a>
     <a href="/feedback" style={linkStyle}>FAQ</a>
   </div>
