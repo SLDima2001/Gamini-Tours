@@ -325,12 +325,14 @@ function Home() {
 
   const packageStyle = {
     textAlign: 'center',
+    fontSize:'15px',
     backgroundColor: '',
-    padding: '20px ',
+    padding: '30px ',
     borderRadius: '10px',
     boxShadow: '0 4px 8px rgba(0, 1, 1, 1)',
-    width: '280px',
-    borderColor:'#00008B',
+    width: '300px',
+    height:'400px',
+    borderColor:'',
   };
 
   const fbstyle= {
@@ -638,7 +640,7 @@ function Home() {
 
 
             <Link to="/Days6" style={packageStyle}>
-            <h4>Sri Lanka 6 Days Tour</h4>
+            <h4>Sri Lanka 6 Days Tour <br /> </h4>
               <img src="https://images.unsplash.com/photo-1683647986987-bcd7c320f3a1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Njh8fHNyaSUyMGxhbmthJTIwdG91cmlzbXxlbnwwfHwwfHx8MA%3D%3D" alt="Package 1" style={packageImgStyle} />
               <h4 style={h42Style}>Days 6</h4>
               <div style={iconStyle}>
@@ -650,7 +652,7 @@ function Home() {
             </Link>
 
             <Link to="/Days8" style={packageStyle}>
-            <h4>Sri Lanka 8 Days Tour</h4>
+            <h4>Sri Lanka 8 Days Tour<br /> </h4>
               <img src="https://images.unsplash.com/photo-1604293679030-7cfcd7174ab1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzJ8fHNyaSUyMGxhbmthJTIwdG91cmlzbXxlbnwwfHwwfHx8MA%3D%3D" alt="Package 2" style={packageImgStyle} />
               <h4 style={h42Style}>Days 8</h4>
               <div style={iconStyle}>
@@ -661,7 +663,7 @@ function Home() {
             </Link>
 
             <Link to="/Days10" style={packageStyle}>
-            <h4>Sri Lanka 10 Days Tour</h4>
+            <h4>Sri Lanka 10 Days Tour<br /></h4>
               <img src="https://images.unsplash.com/photo-1562827246-cc429d3bcf6f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzV8fHNyaSUyMGxhbmthJTIwdG91cmlzbXxlbnwwfHwwfHx8MA%3D%3D" alt="Package 3" style={packageImgStyle} />
               <h4 style={h42Style}>Days 10</h4>
               <div style={iconStyle}>
