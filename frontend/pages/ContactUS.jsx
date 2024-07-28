@@ -75,7 +75,7 @@ function ContactUS() {
     borderRadius: '5px',
     border: '1px solid #ccc',
     boxSizing: 'border-box',
-    minHeight: '120px',
+    minHeight: '200px',
   };
   const bookbuttonstyle = {
     fontSize: '1.6em',
@@ -90,11 +90,11 @@ function ContactUS() {
     
   };
   const buttonStyle = {
-    backgroundColor: '#00796b',
+    backgroundColor: 'blue',
     color: 'white',
     border: 'none',
     padding: '12px 20px',
-    borderRadius: '45%',
+    borderRadius: '',
     cursor: 'pointer',
     transition: 'background-color 0.3s ease',
   };
@@ -226,7 +226,7 @@ function ContactUS() {
 
   const tourPackagesStyle = {
     padding: '20px',
-    backgroundColor: '#ffffff',
+    backgroundColor: '#e0f7fa',
   };
 
   const packageStyle = {
@@ -293,11 +293,12 @@ function ContactUS() {
   };
   const formStyle = {
     flex: '1',
-    backgroundColor: '#B0E0E6',
+    backgroundColor: 'white',
     padding: '100px',
-    borderRadius: '8px',
+    border: '2px solid #3498db',
+    borderRadius: '0px',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 1)',
-    maxWidth: '50%',
+    maxWidth: '30%',
     fontFamily: 'Arial, sans-serif',
     position: 'center',
     top: '400px', // To align with the header
@@ -305,7 +306,8 @@ function ContactUS() {
     right: '20px',
     zIndex: '999',
     minHeight:'90%',
-    marginLeft:'450px',
+    marginLeft:'750px',
+    
   };
 
 
@@ -315,7 +317,7 @@ function ContactUS() {
       <div style={navbarStyle}>
       {/* Left Section: Logo */}
       <div>
-        <h1 style={{ margin: '0', padding: '0', fontSize: '1em' }}>lahirutours@gmail.com</h1>
+        <h1 style={{ margin: '0', padding: '0', fontSize: '1em' }}>info@lahirutours.co.uk</h1>
       </div>
       
       {/* Center Section: Navigation Links */}
@@ -419,11 +421,11 @@ function ContactUS() {
         <div style={footerSectionStyle}>
           <h4 style={footerSectionTitleStyle}>Relaxing</h4>
           <ul style={footerListStyle}>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Hikkaduwa Beach</a></li>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Galle fort</a></li>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Negambo Beach</a></li>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Peradeniya Botnical</a></li>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Tangalla</a></li>
+            <li style={footerListItemStyle}>Hikkaduwa Beach</li>
+            <li style={footerListItemStyle}>Galle fort</li>
+            <li style={footerListItemStyle}>Negambo Beach</li>
+            <li style={footerListItemStyle}>Peradeniya Botnical</li>
+            <li style={footerListItemStyle}>Tangalla</li>
           </ul>
         </div>
         <div style={footerSectionStyle}>
@@ -445,9 +447,9 @@ function ContactUS() {
         <div style={footerSectionStyle}>
           <h4 style={footerSectionTitleStyle}>Contact Us</h4>
           <p>
-            Email: info@lahirutours.com
+            Email: info@lahirutours.co.uk
             <br />
-            Phone: 0094-91-2267027 | 0094-77-7614087
+            
           </p>
         </div>
       </footer>

@@ -274,11 +274,11 @@ function Gallery() {
         <div style={footerSectionStyle}>
           <h4 style={footerSectionTitleStyle}>Relaxing</h4>
           <ul style={footerListStyle}>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Hikkaduwa Beach</a></li>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Galle fort</a></li>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Negambo Beach</a></li>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Peradeniya Botanical</a></li>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Tangalla</a></li>
+            <li style={footerListItemStyle}>Hikkaduwa Beach</li>
+            <li style={footerListItemStyle}>Galle fort</li>
+            <li style={footerListItemStyle}>Negambo Beach</li>
+            <li style={footerListItemStyle}>Peradeniya Botnical</li>
+            <li style={footerListItemStyle}>Tangalla</li>
           </ul>
         </div>
         <div style={footerSectionStyle}>
@@ -300,9 +300,9 @@ function Gallery() {
         <div style={footerSectionStyle}>
           <h4 style={footerSectionTitleStyle}>Contact Us</h4>
           <p>
-            Email: info@lahirutours.com
+            Email: info@lahirutours.co.uk
             <br />
-            Phone: 0094-91-2267027 | 0094-77-7614087
+            
           </p>
         </div>
       </footer>

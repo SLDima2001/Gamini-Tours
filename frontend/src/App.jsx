@@ -17,6 +17,7 @@ import Days182 from '../pages/Days182'
 import Days20 from '../pages/Days20'
 import PaymentSuccess from '../pages/PaymentSuccess'
 import PaymentCancel from '../pages/PaymentCancel'
+import Afterfeedback from '../pages/Afterfeedback'
 
 
 
@@ -32,6 +33,7 @@ const App = () => {
       <Route path="/Feedback" element={<Feedback />} />
       <Route path="/TourPackages" element={<TourPackages />} />
       <Route path="/BookingForm" element={<BookingForm />} />
+      <Route path="/Afterfeedback" element={<Afterfeedback />} />
 
 
       <Route path="/Days6" element={<Days6 />} />
@@ -42,6 +44,7 @@ const App = () => {
       <Route path="/Days18" element={<Days18 />} />
       <Route path="/Days182" element={<Days182 />} />
       <Route path="/Days20" element={<Days20 />} />
+      
 
       <Route path="/PaymentSuccess" element={<PaymentSuccess />} />
       <Route path="/PaymentCancel" element={<PaymentCancel />} />

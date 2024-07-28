@@ -11,12 +11,14 @@ function TourPackages() {
   const [isScrolled, setIsScrolled] = useState(false); 
 
   const packages = [
-    { id: 1, name: '6 Days', imgSrc: 'https://via.placeholder.com/150', link: '/Days6', price: 100, description: 'Enjoy a 6-day tour exploring beautiful destinations.' },
-    { id: 2, name: '8 Days', imgSrc: 'https://via.placeholder.com/150', link: '/Days8', price: 150, description: 'Experience an 8-day adventure filled with fun and excitement.' },
-    { id: 3, name: '10 Days', imgSrc: 'https://via.placeholder.com/150', link: '/Days10', price: 200, description: 'Discover the wonders of a 10-day tour.' },
-    { id: 4, name: '15 Days', imgSrc: 'https://via.placeholder.com/150', link: '/Days15', price: 300, description: 'A 15-day journey to explore the best sights and sounds.' },
-    { id: 5, name: '18 Days', imgSrc: 'https://via.placeholder.com/150', link: '/Days18', price: 350, description: 'An 18-day tour to immerse yourself in rich culture and history.' },
-    { id: 6, name: '20 Days', imgSrc: 'https://via.placeholder.com/150', link: '/Days20', price: 400, description: 'A 20-day expedition to experience everything.' },
+    { id: 1, name: '6 Days', imgSrc: '/Photos/Day6.gif', link: '/Days6', price: 100, description: 'Enjoy a 6-days tour exploring beautiful destinations.' },
+    { id: 2, name: '8 Days', imgSrc: '/Photos/Day8.gif', link: '/Days8', price: 150, description: 'Experience an 8-days adventure filled with fun and excitement.' },
+    { id: 3, name: '10 Days', imgSrc: '/Photos/Day10.gif', link: '/Days10', price: 200, description: 'Discover the wonders of a 10-days tour.' },
+    { id: 4, name: '12 Days', imgSrc: '/Photos/Day12.gif', link: '/Days12', price: 300, description: 'A 12-days journey to explore the best sights and sounds.' },
+    { id: 5, name: '15 Days', imgSrc: '/Photos/Day15.gif', link: '/Days15', price: 300, description: 'A 15-days journey to explore the best sights and sounds.' },
+    { id: 6, name: '18 Days', imgSrc: '/Photos/Day18.gif', link: '/Days18', price: 350, description: 'An 18-days tour to immerse yourself in rich culture and history.' },
+    { id: 7, name: '18 Days', imgSrc: '/Photos/Day18n.gif', link: '/Days182', price: 350, description: 'An 18-days tour to immerse yourself in rich culture and history.' },
+    { id: 8, name: '20 Days', imgSrc: '/Photos/Day20.gif', link: '/Days20', price: 400, description: 'A 20-days expedition to experience everything.' },
   ];
 
   const appStyle = {
@@ -259,7 +261,7 @@ function TourPackages() {
       <div style={navbarStyle}>
       {/* Left Section: Logo */}
       <div>
-        <h1 style={{ margin: '0', padding: '0', fontSize: '1em' }}>lahirutours@gmail.com</h1>
+        <h1 style={{ margin: '0', padding: '0', fontSize: '1em' }}>info@lahirutoursco.uk</h1>
       </div>
       
       {/* Center Section: Navigation Links */}
@@ -338,11 +340,11 @@ function TourPackages() {
         <div style={footerSectionStyle}>
           <h4 style={footerSectionTitleStyle}>Relaxing</h4>
           <ul style={footerListStyle}>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Hikkaduwa Beach</a></li>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Galle fort</a></li>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Negambo Beach</a></li>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Peradeniya Botnical</a></li>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Tangalla</a></li>
+            <li style={footerListItemStyle}>Hikkaduwa Beach</li>
+            <li style={footerListItemStyle}>Galle fort</li>
+            <li style={footerListItemStyle}>Negambo Beach</li>
+            <li style={footerListItemStyle}>Peradeniya Botnical</li>
+            <li style={footerListItemStyle}>Tangalla</li>
           </ul>
         </div>
         <div style={footerSectionStyle}>
@@ -364,9 +366,9 @@ function TourPackages() {
         <div style={footerSectionStyle}>
           <h4 style={footerSectionTitleStyle}>Contact Us</h4>
           <p>
-            Email: info@lahirutours.com
+            Email: info@lahirutours.co.uk
             <br />
-            Phone: 0094-91-2267027 | 0094-77-7614087
+            
           </p>
         </div>
       </footer>

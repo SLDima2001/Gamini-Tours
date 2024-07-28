@@ -6,6 +6,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { FaFacebook, FaInstagram,FaTiktok } from 'react-icons/fa';
 
 
+
 function About() {
   const [isNavbarVisible, setIsNavbarVisible] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -19,15 +20,15 @@ function About() {
     minHeight: '100vh', // Ensure app takes up full viewport height
   };
   const bookbuttonstyle = {
-    fontSize: '1.6em',
-    backgroundColor: '#00796b',
-    color: 'white',
-    border: 'none',
-    padding: '20px 60px',
-    borderRadius: '5px',
-    cursor: 'hand',
-    transition: 'background-color 0.3s ease',
-    
+    backgroundColor: '#333',
+      color: 'white',
+      padding: '20px 20px',
+      border: 'none',
+      borderRadius: '4px',
+      cursor: 'pointer',
+      fontSize: '1.6em',
+      marginTop: '0px',
+      transition: 'background-color 0.3s ease',
     
   };
 
@@ -138,8 +139,8 @@ function About() {
 
   const mainContentStyle = {
     flex: '1', // Allow main content to grow to fill remaining space
-    padding: '20px',
-    backgroundColor: '#ffffff',
+    padding: '50px',
+    backgroundColor: '',
     marginLeft: isNavbarVisible ? '200px' : '0', // Adjust main content margin when navbar is visible
     transition: 'margin-left 0.3s ease', // Add transition for smooth adjustment
   };
@@ -151,9 +152,22 @@ function About() {
   };
 
   const pStyle = {
-    fontFamily:'Great Vibes',
-    fontSize: '2em',
+    fontFamily:'Feeling Lovely',
+    fontSize: '2.5em',
     color: '#333',
+    textAlign:'left',
+  };
+  const pStyle1 = {
+    fontFamily:'Awesome Season Personal',
+    fontSize: '3em',
+    color: '#333',
+    textAlign:'center',
+  };
+  const pStyle2 = {
+    fontFamily:'Great Vibes',
+    fontSize: '1em',
+    color: '#333',
+    textAlign:'left',
   };
 
   const tourPackagesStyle = {
@@ -183,7 +197,8 @@ function About() {
     height: '100px',
   };
 
-  const h4Style = {
+  const photodesstyle = {
+    fontSize:'30px',
     marginTop: '10px',
     color: '#333',
   };
@@ -253,7 +268,7 @@ function About() {
       <div style={navbarStyle}>
       {/* Left Section: Logo */}
       <div>
-        <h1 style={{ margin: '0', padding: '0', fontSize: '1em' }}>lahirutours@gmail.com</h1>
+        <h1 style={{ margin: '0', padding: '0', fontSize: '1em' }}>info@lahirutours.co.uk</h1>
       </div>
       
       {/* Center Section: Navigation Links */}
@@ -309,25 +324,63 @@ function About() {
      
       <main style={mainContentStyle}>
         <h2 style={h2Style}>Lahiru Tours</h2>
-        <p style={pStyle}>
-        Thank you for choosing Lahiru Tours! We are excited to assist you in planning your perfect Sri Lankan adventure. Our team will promptly get back to you within 24 hours with a customized itinerary tailored to your interests and needs.
-For any immediate questions or additional information, please feel free to contact us directly at info@lahirutours.co.uk.
-We look forward to making your travel dreams come true!
-Warm regards,
-The Lahiru Tours Team
-        
-        </p>
+
+        <div style={{display:'flex',gap:'600px'}}>
+
+
+          <div>
+        <img style={{height:'500px'}} src="/Photos/Dad1.jpg" alt="" />
+        <h1 style={photodesstyle}>1996</h1>
+        </div>
+
+
+        <div>
+       <img style={{height:'500px'}} src="/Photos/Dad2.jpg" alt="" />
+        </div>
+
+        </div>
+       
+        <div>
+        <p style={pStyle1}>
+       <b> Welcome to Lahiru Tours: Your Gateway to Sri Lanka </b> <br /></p>
+      
+<p style={pStyle}>‘Where Family, Passion, and Adventure Meet’</p>
+
+<p style={pStyle}>At Lahiru Tours, we believe that travel is more than just visiting new places—it's about creating unforgettable memories and experiencing the heart and soul of a destination. As a family-run travel agency with over two decades of experience, we bring a personal touch and deep local knowledge to every journey we plan.
+<br /><b>Our Story</b><br />
+Founded in 1996 by Gamini, Lahiru Tours was born from a passion for showcasing the rich culture, history, and natural beauty of Sri Lanka. Our family has explored every corner of this stunning island, gaining unique insights and knowledge that we use to craft perfect travel itineraries for our guests.
+<br /><b>Why Choose Lahiru Tours?</b><br />
+<p style={pStyle2}><b>•	Personal Touch:</b> We treat every guest like a member of our own family, ensuring you receive personalized service and attention to detail that larger companies can't offer.<br />
+<b>•	Expert Knowledge:</b> Our extensive local expertise allows us to create unique itineraries that highlight both hidden gems and popular landmarks, offering an authentic and enriching experience.<br />
+<b>•	Passionate Team:</b> Our team consists of family members and close friends who share a love for travel and hospitality. We are committed to providing warm, friendly, and professional service to make your trip unforgettable.<br />
+<b>•	Customized Experiences:</b> Every traveler is unique, and we offer tailor-made tours that cater to your specific interests, preferences, and pace. Whether you're seeking adventure, relaxation, or cultural immersion, we design the perfect trip for you.<br />
+<b>•	Sustainable Tourism:</b> As locals, we are dedicated to preserving the natural beauty and cultural heritage of Sri Lanka. We support eco-friendly practices and promote responsible tourism to ensure that future generations can enjoy the wonders of our island.<br />
+</p>
+<br /><br /><b>Our Services<br /></b>
+<b>•	Custom Tours:</b> Personalized itineraries designed to suit your interests and needs.<br />
+<b>•	Cultural Excursions:</b> Explore Sri Lanka’s rich history and heritage with knowledgeable guides.<br />
+<b>•	Adventure Trips:</b> From surfing and hiking to wildlife safaris, experience thrilling adventures.<br />
+<b>•	Family Vacations:</b> Fun and engaging activities for travelers of all ages.<br />
+<b>•	Luxury Travel:</b> Enjoy the finest accommodations and exclusive experiences.<br /><br /><br />
+Join the Lahiru Tours Family<br />
+Embark on a journey with Lahiru Tours and discover the true essence of Sri Lanka. Let our family take care of yours and create memories that will last a lifetime.<br />
+We look forward to welcoming you to our beautiful island and providing you with an exceptional travel experience.<br />
+Contact Us Today:
+
+</p>
+<br />
+</div>
       </main>
       
       <footer style={footerStyle}>
         <div style={footerSectionStyle}>
           <h4 style={footerSectionTitleStyle}>Relaxing</h4>
           <ul style={footerListStyle}>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Hikkaduwa Beach</a></li>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Galle fort</a></li>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Negambo Beach</a></li>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Peradeniya Botnical</a></li>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Tangalla</a></li>
+            <li style={footerListItemStyle}>Hikkaduwa Beach</li>
+            <li style={footerListItemStyle}>Galle fort</li>
+            <li style={footerListItemStyle}>Negambo Beach</li>
+            <li style={footerListItemStyle}>Peradeniya Botnical</li>
+            <li style={footerListItemStyle}>Tangalla</li>
           </ul>
         </div>
         <div style={footerSectionStyle}>
@@ -349,9 +402,9 @@ The Lahiru Tours Team
         <div style={footerSectionStyle}>
           <h4 style={footerSectionTitleStyle}>Contact Us</h4>
           <p>
-            Email: info@lahirutours.com
+            Email: info@lahirutours.co.uk
             <br />
-            Phone: 0094-91-2267027 | 0094-77-7614087
+            
           </p>
         </div>
       </footer>

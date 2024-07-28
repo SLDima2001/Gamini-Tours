@@ -195,8 +195,8 @@ function Days6() {
   };
 
   const photoStyle = {
-    width: '700px',
-    height: '500px',
+    width: '600px',
+    height: '600px',
     objectFit: 'cover',
     borderRadius: '20%',
     margin: '20px 0',
@@ -409,7 +409,7 @@ function Days6() {
       <div style={navbarStyle}>
       {/* Left Section: Logo */}
       <div>
-        <h1 style={{ margin: '0', padding: '0', fontSize: '1em' }}>lahirutours@gmail.com</h1>
+        <h1 style={{ margin: '0', padding: '0', fontSize: '1em' }}>info@lahirutours.co.uk</h1>
       </div>
       
       {/* Center Section: Navigation Links */}
@@ -469,13 +469,13 @@ function Days6() {
         <section style={tourPackagesStyle}>
           <div style={packageStyle}>
             <img
-              src="https://via.placeholder.com/700x500"
+              src="/Photos/Day6.gif"
               alt="Tour Image"
-              style={{ ...photoStyle, alignSelf: 'center' }}
+              style={{ ...photoStyle, alignSelf: 'center',objectFit:'cover' }}
             />
             <div style={iconStyle}>
               <FontAwesomeIcon  icon={faBed} size="5x" />
-              <FontAwesomeIcon  icon={faUtensils} size="5x" />
+              <FontAwesomeIcon style={{padding:'10px'}}  icon={faUtensils} size="5x" />
               <FontAwesomeIcon  icon={faCar} size="5x" />  
               </div>
             <div style={{ ...packageDescriptionStyle, textAlign: 'left', alignItems: 'center' }}>
@@ -505,7 +505,7 @@ function Days6() {
 •	Visit St. Mary’s Church and Angurukaramulla Temple: Discover the religious heritage of Negombo by visiting St. Mary’s Church and the Angurukaramulla Temple.<br />
 Enjoy your first day soaking in the vibrant culture and picturesque landscapes of Negombo!<br />
 
-<img src="/Photos/ABC.png" alt="" />
+<img style={photoStyle} src="/Photos/Negambo.jpg" alt="" />
                     </p>
                   </div>
                 )}
@@ -535,7 +535,7 @@ Enjoy your first day soaking in the vibrant culture and picturesque landscapes 
 •	Enjoy your first Sri Lankan grand dinner buffet at the hotel: Savor a variety of local delicacies at the hotel buffet.<br />
 •	Take a walk around the Kandy Lake at night: End your day with a peaceful stroll around the picturesque Kandy Lake.<br />
 Enjoy your second day immersed in the cultural and historical richness of Kandy!<br />
-<img src="/Photos/ABC.png" alt="" />
+<img style={photoStyle} src="/Photos/Kandy.jpg" alt=""/>
                     </p>
                   </div>
                 )}
@@ -569,7 +569,7 @@ Enjoy your second day immersed in the cultural and historical richness of Kand
 •	Check in at the cozy hotel in Nuwara Eliya and relax.<br />
 •	Visit Gregory Lake later to soak in the sunset.<br />
 •	Walk around chilly "Little England".<br />
-<img src="/Photos/ABC.png" alt="" />
+<img style={photoStyle} src="/Photos/Nuwaraeliya.jpg" alt="" />
                     </p>
                   </div>
                 )}
@@ -603,7 +603,7 @@ Enjoy your second day immersed in the cultural and historical richness of Kand
 •Return to the hotel and relax<br />
 •Walk around the village and interact with friendly locals<br />
 •Enjoy a fiery BBQ dinner at the hotel under the starry sky<br />
-<img src="/Photos/ABC.png" alt="" />
+<img style={photoStyle} src="/Photos/Yala.jpg" alt="" />
                     </p>
                   </div>
                 )}
@@ -643,7 +643,7 @@ The next part of this exciting Sri Lanka tour package is a visit to Galle, a cit
 •Explore the historic Galle Fort<br />
 •Visit the iconic Galle Lighthouse<br />
 •Browse the unique boutiques on Peddler Street<br />
-<img src="/Photos/ABC.png" alt="" />
+<img style={photoStyle} src="/Photos/Hikkaduwa.png" alt=""  />
                     </p>
                     
                   </div>
@@ -682,7 +682,8 @@ From your luxurious hotel room, you’ll enjoy breathtaking views of the ocean a
 •Experience Colombo’s nightlife at popular local clubs<br />
 •End of Your Sri Lanka Journey<br />
 <br /> 
-<img src="/Photos/ABC.png" alt="" />
+<img style={photoStyle} src="/Photos/Colombo.jpg" alt="" />
+
                     </p>
                     
                   </div>
@@ -772,11 +773,11 @@ From your luxurious hotel room, you’ll enjoy breathtaking views of the ocean a
         <div style={footerSectionStyle}>
           <h4 style={footerSectionTitleStyle}>Relaxing</h4>
           <ul style={footerListStyle}>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Hikkaduwa Beach</a></li>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Galle fort</a></li>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Negambo Beach</a></li>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Peradeniya Botnical</a></li>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Tangalla</a></li>
+            <li style={footerListItemStyle}>Hikkaduwa Beach</li>
+            <li style={footerListItemStyle}>Galle fort</li>
+            <li style={footerListItemStyle}>Negambo Beach</li>
+            <li style={footerListItemStyle}>Peradeniya Botnical</li>
+            <li style={footerListItemStyle}>Tangalla</li>
           </ul>
         </div>
         <div style={footerSectionStyle}>
@@ -798,9 +799,9 @@ From your luxurious hotel room, you’ll enjoy breathtaking views of the ocean a
         <div style={footerSectionStyle}>
           <h4 style={footerSectionTitleStyle}>Contact Us</h4>
           <p>
-            Email: info@lahirutours.com
+            Email: info@lahirutours.co.uk
             <br />
-            Phone: 0094-91-2267027 | 0094-77-7614087
+            
           </p>
         </div>
       </footer>

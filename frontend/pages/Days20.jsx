@@ -205,8 +205,8 @@ function Days20() {
   };
 
   const photoStyle = {
-    width: '700px',
-    height: '500px',
+    width: '600px',
+    height: '600px',
     objectFit: 'cover',
     borderRadius: '20%',
     margin: '20px 0',
@@ -419,7 +419,7 @@ function Days20() {
       <div style={navbarStyle}>
       {/* Left Section: Logo */}
       <div>
-        <h1 style={{ margin: '0', padding: '0', fontSize: '1em' }}>lahirutours@gmail.com</h1>
+        <h1 style={{ margin: '0', padding: '0', fontSize: '1em' }}>info@lahirutours.co.uk</h1>
       </div>
       
       {/* Center Section: Navigation Links */}
@@ -474,18 +474,18 @@ function Days20() {
         
       </section>
       
-      <h1 style={h1Style}>6-Day Tour Package</h1>
+      <h1 style={h1Style}>20-Day Tour Package</h1>
       <main style={mainContentStyle}>
         <section style={tourPackagesStyle}>
           <div style={packageStyle}>
             <img
-              src="https://via.placeholder.com/700x500"
+              src="/Photos/Day20.gif"
               alt="Tour Image"
               style={{ ...photoStyle, alignSelf: 'center' }}
             />
             <div style={iconStyle}>
               <FontAwesomeIcon  icon={faBed} size="5x" />
-              <FontAwesomeIcon  icon={faUtensils} size="5x" />
+              <FontAwesomeIcon style={{padding:'10px'}}  icon={faUtensils} size="5x" />
               <FontAwesomeIcon  icon={faCar} size="5x" />  
               </div>
             <div style={{ ...packageDescriptionStyle, textAlign: 'left', alignItems: 'center' }}>
@@ -515,7 +515,7 @@ function Days20() {
 •	Visit St. Mary’s Church and Angurukaramulla Temple: Discover the religious heritage of Negombo by visiting St. Mary’s Church and the Angurukaramulla Temple.<br />
 Enjoy your first day soaking in the vibrant culture and picturesque landscapes of Negombo!<br />
 
-<img src="/Photos/ABC.png" alt="" />
+<img style={photoStyle} src="/Photos/Negambo.jpg" alt="" />
                     </p>
                   </div>
                 )}
@@ -545,7 +545,7 @@ Your first stop is Mihintale, where a fascinating climb rewards you with spectac
 Continue to the Ritigala Forest Monastery, a hidden gem in the lush greenery, where you’ll marvel at the ancient architecture and peaceful ambiance. Explore the intricate beauty of the Twin Baths (Kuttam Pokuna) and stand in awe of the majestic Ruwanweliseya Stupa, a symbol of Sri Lanka’s rich spiritual heritage.
 
 
-<img src="/Photos/ABC.png" alt="" />
+<img style={photoStyle} src="/Photos/Anuradhapura.jpg" alt="" />
                   </p>
                 </div>
                 )}
@@ -569,7 +569,7 @@ Continue to the Ritigala Forest Monastery, a hidden gem in the lush greenery, wh
                   <div>
                   <p>
                   Jaffna, located in the northern part of Sri Lanka, is a vibrant city with a rich cultural heritage and a unique blend of Tamil and Sri Lankan influences. Known for its historic temples, colonial architecture, and picturesque landscapes, Jaffna has long been a center of Tamil culture and tradition. The city features notable landmarks such as the Jaffna Fort, a 17th-century Dutch fortress, and the Nallur Kandaswamy Kovil, a significant Hindu temple. Jaffna's cuisine, characterized by its spicy and flavorful dishes, offers a taste of the region's distinct culinary traditions. Despite the challenges of recent history, Jaffna remains a resilient and culturally rich area, attracting visitors with its historical sites, cultural festivals, and warm hospitality.
-<img src="/Photos/ABC.png" alt="" />
+<img style={photoStyle} src="/Photos/Jaffna.jpg" alt="" />
                   </p>
                 </div>
                 )}
@@ -596,7 +596,7 @@ Continue to the Ritigala Forest Monastery, a hidden gem in the lush greenery, wh
                   Trincomalee, located on the northeast coast of Sri Lanka, is a bustling port city known for its stunning natural beauty and rich history. It boasts one of the finest natural harbors in the world, making it a strategic naval base. The city's attractions include pristine beaches like Nilaveli and Uppuveli, which are ideal for relaxation and water sports.
 
 Trincomalee is also home to significant cultural and historical sites, such as the Koneswaram Temple, an ancient Hindu shrine perched atop Swami Rock, and the Dutch Fort, a relic of the colonial era. The nearby Pigeon Island National Park offers opportunities for snorkeling and observing marine life. With its blend of scenic landscapes, historical landmarks, and vibrant local culture, Trincomalee is a captivating destination for travelers seeking both relaxation and exploration.
-<img src="/Photos/ABC.png" alt="" />
+<img style={photoStyle} src="/Photos/Trincomalee.jpg" alt="" />
                   </p>
                 </div>
                 )}
@@ -631,7 +631,7 @@ The city is renowned for its impressive ruins, including the Royal Palace, the G
 •	Relax: Experience the serene beauty of the Parakrama Reservoir at sunset.<br />
 •	Dinner: Indulge in a grand buffet dinner at the hotel.<br />
 •	Overnight: Stay in a comfortable hotel surrounded by the rural charm of Polonnaruwa.<br /><br />
-<img src="/Photos/ABC.png" alt="" />
+<img style={photoStyle} src="/Photos/Polonnaruwa.jpg" alt="" />
                   </p>
                   
                 </div>
@@ -680,7 +680,7 @@ The city is renowned for its impressive ruins, including the Royal Palace, the G
  Enjoy this day of cultural discovery and natural beauty as you immerse yourself in the rich heritage of Sri Lanka!<br /><br />
  
  
- <img src="/Photos/ABC.png" alt="" />
+ <img style={photoStyle} src="/Photos/Dambulla.jpg" alt="" />
                   </p>
                 </div>
                 )}
@@ -714,7 +714,7 @@ The city is renowned for its impressive ruins, including the Royal Palace, the G
 •	Enjoy your first Sri Lankan grand dinner buffet at the hotel: Savor a variety of local delicacies at the hotel buffet.<br />
 •	Take a walk around the Kandy Lake at night: End your day with a peaceful stroll around the picturesque Kandy Lake.<br />
 Enjoy your second day immersed in the cultural and historical richness of Kandy!<br />
-<img src="/Photos/ABC.png" alt="" />
+<img style={photoStyle} src="/Photos/Kandy.jpg" alt="" />
                   </p>
                 </div>
                 )}
@@ -749,7 +749,7 @@ Enjoy your second day immersed in the cultural and historical richness of Kand
 •	Check in at the cozy hotel in Nuwara Eliya and relax.<br />
 •	Visit Gregory Lake later to soak in the sunset.<br />
 •	Walk around chilly "Little England".<br />
-<img src="/Photos/ABC.png" alt="" />
+<img style={photoStyle} src="/Photos/Nuwaraeliya.jpg" alt="" />
                  </p>
                </div>
                 )}
@@ -775,7 +775,7 @@ Enjoy your second day immersed in the cultural and historical richness of Kand
                   World-Class Surfing: Arugam Bay is famous for its excellent surfing conditions, with waves suitable for various skill levels. The area is known for its consistent swells and is a favorite among surfers seeking thrilling rides and warm waters. <br />
                   Local Culture: The area has a vibrant local culture with a mix of traditional Sri Lankan charm and modern beach vibes. Visitors can explore local markets, enjoy fresh seafood at beachside restaurants, and experience traditional Sri Lankan hospitality <br />
                   
-<img src="/Photos/ABC.png" alt="" />
+<img style={photoStyle} src="/Photos/Arugambay.jpg" alt="" />
                   </p>
                 </div>
                 )}
@@ -835,7 +835,7 @@ Highlights:<br />
 •	 Mountains<br /><br />
 
 
-<img src="/Photos/ABC.png" alt="" />
+<img style={photoStyle} src="/Photos/Ella.jpg" alt="" />
                   </p>
                   
                 </div>
@@ -870,7 +870,7 @@ Just a short drive from Thissa lies Yala National Park, one of Sri Lanka’s pre
 <b>Relax by Scenic Lakes</b>
 
 Take a moment to unwind by the tranquil Tissa Wewa, a picturesque lake that offers serene views and peaceful surroundings. Enjoy a leisurely boat ride or simply relax by the water, soaking in the beauty of Sri Lanka’s natural landscape. The lakes around Thissa are perfect for a quiet escape from the hustle and bustle.
-<img src="/Photos/ABC.png" alt="" />
+<img style={photoStyle} src="/Photos/Thissa.jpg" alt="" />
                   </p>
                 </div>
                 )}
@@ -904,7 +904,7 @@ Hikkaduwa is a charming seaside resort town in southwestern Sri Lanka, renowned 
 Galle<br /><br />
 
 
-<img src="/Photos/ABC.png" alt="" />
+<img style={photoStyle} src="/Photos/Hikkaduwa.png" alt="" />
                   </p>
                   
                 </div>
@@ -947,7 +947,7 @@ Welcome to Bentota, the jewel of Sri Lanka's southern coast and the ultimate des
 •	Enjoy a seafood BBQ dinner on the beach.<br />
 •	Witness the beauty of a sunset over the Indian Ocean.<br />
 This day in Bentota offers a perfect blend of relaxation, adventure, and cultural experiences, making it a highlight of your Sri Lankan getaway.<br /><br /><br />
-<img src="/Photos/ABC.png" alt="" />
+<img style={photoStyle} src="/Photos/Bentota.jpg" alt="" />
                   </p>
                 </div>
                 )}
@@ -989,7 +989,7 @@ From your luxurious hotel room, you’ll enjoy breathtaking views of the ocean a
 •Experience Colombo’s nightlife at popular local clubs<br />
 •End of Your Sri Lanka Journey<br />
 <br /> 
-<img src="/Photos/ABC.png" alt="" />
+<img style={photoStyle} src="/Photos/Colombo.jpg" alt="" />
                     </p>
                     
                   </div>
@@ -997,7 +997,7 @@ From your luxurious hotel room, you’ll enjoy breathtaking views of the ocean a
                   
                 )}
                 <img
-              src="/Photos/Day 6.gif"
+              src="/Photos/Day 20.gif"
               alt="Tour Image"
               style={{ ...mapstyle }}
             />
@@ -1080,11 +1080,11 @@ From your luxurious hotel room, you’ll enjoy breathtaking views of the ocean a
         <div style={footerSectionStyle}>
           <h4 style={footerSectionTitleStyle}>Relaxing</h4>
           <ul style={footerListStyle}>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Hikkaduwa Beach</a></li>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Galle fort</a></li>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Negambo Beach</a></li>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Peradeniya Botnical</a></li>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Tangalla</a></li>
+            <li style={footerListItemStyle}>Hikkaduwa Beach</li>
+            <li style={footerListItemStyle}>Galle fort</li>
+            <li style={footerListItemStyle}>Negambo Beach</li>
+            <li style={footerListItemStyle}>Peradeniya Botnical</li>
+            <li style={footerListItemStyle}>Tangalla</li>
           </ul>
         </div>
         <div style={footerSectionStyle}>
@@ -1106,9 +1106,9 @@ From your luxurious hotel room, you’ll enjoy breathtaking views of the ocean a
         <div style={footerSectionStyle}>
           <h4 style={footerSectionTitleStyle}>Contact Us</h4>
           <p>
-            Email: info@lahirutours.com
+            Email: info@lahirutours.co.uk
             <br />
-            Phone: 0094-91-2267027 | 0094-77-7614087
+            
           </p>
         </div>
       </footer>

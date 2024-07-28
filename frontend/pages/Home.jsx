@@ -272,6 +272,24 @@ function Home() {
     borderRadius: '8px',
     display: 'inline-block',
   };
+  const aboutS = {
+    fontFamily:'Great Vibes',
+    fontSize: '2em',
+    margin: '0',
+    color: '#333',
+    padding: '10px',
+    borderRadius: '8px',
+    display: 'inline-block',
+  };
+  const aboutmore = {
+    fontFamily:'Great Vibes',
+    fontSize: '1.5em',
+    margin: '0',
+    color: '#00008B',
+    padding: '10px',
+    borderRadius: '8px',
+    display: 'inline-block',
+  };
   const custopic = {
     fontSize: '3em',
     marginTop: '500px',
@@ -378,7 +396,7 @@ function Home() {
   const h42Style = {
     marginTop: '40px',
     color: '#333',
-    backgroundColor:'#B0E0E6',
+    backgroundColor:'',
     textAlign: 'left',
     width: '60px',
     
@@ -386,10 +404,11 @@ function Home() {
 
   const formStyle = {
     flex: '1',
-    backgroundColor: '#B0E0E6',
+    backgroundColor: 'white',
     padding: '30px',
-    borderRadius: '8px',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 1)',
+    borderRadius: '',
+    border: '2px solid #3498db',
+    boxShadow: '0 4px 8px rgba(1, 1, 1, 1)',
     maxWidth: '300px',
     fontFamily: 'Arial, sans-serif',
     position: 'fixed',
@@ -398,7 +417,7 @@ function Home() {
     display: isformvisible ? 'block' : 'none', // Show/hide based on state
     right: '20px',
     zIndex: '999',
-    maxHeight:'100%',
+    maxHeight:'80%',
     marginRight: '103px',
   };
 
@@ -438,20 +457,20 @@ function Home() {
   };
 
   const bookbuttonstyle = {
-    fontSize: '1.6em',
-    backgroundColor: '#00796b',
-    color: 'white',
-    border: 'none',
-    padding: '20px 60px',
-    borderRadius: '5px',
-    cursor: 'hand',
-    transition: 'background-color 0.3s ease',
-    
+    backgroundColor: '#333',
+      color: 'white',
+      padding: '20px 20px',
+      border: 'none',
+      borderRadius: '4px',
+      cursor: 'pointer',
+      fontSize: '1.6em',
+      marginTop: '0px',
+      transition: 'background-color 0.3s ease',
     
   };
   const hoverStyle = {
     backgroundColor: '#0056b3',
-    transform: 'scale(0.5)',
+    transform: 'scale(1)',
   };
   
   
@@ -518,11 +537,11 @@ function Home() {
     setisformvisible(!isformvisible);
   };
   const iconStyle = {
-    fontSize: '0.9em',  // Adjust the font size
-    margin: '10px',   // Add margin around each icon
+    fontSize: '1.0em',  // Adjust the font size
+    margin: '20px',   // Add margin around each icon
     color: '#007bff',  // Change the icon color
     marginRight: '-120px',
-    marginTop:'-30px',
+    marginTop:'-20px',
     gap:'10px',
   };
   const icon2Style = {
@@ -559,7 +578,7 @@ function Home() {
 
     
   };
-
+  
  
   return (
     <div style={appStyle}>
@@ -567,7 +586,7 @@ function Home() {
       <div style={navbarStyle}>
       {/* Left Section: Logo */}
       <div>
-        <h1 style={{ margin: '0', padding: '0', fontSize: '1em' }}>lahirutours@gmail.com</h1>
+        <h1 style={{ margin: '0', padding: '0', fontSize: '1em' }}>info@lahirutours.co.uk</h1>
       </div>
       
       {/* Center Section: Navigation Links */}
@@ -634,99 +653,153 @@ function Home() {
 
       <div style={mainContentStyle}>
         <div style={tourPackagesStyle}>
+
+          
+         <p style={{fontSize:'1.5em',fontFamily:'Agraham'}}><b>
+          
+          <p style={{fontSize:'2em',}}>Welcome to Lahiru Tours: A Family-Run Travel Agency</p></b><br />
+<p>At Lahiru Tours, we pride ourselves on being more than just a travel agency. As a family-run business, we bring a personal touch and heartfelt dedication to every journey we plan. Our passion for travel and commitment to exceptional customer service stem from our deep love for Sri Lanka, and we are eager to share its wonders with you.</p>
+
+<p><br /><b>Our Story </b><br />
+Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing unique, memorable travel experiences that highlight the rich culture, history, and natural beauty of Sri Lanka. As Gamini’s family, we have explored every corner of this beautiful island, gaining insights and knowledge that we now use to create perfect travel itineraries for our guests.</p>
+
+<br /></p>
          
           <h2 style={h12Style}>Tour Packages</h2>
           <div style={packageOptionsStyle}>
 
-
-            <Link to="/Days6" style={packageStyle}>
-            <h4>Sri Lanka 6 Days Tour <br /> </h4>
-              <img src="https://images.unsplash.com/photo-1683647986987-bcd7c320f3a1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Njh8fHNyaSUyMGxhbmthJTIwdG91cmlzbXxlbnwwfHwwfHx8MA%3D%3D" alt="Package 1" style={packageImgStyle} />
+            <a style={packageStyle} href="/Days6">
+            
+            <h4>Sri Lanka 6 Days Tour</h4> <br />
+            
+              <img src="/Photos/Day6.gif" alt="Package 1" style={packageImgStyle} />
               <h4 style={h42Style}>Days 6</h4>
               <div style={iconStyle}>
-              <FontAwesomeIcon  icon={faBed} size="2x" />
-              <FontAwesomeIcon  icon={faUtensils} size="2x" />
-              <FontAwesomeIcon  icon={faCar} size="2x" />  
-              </div>
-                
-            </Link>
+              <FontAwesomeIcon  icon={faBed} size="1x" />
+              <FontAwesomeIcon  icon={faUtensils} size="1x" />
+              <FontAwesomeIcon  icon={faCar} size="1x" />  
+              </div>  
+            
+            </a>
 
-            <Link to="/Days8" style={packageStyle}>
-            <h4>Sri Lanka 8 Days Tour<br /> </h4>
-              <img src="https://images.unsplash.com/photo-1604293679030-7cfcd7174ab1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzJ8fHNyaSUyMGxhbmthJTIwdG91cmlzbXxlbnwwfHwwfHx8MA%3D%3D" alt="Package 2" style={packageImgStyle} />
+            <a style={packageStyle} href="/Days8">
+            
+            <h4>Sri Lanka 8 Days Tour</h4><br />
+              <img src="/Photos/Day8.gif" alt="Package 2" style={packageImgStyle} />
               <h4 style={h42Style}>Days 8</h4>
               <div style={iconStyle}>
-              <FontAwesomeIcon  icon={faBed} size="2x" />
-              <FontAwesomeIcon  icon={faUtensils} size="2x" />
-              <FontAwesomeIcon  icon={faCar} size="2x" />  
+              <FontAwesomeIcon  icon={faBed} size="1x" />
+              <FontAwesomeIcon  icon={faUtensils} size="1x" />
+              <FontAwesomeIcon  icon={faCar} size="1x" />  
               </div>
-            </Link>
+            
+            </a>
 
-            <Link to="/Days10" style={packageStyle}>
-            <h4>Sri Lanka 10 Days Tour<br /></h4>
-              <img src="https://images.unsplash.com/photo-1562827246-cc429d3bcf6f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzV8fHNyaSUyMGxhbmthJTIwdG91cmlzbXxlbnwwfHwwfHx8MA%3D%3D" alt="Package 3" style={packageImgStyle} />
+            <a style={packageStyle} href="/Days10">
+            <h4>Sri Lanka 10 Days Tour</h4><br />
+              <img src="/Photos/Day10.gif" alt="Package 3" style={packageImgStyle} />
               <h4 style={h42Style}>Days 10</h4>
               <div style={iconStyle}>
-              <FontAwesomeIcon  icon={faBed} size="2x" />
-              <FontAwesomeIcon  icon={faUtensils} size="2x" />
-              <FontAwesomeIcon  icon={faCar} size="2x" />  
+              <FontAwesomeIcon  icon={faBed} size="1x" />
+              <FontAwesomeIcon  icon={faUtensils} size="1x" />
+              <FontAwesomeIcon  icon={faCar} size="1x" />  
               </div>
-            </Link>
+            </a>
 
-            <Link to="/Days12" style={packageStyle}>
-            <h4>Sri Lanka 12 Days Tour</h4>
-              <img src="https://images.unsplash.com/photo-1526785436213-c732dac778b1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODd8fHNyaSUyMGxhbmthJTIwdG91cmlzbXxlbnwwfHwwfHx8MA%3D%3D" alt="Package 4" style={packageImgStyle} />
+
+            <a style={packageStyle} href="/Days12">
+            
+            <h4>Sri Lanka 12 Days Tour</h4><br />
+              <img src="/Photos/Day12.gif" alt="Package 4" style={packageImgStyle} />
               <h4 style={h42Style}>Days 12</h4>
               <div style={iconStyle}>
-              <FontAwesomeIcon  icon={faBed} size="2x" />
-              <FontAwesomeIcon  icon={faUtensils} size="2x" />
-              <FontAwesomeIcon  icon={faCar} size="2x" />  
+              <FontAwesomeIcon  icon={faBed} size="1x" />
+              <FontAwesomeIcon  icon={faUtensils} size="1x" />
+              <FontAwesomeIcon  icon={faCar} size="1x" />  
               </div>
-            </Link>
             
-            <Link to="/Days15" style={packageStyle}>
-            <h4>Sri Lanka 15 Days Tour</h4>
-              <img src="https://images.unsplash.com/photo-1580910531902-1112518b26ea?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTAyfHxzcmklMjBsYW5rYSUyMHRvdXJpc218ZW58MHx8MHx8fDA%3D" alt="Package 5" style={packageImgStyle} />
+            </a>
+
+
+
+            <a style={packageStyle} href="/Days15">
+           
+            <h4>Sri Lanka 15 Days Tour</h4><br />
+              <img src="/Photos/Day15.gif" alt="Package 5" style={packageImgStyle} />
               <h4 style={h42Style}>Days 15</h4>
               <div style={iconStyle}>
-              <FontAwesomeIcon  icon={faBed} size="2x" />
-              <FontAwesomeIcon  icon={faUtensils} size="2x" />
-              <FontAwesomeIcon  icon={faCar} size="2x" />  
+              <FontAwesomeIcon  icon={faBed} size="1x" />
+              <FontAwesomeIcon  icon={faUtensils} size="1x" />
+              <FontAwesomeIcon  icon={faCar} size="1x" />  
               </div>
-            </Link>
+            
+            </a>
 
-            <Link to="/Days18" style={packageStyle}>
-            <h4>Sri Lanka 18 Days Tour</h4>
-              <img src="https://images.unsplash.com/photo-1527248709254-0f1a6b5d297a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTI3fHxzcmklMjBsYW5rYSUyMHRvdXJpc218ZW58MHx8MHx8fDA%3D" alt="Package 6" style={packageImgStyle} />
+
+            <a style={packageStyle} href="/Days18">
+           
+            <h4>Sri Lanka 18 Days Tour</h4><br />
+              <img src="/Photos/Day18.gif" alt="Package 6" style={packageImgStyle} />
               <h4 style={h42Style}>Days 18</h4>
               <div style={iconStyle}>
-              <FontAwesomeIcon  icon={faBed} size="2x" />
-              <FontAwesomeIcon  icon={faUtensils} size="2x" />
-              <FontAwesomeIcon  icon={faCar} size="2x" />  
+              <FontAwesomeIcon  icon={faBed} size="1x" />
+              <FontAwesomeIcon  icon={faUtensils} size="1x" />
+              <FontAwesomeIcon  icon={faCar} size="1x" />  
               </div>
-            </Link>
+           
+            </a>
 
-            <Link to="/Days182" style={packageStyle}>
+
+            <a style={packageStyle} href="/Days182">
+            
             <h4>Sri Lanka 18 Days North &South Round Tour</h4>
-              <img src="https://images.unsplash.com/photo-1684758404779-388d63ffafb4?q=80&w=1963&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Package 7" style={packageImgStyle} />
+              <img src="/Photos/Day18n.gif" alt="Package 7" style={packageImgStyle} />
               <h4 style={h42Style}>Days 18</h4>
               <div style={iconStyle}>
-              <FontAwesomeIcon  icon={faBed} size="2x" />
-              <FontAwesomeIcon  icon={faUtensils} size="2x" />
-              <FontAwesomeIcon  icon={faCar} size="2x" />  
+              <FontAwesomeIcon  icon={faBed} size="1x" />
+              <FontAwesomeIcon  icon={faUtensils} size="1x" />
+              <FontAwesomeIcon  icon={faCar} size="1x" />  
               </div>
-            </Link>
+           
+            </a>
 
-            <Link to="/Days20" style={packageStyle}>
-            <h4>Sri Lanka 20 Days Tour</h4>
-              <img src="https://images.unsplash.com/photo-1697375877233-9d44fa4f68c7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTU1fHxzcmklMjBsYW5rYSUyMHRvdXJpc218ZW58MHx8MHx8fDA%3D" alt="Package 8" style={packageImgStyle} />
+
+            <a style={packageStyle} href="/Days20">
+            
+            <h4>Sri Lanka 20 Days Tour</h4><br />
+              <img src="/Photos/Day20.gif" alt="Package 8" style={packageImgStyle} />
               <h4 style={h42Style}>Days 20</h4>
               <div style={iconStyle}>
-              <FontAwesomeIcon  icon={faBed} size="2x" />
-              <FontAwesomeIcon  icon={faUtensils} size="2x" />
-              <FontAwesomeIcon  icon={faCar} size="2x" />  
+              <FontAwesomeIcon  icon={faBed} size="1x" />
+              <FontAwesomeIcon  icon={faUtensils} size="1x" />
+              <FontAwesomeIcon  icon={faCar} size="1x" />  
               </div>
-            </Link> <br /><br />
+            
+            </a>
+
+            <div>
+            <p><p style={{fontSize:'40px'}}> <b> Why Choose Lahiru Tours?</b></p><br />
+            <p style={{fontSize:'1.5em'}}>
+<b>Personal Touch:</b> As a family-run business, we treat every guest as an extension of our family. This means you receive personalized service and attention to detail that larger companies can't offer. <br />
+<b>Expert Knowledge:</b> Our extensive local knowledge allows us to craft unique itineraries that showcase the best of Sri Lanka. Whether it's hidden gems or popular landmarks, we ensure your experience is authentic and enriching.<br />
+<b>Passionate Team:</b> Our team consists of family members and close friends who share a passion for travel and hospitality. We are committed to providing warm, friendly, and professional service to make your trip unforgettable.<br />
+<b>Customized Experiences:</b> We understand that every traveler is unique. That's why we offer tailor-made tours that cater to your interests, preferences, and pace. Whether you're seeking adventure, relaxation, or cultural immersion, we design the perfect trip for you.<br />
+<b>Sustainable Tourism:</b> As locals, we are committed to preserving the natural beauty and cultural heritage of Sri Lanka. We support eco-friendly practices and promote responsible tourism to ensure that future generations can enjoy the wonders of our island.</p><br />
+<h1><b><p style={{fontSize:'30px'}}>Our Services</p></b></h1>
+<p style={{fontSize:'1.5em'}}><b>Custom Tours:</b> Personalized itineraries designed to suit your interests and needs. <br />
+<b>Cultural Excursions:</b> Explore Sri Lanka’s rich history and heritage with knowledgeable guides.<br />
+<b>Adventure Trips:</b> From surfing and hiking to wildlife safaris, experience thrilling adventures.<br />
+<b>Family Vacations:</b> Fun and engaging activities for travelers of all ages.<br />
+<b>Luxury Travel:</b> Enjoy the finest accommodations and exclusive experiences. <br /><br />
+Join the Lahiru Tours Family
+Embark on a journey with Lahiru Tours and discover the true essence of Sri Lanka. Let our family take care of yours, and create memories that will last a lifetime. We look forward to welcoming you to our beautiful island and providing you with an exceptional travel experience.</p>
+
+<br /><p style={{fontSize:'1.7em'}}>Contact Us Today
+
+Lahiru Tours – Where Family, Passion, and Adventure Meet!</p></p>
+            </div>
+            
+             <br /><br />
             <p style={desstyle}>We offer both cars and vans to suit your preferences. We recommend cars for couples and vans for small groups, but your choice always comes first. All our vehicles are fully air-conditioned to ensure a comfortable and safe ride. Our partner hotels provide great comfort, excellent food, and high-standard services. We strive to deliver the best experience to ensure you have a highly satisfactory tour with us.
 
 Tour PackagesWe offer flexible and engaging packages designed to help you enjoy and relax during your stay in Sri Lanka. Our packages are reasonably priced and include very comfortable hotels and meals tailored to your preferences.</p>
@@ -837,11 +910,11 @@ Tour PackagesWe offer flexible and engaging packages designed to help you enjoy 
         <div style={footerSectionStyle}>
           <h4 style={footerSectionTitleStyle}>Relaxing</h4>
           <ul style={footerListStyle}>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Hikkaduwa Beach</a></li>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Galle fort</a></li>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Negambo Beach</a></li>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Peradeniya Botnical</a></li>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Tangalla</a></li>
+            <li style={footerListItemStyle}>Hikkaduwa Beach</li>
+            <li style={footerListItemStyle}>Galle fort</li>
+            <li style={footerListItemStyle}>Negambo Beach</li>
+            <li style={footerListItemStyle}>Peradeniya Botnical</li>
+            <li style={footerListItemStyle}>Tangalla</li>
           </ul>
         </div>
         <div style={footerSectionStyle}>
@@ -863,9 +936,9 @@ Tour PackagesWe offer flexible and engaging packages designed to help you enjoy 
         <div style={footerSectionStyle}>
           <h4 style={footerSectionTitleStyle}>Contact Us</h4>
           <p>
-            Email: info@lahirutours.com
+            Email: info@lahirutours.co.uk
             <br />
-            Phone: 0094-91-2267027 | 0094-77-7614087
+            
           </p>
         </div>
       </footer>

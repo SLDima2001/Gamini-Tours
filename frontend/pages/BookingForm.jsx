@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 
 // Stripe public key
@@ -13,6 +13,7 @@ function BookingForm() {
     persons: 1,
     fromDate: '',
     toDate: '',
+    agreement: false,
   });
 
   const [packages, setPackages] = useState([
@@ -28,6 +29,8 @@ function BookingForm() {
 
   const [totalAmount, setTotalAmount] = useState(0);
   const [timePeriod, setTimePeriod] = useState('');
+  const [showTerms, setShowTerms] = useState(false);
+  const modalRef = useRef(null);
 
   // Styles
   const styles = {
@@ -40,10 +43,12 @@ function BookingForm() {
       minHeight: '100vh',
     },
     header: {
+      display: 'flex',
       justifyContent: 'center',
       padding: '20px',
       backgroundColor: '#ADD8E6',
       color: 'black',
+      position: 'relative',
     },
     logoImg: {
       height: '80px',
@@ -60,6 +65,21 @@ function BookingForm() {
     contactInfo: {
       marginLeft: 'auto',
     },
+    backButton: {
+      position: '',
+      height:'50px',
+      width:'100px',
+      top: '20px',
+      left: '20px',
+      backgroundColor: '#3498db',
+      color: 'white',
+      border: 'none',
+      borderRadius: '4px',
+      cursor: 'pointer',
+      fontSize: '1em',
+      padding: '10px 15px',
+      transition: 'background-color 0.3s ease',
+    },
     mainContent: {
       display: 'flex',
       flexDirection: 'row',
@@ -74,7 +94,7 @@ function BookingForm() {
       padding: '20px',
       borderRadius: '8px',
       boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-      backgroundColor: '',
+      backgroundColor: '#f9f9f9',
       fontSize: '1.3em',
       border: '2px solid #3498db',
     },
@@ -85,6 +105,7 @@ function BookingForm() {
       boxSizing: 'border-box',
       fontSize: '1em',
       border: '2px solid #3498db',
+      borderRadius: '4px',
     },
     button: {
       backgroundColor: '#333',
@@ -103,21 +124,84 @@ function BookingForm() {
       padding: '20px',
       borderRadius: '5px',
       boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-      backgroundColor: '',
+      backgroundColor: '#f9f9f9',
       fontSize: '1.3em',
-      marginBottom:'20%',
-      marginRight:'30%',
+      marginBottom: '20%',
+      marginRight: '30%',
       border: '2px solid #3498db',
-
     },
-    
+    termsContainer: {
+      margin: '20px 0',
+      textAlign: 'left',
+      fontSize: '0.9em',
+      borderTop: '1px solid #ddd',
+      paddingTop: '10px',
+    },
+    termsButton: {
+      color: '#3498db',
+      border: 'none',
+      background: 'none',
+      cursor: 'pointer',
+      textDecoration: 'underline',
+    },
+    modal: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      position: 'fixed',
+      left: '0',
+      top: '0',
+      width: '100%',
+      height: '100%',
+      backgroundColor: 'rgba(0, 0, 0, 0.7)',
+      zIndex: '1000',
+      transition: 'opacity 0.3s ease',
+    },
+    modalContent: {
+      backgroundColor: 'white',
+      padding: '20px',
+      borderRadius: '8px',
+      width: '80%',
+      maxWidth: '600px',
+      position: 'relative',
+      animation: 'fadeIn 0.5s ease-out',
+    },
+    closeButton: {
+      position: 'absolute',
+      top: '10px',
+      right: '10px',
+      background: 'none',
+      border: 'none',
+      fontSize: '1.5em',
+      cursor: 'pointer',
+      color: '#3498db',
+    },
+    '@keyframes fadeIn': {
+      '0%': { opacity: 0 },
+      '100%': { opacity: 1 },
+    },
+    personButton: {
+      backgroundColor: '#3498db',
+      color: 'white',
+      border: 'none',
+      borderRadius: '4px',
+      cursor: 'pointer',
+      fontSize: '1.5em',
+      padding: '10px 20px',
+      margin: '0 5px',
+      transition: 'background-color 0.3s ease',
+    },
+    personCount: {
+      fontSize: '1.5em',
+      margin: '0 10px',
+    },
   };
 
   const handleInputChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value, type, checked } = e.target;
     setFormData({
       ...formData,
-      [name]: value,
+      [name]: type === 'checkbox' ? checked : value,
     });
   };
 
@@ -146,6 +230,11 @@ function BookingForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (!formData.agreement) {
+      alert('Please agree to the terms before submitting.');
+      return;
+    }
+
     try {
       const response = await fetch('http://localhost:5555/send-email/form2', {
         method: 'POST',
@@ -162,7 +251,7 @@ function BookingForm() {
       alert('Booking successful!');
       await makePayment();
     } catch (error) {
-      console.alert('Error booking tour:', error);
+      console.error('Error booking tour:', error);
       alert('Booking failed!');
     }
   };
@@ -188,30 +277,24 @@ function BookingForm() {
   };
 
   const incrementPersons = () => {
-    setFormData({
-      ...formData,
-      persons: formData.persons + 1,
-    });
+    setFormData((prevData) => ({
+      ...prevData,
+      persons: prevData.persons + 1,
+    }));
   };
 
   const decrementPersons = () => {
-    if (formData.persons > 1) {
-      setFormData({
-        ...formData,
-        persons: formData.persons - 1,
-      });
-    }
+    setFormData((prevData) => ({
+      ...prevData,
+      persons: Math.max(1, prevData.persons - 1),
+    }));
   };
 
   const getTodayDate = () => {
     const today = new Date();
     const year = today.getFullYear();
-    let month = today.getMonth() + 1;
-    let day = today.getDate();
-
-    if (month < 10) month = '0' + month;
-    if (day < 10) day = '0' + day;
-
+    const month = String(today.getMonth() + 1).padStart(2, '0');
+    const day = String(today.getDate()).padStart(2, '0');
     return `${year}-${month}-${day}`;
   };
 
@@ -223,11 +306,27 @@ function BookingForm() {
     calculateTimePeriod();
   }, [formData.fromDate, formData.toDate]);
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (modalRef.current && !modalRef.current.contains(event.target)) {
+        setShowTerms(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
   return (
     <div style={styles.app}>
       <header style={styles.header}>
-        <div style={{ display: 'flex', alignItems: 'center' }}>
-          <img src="/Photos/logo.gif" alt="Logo" style={styles.logoImg} />
+        
+        <div>
+          <img
+            src="/Photos/logo.gif"
+            alt="Logo"
+            style={styles.logoImg}
+          />
           <div>
             <h1 style={styles.h1}>Booking Form</h1>
             <p style={styles.para}>Book your dream tour today!</p>
@@ -237,11 +336,17 @@ function BookingForm() {
           <p></p>
         </div>
       </header>
-
+      <button
+          type="button"
+          onClick={() => window.history.back()}
+          style={styles.backButton}
+        >
+          &larr; Back
+        </button>
       <div style={styles.mainContent}>
         <div style={styles.formContainer}>
           <h2>Book Your Tour</h2>
-          
+
           <form onSubmit={handleSubmit}>
             <input
               type="text"
@@ -284,11 +389,10 @@ function BookingForm() {
                 </option>
               ))}
             </select>
-            <div>
-              <label>Number of Persons: </label>
-              <button type="button" onClick={decrementPersons}>-</button>
-              <span>{formData.persons}</span>
-              <button type="button" onClick={incrementPersons}>+</button>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <button type="button" onClick={decrementPersons} style={styles.personButton}>-</button>
+              <span style={styles.personCount}>{formData.persons}</span>
+              <button type="button" onClick={incrementPersons} style={styles.personButton}>+</button>
             </div>
             <label>From Date: </label>
             <input
@@ -310,10 +414,30 @@ function BookingForm() {
               style={styles.input}
               required
             />
+
+            {/* Terms and Conditions Button */}
+            <div style={styles.termsContainer}>
+              <label>
+                <input
+                  type="checkbox"
+                  name="agreement"
+                  checked={formData.agreement}
+                  onChange={handleInputChange}
+                />
+                I agree to the{' '}
+                <button
+                  type="button"
+                  onClick={() => setShowTerms(true)}
+                  style={styles.termsButton}
+                >
+                  terms and conditions
+                </button>
+              </label>
+            </div>
+
             <button type="submit" style={styles.button}>
               Book Now
             </button>
-           
           </form>
         </div>
 
@@ -321,9 +445,40 @@ function BookingForm() {
           <h2>Summary</h2>
           <p>Time Period: {timePeriod}</p>
           <p>Total Amount: ${totalAmount}</p>
-          
         </div>
       </div>
+
+      {/* Modal for Terms and Conditions */}
+      {showTerms && (
+        <div style={styles.modal}>
+          <div ref={modalRef} style={styles.modalContent}>
+            <button
+              type="button"
+              onClick={() => setShowTerms(false)}
+              style={styles.closeButton}
+            >
+              &times;
+            </button>
+            <h3>Terms and Conditions</h3>
+            <p>Please read these terms and conditions carefully before using our service.</p>
+            <p>1. Payment Terms: Full payment is required at the time of booking.</p>
+            <p>2. Cancellation Policy: Cancellations made within 48 hours of booking are eligible for a full refund. Cancellations made after 48 hours are non-refundable.</p>
+            <p>3. Changes to Bookings: Changes to bookings may be made up to 7 days before the start date of the tour.</p>
+            <p>4. Liability: We are not liable for any loss or damage to personal property during the tour.</p>
+            <p>5. Health and Safety: Ensure you are in good health and fit to travel. We reserve the right to refuse service if we believe it is unsafe.</p>
+            <p>6. Governing Law: These terms are governed by the laws of the jurisdiction in which we operate.</p>
+            <label>
+              <input
+                type="checkbox"
+                name="agreement"
+                checked={formData.agreement}
+                onChange={handleInputChange}
+              />
+              I agree to these terms and conditions
+            </label>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

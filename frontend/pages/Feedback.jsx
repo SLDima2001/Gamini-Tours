@@ -64,7 +64,7 @@ const Feedback = ({ backgroundImageUrl }) => {
     Axios.post('http://localhost:5555/feedback', data)
       .then(() => {
         setLoading(false);
-        navigate('/');
+        navigate('/Afterfeedback');
       })
       .catch((error) => {
         setLoading(false);
@@ -365,7 +365,7 @@ const Feedback = ({ backgroundImageUrl }) => {
       <div style={styles.navbarStyle}>
       {/* Left Section: Logo */}
       <div>
-        <h1 style={{ margin: '0', padding: '0', fontSize: '1em' }}>lahirutours@gmail.com</h1>
+        <h1 style={{ margin: '0', padding: '0', fontSize: '1em' }}>info@lahirutours.co.uk</h1>
       </div>
       
       {/* Center Section: Navigation Links */}
@@ -518,11 +518,11 @@ const Feedback = ({ backgroundImageUrl }) => {
         <div style={styles.footerSectionStyle}>
           <h4 style={styles.footerSectionTitleStyle}>Relaxing</h4>
           <ul style={styles.footerListStyle}>
-            <li style={styles.footerListItemStyle}><a href="#" style={styles.socialLinkStyle}>Hikkaduwa Beach</a></li>
-            <li style={styles.footerListItemStyle}><a href="#" style={styles.socialLinkStyle}>Galle fort</a></li>
-            <li style={styles.footerListItemStyle}><a href="#" style={styles.socialLinkStyle}>Negambo Beach</a></li>
-            <li style={styles.footerListItemStyle}><a href="#" style={styles.socialLinkStyle}>Peradeniya Botnical</a></li>
-            <li style={styles.footerListItemStyle}><a href="#" style={styles.socialLinkStyle}>Tangalla</a></li>
+            <li style={styles.footerListItemStyle}>Hikkaduwa Beach</li>
+            <li style={styles.footerListItemStyle}>Galle fort</li>
+            <li style={styles.footerListItemStyle}>Negambo Beach</li>
+            <li style={styles.footerListItemStyle}>Peradeniya Botnical</li>
+            <li style={styles.footerListItemStyle}>Tangalla</li>
           </ul>
         </div>
         <div style={styles.footerSectionStyle}>
@@ -544,9 +544,9 @@ const Feedback = ({ backgroundImageUrl }) => {
         <div style={styles.footerSectionStyle}>
           <h4 style={styles.footerSectionTitleStyle}>Contact Us</h4>
           <p>
-            Email: info@lahirutours.com
+            Email: info@lahirutours.co.uk
             <br />
-            Phone: 0094-91-2267027 | 0094-77-7614087
+            
           </p>
         </div>
       </footer>
