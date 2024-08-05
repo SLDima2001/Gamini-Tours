@@ -13,6 +13,7 @@
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "@react-spring/web": "^9.7.4",
     "@stripe/react-stripe-js": "^2.7.3",
     "@stripe/stripe-js": "^4.1.0",
     "axios": "^1.7.2",
@@ -25,7 +26,8 @@
     "react-router-dom": "^6.24.1",
     "react-spring": "^9.7.3",
     "react-toastify": "^10.0.5",
-    "styled-components": "^6.1.11",
+    "react-transition-group": "^4.4.5",
+    "styled-components": "^6.1.12",
     "tailwind-merge": "^2.4.0"
   },
   "devDependencies": {

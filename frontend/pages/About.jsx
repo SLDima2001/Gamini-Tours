@@ -11,16 +11,18 @@ function About() {
   const [isNavbarVisible, setIsNavbarVisible] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
+  
   const appStyle = {
     textAlign: 'center',
     fontFamily: 'Arial, sans-serif',
-    backgroundColor: '', // Light blue background color
+    backgroundColor: 'white',
     display: 'flex',
     flexDirection: 'column',
-    minHeight: '100vh', // Ensure app takes up full viewport height
+    minHeight: '100vh',
+    overflow: 'hidden',
   };
   const bookbuttonstyle = {
-    backgroundColor: '#333',
+    backgroundColor: '#4682B4',
       color: 'white',
       padding: '20px 20px',
       border: 'none',
@@ -147,7 +149,7 @@ function About() {
 
   const h2Style = {
     fontFamily:'Rockybilly',
-    color: '#4CAF50',
+    color: '#4682B4',
     fontSize:'4em',
   };
 
@@ -155,7 +157,7 @@ function About() {
     fontFamily:'Feeling Lovely',
     fontSize: '2.5em',
     color: '#333',
-    textAlign:'left',
+    textAlign:'center',
   };
   const pStyle1 = {
     fontFamily:'Awesome Season Personal',
@@ -167,7 +169,7 @@ function About() {
     fontFamily:'Great Vibes',
     fontSize: '1em',
     color: '#333',
-    textAlign:'left',
+    textAlign:'center',
   };
 
   const tourPackagesStyle = {
@@ -198,9 +200,10 @@ function About() {
   };
 
   const photodesstyle = {
-    fontSize:'30px',
+    fontSize:'40px',
     marginTop: '10px',
     color: '#333',
+    justifyContent:'center'
   };
 
   const footerStyle = {
@@ -263,12 +266,15 @@ function About() {
 
   
   return (
+    
     <div style={appStyle}>
+    
+
       <header style={header1style} >
       <div style={navbarStyle}>
       {/* Left Section: Logo */}
       <div>
-        <h1 style={{ margin: '0', padding: '0', fontSize: '1em' }}>info@lahirutours.co.uk</h1>
+        <h1 style={{ margin: '0', padding: '0', fontSize: '2em' }}><b>info@lahirutours.co.uk</b></h1>
       </div>
       
       {/* Center Section: Navigation Links */}
@@ -279,13 +285,13 @@ function About() {
       {/* Right Section: Buttons */}
       <div style={buttonContainerStyle}>
       <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
-          <FaFacebook size={24} />
+          <FaFacebook size={30} />
         </a>
         <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
-          <FaInstagram size={24} />
+          <FaInstagram size={30} />
         </a>
         <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" style={{  padding: '10px 20px', cursor: 'pointer' }} >
-          <FaTiktok size={24}  />
+          <FaTiktok size={30}  />
   </a>
 
         {/* Add more buttons as needed */}
@@ -304,15 +310,15 @@ function About() {
   {/* Center Section: Navigation Links */}
   <div style={navLinksStyle}>
     <a href="/" style={linkStyle}>Home</a>
-    <a href="/About" style={linkStyle}>About</a>
+    <a href="/About" style={linkStyle}>About Us</a>
     <a href="/TourPackages" style={linkStyle}>Tour Packages</a>
     <a href="/ContactUS" style={linkStyle}>Contact</a>
     <a href="/feedback" style={linkStyle}>FAQ</a>
   </div>
   <div style={{ marginRight: '10px',marginTop:'19px' }}> {/* Right-aligned content */}
-  <Link to="/BookingForm" style={bookbuttonstyle}>
-          Book Now !
-            </Link> 
+    <a style={bookbuttonstyle} href="/BookingForm">
+   <b>Book Now</b>
+   </a>
   </div>
   
   
@@ -323,32 +329,55 @@ function About() {
       </section>
      
       <main style={mainContentStyle}>
-        <h2 style={h2Style}>Lahiru Tours</h2>
+        <h2 style={h2Style}><b>Lahiru Tours</b></h2><br /><br />
 
-        <div style={{display:'flex',gap:'600px'}}>
+        <div style={{display:'flex',gap:'40%',alignContent:'center'}}>
 
 
           <div>
-        <img style={{height:'500px'}} src="/Photos/Dad1.jpg" alt="" />
-        <h1 style={photodesstyle}>1996</h1>
+        <img style={{height:'550px',marginLeft:'',alignContent:'center'}} src="/Photos/Dad1.jpg" alt="" />
+        <h1 style={photodesstyle}><b>Our begining in 1996</b></h1>
         </div>
 
 
         <div>
-       <img style={{height:'500px'}} src="/Photos/Dad2.jpg" alt="" />
+       <img style={{height:'550px',alignContent:'center'}} src="/Photos/Dad2.jpg" alt="" />
+       <h1 style={photodesstyle}><b>Our begining in 1996</b></h1>
         </div>
 
         </div>
        
-        <div>
+        <div style={{alignItems:'center'}}>
         <p style={pStyle1}>
-       <b> Welcome to Lahiru Tours: Your Gateway to Sri Lanka </b> <br /></p>
+       <br /><br /><b> Welcome to Lahiru Tours: Your Gateway to Sri Lanka </b> <br /></p><br /><br />
       
-<p style={pStyle}>‘Where Family, Passion, and Adventure Meet’</p>
+<p style={pStyle}><b>‘Where Family, Passion, and Adventure Meet’</b></p>
 
 <p style={pStyle}>At Lahiru Tours, we believe that travel is more than just visiting new places—it's about creating unforgettable memories and experiencing the heart and soul of a destination. As a family-run travel agency with over two decades of experience, we bring a personal touch and deep local knowledge to every journey we plan.
-<br /><b>Our Story</b><br />
+<br /><br /><br /><b>Our Story</b><br />
+<div  style={{display:'flex',gap:'15%',width:'auto',height:'auto'}}>
+  <div>
+<img style={{width:''}} src="/Photos/1.jpg" alt="Photo" />
+</div>
+<div>
+<img src="/Photos/2.jpg" alt="Photo" />
+</div>
+<div>
+<img src="/Photos/3.jpg" alt="Photo" />
+</div>
+
+</div>
 Founded in 1996 by Gamini, Lahiru Tours was born from a passion for showcasing the rich culture, history, and natural beauty of Sri Lanka. Our family has explored every corner of this stunning island, gaining unique insights and knowledge that we use to craft perfect travel itineraries for our guests.
+
+<div style={{display:'flex',gap:'40%'}}>
+  <div>
+<img src="/Photos/4.jpg" alt="Photo" />
+</div>
+<div>
+<img src="/Photos/5.jpg" alt="Photo" />
+</div>
+
+</div>
 <br /><b>Why Choose Lahiru Tours?</b><br />
 <p style={pStyle2}><b>•	Personal Touch:</b> We treat every guest like a member of our own family, ensuring you receive personalized service and attention to detail that larger companies can't offer.<br />
 <b>•	Expert Knowledge:</b> Our extensive local expertise allows us to create unique itineraries that highlight both hidden gems and popular landmarks, offering an authentic and enriching experience.<br />

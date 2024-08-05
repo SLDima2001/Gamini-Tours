@@ -78,25 +78,26 @@ function ContactUS() {
     minHeight: '200px',
   };
   const bookbuttonstyle = {
-    fontSize: '1.6em',
-    backgroundColor: '#00796b',
-    color: 'white',
-    border: 'none',
-    padding: '20px 60px',
-    borderRadius: '5px',
-    cursor: 'hand',
-    transition: 'background-color 0.3s ease',
-    
+    backgroundColor: '#4682B4',
+      color: 'white',
+      padding: '20px 20px',
+      border: 'none',
+      borderRadius: '4px',
+      cursor: 'pointer',
+      fontSize: '1.6em',
+      marginTop: '0px',
+      transition: 'background-color 0.3s ease',
     
   };
   const buttonStyle = {
-    backgroundColor: 'blue',
+    backgroundColor: '#4682B4',
     color: 'white',
     border: 'none',
-    padding: '12px 20px',
+    padding: '1px 50px',
     borderRadius: '',
     cursor: 'pointer',
     transition: 'background-color 0.3s ease',
+    fontSize:'2em',
   };
 
   const labelStyle = {
@@ -293,21 +294,18 @@ function ContactUS() {
   };
   const formStyle = {
     flex: '1',
-    backgroundColor: 'white',
-    padding: '100px',
+    backgroundColor: 'rgba(255, 255, 255, 0.8)',
+    padding: '20px',
     border: '2px solid #3498db',
-    borderRadius: '0px',
+    borderRadius: '20px',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 1)',
     maxWidth: '30%',
     fontFamily: 'Arial, sans-serif',
     position: 'center',
-    top: '400px', // To align with the header
-    bottom:'20px',
-    right: '20px',
     zIndex: '999',
-    minHeight:'90%',
-    marginLeft:'750px',
-    
+    minHeight:'80vh',
+    marginLeft:'850px',
+    alignItems: 'center',
   };
 
 
@@ -317,7 +315,7 @@ function ContactUS() {
       <div style={navbarStyle}>
       {/* Left Section: Logo */}
       <div>
-        <h1 style={{ margin: '0', padding: '0', fontSize: '1em' }}>info@lahirutours.co.uk</h1>
+        <h1 style={{ margin: '0', padding: '0', fontSize: '2em' }}> <b> info@lahirutours.co.uk</b></h1>
       </div>
       
       {/* Center Section: Navigation Links */}
@@ -328,13 +326,13 @@ function ContactUS() {
       {/* Right Section: Buttons */}
       <div style={buttonContainerStyle}>
       <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
-          <FaFacebook size={24} />
+          <FaFacebook size={30} />
         </a>
         <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
-          <FaInstagram size={24} />
+          <FaInstagram size={30} />
         </a>
         <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" style={{  padding: '10px 20px', cursor: 'pointer' }} >
-          <FaTiktok size={24}  />
+          <FaTiktok size={30}  />
   </a>
 
         {/* Add more buttons as needed */}
@@ -353,13 +351,15 @@ function ContactUS() {
   {/* Center Section: Navigation Links */}
   <div style={navLinksStyle}>
     <a href="/" style={linkStyle}>Home</a>
-    <a href="/About" style={linkStyle}>About</a>
+    <a href="/About" style={linkStyle}>About Us</a>
     <a href="/TourPackages" style={linkStyle}>Tour Packages</a>
     <a href="/ContactUS" style={linkStyle}>Contact</a>
     <a href="/feedback" style={linkStyle}>FAQ</a>
   </div>
   <div style={{ marginRight: '10px',marginTop:'19px' }}> {/* Right-aligned content */}
- 
+  <Link to="/BookingForm" style={bookbuttonstyle}>
+          Book Now
+            </Link> 
   </div>
   
   
@@ -414,7 +414,7 @@ function ContactUS() {
             style={textareaStyle}
             required
           ></textarea>
-          <button type="submit" style={buttonStyle}>Inquiry</button>
+          <button type="submit" style={buttonStyle}>Submit</button>
         </form>
       </section>
       <footer style={footerStyle}>

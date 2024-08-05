@@ -352,6 +352,17 @@ const Feedback = ({ backgroundImageUrl }) => {
       color: 'white',
       textDecoration: 'none',
     },
+    bookbuttonstyle:{
+      backgroundColor: '#4682B4',
+      color: 'white',
+      padding: '20px 20px',
+      border: 'none',
+      borderRadius: '4px',
+      cursor: 'pointer',
+      fontSize: '1.6em',
+      marginTop: '0px',
+      transition: 'background-color 0.3s ease',
+    },
   };
 
 
@@ -365,7 +376,7 @@ const Feedback = ({ backgroundImageUrl }) => {
       <div style={styles.navbarStyle}>
       {/* Left Section: Logo */}
       <div>
-        <h1 style={{ margin: '0', padding: '0', fontSize: '1em' }}>info@lahirutours.co.uk</h1>
+        <h1 style={{ margin: '0', padding: '0', fontSize: '2em' }}><b>info@lahirutours.co.uk</b></h1>
       </div>
       
       {/* Center Section: Navigation Links */}
@@ -376,13 +387,13 @@ const Feedback = ({ backgroundImageUrl }) => {
       {/* Right Section: Buttons */}
       <div style={styles.buttonContainerStyle}>
       <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
-          <FaFacebook size={24} />
+          <FaFacebook size={30} />
         </a>
         <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
-          <FaInstagram size={24} />
+          <FaInstagram size={30} />
         </a>
         <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" style={{  padding: '10px 20px', cursor: 'pointer' }} >
-          <FaTiktok size={24}  />
+          <FaTiktok size={30}  />
   </a>
 
         {/* Add more buttons as needed */}
@@ -402,12 +413,12 @@ const Feedback = ({ backgroundImageUrl }) => {
   {/* Center Section: Navigation Links */}
   <div style={styles.navLinksStyle}>
     <a href="/" style={styles.linkStyle}>Home</a>
-    <a href="/About" style={styles.linkStyle}>About</a>
+    <a href="/About" style={styles.linkStyle}>About Us</a>
     <a href="/TourPackages" style={styles.linkStyle}>Tour Packages</a>
     <a href="/ContactUS" style={styles.linkStyle}>Contact</a>
     <a href="/feedback" style={styles.linkStyle}>FAQ</a>
   </div>
-  <div style={{ marginRight: '10px',marginTop:'19px' }}> {/* Right-aligned content */}
+  <div style={{ marginRight: '0px',marginTop:'19px' }}> {/* Right-aligned content */}
   <Link to="/BookingForm" style={styles.bookbuttonstyle}>
           Book Now !
             </Link> 

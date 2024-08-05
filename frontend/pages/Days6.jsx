@@ -34,12 +34,13 @@ function Days6() {
   const appStyle = {
     textAlign: 'center',
     fontFamily: 'Arial, sans-serif',
-    backgroundColor: '#f0f8ff',
+    backgroundColor: 'white',
     display: 'flex',
     flexDirection: 'column',
     minHeight: '100vh',
-    justifyContent: 'center',
+    overflow: 'hidden',
   };
+
 
   const headerStyle = {
     justifyContent: '',
@@ -66,18 +67,17 @@ function Days6() {
     marginTop: '0px',
   }
   const bookbuttonstyle = {
-    fontSize: '1.6em',
-    backgroundColor: '#00796b',
-    color: 'white',
-    border: 'none',
-    padding: '20px 40px',
-    borderRadius: '5px',
-    cursor: 'hand',
-    transition: 'background-color 0.3s ease',
-    
+    backgroundColor: '#4682B4',
+      color: 'white',
+      padding: '20px 20px',
+      border: 'none',
+      borderRadius: '4px',
+      cursor: 'pointer',
+      fontSize: '1.6em',
+      marginTop: '0px',
+      
     
   };
-
   const logoImgStyle = {
     height: '120px',
     width:'120px',
@@ -87,6 +87,7 @@ function Days6() {
   const h1Style = {
    
     fontSize: '3em',
+    color:'#4682B4',
     margin: '0',
   };
 
@@ -195,13 +196,14 @@ function Days6() {
   };
 
   const photoStyle = {
-    width: '600px',
-    height: '600px',
+    width: '900px',
+    height: '700px',
     objectFit: 'cover',
-    borderRadius: '20%',
+    justifyContent:'center',
     margin: '20px 0',
-    marginLeft:'00px',
-    
+    marginLeft:'px',
+    borderRadius:'20px',
+    border:'5px solid #4682B4',
   };
 
   const additionalDescriptionStyle = {
@@ -243,7 +245,8 @@ function Days6() {
     margin: '10px',   // Add margin around each icon
     color: '#007bff',  // Change the icon color
     marginRight: '00px',
-    marginTop:'-50px',
+    marginTop:'0px',
+    alignItems:'left'
   };
 
   const footerSectionStyle = {
@@ -264,8 +267,8 @@ function Days6() {
   };
 
   const mapstyle = {
-    width: '600px',
-    height: '600px',
+    width: '700px',
+    height: '700px',
     objectFit: 'cover',
     borderRadius: '5%',
     margin: '20px 100px',
@@ -331,11 +334,11 @@ function Days6() {
   };
 
   const buttonStyle = {
-    backgroundColor: '#00796b',
+    backgroundColor: '#4682B4',
     color: 'white',
     border: 'none',
     padding: '12px 20px',
-    borderRadius: '45%',
+    borderRadius: '',
     cursor: 'pointer',
     transition: 'background-color 0.3s ease',
     marginLeft:'0px',
@@ -446,15 +449,13 @@ function Days6() {
   {/* Center Section: Navigation Links */}
   <div style={navLinksStyle}>
     <a href="/" style={linkStyle}>Home</a>
-    <a href="/About" style={linkStyle}>About</a>
+    <a href="/About" style={linkStyle}>About Us</a>
     <a href="/TourPackages" style={linkStyle}>TourPackages</a>
     <a href="/ContactUS" style={linkStyle}>Contact</a>
     <a href="/feedback" style={linkStyle}>FAQ</a>
   </div>
   <div style={{ marginRight: '10px',marginTop:'19px' }}> {/* Right-aligned content */}
-  <Link to="/BookingForm" style={bookbuttonstyle}>
-          Book Now !
-            </Link> 
+  <Link to="/BookingForm" style={bookbuttonstyle}>Book Now</Link> 
   </div>
   
   
@@ -464,21 +465,34 @@ function Days6() {
         
       </section>
       
-      <h1 style={h1Style}>6-Day Tour Package</h1>
+      <h1 style={h1Style}><b>6 Days Tour Package</b></h1>
       <main style={mainContentStyle}>
         <section style={tourPackagesStyle}>
-          <div style={packageStyle}>
+          <section>
+          <div style={{packageStyle , display:'flex',gap:'20%'}}>
+            <div>
             <img
               src="/Photos/Day6.gif"
               alt="Tour Image"
-              style={{ ...photoStyle, alignSelf: 'center',objectFit:'cover' }}
+              style={{ ...photoStyle,objectFit:'cover' }}
             />
-            <div style={iconStyle}>
-              <FontAwesomeIcon  icon={faBed} size="5x" />
-              <FontAwesomeIcon style={{padding:'10px'}}  icon={faUtensils} size="5x" />
-              <FontAwesomeIcon  icon={faCar} size="5x" />  
-              </div>
+            </div>
+            <div>
+             <img
+              src="/Photos/Day 6.gif"
+              alt="Tour Image"
+              style={{ ...mapstyle }}
+            />
+            </div>
+            </div>
+            </section><br />
+           
             <div style={{ ...packageDescriptionStyle, textAlign: 'left', alignItems: 'center' }}>
+            <div style={iconStyle}>
+              <FontAwesomeIcon  icon={faBed} size="3x" />
+              <FontAwesomeIcon style={{padding:'10px'}}  icon={faUtensils} size="3x" />
+              <FontAwesomeIcon  icon={faCar} size="3x" />  
+              </div>
               <div style={additionalDescriptionStyle}>
                 <p>Day 1 - Negombo</p>
                 <button
@@ -690,17 +704,13 @@ From your luxurious hotel room, you’ll enjoy breathtaking views of the ocean a
                   
                   
                 )}
-                <img
-              src="/Photos/Day 6.gif"
-              alt="Tour Image"
-              style={{ ...mapstyle }}
-            />
+               
             
               </div>
               
             </div>
             
-          </div>
+          
           
         </section>
         
@@ -711,7 +721,7 @@ From your luxurious hotel room, you’ll enjoy breathtaking views of the ocean a
             position: 'fixed',
             top: '200px',
             right: '00px',
-            backgroundColor: '#333',
+            backgroundColor: '#4682B4',
             color: 'white',
             border: 'none',
             padding: '10px 20px',
@@ -766,7 +776,7 @@ From your luxurious hotel room, you’ll enjoy breathtaking views of the ocean a
             style={textareaStyle}
             required
           ></textarea>
-          <button onClick={showAlert} type="submit" style={buttonStyle}>Inquiry</button>
+          <button onClick={showAlert} type="submit" style={buttonStyle}><b>Inquiry</b></button>
         </form>
       
         <footer style={footerStyle}>

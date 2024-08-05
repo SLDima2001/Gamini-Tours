@@ -11,20 +11,20 @@ function TourPackages() {
   const [isScrolled, setIsScrolled] = useState(false); 
 
   const packages = [
-    { id: 1, name: '6 Days', imgSrc: '/Photos/Day6.gif', link: '/Days6', price: 100, description: 'Enjoy a 6-days tour exploring beautiful destinations.' },
-    { id: 2, name: '8 Days', imgSrc: '/Photos/Day8.gif', link: '/Days8', price: 150, description: 'Experience an 8-days adventure filled with fun and excitement.' },
+    { id: 1, name: '6 Days', imgSrc: '/Photos/Day6.gif', link: '/Days6', price: 100, description: 'Enjoy a 6 Days tour exploring beautiful destinations.' },
+    { id: 2, name: '8 Days', imgSrc: '/Photos/Day8.gif', link: '/Days8', price: 150, description: 'Experience an 8 Days adventure filled with fun and excitement.' },
     { id: 3, name: '10 Days', imgSrc: '/Photos/Day10.gif', link: '/Days10', price: 200, description: 'Discover the wonders of a 10-days tour.' },
-    { id: 4, name: '12 Days', imgSrc: '/Photos/Day12.gif', link: '/Days12', price: 300, description: 'A 12-days journey to explore the best sights and sounds.' },
-    { id: 5, name: '15 Days', imgSrc: '/Photos/Day15.gif', link: '/Days15', price: 300, description: 'A 15-days journey to explore the best sights and sounds.' },
-    { id: 6, name: '18 Days', imgSrc: '/Photos/Day18.gif', link: '/Days18', price: 350, description: 'An 18-days tour to immerse yourself in rich culture and history.' },
-    { id: 7, name: '18 Days', imgSrc: '/Photos/Day18n.gif', link: '/Days182', price: 350, description: 'An 18-days tour to immerse yourself in rich culture and history.' },
-    { id: 8, name: '20 Days', imgSrc: '/Photos/Day20.gif', link: '/Days20', price: 400, description: 'A 20-days expedition to experience everything.' },
+    { id: 4, name: '12 Days', imgSrc: '/Photos/Day12.gif', link: '/Days12', price: 300, description: 'A 12 days journey to explore the best sights and sounds.' },
+    { id: 5, name: '15 Days', imgSrc: '/Photos/Day15.gif', link: '/Days15', price: 300, description: 'A 15 days journey to explore the best sights and sounds.' },
+    { id: 6, name: '18 Days', imgSrc: '/Photos/Day18.gif', link: '/Days18', price: 350, description: 'An 18 days tour to immerse yourself in rich culture and history.' },
+    { id: 7, name: '18 Days', imgSrc: '/Photos/Day18n.gif', link: '/Days182', price: 350, description: 'An 18 days North & South tour to immerse yourself in rich culture and history.' },
+    { id: 8, name: '20 Days', imgSrc: '/Photos/Day20.gif', link: '/Days20', price: 400, description: 'A 20 days expedition to experience everything.' },
   ];
 
   const appStyle = {
     textAlign: 'center',
     fontFamily: 'Arial, sans-serif',
-    backgroundColor: '#e0f7fa',
+    backgroundColor: 'white',
     display: 'flex',
     flexDirection: 'column',
     minHeight: '100vh',
@@ -45,33 +45,24 @@ function TourPackages() {
     marginTop: '0px',
   };
   const bookbuttonstyle = {
-    fontSize: '1.6em',
-    backgroundColor: '#00796b',
-    color: 'white',
-    border: 'none',
-    padding: '20px 60px',
-    borderRadius: '5px',
-    cursor: 'hand',
-    transition: 'background-color 0.3s ease',
-    
+    backgroundColor: '#4682B4',
+      color: 'white',
+      padding: '20px 20px',
+      border: 'none',
+      borderRadius: '4px',
+      cursor: 'pointer',
+      fontSize: '1.6em',
+      marginTop: '',
     
   };
 
-  const h1Style = {
-    fontSize: '4em',
-    margin: '0',
-    color: '#333',
-    padding: '10px',
-    borderRadius: '8px',
-    display: 'inline-block',
-    marginLeft: '-1600px',
-  };
-
+  
   const paraStyle = {
     color: 'black',
     marginLeft: '-1600px',
   };
   const header1style = {
+    display:'flex',
     justifyContent: 'center',
     padding: '0px',
     backgroundColor: isScrolled ? 'rgba(0, 0, 0, 0.8)' : 'rgba(0, 0, 0, 0.5)',
@@ -115,7 +106,7 @@ function TourPackages() {
     height: '120px',
     padding: '10px 0px 0px  ',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
-    transition: 'transform 0.3s ease',
+    
     transform: isNavbarVisible ? 'translateY(0)' : 'translateY()',
     zIndex: '1000',
   };
@@ -179,6 +170,7 @@ function TourPackages() {
   const packageStyle = (isHovered) => ({
     textAlign: 'center',
     backgroundColor: '#ffffff',
+    border:'2px solid #4682B4',
     padding: '20px',
     borderRadius: '10px',
     boxShadow: '0 4px 8px rgba(10, 0, 0, 0.1)',
@@ -196,6 +188,7 @@ function TourPackages() {
 
   const packageImgStyle = {
     height: '150px',
+    width:'150px',
     borderRadius: '10px',
   };
 
@@ -261,7 +254,7 @@ function TourPackages() {
       <div style={navbarStyle}>
       {/* Left Section: Logo */}
       <div>
-        <h1 style={{ margin: '0', padding: '0', fontSize: '1em' }}>info@lahirutoursco.uk</h1>
+        <h1 style={{ margin: '0', padding: '0', fontSize: '2em' }}> <b> info@lahirutoursco.uk</b></h1>
       </div>
       
       {/* Center Section: Navigation Links */}
@@ -271,14 +264,14 @@ function TourPackages() {
       
       {/* Right Section: Buttons */}
       <div style={buttonContainerStyle}>
-      <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
-          <FaFacebook size={24} />
+      <a href="https://www.facebook.com/profile.php?id=100054495458742&mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
+          <FaFacebook size={30} />
         </a>
         <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
-          <FaInstagram size={24} />
+          <FaInstagram size={30} />
         </a>
         <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" style={{  padding: '10px 20px', cursor: 'pointer' }} >
-          <FaTiktok size={24}  />
+          <FaTiktok size={30}  />
   </a>
 
         {/* Add more buttons as needed */}
@@ -297,15 +290,14 @@ function TourPackages() {
   {/* Center Section: Navigation Links */}
   <div style={navLinksStyle}>
     <a href="/" style={linkStyle}>Home</a>
-    <a href="/About" style={linkStyle}>About</a>
+    <a href="/About" style={linkStyle}>About Us</a>
     <a href="/TourPackages" style={linkStyle}>Tour Packages</a>
     <a href="/ContactUS" style={linkStyle}>Contact</a>
     <a href="/feedback" style={linkStyle}>FAQ</a>
   </div>
-  <div style={{ marginRight: '10px',marginTop:'19px' }}> {/* Right-aligned content */}
-  <Link to="/BookingForm" style={bookbuttonstyle}>
-          Book Now !
-            </Link> 
+  <div style={{ marginRight: '1%',marginTop:'19px' }}> {/* Right-aligned content */}
+    <a style={bookbuttonstyle} href="/BookingForm">Book Now !</a>
+  
   </div>
   
   
@@ -314,7 +306,12 @@ function TourPackages() {
         
         
       </section>
+      
       <main style={isNavbarVisible ? { ...mainContentStyle, ...blurredBackgroundStyle } : mainContentStyle}>
+      <div style={{ marginRight: '5%',marginTop:'19px' }}> {/* Right-aligned content */}
+    
+  
+  </div>
         <section style={tourPackagesStyle}>
           <div style={packageOptionsStyle}>
             {packages.map((pkg) => (
@@ -334,7 +331,27 @@ function TourPackages() {
               </div>
             ))}
           </div>
+          <div style={{border:'none',justifyContent:'right',width:'60%',alignContent:'left',backgroundColor:'white',backgroundPosition:'center',marginLeft:'20%',}}>
+          <h1 style={{fontSize:'2em',color:'#4682B4'}}>Special Discount for Couples!</h1>
+        
+        <p>Enjoy an exclusive offer for couples with our special discount prices. Book now and make the most of this limited-time opportunity!</p>
+<p style={{fontSize:'1.5em'}}>
+<b>Discount Details: </b><br />
+<b><p style={{fontSize:'2em'}}>25% off</p></b> on all couple bookings</p> <br />
+<p style={{fontSize:'1.3em'}}>Valid for stays between 01/08/2024 and 31/12/2025 <br />
+Includes complimentary breakfast and late checkout </p><br /><br />
+<p style={{fontSize:'1.7em'}}>How to Redeem:</p> <br />
+<p style={{fontSize:'1.3em'}}>Visit our website and choose <a style={{fontSize:'1.5em',accentColor:'yellow',color:'blue',}} href="/ContactUS">‘Contact Us’</a>
+Enter your information and use promo code <p style={{color:'#4682B4'}}><b><u>COUPLE10</u></b></p> in the subject line and send us a message. <br />
+One of our dedicated team members will contact you within 24 hours to validate your booking.
+Enjoy your discounted rate and special perks!
+Hurry, this offer won't last long. Limited bookings available. Book your romantic getaway today!</p>
+<br /><br />
+<a style={{fontSize:'2.5em',border:'none',backgroundColor:'#4682B4',borderRadius:'4px',padding:'20px 20px',color:'white'}} href="/ContactUS">Contact Us</a><br /><br />
+        </div>
         </section>
+
+        
       </main>
       <footer style={footerStyle}>
         <div style={footerSectionStyle}>

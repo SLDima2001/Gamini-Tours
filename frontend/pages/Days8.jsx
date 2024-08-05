@@ -37,12 +37,13 @@ function Days8() {
   const appStyle = {
     textAlign: 'center',
     fontFamily: 'Arial, sans-serif',
-    backgroundColor: '#f0f8ff',
+    backgroundColor: 'white',
     display: 'flex',
     flexDirection: 'column',
     minHeight: '100vh',
-    justifyContent: 'center',
+    overflow: 'hidden',
   };
+
 
   const headerStyle = {
     justifyContent: '',
@@ -69,15 +70,15 @@ function Days8() {
     marginTop: '0px',
   }
   const bookbuttonstyle = {
-    fontSize: '1.6em',
-    backgroundColor: '#00796b',
-    color: 'white',
-    border: 'none',
-    padding: '20px 40px',
-    borderRadius: '5px',
-    cursor: 'hand',
-    transition: 'background-color 0.3s ease',
-    
+    backgroundColor: '#4682B4',
+      color: 'white',
+      padding: '20px 20px',
+      border: 'none',
+      borderRadius: '4px',
+      cursor: 'pointer',
+      fontSize: '1.6em',
+      marginTop: '0px',
+      
     
   };
 
@@ -199,13 +200,14 @@ function Days8() {
   };
 
   const photoStyle = {
-    width: '600px',
-    height: '600px',
+    width: '900px',
+    height: '700px',
     objectFit: 'cover',
-    borderRadius: '20%',
+    justifyContent:'center',
     margin: '20px 0',
-    marginLeft:'00px',
-    
+    marginLeft:'px',
+    borderRadius:'20px',
+    border:'5px solid #4682B4',
   };
 
   const additionalDescriptionStyle = {
@@ -268,8 +270,8 @@ function Days8() {
   };
 
   const mapstyle = {
-    width: '600px',
-    height: '600px',
+    width: '700px',
+    height: '700px',
     objectFit: 'cover',
     borderRadius: '5%',
     margin: '20px 100px',
@@ -450,14 +452,14 @@ function Days8() {
   {/* Center Section: Navigation Links */}
   <div style={navLinksStyle}>
     <a href="/" style={linkStyle}>Home</a>
-    <a href="/About" style={linkStyle}>About</a>
+    <a href="/About" style={linkStyle}>About Us</a>
     <a href="/TourPackages" style={linkStyle}>TourPackages</a>
     <a href="/ContactUS" style={linkStyle}>Contact</a>
     <a href="/feedback" style={linkStyle}>FAQ</a>
   </div>
   <div style={{ marginRight: '10px',marginTop:'19px' }}> {/* Right-aligned content */}
   <Link to="/BookingForm" style={bookbuttonstyle}>
-          Book Now !
+          Book Now
             </Link> 
   </div>
   
@@ -468,21 +470,32 @@ function Days8() {
         
       </section>
       
-      <h1 style={h1Style}>8-Day Tour Package</h1>
+      <h1 style={h1Style}>8 Days Tour Package</h1>
       <main style={mainContentStyle}>
         <section style={tourPackagesStyle}>
-          <div style={packageStyle}>
+        <div style={{packageStyle , display:'flex',gap:'20%'}}>
+          <div>
             <img
               src="/Photos/Day8.gif"
               alt="Tour Image"
-              style={{ ...photoStyle, alignSelf: 'center' }}
+              style={{ ...photoStyle,objectFit:'cover' }}
             />
-            <div style={iconStyle}>
-              <FontAwesomeIcon  icon={faBed} size="5x" />
-              <FontAwesomeIcon style={{padding:'10px'}}  icon={faUtensils} size="5x" />
-              <FontAwesomeIcon  icon={faCar} size="5x" />  
-              </div>
+            </div>
+            <div>
+             <img
+              src="/Photos/Day 8.gif"
+              alt="Tour Image"
+              style={{ ...mapstyle }}
+            />
+            </div>
+            </div><br />
+          
             <div style={{ ...packageDescriptionStyle, textAlign: 'left', alignItems: 'center' }}>
+            <div style={iconStyle}>
+              <FontAwesomeIcon  icon={faBed} size="3x" />
+              <FontAwesomeIcon style={{padding:'10px'}}  icon={faUtensils} size="3x" />
+              <FontAwesomeIcon  icon={faCar} size="3x" />  
+              </div>
               <div style={additionalDescriptionStyle}>
                 <p>Day 1 - Negombo</p>
                 <button
@@ -764,17 +777,13 @@ This day in Bentota offers a perfect blend of relaxation, adventure, and cultura
                   
                   
                 )}
-                <img
-              src="/Photos/Day 8.gif"
-              alt="Tour Image"
-              style={{ ...mapstyle }}
-            />
+                
             
               </div>
               
             </div>
             
-          </div>
+          
           
         </section>
         
@@ -785,7 +794,7 @@ This day in Bentota offers a perfect blend of relaxation, adventure, and cultura
             position: 'fixed',
             top: '200px',
             right: '00px',
-            backgroundColor: '#333',
+            backgroundColor: '#4682B4',
             color: 'white',
             border: 'none',
             padding: '10px 20px',

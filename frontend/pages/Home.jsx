@@ -89,10 +89,12 @@ function Home() {
   const appStyle = {
     textAlign: 'center',
     fontFamily: 'Arial, sans-serif',
-    backgroundColor: '',
+    backgroundColor: 'white',
     display: 'flex',
     flexDirection: 'column',
-    minHeight: '150vh',
+    minHeight: '100vh',
+    overflow: 'hidden',
+    
   };
 
   const headerStyle = {
@@ -169,10 +171,7 @@ function Home() {
     left: '0',
     width: '100%',
     height: '120px',
-    padding: '10px 0px 0px  ',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
-    transition: 'transform 0.3s ease',
-    transform: isNavbarVisible ? 'translateY(0)' : 'translateY()',
     zIndex: '1000',
   };
   
@@ -189,7 +188,7 @@ function Home() {
   const buttonContainerStyle = {
     display: 'flex',
     alignItems: 'center',
-    gap: '10px', // Adds space between buttons
+    gap: '0px', // Adds space between buttons
   };
   
   const button1Style = {
@@ -267,7 +266,7 @@ function Home() {
     fontFamily:'Great Vibes',
     fontSize: '4em',
     margin: '0',
-    color: '#333',
+    color: '#4682B4',
     padding: '10px',
     borderRadius: '8px',
     display: 'inline-block',
@@ -345,11 +344,11 @@ function Home() {
     textAlign: 'center',
     fontSize:'15px',
     backgroundColor: '',
-    padding: '30px ',
-    borderRadius: '10px',
+    padding: '20px ',
+    borderRadius: '20px',
     boxShadow: '0 4px 8px rgba(0, 1, 1, 1)',
     width: '300px',
-    height:'400px',
+    height:'430px',
     borderColor:'',
   };
 
@@ -417,7 +416,7 @@ function Home() {
     display: isformvisible ? 'block' : 'none', // Show/hide based on state
     right: '20px',
     zIndex: '999',
-    maxHeight:'80%',
+    maxHeight:'70%',
     marginRight: '103px',
   };
 
@@ -447,7 +446,7 @@ function Home() {
   };
 
   const buttonStyle = {
-    backgroundColor: '#00796b',
+    backgroundColor: '#4682B4',
     color: 'white',
     border: 'none',
     padding: '12px 20px',
@@ -457,7 +456,7 @@ function Home() {
   };
 
   const bookbuttonstyle = {
-    backgroundColor: '#333',
+    backgroundColor: '#4682B4',
       color: 'white',
       padding: '20px 20px',
       border: 'none',
@@ -465,7 +464,7 @@ function Home() {
       cursor: 'pointer',
       fontSize: '1.6em',
       marginTop: '0px',
-      transition: 'background-color 0.3s ease',
+      
     
   };
   const hoverStyle = {
@@ -567,14 +566,8 @@ function Home() {
     
   };
  
-  const reviewstyle = {
-    display: 'flex',    
-    maxWidth: '60%',
-    top:'100px',
-    maxHeight: '1000px', // Adjust this value to your desired image height
-    objectFit: 'cover', // Ensure the image covers the area
-    marginTop:'500px',
-    justifyContent: 'center',
+  const pricestyle = {
+   fontSize:'1.4em',
 
     
   };
@@ -586,7 +579,7 @@ function Home() {
       <div style={navbarStyle}>
       {/* Left Section: Logo */}
       <div>
-        <h1 style={{ margin: '0', padding: '0', fontSize: '1em' }}>info@lahirutours.co.uk</h1>
+        <h1 style={{ margin: '0', padding: '0', fontSize: '2em' }}> <b> info@lahirutours.co.uk</b></h1>
       </div>
       
       {/* Center Section: Navigation Links */}
@@ -597,13 +590,13 @@ function Home() {
       {/* Right Section: Buttons */}
       <div style={buttonContainerStyle}>
       <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
-          <FaFacebook size={24} />
+          <FaFacebook size={30} />
         </a>
         <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
-          <FaInstagram size={24} />
+          <FaInstagram size={30} />
         </a>
         <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" style={{  padding: '10px 20px', cursor: 'pointer' }} >
-          <FaTiktok size={24}  />
+          <FaTiktok size={30}  />
   </a>
 
         {/* Add more buttons as needed */}
@@ -624,14 +617,14 @@ function Home() {
   {/* Center Section: Navigation Links */}
   <div style={navLinksStyle}>
     <a href="/" style={linkStyle}>Home</a>
-    <a href="/About" style={linkStyle}>About</a>
+    <a href="/About" style={linkStyle}>About Us</a>
     <a href="/TourPackages" style={linkStyle}>Tour Packages</a>
     <a href="/ContactUS" style={linkStyle}>Contact</a>
     <a href="/feedback" style={linkStyle}>FAQ</a>
   </div>
   <div style={{ marginRight: '10px',marginTop:'19px' }}> {/* Right-aligned content */}
   <Link to="/BookingForm" style={bookbuttonstyle}>
-          Book Now !
+          Book Now
             </Link> 
   </div>
   
@@ -657,7 +650,7 @@ function Home() {
           
          <p style={{fontSize:'1.5em',fontFamily:'Agraham'}}><b>
           
-          <p style={{fontSize:'2em',}}>Welcome to Lahiru Tours: A Family-Run Travel Agency</p></b><br />
+          <p style={{fontSize:'2em',}}>Welcome to Lahiru Tours</p></b><br />
 <p>At Lahiru Tours, we pride ourselves on being more than just a travel agency. As a family-run business, we bring a personal touch and heartfelt dedication to every journey we plan. Our passion for travel and commitment to exceptional customer service stem from our deep love for Sri Lanka, and we are eager to share its wonders with you.</p>
 
 <p><br /><b>Our Story </b><br />
@@ -665,7 +658,7 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
 
 <br /></p>
          
-          <h2 style={h12Style}>Tour Packages</h2>
+          <h2 style={h12Style}><b>Tour Packages</b></h2>
           <div style={packageOptionsStyle}>
 
             <a style={packageStyle} href="/Days6">
@@ -673,12 +666,14 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
             <h4>Sri Lanka 6 Days Tour</h4> <br />
             
               <img src="/Photos/Day6.gif" alt="Package 1" style={packageImgStyle} />
+              
               <h4 style={h42Style}>Days 6</h4>
               <div style={iconStyle}>
               <FontAwesomeIcon  icon={faBed} size="1x" />
               <FontAwesomeIcon  icon={faUtensils} size="1x" />
               <FontAwesomeIcon  icon={faCar} size="1x" />  
-              </div>  
+              
+              </div>  <h1 style={pricestyle}>Price $100 P\P</h1>
             
             </a>
 
@@ -691,7 +686,7 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
               <FontAwesomeIcon  icon={faBed} size="1x" />
               <FontAwesomeIcon  icon={faUtensils} size="1x" />
               <FontAwesomeIcon  icon={faCar} size="1x" />  
-              </div>
+              </div><h1 style={pricestyle}>Price $100 P\P</h1>
             
             </a>
 
@@ -703,7 +698,7 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
               <FontAwesomeIcon  icon={faBed} size="1x" />
               <FontAwesomeIcon  icon={faUtensils} size="1x" />
               <FontAwesomeIcon  icon={faCar} size="1x" />  
-              </div>
+              </div><h1 style={pricestyle}>Price $100 P\PP\P</h1>
             </a>
 
 
@@ -716,7 +711,7 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
               <FontAwesomeIcon  icon={faBed} size="1x" />
               <FontAwesomeIcon  icon={faUtensils} size="1x" />
               <FontAwesomeIcon  icon={faCar} size="1x" />  
-              </div>
+              </div><h1 style={pricestyle}>Price $100 P\P</h1>
             
             </a>
 
@@ -731,7 +726,7 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
               <FontAwesomeIcon  icon={faBed} size="1x" />
               <FontAwesomeIcon  icon={faUtensils} size="1x" />
               <FontAwesomeIcon  icon={faCar} size="1x" />  
-              </div>
+              </div><h1 style={pricestyle}>Price $100 P\P</h1>
             
             </a>
 
@@ -745,7 +740,7 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
               <FontAwesomeIcon  icon={faBed} size="1x" />
               <FontAwesomeIcon  icon={faUtensils} size="1x" />
               <FontAwesomeIcon  icon={faCar} size="1x" />  
-              </div>
+              </div><h1 style={pricestyle}>Price $100 P\P</h1>
            
             </a>
 
@@ -759,7 +754,7 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
               <FontAwesomeIcon  icon={faBed} size="1x" />
               <FontAwesomeIcon  icon={faUtensils} size="1x" />
               <FontAwesomeIcon  icon={faCar} size="1x" />  
-              </div>
+              </div><h1 style={pricestyle}>Price $100 P\P</h1>
            
             </a>
 
@@ -773,11 +768,15 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
               <FontAwesomeIcon  icon={faBed} size="1x" />
               <FontAwesomeIcon  icon={faUtensils} size="1x" />
               <FontAwesomeIcon  icon={faCar} size="1x" />  
-              </div>
+              </div><h1 style={pricestyle}>Price $100 P\P</h1>
             
             </a>
+            <div style={{fontSize:'2em',fontSmooth:'100px',backgroundColor:'',color:'#4682B4'}}>
+            Special Discount for Couples! <a style={{color:'#4682B4',fontSize:'1em'}} href="/TourPackages"><u>For more Info</u></a>
 
-            <div>
+            </div><br />
+
+            <div><br /><br />
             <p><p style={{fontSize:'40px'}}> <b> Why Choose Lahiru Tours?</b></p><br />
             <p style={{fontSize:'1.5em'}}>
 <b>Personal Touch:</b> As a family-run business, we treat every guest as an extension of our family. This means you receive personalized service and attention to detail that larger companies can't offer. <br />
@@ -811,18 +810,18 @@ Tour PackagesWe offer flexible and engaging packages designed to help you enjoy 
             
             
             <div style={fb1style}>
-            <h1 style={h0style}>Our Facbook Rewiews</h1>
-              <Link to="" >
+            <h1 style={{h0style , fontSize:'3em',top:'50px'}}>Our Facbook Rewiews</h1>
+              <Link to="https://www.facebook.com/profile.php?id=100054495458742&mibextid=ZbWKwL" >
             
-                  <img src="/Photos/ABC.png" alt='Facebook Review Page'/>
+                  <img src="/Photos/FB.png" alt='Facebook Review Page'/>
             
               </Link>
-            
-              <h1 style={h0style}>Our Facbook Rewiews</h1>
+            <br /><br /><br /><br /><br /><br /><br /><br />
+              <h1 style={{h0style , fontSize:'3em',top:'50px'}}>Our Facbook Rewiews</h1>
               
-              <img src="/Photos/review.gif" alt="Our Customers Feedbacks" />
+              <img style={{width:'100%'}} src="/Photos/review.gif" alt="Our Customers Feedbacks" />
             </div>
-
+    
 
             
            <div style={fbstyle}>
@@ -833,7 +832,7 @@ Tour PackagesWe offer flexible and engaging packages designed to help you enjoy 
             position: 'fixed',
             top: '200px',
             right: '00px',
-            backgroundColor: '#333',
+            backgroundColor: '#4682B4',
             color: 'white',
             border: 'none',
             padding: '10px 20px',
