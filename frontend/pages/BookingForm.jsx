@@ -17,14 +17,14 @@ function BookingForm() {
   });
 
   const [packages, setPackages] = useState([
-    { id: 1, name: '6 Days', price: 100 },
-    { id: 2, name: '8 Days', price: 150 },
-    { id: 3, name: '10 Days', price: 200 },
-    { id: 4, name: '12 Days', price: 250 },
-    { id: 5, name: '15 Days', price: 300 },
-    { id: 6, name: '18 Days', price: 350 },
-    { id: 7, name: '18 Days North &South', price: 370 },
-    { id: 8, name: '20 Days', price: 400 },
+    { id: 1, name: '6 Days', price: 10 },
+    { id: 2, name: '8 Days', price: 2049 },
+    { id: 3, name: '10 Days', price: 2514 },
+    { id: 4, name: '12 Days', price: 3016 },
+    { id: 5, name: '15 Days', price: 3701 },
+    { id: 6, name: '18 Days', price: 4425 },
+    { id: 7, name: '18 Days North &South', price: 4595 },
+    { id: 8, name: '20 Days', price: 4883 },
   ]);
 
   const [totalAmount, setTotalAmount] = useState(0);

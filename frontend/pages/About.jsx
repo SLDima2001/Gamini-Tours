@@ -20,6 +20,7 @@ function About() {
     flexDirection: 'column',
     minHeight: '100vh',
     overflow: 'hidden',
+    
   };
   const bookbuttonstyle = {
     backgroundColor: '#4682B4',
@@ -118,7 +119,7 @@ function About() {
   const buttonContainerStyle = {
     display: 'flex',
     alignItems: 'center',
-    gap: '10px', // Adds space between buttons
+    gap: '0px', // Adds space between buttons
   };
   
   const ulStyle = {
@@ -143,14 +144,27 @@ function About() {
     flex: '1', // Allow main content to grow to fill remaining space
     padding: '50px',
     backgroundColor: '',
-    marginLeft: isNavbarVisible ? '200px' : '0', // Adjust main content margin when navbar is visible
     transition: 'margin-left 0.3s ease', // Add transition for smooth adjustment
+    display:'inline-block',
+    width:'90%',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 1)',
+    marginBottom:'50px',
+    marginTop:'50px',
+    border:'2px solid blue',
+    borderRadius:'80px',
   };
 
   const h2Style = {
     fontFamily:'Rockybilly',
+    display:'inline-block',
     color: '#4682B4',
     fontSize:'4em',
+    margin: '0',
+    padding: '20px',
+    borderRadius: '40px',
+    border:'2px solid blue',
+    boxShadow: '0px 4px 8px rgba(0, 0, 0, 1)',
+    width:'25%',
   };
 
   const pStyle = {
@@ -316,9 +330,9 @@ function About() {
     <a href="/feedback" style={linkStyle}>FAQ</a>
   </div>
   <div style={{ marginRight: '10px',marginTop:'19px' }}> {/* Right-aligned content */}
-    <a style={bookbuttonstyle} href="/BookingForm">
-   <b>Book Now</b>
-   </a>
+  <Link to="/BookingForm" style={bookbuttonstyle}>
+  <b>Book Now</b>
+            </Link> 
   </div>
   
   
@@ -328,9 +342,11 @@ function About() {
         
       </section>
      
-      <main style={mainContentStyle}>
+      <main>
+        <div style={mainContentStyle}>
+          <div>
         <h2 style={h2Style}><b>Lahiru Tours</b></h2><br /><br />
-
+        </div>
         <div style={{display:'flex',gap:'40%',alignContent:'center'}}>
 
 
@@ -398,6 +414,8 @@ Contact Us Today:
 
 </p>
 <br />
+</div>
+
 </div>
       </main>
       

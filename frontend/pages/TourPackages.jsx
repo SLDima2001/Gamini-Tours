@@ -254,7 +254,7 @@ function TourPackages() {
       <div style={navbarStyle}>
       {/* Left Section: Logo */}
       <div>
-        <h1 style={{ margin: '0', padding: '0', fontSize: '2em' }}> <b> info@lahirutoursco.uk</b></h1>
+        <h1 style={{ margin: '0', padding: '0', fontSize: '2em' }}> <b>info@lahirutours.co.uk</b></h1>
       </div>
       
       {/* Center Section: Navigation Links */}
@@ -295,9 +295,10 @@ function TourPackages() {
     <a href="/ContactUS" style={linkStyle}>Contact</a>
     <a href="/feedback" style={linkStyle}>FAQ</a>
   </div>
-  <div style={{ marginRight: '1%',marginTop:'19px' }}> {/* Right-aligned content */}
-    <a style={bookbuttonstyle} href="/BookingForm">Book Now !</a>
-  
+  <div style={{ marginRight: '10px',marginTop:'19px' }}> {/* Right-aligned content */}
+  <Link to="/BookingForm" style={bookbuttonstyle}>
+  <b>Book Now</b>
+            </Link> 
   </div>
   
   

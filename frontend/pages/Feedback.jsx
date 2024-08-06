@@ -420,7 +420,7 @@ const Feedback = ({ backgroundImageUrl }) => {
   </div>
   <div style={{ marginRight: '0px',marginTop:'19px' }}> {/* Right-aligned content */}
   <Link to="/BookingForm" style={styles.bookbuttonstyle}>
-          Book Now !
+          <b>Book Now</b>
             </Link> 
   </div>
   

@@ -96,6 +96,7 @@ function Days12() {
   const h1Style = {
    
     fontSize: '3em',
+    color:'#4682B4',
     margin: '0',
   };
 
@@ -299,21 +300,21 @@ function Days12() {
   };
   const formStyle = {
     flex: '1',
-    backgroundColor: '#B0E0E6',
-    padding: '10px',
-    borderRadius: '8px',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 1)',
-    maxWidth: '400px',
+    backgroundColor: 'white',
+    padding: '30px',
+    borderRadius: '',
+    border: '2px solid #3498db',
+    boxShadow: '0 4px 8px rgba(1, 1, 1, 1)',
+    maxWidth: '300px',
     fontFamily: 'Arial, sans-serif',
     position: 'fixed',
-    top: '100px', // To align with the header
-    bottom:'160px',
+    top: '230px', // To align with the header
+    bottom:'10px',
     display: isformvisible ? 'block' : 'none', // Show/hide based on state
-    right: '10px',
+    right: '20px',
     zIndex: '999',
-    maxHeight:'100%',
-    marginTop:'100px',
-    marginRight:'90px',
+    maxHeight:'70%',
+    marginRight: '103px',
   };
   const labelStyle = {
     display: 'block',
@@ -419,7 +420,7 @@ function Days12() {
       <div style={navbarStyle}>
       {/* Left Section: Logo */}
       <div>
-        <h1 style={{ margin: '0', padding: '0', fontSize: '1em' }}>info@lahirutours.co.uk</h1>
+        <h1 style={{ margin: '0', padding: '0', fontSize: '2em' }}><b>info@lahirutours.co.uk</b></h1>
       </div>
       
       {/* Center Section: Navigation Links */}
@@ -430,13 +431,13 @@ function Days12() {
       {/* Right Section: Buttons */}
       <div style={buttonContainerStyle}>
       <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
-          <FaFacebook size={24} />
+          <FaFacebook size={30} />
         </a>
         <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
-          <FaInstagram size={24} />
+          <FaInstagram size={30} />
         </a>
         <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" style={{  padding: '10px 20px', cursor: 'pointer' }} >
-          <FaTiktok size={24}  />
+          <FaTiktok size={30}  />
   </a>
 
         {/* Add more buttons as needed */}
@@ -463,7 +464,7 @@ function Days12() {
   </div>
   <div style={{ marginRight: '10px',marginTop:'19px' }}> {/* Right-aligned content */}
   <Link to="/BookingForm" style={bookbuttonstyle}>
-          Book Now
+  <b>Book Now</b>
             </Link> 
   </div>
   
@@ -474,7 +475,7 @@ function Days12() {
         
       </section>
       
-      <h1 style={h1Style}>12 Day Tour Package</h1>
+      <h1 style={h1Style}><b>12 Day Tour Package</b></h1>
       <main style={mainContentStyle}>
         <section style={tourPackagesStyle}>
         <div style={{packageStyle , display:'flex',gap:'20%'}}>

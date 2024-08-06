@@ -292,21 +292,21 @@ function Days6() {
   };
   const formStyle = {
     flex: '1',
-    backgroundColor: '#B0E0E6',
-    padding: '10px',
-    borderRadius: '8px',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 1)',
-    maxWidth: '400px',
+    backgroundColor: 'white',
+    padding: '30px',
+    borderRadius: '',
+    border: '2px solid #3498db',
+    boxShadow: '0 4px 8px rgba(1, 1, 1, 1)',
+    maxWidth: '300px',
     fontFamily: 'Arial, sans-serif',
     position: 'fixed',
-    top: '100px', // To align with the header
-    bottom:'160px',
+    top: '230px', // To align with the header
+    bottom:'10px',
     display: isformvisible ? 'block' : 'none', // Show/hide based on state
-    right: '10px',
+    right: '20px',
     zIndex: '999',
-    maxHeight:'100%',
-    marginTop:'100px',
-    marginRight:'90px',
+    maxHeight:'70%',
+    marginRight: '103px',
   };
   const labelStyle = {
     display: 'block',
@@ -412,7 +412,7 @@ function Days6() {
       <div style={navbarStyle}>
       {/* Left Section: Logo */}
       <div>
-        <h1 style={{ margin: '0', padding: '0', fontSize: '1em' }}>info@lahirutours.co.uk</h1>
+        <h1 style={{ margin: '0', padding: '0', fontSize: '2em' }}><b>info@lahirutours.co.uk</b></h1>
       </div>
       
       {/* Center Section: Navigation Links */}
@@ -423,13 +423,13 @@ function Days6() {
       {/* Right Section: Buttons */}
       <div style={buttonContainerStyle}>
       <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
-          <FaFacebook size={24} />
+          <FaFacebook size={30} />
         </a>
         <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
-          <FaInstagram size={24} />
+          <FaInstagram size={30} />
         </a>
         <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" style={{  padding: '10px 20px', cursor: 'pointer' }} >
-          <FaTiktok size={24}  />
+          <FaTiktok size={30}  />
   </a>
 
         {/* Add more buttons as needed */}
@@ -455,7 +455,7 @@ function Days6() {
     <a href="/feedback" style={linkStyle}>FAQ</a>
   </div>
   <div style={{ marginRight: '10px',marginTop:'19px' }}> {/* Right-aligned content */}
-  <Link to="/BookingForm" style={bookbuttonstyle}>Book Now</Link> 
+  <Link to="/BookingForm" style={bookbuttonstyle}> <b>Book Now</b></Link> 
   </div>
   
   
@@ -486,8 +486,17 @@ function Days6() {
             </div>
             </div>
             </section><br />
+
+
+            <div style={{width:'80%',display:'inline-block',border:'2px solid blue',boxShadow: '0px 4px 8px rgba(1, 1, 1, 1)',borderRadius:'10px',padding:'20px'}}>
+           <h1 style={{fontSize:'2em',textAlign:'left',fontFamily:'Ubuntu'}}> All our tour packages include the cost of tickets for all attractions during your travel. Additionally, all our packages include high-standard hotel stays with breakfast and dinner provided throughout your stay. </h1><br />
+
+            <p style={{fontSize:'2.2em',textAlign:'left',fontFamily:'Oswald',color:'blue'}}><b>Please note:</b></p><h1 style={{fontSize:'2em',textAlign:'left',fontFamily:'Nanum Gothic'}}> Our travel packages do not include airline tickets. If you would like us to arrange your airline tickets, please contact our admin team through our contact form or at <u>admin@lahirutours.co.uk.</u></h1>
+            </div>
+
+
            
-            <div style={{ ...packageDescriptionStyle, textAlign: 'left', alignItems: 'center' }}>
+            <div style={{ ...packageDescriptionStyle, textAlign: 'left', alignItems: 'center' ,}}>
             <div style={iconStyle}>
               <FontAwesomeIcon  icon={faBed} size="3x" />
               <FontAwesomeIcon style={{padding:'10px'}}  icon={faUtensils} size="3x" />

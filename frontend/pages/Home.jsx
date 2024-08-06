@@ -171,6 +171,7 @@ function Home() {
     left: '0',
     width: '100%',
     height: '120px',
+    padding: '10px 0px 0px  ',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
     zIndex: '1000',
   };
@@ -267,9 +268,11 @@ function Home() {
     fontSize: '4em',
     margin: '0',
     color: '#4682B4',
-    padding: '10px',
-    borderRadius: '8px',
+    padding: '20px',
+    borderRadius: '40px',
     display: 'inline-block',
+    border:'2px solid blue',
+    boxShadow: '0px 4px 8px rgba(0, 0, 0, 1)',
   };
   const aboutS = {
     fontFamily:'Great Vibes',
@@ -336,8 +339,11 @@ function Home() {
     flexWrap: 'wrap',
     justifyContent: 'center',
     gap: '40px',
-    marginLeft:'0px',
-    
+    marginTop:'40px',
+    border:'2px solid blue',
+    padding:'50px',
+    boxShadow: '0px 4px 8px rgba(0, 0, 0, 1)',
+    borderRadius:'30px',
   };
 
   const packageStyle = {
@@ -368,7 +374,8 @@ function Home() {
     justifyContent: 'center',
     padding: '0px',
     paddingTop: '100px',
-    marginLeft: '00px',
+    
+    display:'inline-block'
     
   };
   const fb2style= {
@@ -416,7 +423,7 @@ function Home() {
     display: isformvisible ? 'block' : 'none', // Show/hide based on state
     right: '20px',
     zIndex: '999',
-    maxHeight:'70%',
+    maxHeight:'60%',
     marginRight: '103px',
   };
 
@@ -589,7 +596,7 @@ function Home() {
       
       {/* Right Section: Buttons */}
       <div style={buttonContainerStyle}>
-      <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
+      <a href="https://www.facebook.com/share/TLHsJswwmcxzvuiA/?mibextid=WC7FNe" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
           <FaFacebook size={30} />
         </a>
         <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
@@ -624,7 +631,7 @@ function Home() {
   </div>
   <div style={{ marginRight: '10px',marginTop:'19px' }}> {/* Right-aligned content */}
   <Link to="/BookingForm" style={bookbuttonstyle}>
-          Book Now
+  <b>Book Now</b>
             </Link> 
   </div>
   
@@ -673,7 +680,7 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
               <FontAwesomeIcon  icon={faUtensils} size="1x" />
               <FontAwesomeIcon  icon={faCar} size="1x" />  
               
-              </div>  <h1 style={pricestyle}>Price $100 P\P</h1>
+              </div>  <h1 style={pricestyle}>Price £1,488 P\P</h1>
             
             </a>
 
@@ -686,7 +693,7 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
               <FontAwesomeIcon  icon={faBed} size="1x" />
               <FontAwesomeIcon  icon={faUtensils} size="1x" />
               <FontAwesomeIcon  icon={faCar} size="1x" />  
-              </div><h1 style={pricestyle}>Price $100 P\P</h1>
+              </div><h1 style={pricestyle}>Price £2,049 P\P</h1>
             
             </a>
 
@@ -698,7 +705,7 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
               <FontAwesomeIcon  icon={faBed} size="1x" />
               <FontAwesomeIcon  icon={faUtensils} size="1x" />
               <FontAwesomeIcon  icon={faCar} size="1x" />  
-              </div><h1 style={pricestyle}>Price $100 P\PP\P</h1>
+              </div><h1 style={pricestyle}>Price £2,514 P\P</h1>
             </a>
 
 
@@ -711,7 +718,7 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
               <FontAwesomeIcon  icon={faBed} size="1x" />
               <FontAwesomeIcon  icon={faUtensils} size="1x" />
               <FontAwesomeIcon  icon={faCar} size="1x" />  
-              </div><h1 style={pricestyle}>Price $100 P\P</h1>
+              </div><h1 style={pricestyle}>Price £3,016 P\P</h1>
             
             </a>
 
@@ -726,7 +733,7 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
               <FontAwesomeIcon  icon={faBed} size="1x" />
               <FontAwesomeIcon  icon={faUtensils} size="1x" />
               <FontAwesomeIcon  icon={faCar} size="1x" />  
-              </div><h1 style={pricestyle}>Price $100 P\P</h1>
+              </div><h1 style={pricestyle}>Price £3,701 P\P</h1>
             
             </a>
 
@@ -740,7 +747,7 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
               <FontAwesomeIcon  icon={faBed} size="1x" />
               <FontAwesomeIcon  icon={faUtensils} size="1x" />
               <FontAwesomeIcon  icon={faCar} size="1x" />  
-              </div><h1 style={pricestyle}>Price $100 P\P</h1>
+              </div><h1 style={pricestyle}>Price £4,425 P\P</h1>
            
             </a>
 
@@ -754,7 +761,7 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
               <FontAwesomeIcon  icon={faBed} size="1x" />
               <FontAwesomeIcon  icon={faUtensils} size="1x" />
               <FontAwesomeIcon  icon={faCar} size="1x" />  
-              </div><h1 style={pricestyle}>Price $100 P\P</h1>
+              </div><h1 style={pricestyle}>Price £4,595 P\P</h1>
            
             </a>
 
@@ -768,9 +775,10 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
               <FontAwesomeIcon  icon={faBed} size="1x" />
               <FontAwesomeIcon  icon={faUtensils} size="1x" />
               <FontAwesomeIcon  icon={faCar} size="1x" />  
-              </div><h1 style={pricestyle}>Price $100 P\P</h1>
+              </div><h1 style={pricestyle}>Price £4,883 P\P</h1>
             
             </a>
+            </div>
             <div style={{fontSize:'2em',fontSmooth:'100px',backgroundColor:'',color:'#4682B4'}}>
             Special Discount for Couples! <a style={{color:'#4682B4',fontSize:'1em'}} href="/TourPackages"><u>For more Info</u></a>
 
@@ -802,7 +810,10 @@ Lahiru Tours – Where Family, Passion, and Adventure Meet!</p></p>
             <p style={desstyle}>We offer both cars and vans to suit your preferences. We recommend cars for couples and vans for small groups, but your choice always comes first. All our vehicles are fully air-conditioned to ensure a comfortable and safe ride. Our partner hotels provide great comfort, excellent food, and high-standard services. We strive to deliver the best experience to ensure you have a highly satisfactory tour with us.
 
 Tour PackagesWe offer flexible and engaging packages designed to help you enjoy and relax during your stay in Sri Lanka. Our packages are reasonably priced and include very comfortable hotels and meals tailored to your preferences.</p>
-          </div>
+          
+
+
+
           <br /><br /><br />
           <Link to="/BookingForm" style={{...bookbuttonstyle,':hover':hoverStyle}}>
           Book Now !
@@ -927,16 +938,21 @@ Tour PackagesWe offer flexible and engaging packages designed to help you enjoy 
         <div style={footerSectionStyle}>
           <h4 style={footerSectionTitleStyle}>Become Our Friend</h4>
           <ul style={footerListStyle}>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Facebook</a></li>
+            <li style={footerListItemStyle}><a href="https://www.facebook.com/share/TLHsJswwmcxzvuiA/?mibextid=WC7FNe" style={socialLinkStyle}>Facebook</a></li>
             <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Twitter</a></li>
             <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Instagram</a></li>
           </ul>
         </div>
         <div style={footerSectionStyle}>
           <h4 style={footerSectionTitleStyle}>Contact Us</h4>
-          <p>
-            Email: info@lahirutours.co.uk
-            <br />
+          
+          <p><u>
+            info@lahirutours.co.uk<br />
+            admin@lahirutours.co.uk <br />
+            payment@lahirutours.co.uk <br />
+            nipun_virajitha@lahirutours.co.uk <br />
+            gamini@lahirutours.co.uk <br /></u>
+
             
           </p>
         </div>

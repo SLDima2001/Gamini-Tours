@@ -63,19 +63,21 @@ function ContactUS() {
   const appStyle = {
     textAlign: 'center',
     fontFamily: 'Arial, sans-serif',
-    backgroundColor: '#e0f7fa', // Light blue background color
+    backgroundColor: 'white',
     display: 'flex',
     flexDirection: 'column',
-    minHeight: '100vh', // Ensure app takes up full viewport height
+    minHeight: '100vh',
+    overflow: 'hidden',
+    
   };
   const textareaStyle = {
     width: '100%',
-    padding: '10px',
-    marginBottom: '15px',
+    padding: '20px',
+    marginBottom: '25px',
     borderRadius: '5px',
     border: '1px solid #ccc',
     boxSizing: 'border-box',
-    minHeight: '200px',
+    minHeight: '300px',
   };
   const bookbuttonstyle = {
     backgroundColor: '#4682B4',
@@ -101,18 +103,17 @@ function ContactUS() {
   };
 
   const labelStyle = {
-    fontSize: '2em',
     display: 'block',
-    marginBottom: '10px',
-    color: '#333',
+      fontSize: '16px',
+      marginBottom: '5px',
+      color: '#333',
   };
   const inputStyle = {
-    width: '100%',
+    width: 'calc(100% - 20px)',
     padding: '10px',
-    marginBottom: '15px',
-    borderRadius: '5px',
     border: '1px solid #ccc',
-    boxSizing: 'border-box',
+    borderRadius: '5px',
+    fontSize: '16px',
   };
 
   const headerStyle = {
@@ -227,7 +228,13 @@ function ContactUS() {
 
   const tourPackagesStyle = {
     padding: '20px',
-    backgroundColor: '#e0f7fa',
+    backgroundColor: '',
+    justifyContent: 'center',
+    backgroundSize: 'cover',
+    height: '100vh',
+    display: 'flex',
+    alignItems: 'center',
+    
   };
 
   const packageStyle = {
@@ -293,20 +300,27 @@ function ContactUS() {
     display: 'inline-block',
   };
   const formStyle = {
-    flex: '1',
     backgroundColor: 'rgba(255, 255, 255, 0.8)',
     padding: '20px',
     border: '2px solid #3498db',
-    borderRadius: '20px',
+    borderRadius: '10px',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 1)',
-    maxWidth: '30%',
     fontFamily: 'Arial, sans-serif',
     position: 'center',
     zIndex: '999',
     minHeight:'80vh',
-    marginLeft:'850px',
+    marginLeft:'',
     alignItems: 'center',
+    backgroundSize: 'cover',
   };
+  const wrapper={
+    backgroundColor: '',
+      border: '',
+      borderRadius: '10px',
+      width: '600px',
+      padding: '20px',
+      boxShadow: '0 0 10px rgba(0, 0, 0, 0)',
+  }
 
 
   return (
@@ -358,7 +372,7 @@ function ContactUS() {
   </div>
   <div style={{ marginRight: '10px',marginTop:'19px' }}> {/* Right-aligned content */}
   <Link to="/BookingForm" style={bookbuttonstyle}>
-          Book Now
+          <b>Book Now</b>
             </Link> 
   </div>
   
@@ -368,7 +382,9 @@ function ContactUS() {
         
         
       </section>
-      <section style={tourPackagesStyle}>
+      
+      <div style={tourPackagesStyle}>
+        <div style={wrapper}>
       <form style={formStyle} onSubmit={handleSubmit}>
           <h2 style={h2Style}>Contact Us</h2>
           <label style={labelStyle} htmlFor="name">Name:</label>
@@ -416,7 +432,9 @@ function ContactUS() {
           ></textarea>
           <button type="submit" style={buttonStyle}>Submit</button>
         </form>
-      </section>
+      </div>
+      </div>
+      
       <footer style={footerStyle}>
         <div style={footerSectionStyle}>
           <h4 style={footerSectionTitleStyle}>Relaxing</h4>

@@ -13,21 +13,23 @@ function Afterfeedback() {
   const appStyle = {
     textAlign: 'center',
     fontFamily: 'Arial, sans-serif',
-    backgroundColor: '', // Light blue background color
+    backgroundColor: 'white',
     display: 'flex',
     flexDirection: 'column',
-    minHeight: '100vh', // Ensure app takes up full viewport height
+    minHeight: '100vh',
+    overflow: 'hidden',
+    
   };
   const bookbuttonstyle = {
-    fontSize: '1.6em',
-    backgroundColor: '#00796b',
-    color: 'white',
-    border: 'none',
-    padding: '20px 60px',
-    borderRadius: '5px',
-    cursor: 'hand',
-    transition: 'background-color 0.3s ease',
-    
+    backgroundColor: '#4682B4',
+      color: 'white',
+      padding: '20px 20px',
+      border: 'none',
+      borderRadius: '4px',
+      cursor: 'pointer',
+      fontSize: '1.6em',
+      marginTop: '0px',
+      
     
   };
 
@@ -137,17 +139,35 @@ function Afterfeedback() {
   };
 
   const mainContentStyle = {
-    flex: '1', // Allow main content to grow to fill remaining space
-    padding: '20px',
+    
+    padding: '10px',
     backgroundColor: '#ffffff',
-    marginLeft: isNavbarVisible ? '200px' : '0', // Adjust main content margin when navbar is visible
     transition: 'margin-left 0.3s ease', // Add transition for smooth adjustment
+    justifyContent:'',
+    display:'inline-block',
+    width:'80%',
+    alignItems:'center',
+    border:'2px solid blue',
+    boxShadow: '0px 4px 8px rgba(0, 0, 0, 1)',
+    borderRadius:'10%',
+    marginBottom:'50px',
+    marginTop:'50px',
+
+
   };
 
   const h2Style = {
     fontFamily:'Rockybilly',
-    color: '#4CAF50',
+    display:'inline-block',
+    color: '#4682B4',
     fontSize:'4em',
+    margin: '0',
+    padding: '20px',
+    borderRadius: '40px',
+    border:'2px solid blue',
+    boxShadow: '0px 4px 8px rgba(0, 0, 0, 1)',
+    width:'30%',
+    
   };
 
   const pStyle = {
@@ -224,10 +244,6 @@ function Afterfeedback() {
     marginBottom: '10px',
   };
 
-  const socialMediaStyle = {
-    display: 'flex',
-    gap: '10px',
-  };
 
   const socialLinkStyle = {
     color: 'white',
@@ -235,8 +251,8 @@ function Afterfeedback() {
   };
   const buttonS = {
     marginTop: '20px',
-      padding: '10px 20px',
-      fontSize: '1.5em',
+      padding: '20px 50px',
+      fontSize: '2em',
       color: 'white',
       backgroundColor: '#333',
       border: 'none',
@@ -284,7 +300,7 @@ function Afterfeedback() {
       <div style={navbarStyle}>
       {/* Left Section: Logo */}
       <div>
-        <h1 style={{ margin: '0', padding: '0', fontSize: '1em' }}>info@lahirutours.co.uk</h1>
+        <h1 style={{ margin: '0', padding: '0', fontSize: '2em' }}><b>info@lahirutours.co.uk</b></h1>
       </div>
       
       {/* Center Section: Navigation Links */}
@@ -295,13 +311,13 @@ function Afterfeedback() {
       {/* Right Section: Buttons */}
       <div style={buttonContainerStyle}>
       <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
-          <FaFacebook size={24} />
+          <FaFacebook size={30} />
         </a>
         <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
-          <FaInstagram size={24} />
+          <FaInstagram size={30} />
         </a>
         <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" style={{  padding: '10px 20px', cursor: 'pointer' }} >
-          <FaTiktok size={24}  />
+          <FaTiktok size={30}  />
   </a>
 
         {/* Add more buttons as needed */}
@@ -327,7 +343,7 @@ function Afterfeedback() {
   </div>
   <div style={{ marginRight: '10px',marginTop:'19px' }}> {/* Right-aligned content */}
   <Link to="/BookingForm" style={bookbuttonstyle}>
-          Book Now !
+          <b>Book Now</b>
             </Link> 
   </div>
   
@@ -338,7 +354,8 @@ function Afterfeedback() {
         
       </section>
      
-      <main style={mainContentStyle}>
+      <main>
+        <div style={mainContentStyle}>
         <h2 style={h2Style}>Lahiru Tours</h2>
         <p style={pStyle}>
         <b style={aboutS}>Welcome to Lahiru Tours: A Family-Run Travel Agency </b><br /></p>
@@ -375,8 +392,8 @@ Lahiru Tours – Where Family, Passion, and Adventure Meet! <br />
           Back To Home
             </Link> 
 
-
-        
+<br />
+            </div>
         
       </main>
       
