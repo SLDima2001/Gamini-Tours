@@ -6,6 +6,7 @@ import Route from './routes/Route.js';
 import emailRoute from './routes/emailRoute.js';
 import Stripe from 'stripe';
 
+
 const stripe = new Stripe(stripeSecretKey);
 
 const app = express();
