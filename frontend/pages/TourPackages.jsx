@@ -45,6 +45,10 @@ function TourPackages() {
     marginTop: '0px',
   };
   const bookbuttonstyle = {
+    display: 'block',
+  '@media (max-width: 768px)': {
+    display: 'none',
+  },
     backgroundColor: '#4682B4',
       color: 'white',
       padding: '20px 20px',
@@ -52,7 +56,8 @@ function TourPackages() {
       borderRadius: '4px',
       cursor: 'pointer',
       fontSize: '1.6em',
-      marginTop: '',
+      marginTop: '0px',
+      
     
   };
 
@@ -264,18 +269,19 @@ function TourPackages() {
       
       {/* Right Section: Buttons */}
       <div style={buttonContainerStyle}>
-      <a href="https://www.facebook.com/profile.php?id=100054495458742&mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
+      <a href="https://www.facebook.com/share/TLHsJswwmcxzvuiA/?mibextid=WC7FNe" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
           <FaFacebook size={30} />
         </a>
-        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
+        <a href="https://www.instagram.com/lahiru_tours_sri_lanka?igsh=azYyenZxaHZ6aW1y&utm_source=qr" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
           <FaInstagram size={30} />
         </a>
-        <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" style={{  padding: '10px 20px', cursor: 'pointer' }} >
+        <a href="https://vm.tiktok.com/ZGevyQ8eB/" target="_blank" rel="noopener noreferrer" style={{  padding: '10px 20px', cursor: 'pointer' }} >
           <FaTiktok size={30}  />
   </a>
 
         {/* Add more buttons as needed */}
       </div>
+
     </div>
 
             
@@ -376,17 +382,19 @@ Hurry, this offer won't last long. Limited bookings available. Book your romanti
         <div style={footerSectionStyle}>
           <h4 style={footerSectionTitleStyle}>Become Our Friend</h4>
           <ul style={footerListStyle}>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Facebook</a></li>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Twitter</a></li>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Instagram</a></li>
+            <li style={footerListItemStyle}><a href="https://www.facebook.com/share/TLHsJswwmcxzvuiA/?mibextid=WC7FNe" style={socialLinkStyle}>Facebook</a></li>
+            <li style={footerListItemStyle}><a href="https://www.instagram.com/lahiru_tours_sri_lanka?igsh=azYyenZxaHZ6aW1y&utm_source=qr" style={socialLinkStyle}>Instagram</a></li>
           </ul>
         </div>
         <div style={footerSectionStyle}>
           <h4 style={footerSectionTitleStyle}>Contact Us</h4>
-          <p>
-            Email: info@lahirutours.co.uk
-            <br />
-            
+          
+          <p><u>
+            info@lahirutours.co.uk<br />
+            admin@lahirutours.co.uk <br />
+            payment@lahirutours.co.uk <br />
+            nipun_virajitha@lahirutours.co.uk <br />
+            gamini@lahirutours.co.uk <br /></u>
           </p>
         </div>
       </footer>

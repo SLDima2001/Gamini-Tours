@@ -292,16 +292,21 @@ function Gallery() {
         <div style={footerSectionStyle}>
           <h4 style={footerSectionTitleStyle}>Become Our Friend</h4>
           <ul style={footerListStyle}>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Facebook</a></li>
+            <li style={footerListItemStyle}><a href="https://www.facebook.com/share/TLHsJswwmcxzvuiA/?mibextid=WC7FNe" style={socialLinkStyle}>Facebook</a></li>
             <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Twitter</a></li>
             <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Instagram</a></li>
           </ul>
         </div>
         <div style={footerSectionStyle}>
           <h4 style={footerSectionTitleStyle}>Contact Us</h4>
-          <p>
-            Email: info@lahirutours.co.uk
-            <br />
+          
+          <p><u>
+            info@lahirutours.co.uk<br />
+            admin@lahirutours.co.uk <br />
+            payment@lahirutours.co.uk <br />
+            nipun_virajitha@lahirutours.co.uk <br />
+            gamini@lahirutours.co.uk <br /></u>
+
             
           </p>
         </div>

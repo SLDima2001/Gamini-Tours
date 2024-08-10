@@ -67,6 +67,10 @@ function Days6() {
     marginTop: '0px',
   }
   const bookbuttonstyle = {
+    display: 'block',
+  '@media (max-width: 768px)': {
+    display: 'none',
+  },
     backgroundColor: '#4682B4',
       color: 'white',
       padding: '20px 20px',
@@ -422,18 +426,19 @@ function Days6() {
       
       {/* Right Section: Buttons */}
       <div style={buttonContainerStyle}>
-      <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
+      <a href="https://www.facebook.com/share/TLHsJswwmcxzvuiA/?mibextid=WC7FNe" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
           <FaFacebook size={30} />
         </a>
-        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
+        <a href="https://www.instagram.com/lahiru_tours_sri_lanka?igsh=azYyenZxaHZ6aW1y&utm_source=qr" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
           <FaInstagram size={30} />
         </a>
-        <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" style={{  padding: '10px 20px', cursor: 'pointer' }} >
+        <a href="https://vm.tiktok.com/ZGevyQ8eB/" target="_blank" rel="noopener noreferrer" style={{  padding: '10px 20px', cursor: 'pointer' }} >
           <FaTiktok size={30}  />
   </a>
 
         {/* Add more buttons as needed */}
       </div>
+
     </div>
 
             
@@ -468,6 +473,7 @@ function Days6() {
       <h1 style={h1Style}><b>6 Days Tour Package</b></h1>
       <main style={mainContentStyle}>
         <section style={tourPackagesStyle}>
+          
           <section>
           <div style={{packageStyle , display:'flex',gap:'20%'}}>
             <div>
@@ -488,10 +494,10 @@ function Days6() {
             </section><br />
 
 
-            <div style={{width:'80%',display:'inline-block',border:'2px solid blue',boxShadow: '0px 4px 8px rgba(1, 1, 1, 1)',borderRadius:'10px',padding:'20px'}}>
-           <h1 style={{fontSize:'2em',textAlign:'left',fontFamily:'Ubuntu'}}> All our tour packages include the cost of tickets for all attractions during your travel. Additionally, all our packages include high-standard hotel stays with breakfast and dinner provided throughout your stay. </h1><br />
+            <div style={{width:'40%',display:'',border:'2px solid blue',boxShadow: '0px 4px 8px rgba(1, 1, 1, 1)',borderRadius:'10px',padding:'20px'}}>
+           <h1 style={{fontSize:'1em',textAlign:'left',fontFamily:'Ubuntu'}}> All our tour packages include the cost of tickets for all attractions during your travel. Additionally, all our packages include high-standard hotel stays with breakfast and dinner provided throughout your stay. </h1><br />
 
-            <p style={{fontSize:'2.2em',textAlign:'left',fontFamily:'Oswald',color:'blue'}}><b>Please note:</b></p><h1 style={{fontSize:'2em',textAlign:'left',fontFamily:'Nanum Gothic'}}> Our travel packages do not include airline tickets. If you would like us to arrange your airline tickets, please contact our admin team through our contact form or at <u>admin@lahirutours.co.uk.</u></h1>
+            <p style={{fontSize:'1.2em',textAlign:'left',fontFamily:'Oswald',color:'blue'}}><b>Please note:</b></p><h1 style={{fontSize:'1.3em',textAlign:'left',fontFamily:'Nanum Gothic'}}> Our travel packages do not include airline tickets. If you would like us to arrange your airline tickets, please contact our admin team through our contact form or at <u>admin@lahirutours.co.uk.</u></h1>
             </div>
 
 
@@ -810,17 +816,19 @@ From your luxurious hotel room, you’ll enjoy breathtaking views of the ocean a
         <div style={footerSectionStyle}>
           <h4 style={footerSectionTitleStyle}>Become Our Friend</h4>
           <ul style={footerListStyle}>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Facebook</a></li>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Twitter</a></li>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Instagram</a></li>
+            <li style={footerListItemStyle}><a href="https://www.facebook.com/share/TLHsJswwmcxzvuiA/?mibextid=WC7FNe" style={socialLinkStyle}>Facebook</a></li>
+            <li style={footerListItemStyle}><a href="https://www.instagram.com/lahiru_tours_sri_lanka?igsh=azYyenZxaHZ6aW1y&utm_source=qr" style={socialLinkStyle}>Instagram</a></li>
           </ul>
         </div>
         <div style={footerSectionStyle}>
           <h4 style={footerSectionTitleStyle}>Contact Us</h4>
-          <p>
-            Email: info@lahirutours.co.uk
-            <br />
-            
+          
+          <p><u>
+            info@lahirutours.co.uk<br />
+            admin@lahirutours.co.uk <br />
+            payment@lahirutours.co.uk <br />
+            nipun_virajitha@lahirutours.co.uk <br />
+            gamini@lahirutours.co.uk <br /></u>
           </p>
         </div>
       </footer>

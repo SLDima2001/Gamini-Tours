@@ -14,6 +14,8 @@ function ContactUS() {
   const [subject, setsubject] = useState('');
   const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
+  
+  const handleChange = (e) => setPhone(e.target.value.replace(/[^0-9]/g, ''));
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -60,6 +62,7 @@ function ContactUS() {
       alert('Successfully');
     }
   };
+  
   const appStyle = {
     textAlign: 'center',
     fontFamily: 'Arial, sans-serif',
@@ -80,6 +83,10 @@ function ContactUS() {
     minHeight: '300px',
   };
   const bookbuttonstyle = {
+    display: 'block',
+  '@media (max-width: 768px)': {
+    display: 'none',
+  },
     backgroundColor: '#4682B4',
       color: 'white',
       padding: '20px 20px',
@@ -88,7 +95,7 @@ function ContactUS() {
       cursor: 'pointer',
       fontSize: '1.6em',
       marginTop: '0px',
-      transition: 'background-color 0.3s ease',
+      
     
   };
   const buttonStyle = {
@@ -228,7 +235,7 @@ function ContactUS() {
 
   const tourPackagesStyle = {
     padding: '20px',
-    backgroundColor: '',
+    backgroundColor: 'rgba(255, 255, 255, 0.8)',
     justifyContent: 'center',
     backgroundSize: 'cover',
     height: '100vh',
@@ -339,18 +346,19 @@ function ContactUS() {
       
       {/* Right Section: Buttons */}
       <div style={buttonContainerStyle}>
-      <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
+      <a href="https://www.facebook.com/share/TLHsJswwmcxzvuiA/?mibextid=WC7FNe" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
           <FaFacebook size={30} />
         </a>
-        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
+        <a href="https://www.instagram.com/lahiru_tours_sri_lanka?igsh=azYyenZxaHZ6aW1y&utm_source=qr" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
           <FaInstagram size={30} />
         </a>
-        <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" style={{  padding: '10px 20px', cursor: 'pointer' }} >
+        <a href="https://vm.tiktok.com/ZGevyQ8eB/" target="_blank" rel="noopener noreferrer" style={{  padding: '10px 20px', cursor: 'pointer' }} >
           <FaTiktok size={30}  />
   </a>
 
         {/* Add more buttons as needed */}
       </div>
+
     </div>
 
             
@@ -410,7 +418,7 @@ function ContactUS() {
             type="tel"
             id="phone"
             value={phone}
-            onChange={(e) => setPhone(e.target.value)}
+            onChange={handleChange}
             style={inputStyle}
             required
           />
@@ -457,17 +465,19 @@ function ContactUS() {
         <div style={footerSectionStyle}>
           <h4 style={footerSectionTitleStyle}>Become Our Friend</h4>
           <ul style={footerListStyle}>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Facebook</a></li>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Twitter</a></li>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Instagram</a></li>
+            <li style={footerListItemStyle}><a href="https://www.facebook.com/share/TLHsJswwmcxzvuiA/?mibextid=WC7FNe" style={socialLinkStyle}>Facebook</a></li>
+            <li style={footerListItemStyle}><a href="https://www.instagram.com/lahiru_tours_sri_lanka?igsh=azYyenZxaHZ6aW1y&utm_source=qr" style={socialLinkStyle}>Instagram</a></li>
           </ul>
         </div>
         <div style={footerSectionStyle}>
           <h4 style={footerSectionTitleStyle}>Contact Us</h4>
-          <p>
-            Email: info@lahirutours.co.uk
-            <br />
-            
+          
+          <p><u>
+            info@lahirutours.co.uk<br />
+            admin@lahirutours.co.uk <br />
+            payment@lahirutours.co.uk <br />
+            nipun_virajitha@lahirutours.co.uk <br />
+            gamini@lahirutours.co.uk <br /></u>
           </p>
         </div>
       </footer>

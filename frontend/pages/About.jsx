@@ -4,6 +4,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBed, faUtensils, faCar,faEnvelope,faEnvelopeOpen } from '@fortawesome/free-solid-svg-icons';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { FaFacebook, FaInstagram,FaTiktok } from 'react-icons/fa';
+import "animate.css/animate.compat.css"
+import ScrollAnimation from 'react-animate-on-scroll';
+import { Bounce, Shake,FadeIn,Flash ,Jello} from 'react-motions'
+
+
 
 
 
@@ -11,6 +16,8 @@ function About() {
   const [isNavbarVisible, setIsNavbarVisible] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
+ 
+  
   
   const appStyle = {
     textAlign: 'center',
@@ -23,6 +30,10 @@ function About() {
     
   };
   const bookbuttonstyle = {
+    display: 'block',
+  '@media (max-width: 768px)': {
+    display: 'none',
+  },
     backgroundColor: '#4682B4',
       color: 'white',
       padding: '20px 20px',
@@ -31,7 +42,7 @@ function About() {
       cursor: 'pointer',
       fontSize: '1.6em',
       marginTop: '0px',
-      transition: 'background-color 0.3s ease',
+      
     
   };
 
@@ -147,16 +158,19 @@ function About() {
     transition: 'margin-left 0.3s ease', // Add transition for smooth adjustment
     display:'inline-block',
     width:'90%',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 1)',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0)',
     marginBottom:'50px',
     marginTop:'50px',
-    border:'2px solid blue',
+    border:'0px solid blue',
     borderRadius:'80px',
   };
 
   const h2Style = {
     fontFamily:'Rockybilly',
     display:'inline-block',
+    '@media (max-width: 768px)': {
+    display: 'none',
+  },
     color: '#4682B4',
     fontSize:'4em',
     margin: '0',
@@ -275,7 +289,8 @@ function About() {
     transition: 'background-color 0.3s ease',
     zIndex: '',
     marginTop: '0px',
-  }
+  };
+  
 
 
   
@@ -298,18 +313,19 @@ function About() {
       
       {/* Right Section: Buttons */}
       <div style={buttonContainerStyle}>
-      <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
+      <a href="https://www.facebook.com/share/TLHsJswwmcxzvuiA/?mibextid=WC7FNe" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
           <FaFacebook size={30} />
         </a>
-        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
+        <a href="https://www.instagram.com/lahiru_tours_sri_lanka?igsh=azYyenZxaHZ6aW1y&utm_source=qr" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
           <FaInstagram size={30} />
         </a>
-        <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" style={{  padding: '10px 20px', cursor: 'pointer' }} >
+        <a href="https://vm.tiktok.com/ZGevyQ8eB/" target="_blank" rel="noopener noreferrer" style={{  padding: '10px 20px', cursor: 'pointer' }} >
           <FaTiktok size={30}  />
   </a>
 
         {/* Add more buttons as needed */}
       </div>
+
     </div>
 
             
@@ -351,15 +367,32 @@ function About() {
 
 
           <div>
-        <img style={{height:'550px',marginLeft:'',alignContent:'center'}} src="/Photos/Dad1.jpg" alt="" />
-        <h1 style={photodesstyle}><b>Our begining in 1996</b></h1>
+          
+          
+          <ScrollAnimation animateIn="bounceInLeft"  animateOut='fadeOut'>
+    <Shake duration={5} infinite>
+    <div> <img style={{height:'550px',marginLeft:'',alignContent:'center'}} src="/Photos/Dad1.jpg" alt="" />
+    <h1 style={photodesstyle}><b>Our begining in 1996</b></h1></div>
+  </Shake>
+</ScrollAnimation>
+          
+       
         </div>
 
 
         <div>
-       <img style={{height:'550px',alignContent:'center'}} src="/Photos/Dad2.jpg" alt="" />
-       <h1 style={photodesstyle}><b>Our begining in 1996</b></h1>
+          
+          
+        <ScrollAnimation animateIn="bounceInLeft"  animateOut='fadeOut'>
+    <Shake duration={5} infinite>
+    <div> <img style={{height:'550px',alignContent:'center'}} src="/Photos/Dad2.jpg" alt="" />
+    <h1 style={photodesstyle}><b>Our begining in 1996</b></h1></div>
+  </Shake>
+</ScrollAnimation>
+          
+       
         </div>
+    
 
         </div>
        
@@ -370,28 +403,58 @@ function About() {
 <p style={pStyle}><b>‘Where Family, Passion, and Adventure Meet’</b></p>
 
 <p style={pStyle}>At Lahiru Tours, we believe that travel is more than just visiting new places—it's about creating unforgettable memories and experiencing the heart and soul of a destination. As a family-run travel agency with over two decades of experience, we bring a personal touch and deep local knowledge to every journey we plan.
-<br /><br /><br /><b>Our Story</b><br />
+<br /><br /><br /><b><p style={{marginBottom:'20pxá',}}>Our Story</p></b><br />
 <div  style={{display:'flex',gap:'15%',width:'auto',height:'auto'}}>
   <div>
-<img style={{width:''}} src="/Photos/1.jpg" alt="Photo" />
+  <ScrollAnimation animateIn="bounceInLeft"  animateOut='fadeOut'>
+    <Bounce duration={5} infinite>
+    <div><img src="/Photos/1.jpg" alt="Photo" /></div>
+  </Bounce>
+</ScrollAnimation>
+
 </div>
+
+
 <div>
-<img src="/Photos/2.jpg" alt="Photo" />
+<ScrollAnimation animateIn="bounceInLeft"  animateOut='fadeOut'>
+    <Bounce duration={5} infinite>
+    <div><img src="/Photos/2.jpg" alt="Photo" /></div>
+  </Bounce>
+</ScrollAnimation>
 </div>
+
+
 <div>
-<img src="/Photos/3.jpg" alt="Photo" />
+<ScrollAnimation animateIn="bounceInLeft"  animateOut='fadeOut'>
+    <Bounce duration={5} infinite>
+    <div><img src="/Photos/3.jpg" alt="Photo" /></div>
+  </Bounce>
+</ScrollAnimation>
 </div>
 
 </div>
 Founded in 1996 by Gamini, Lahiru Tours was born from a passion for showcasing the rich culture, history, and natural beauty of Sri Lanka. Our family has explored every corner of this stunning island, gaining unique insights and knowledge that we use to craft perfect travel itineraries for our guests.
 
+
 <div style={{display:'flex',gap:'40%'}}>
-  <div>
-<img src="/Photos/4.jpg" alt="Photo" />
-</div>
+
 <div>
-<img src="/Photos/5.jpg" alt="Photo" />
+<ScrollAnimation animateIn="FadeIn"  animateOut='fadeOut'>
+    <FadeIn duration={1} infinite>
+    <div><img src="/Photos/4.jpg" alt="Photo" /></div>
+  </FadeIn>
+</ScrollAnimation>
 </div>
+
+
+<div>
+<ScrollAnimation animateIn="FadeIn"  animateOut='fadeOut'>
+    <FadeIn duration={1} infinite>
+    <div><img src="/Photos/5.jpg" alt="Photo" /></div>
+  </FadeIn>
+</ScrollAnimation>
+</div>
+
 
 </div>
 <br /><b>Why Choose Lahiru Tours?</b><br />
@@ -415,6 +478,7 @@ Contact Us Today:
 </p>
 <br />
 </div>
+
 
 </div>
       </main>
@@ -441,17 +505,19 @@ Contact Us Today:
         <div style={footerSectionStyle}>
           <h4 style={footerSectionTitleStyle}>Become Our Friend</h4>
           <ul style={footerListStyle}>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Facebook</a></li>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Twitter</a></li>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Instagram</a></li>
+            <li style={footerListItemStyle}><a href="https://www.facebook.com/share/TLHsJswwmcxzvuiA/?mibextid=WC7FNe" style={socialLinkStyle}>Facebook</a></li>
+            <li style={footerListItemStyle}><a href="https://www.instagram.com/lahiru_tours_sri_lanka?igsh=azYyenZxaHZ6aW1y&utm_source=qr" style={socialLinkStyle}>Instagram</a></li>
           </ul>
         </div>
         <div style={footerSectionStyle}>
           <h4 style={footerSectionTitleStyle}>Contact Us</h4>
-          <p>
-            Email: info@lahirutours.co.uk
-            <br />
-            
+          
+          <p><u>
+            info@lahirutours.co.uk<br />
+            admin@lahirutours.co.uk <br />
+            payment@lahirutours.co.uk <br />
+            nipun_virajitha@lahirutours.co.uk <br />
+            gamini@lahirutours.co.uk <br /></u>
           </p>
         </div>
       </footer>

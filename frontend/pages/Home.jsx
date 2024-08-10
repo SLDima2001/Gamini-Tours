@@ -344,6 +344,7 @@ function Home() {
     padding:'50px',
     boxShadow: '0px 4px 8px rgba(0, 0, 0, 1)',
     borderRadius:'30px',
+    marginBottom:'50px',
   };
 
   const packageStyle = {
@@ -463,6 +464,23 @@ function Home() {
   };
 
   const bookbuttonstyle = {
+    display: 'block',
+  '@media (max-width: 768px)': {
+    display: 'none',
+  },
+    backgroundColor: '#4682B4',
+      color: 'white',
+      padding: '20px 20px',
+      border: 'none',
+      borderRadius: '4px',
+      cursor: 'pointer',
+      fontSize: '1.6em',
+      marginTop: '0px',
+      
+    
+  };
+  const bookbuttonstyle2 = {
+    display: '',
     backgroundColor: '#4682B4',
       color: 'white',
       padding: '20px 20px',
@@ -497,14 +515,14 @@ function Home() {
     padding: '20px',
     backgroundColor: '#4682B4',
     color: 'white',
-    textAlign: 'center',
-    marginTop: '0%',
+    textAlign: 'left',
+    marginTop: 'auto', // Pushes footer to the bottom
+    width: '100%', // Ensure footer spans full width
     display: 'flex',
-    justifyContent: 'space-between',
-    flexWrap: 'wrap',
-    
+    justifyContent: 'space-between', // Spread out footer content
+    flexWrap: 'wrap', // Allow wrapping for smaller screens
+    position: 'relative', // Ensure footer content is relative to parent
   };
-
   const footerSectionStyle = {
     marginBottom: '20px',
     flex: '1 1 200px',
@@ -599,15 +617,17 @@ function Home() {
       <a href="https://www.facebook.com/share/TLHsJswwmcxzvuiA/?mibextid=WC7FNe" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
           <FaFacebook size={30} />
         </a>
-        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
+        <a href="https://www.instagram.com/lahiru_tours_sri_lanka?igsh=azYyenZxaHZ6aW1y&utm_source=qr" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 20px', cursor: 'pointer' }}>
           <FaInstagram size={30} />
         </a>
-        <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" style={{  padding: '10px 20px', cursor: 'pointer' }} >
+        <a href="https://vm.tiktok.com/ZGevyQ8eB/" target="_blank" rel="noopener noreferrer" style={{  padding: '10px 20px', cursor: 'pointer' }} >
           <FaTiktok size={30}  />
   </a>
 
         {/* Add more buttons as needed */}
       </div>
+
+
     </div>
 
             
@@ -815,7 +835,7 @@ Tour PackagesWe offer flexible and engaging packages designed to help you enjoy 
 
 
           <br /><br /><br />
-          <Link to="/BookingForm" style={{...bookbuttonstyle,':hover':hoverStyle}}>
+          <Link to="/BookingForm" style={{...bookbuttonstyle2,':hover':hoverStyle}}>
           Book Now !
             </Link> 
             
@@ -939,8 +959,7 @@ Tour PackagesWe offer flexible and engaging packages designed to help you enjoy 
           <h4 style={footerSectionTitleStyle}>Become Our Friend</h4>
           <ul style={footerListStyle}>
             <li style={footerListItemStyle}><a href="https://www.facebook.com/share/TLHsJswwmcxzvuiA/?mibextid=WC7FNe" style={socialLinkStyle}>Facebook</a></li>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Twitter</a></li>
-            <li style={footerListItemStyle}><a href="#" style={socialLinkStyle}>Instagram</a></li>
+            <li style={footerListItemStyle}><a href="https://www.instagram.com/lahiru_tours_sri_lanka?igsh=azYyenZxaHZ6aW1y&utm_source=qr" style={socialLinkStyle}>Instagram</a></li>
           </ul>
         </div>
         <div style={footerSectionStyle}>
@@ -952,8 +971,6 @@ Tour PackagesWe offer flexible and engaging packages designed to help you enjoy 
             payment@lahirutours.co.uk <br />
             nipun_virajitha@lahirutours.co.uk <br />
             gamini@lahirutours.co.uk <br /></u>
-
-            
           </p>
         </div>
       </footer>
