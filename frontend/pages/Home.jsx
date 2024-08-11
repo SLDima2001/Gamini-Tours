@@ -643,11 +643,12 @@ function Home() {
   
   {/* Center Section: Navigation Links */}
   <div style={navLinksStyle}>
-    <a href="https://gamini-tours.vercel.app/" style={linkStyle}>Home</a>
-    <a href="https://gamini-tours.vercel.app/About" style={linkStyle}>About Us</a>
-    <a href="https://gamini-tours.vercel.app/TourPackages" style={linkStyle}>Tour Packages</a>
-    <a href="https://gamini-tours.vercel.app/ContactUS" style={linkStyle}>Contact</a>
-    <a href="https://gamini-tours.vercel.app/feedback" style={linkStyle}>FAQ</a>
+    <link rel="stylesheet" href="/About" >About</link>
+    <a href="/" style={linkStyle}>Home</a>
+    <a href="/About" style={linkStyle}>About Us</a>
+    <a href="/TourPackages" style={linkStyle}>Tour Packages</a>
+    <a href="/ContactUS" style={linkStyle}>Contact</a>
+    <a href="/feedback" style={linkStyle}>FAQ</a>
   </div>
   <div style={{ marginRight: '10px',marginTop:'19px' }}> {/* Right-aligned content */}
   <Link to="/BookingForm" style={bookbuttonstyle}>
