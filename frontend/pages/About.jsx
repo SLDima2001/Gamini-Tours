@@ -339,11 +339,11 @@ function About() {
   
   {/* Center Section: Navigation Links */}
   <div style={navLinksStyle}>
-    <a href="http://localhost:5173/" style={linkStyle}>Home</a>
-    <a href="http://localhost:5173/About" style={linkStyle}>About Us</a>
-    <a href="http://localhost:5173/TourPackages" style={linkStyle}>Tour Packages</a>
-    <a href="http://localhost:5173/ContactUS" style={linkStyle}>Contact</a>
-    <a href="http://localhost:5173/feedback" style={linkStyle}>FAQ</a>
+    <a href="/" style={linkStyle}>Home</a>
+    <a href="/About" style={linkStyle}>About Us</a>
+    <a href="/TourPackages" style={linkStyle}>Tour Packages</a>
+    <a href="/ContactUS" style={linkStyle}>Contact</a>
+    <a href="/feedback" style={linkStyle}>FAQ</a>
   </div>
   <div style={{ marginRight: '10px',marginTop:'19px' }}> {/* Right-aligned content */}
   <Link to="/BookingForm" style={bookbuttonstyle}>
