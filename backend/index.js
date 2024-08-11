@@ -5,6 +5,7 @@ import { PORT, mongodbURL, stripeSecretKey } from './config.js';
 import Route from './routes/Route.js';
 import emailRoute from './routes/emailRoute.js';
 import Stripe from 'stripe';
+import 'dotenv/config'
 
 
 const stripe = new Stripe(stripeSecretKey);
