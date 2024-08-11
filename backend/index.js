@@ -13,7 +13,13 @@ const app = express();
 
 // Middleware for parsing request body
 app.use(express.json());
-app.use(cors());
+app.use(cors(
+  {
+  origin: ["http://localhost:3000"],
+  methods: ['GET', 'POST'],
+  Credential:true
+  }
+));
 
 app.get('/', (req, res) => {
   return res.status(200).send("Welcome to MERN stack");
@@ -56,7 +62,7 @@ app.post('/create-checkout-session', async (req, res) => {
 });
 
 mongoose
-  .connect(mongodbURL, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(mongodbURL, {})
   .then(() => {
     console.log("App connected to database");
     app.listen(PORT, () => {
