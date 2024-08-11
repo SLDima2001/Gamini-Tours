@@ -26,6 +26,7 @@ import Afterfeedback from '../pages/Afterfeedback'
 
 const App = () => {
   return (
+    
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/About" element={<About />} />
