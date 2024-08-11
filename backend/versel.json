@@ -4,7 +4,8 @@
       { "src": "package.json", "use": "@vercel/static-build" }
     ],
     "routes": [
-      { "src": "/(.*)", "dest": "/" }
+      { "src": "/(.*)", "dest": "/" },
+      { "src": "/about(.*)", "dest": "/about" }
     ]
   }
   
