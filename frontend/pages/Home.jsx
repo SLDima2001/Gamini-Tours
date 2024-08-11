@@ -643,7 +643,7 @@ function Home() {
   
   {/* Center Section: Navigation Links */}
   <div style={navLinksStyle}>
-    <link rel="stylesheet" href="/About" >About</link>
+    
     <a href="/" style={linkStyle}>Home</a>
     <a href="/About" style={linkStyle}>About Us</a>
     <a href="/TourPackages" style={linkStyle}>Tour Packages</a>
