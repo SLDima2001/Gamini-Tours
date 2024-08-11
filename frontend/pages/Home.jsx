@@ -33,11 +33,6 @@ function Home() {
     };
   }, []);
 
-  const props = useSpring({
-    opacity: isformvisible ? 1 : 0,
-    transform: isformvisible ? 'scale(1)' : 'scale(2)',
-    config: { tension: 1200, friction: 200 },
-  });
   const handleSubmit = async (event) => {
     event.preventDefault();
     window.location.reload();
@@ -128,19 +123,6 @@ function Home() {
     marginTop: '0px',
   };
 
-  const h1Style = {
-    fontSize: '3.5em',
-    margin: '0',
-    padding: '0px',
-    color: '#333',
-    display: 'inline-block',
-  };
-  const hStyle = {
-    fontSize: '2.5em',
-    margin: '0',
-    color: '#333',
-    display: 'inline-block',
-  };
 
 
   const navbarStyle = {
@@ -192,29 +174,10 @@ function Home() {
     gap: '0px', // Adds space between buttons
   };
   
-  const button1Style = {
-    padding: '10px 20px',
-    cursor: 'pointer',
-  };
   
 
-  const ulStyle = {
-    listStyleType: 'none',
-    padding: '0',
-    margin: '0',
-  };
 
-  const liStyle = {
-    marginBottom: '20px',
-  };
 
-  const aStyle = {
-    display: 'block',
-    color: 'white',
-    padding: '14px 16px',
-    textDecoration: 'none',
-    transition: 'background-color 0.3s ease',
-  };
 
   const mainContentStyle = {
     flex: '1',
@@ -243,26 +206,6 @@ function Home() {
     borderRadius: '8px',
     display: 'inline-block',
   };
-  const h11style = {
-    fontSize: '1em',
-    textAlign: 'left',
-    margin: '0',
-    color: '#333',
-    padding: '0px',
-    borderRadius: '8px',
-    display: 'relative',
-    
-  };
-  const h11right = {
-    fontSize: '1em',
-    textAlign: 'left',
-    margin: '0',
-    color: '#333',
-    padding: '0px',
-    borderRadius: '8px',
-    display: 'relative',
-    
-  };
   const h12Style = {
     fontFamily:'Great Vibes',
     fontSize: '4em',
@@ -273,52 +216,6 @@ function Home() {
     display: 'inline-block',
     border:'2px solid blue',
     boxShadow: '0px 4px 8px rgba(0, 0, 0, 1)',
-  };
-  const aboutS = {
-    fontFamily:'Great Vibes',
-    fontSize: '2em',
-    margin: '0',
-    color: '#333',
-    padding: '10px',
-    borderRadius: '8px',
-    display: 'inline-block',
-  };
-  const aboutmore = {
-    fontFamily:'Great Vibes',
-    fontSize: '1.5em',
-    margin: '0',
-    color: '#00008B',
-    padding: '10px',
-    borderRadius: '8px',
-    display: 'inline-block',
-  };
-  const custopic = {
-    fontSize: '3em',
-    marginTop: '500px',
-    color: '#333',
-    padding: '10px',
-    borderRadius: '8px',
-    display: 'inline-block',
-  };
-  const barstyle = {
-    fontSize: '0.1em',
-    margin: '0',
-    width:'100%',
-    color: '#oooo',
-    backgroundColor:'#000',
-    padding: '1px',
-    display: 'inline-block',
-    marginTop:'10px',
-  };
-  const bar1style = {
-    fontSize: '0.1em',
-    margin: '0',
-    width:'100%',
-    color: '#oooo',
-    backgroundColor:'#000',
-    padding: '1px',
-    
-    marginTop:'100px',
   };
   const desstyle = {
     fontFamily:'Vinque',
@@ -377,16 +274,6 @@ function Home() {
     paddingTop: '100px',
     
     display:'inline-block'
-    
-  };
-  const fb2style= {
-    height: '0%',
-    width: '100%',
-    borderRadius: '0px',
-    justifyContent: 'center',
-    padding: '0px',
-    paddingTop: '100px',
-    marginLeft: '00px',
     
   };
   
@@ -498,19 +385,6 @@ function Home() {
   };
   
   
-  const h1bookbuttonstyle = {
-    fontSize: '1.9em',
-    justifyContent: 'right',
-    backgroundColor: '#00796b',
-    color: 'white',
-    border: 'none',
-    padding: '30px 60px',
-    borderRadius: '5px',
-    cursor: 'pointer',
-    transition: 'background-color 1.3s ease',
-    marginRight: '-700px',
-
-  };
   const footerStyle = {
     padding: '20px',
     backgroundColor: '#4682B4',
@@ -544,19 +418,12 @@ function Home() {
     marginBottom: '10px',
   };
 
-  const socialMediaStyle = {
-    display: 'flex',
-    gap: '10px',
-  };
 
   const socialLinkStyle = {
     color: 'white',
     textDecoration: 'none',
   };
 
-  const toggleNavbar = () => {
-    setIsNavbarVisible(!isNavbarVisible);
-  };
   const handleToggleForm = () => {
     setisformvisible(!isformvisible);
   };
@@ -567,13 +434,6 @@ function Home() {
     marginRight: '-120px',
     marginTop:'-20px',
     gap:'10px',
-  };
-  const icon2Style = {
-    color: 'white',
-  margin: '0 10px',
-  cursor: 'pointer',
-  justifyContent: 'right',
-  
   };
   const bannerstyle= {
     height: '500px',
