@@ -411,7 +411,7 @@ const Feedback = ({ backgroundImageUrl }) => {
       <div style={styles.navbarStyle2}>
   {/* Left Section: Logo */}
   <div>
-  <img src="/Photos/logo.gif" alt="Logo" style={styles.logoImgStyle} />
+  <img src="/src/Photos/logo.gif" alt="Logo" style={styles.logoImgStyle} />
   </div>
   
   {/* Center Section: Navigation Links */}

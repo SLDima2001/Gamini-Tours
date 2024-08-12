@@ -312,12 +312,12 @@ function Days15() {
     maxWidth: '300px',
     fontFamily: 'Arial, sans-serif',
     position: 'fixed',
-    top: '230px', // To align with the header
+    top: '180px', // To align with the header
     bottom:'10px',
     display: isformvisible ? 'block' : 'none', // Show/hide based on state
     right: '20px',
     zIndex: '999',
-    maxHeight:'70%',
+    maxHeight:'60%',
     marginRight: '103px',
   };
   const labelStyle = {
@@ -456,7 +456,7 @@ function Days15() {
       <div style={navbarStyle2}>
   {/* Left Section: Logo */}
   <div>
-  <img src="/Photos/logo.gif" alt="Logo" style={logoImgStyle} />
+  <img src="/src/Photos/logo.gif" alt="Logo" style={logoImgStyle} />
   </div>
   
   {/* Center Section: Navigation Links */}
@@ -486,14 +486,14 @@ function Days15() {
         <div style={{packageStyle , display:'flex',gap:'20%'}}>
           <div>
             <img
-              src="/Photos/Day15.gif"
+              src="/src/Photos/Day15.gif"
               alt="Tour Image"
               style={{ ...photoStyle,objectFit:'cover' }}
             />
             </div>
             <div>
              <img
-              src="/Photos/Day 15.gif"
+              src="/src/Photos/Day 15.gif"
               alt="Tour Image"
               style={{ ...mapstyle }}
             />
@@ -538,7 +538,7 @@ function Days15() {
 •	Visit St. Mary’s Church and Angurukaramulla Temple: Discover the religious heritage of Negombo by visiting St. Mary’s Church and the Angurukaramulla Temple.<br />
 Enjoy your first day soaking in the vibrant culture and picturesque landscapes of Negombo!<br />
 
-<img style={photoStyle}  src="/Photos/Negambo.jpg" alt="" />
+<img style={photoStyle}  src="/src/Photos/Negambo.jpg" alt="" />
                     </p>
                   </div>
                 )}
@@ -585,7 +585,7 @@ Evening: Village Walk and Dinner
 Enjoy this day of cultural discovery and natural beauty as you immerse yourself in the rich heritage of Sri Lanka!<br /><br />
 
 
-<img style={photoStyle}  src="/Photos/Sigiriya.jpg" alt="" />
+<img style={photoStyle}  src="/src/Photos/Sigiriya.jpg" alt="" />
                   </p>
                 </div>
                 )}
@@ -615,7 +615,7 @@ Enjoy this day of cultural discovery and natural beauty as you immerse yourself 
 •	Enjoy your first Sri Lankan grand dinner buffet at the hotel: Savor a variety of local delicacies at the hotel buffet.<br />
 •	Take a walk around the Kandy Lake at night: End your day with a peaceful stroll around the picturesque Kandy Lake.<br />
 Enjoy your second day immersed in the cultural and historical richness of Kandy!<br />
-<img style={photoStyle}  src="/Photos/Kandy.jpg" alt="" />
+<img style={photoStyle}  src="/src/Photos/Kandy.jpg" alt="" />
                   </p>
                 </div>
                 )}
@@ -648,7 +648,7 @@ Enjoy your second day immersed in the cultural and historical richness of Kand
 •	Check in at the cozy hotel in Nuwara Eliya and relax.<br />
 •	Visit Gregory Lake later to soak in the sunset.<br />
 •	Walk around chilly "Little England".<br />
-<img style={photoStyle}  src="/Photos/Nuwaraeliya.jpg" alt="" />
+<img style={photoStyle}  src="/src/Photos/Nuwaraeliya.jpg" alt="" />
                   </p>
                 </div>
                 )}
@@ -678,7 +678,7 @@ Enjoy your second day immersed in the cultural and historical richness of Kand
 •	Enjoy your first Sri Lankan grand dinner buffet at the hotel: Savor a variety of local delicacies at the hotel buffet.<br />
 •	Take a walk around the Kandy Lake at night: End your day with a peaceful stroll around the picturesque Kandy Lake.<br />
 Enjoy your second day immersed in the cultural and historical richness of Kandy!<br />
-<img style={photoStyle}  src="/Photos/Arugambay.jpg" alt="" />
+<img style={photoStyle}  src="/src/Photos/Arugambay.jpg" alt="" />
                     </p>
                   </div>
                 )}
@@ -736,7 +736,7 @@ Highlights:<br />
 •	 Mountains<br /><br />
 
 
-<img style={photoStyle}  src="/Photos/Ella.jpg" alt="" />
+<img style={photoStyle}  src="/src/Photos/Ella.jpg" alt="" />
                   </p>
                   
                 </div>
@@ -767,7 +767,7 @@ Highlights:<br />
 •	Enjoy your first Sri Lankan grand dinner buffet at the hotel: Savor a variety of local delicacies at the hotel buffet.<br />
 •	Take a walk around the Kandy Lake at night: End your day with a peaceful stroll around the picturesque Kandy Lake.<br />
 Enjoy your second day immersed in the cultural and historical richness of Kandy!<br />
-<img style={photoStyle}  src="/Photos/Thissa.jpg" alt="" />
+<img style={photoStyle}  src="/src/Photos/Thissa.jpg" alt="" />
                     </p>
                   </div>
                 )}
@@ -817,7 +817,7 @@ Highlights of Your Day in Mirissa: <br />
 End of Day 8<br />
 Prepare for another day of exploration or relaxation as you continue your unforgettable Sri Lankan adventure!<br /><br />
 
-<img style={photoStyle} src="/Photos/Mirissa.jpg" alt="" />
+<img style={photoStyle} src="/src/Photos/Mirissa.jpg" alt="" />
                   </p>
                 </div>
                 )}
@@ -857,7 +857,7 @@ The next part of this exciting Sri Lanka tour package is a visit to Galle, a cit
 •Explore the historic Galle Fort<br />
 •Visit the iconic Galle Lighthouse<br />
 •Browse the unique boutiques on Peddler Street<br />
-<img style={photoStyle} src="/Photos/Hikkaduwa.png" alt="" />
+<img style={photoStyle} src="/src/Photos/Hikkaduwa.png" alt="" />
                   </p>
                   
                 </div>
@@ -899,7 +899,7 @@ Welcome to Bentota, the jewel of Sri Lanka's southern coast and the ultimate des
 •	Enjoy a seafood BBQ dinner on the beach.<br />
 •	Witness the beauty of a sunset over the Indian Ocean.<br />
 This day in Bentota offers a perfect blend of relaxation, adventure, and cultural experiences, making it a highlight of your Sri Lankan getaway.<br /><br /><br />
-<img style={photoStyle} src="/Photos/Bentota.jpg" alt="" />
+<img style={photoStyle} src="/src/Photos/Bentota.jpg" alt="" />
                   </p>
                 </div>
                 )}
@@ -937,7 +937,7 @@ From your luxurious hotel room, you’ll enjoy breathtaking views of the ocean a
 •Experience Colombo’s nightlife at popular local clubs<br />
 •End of Your Sri Lanka Journey<br />
 <br /> 
-<img style={photoStyle} src="/Photos/Colombo.jpg" alt="" />
+<img style={photoStyle} src="/src/Photos/Colombo.jpg" alt="" />
                     </p>
                     
                   </div>

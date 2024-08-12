@@ -304,12 +304,12 @@ function Days6() {
     maxWidth: '300px',
     fontFamily: 'Arial, sans-serif',
     position: 'fixed',
-    top: '230px', // To align with the header
+    top: '180px', // To align with the header
     bottom:'10px',
     display: isformvisible ? 'block' : 'none', // Show/hide based on state
     right: '20px',
     zIndex: '999',
-    maxHeight:'70%',
+    maxHeight:'60%',
     marginRight: '103px',
   };
   const labelStyle = {
