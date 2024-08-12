@@ -28,7 +28,8 @@ const App = () => {
   return (
     
     <Routes>
-      <Route path="/" element={<Home />} />
+     
+      <Route  path="/" element={<Home />} />
       <Route path="/About" element={<About />} />
       <Route path="/ContactUS" element={<ContactUS />} />
       <Route path="/Gallery" element={<Gallery />} />
@@ -50,7 +51,7 @@ const App = () => {
 
       <Route path="/PaymentSuccess" element={<PaymentSuccess />} />
       <Route path="/PaymentCancel" element={<PaymentCancel />} />
-
+    
      
       
       

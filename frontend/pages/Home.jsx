@@ -89,6 +89,7 @@ function Home() {
     flexDirection: 'column',
     minHeight: '100vh',
     overflow: 'hidden',
+    width:'100%',
     
   };
 
@@ -311,7 +312,7 @@ function Home() {
     display: isformvisible ? 'block' : 'none', // Show/hide based on state
     right: '20px',
     zIndex: '999',
-    maxHeight:'60%',
+    maxHeight:'auto',
     marginRight: '103px',
   };
 
@@ -460,7 +461,7 @@ function Home() {
  
   return (
     <div style={appStyle}>
-      <header style={header1style} >
+      <div style={header1style} >
       <div style={navbarStyle}>
       {/* Left Section: Logo */}
       <div>
@@ -491,10 +492,10 @@ function Home() {
     </div>
 
             
-      </header>
+      </div>
       
 
-      <section style={headerStyle}>
+      <div style={headerStyle}>
       <div style={navbarStyle2}>
   {/* Left Section: Logo */}
   <div>
@@ -521,7 +522,7 @@ function Home() {
         
         
         
-      </section>
+      </div>
       
       <div>
         <img style={bannerstyle} src="/src/Photos/banner.gif" alt="Banner Photo" />
