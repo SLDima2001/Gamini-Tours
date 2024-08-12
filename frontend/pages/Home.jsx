@@ -266,7 +266,7 @@ function Home() {
     padding: '20px ',
     borderRadius: '20px',
     boxShadow: '0 4px 8px rgba(0, 1, 1, 1)',
-    width: isMobile ? '20%' : 'auto', // Adjust width for mobile and PC views
+    width: isMobile ? '780px' : 'auto', // Adjust width for mobile and PC views
     height:'auto',
     borderColor:'',
   };
