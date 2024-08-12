@@ -44,8 +44,8 @@ app.post('/create-checkout-session', async (req, res) => {
         },
       ],
       mode: 'payment',
-      success_url: 'https://gamini-tours.vercel.app/PaymentSuccess',
-      cancel_url: 'https://gamini-tours.vercel.app/PaymentCancel',
+      success_url: 'http://localhost:5173/PaymentSuccess',
+      cancel_url: 'http://localhost:5173/PaymentCancel',
     });
 
     console.log('Session ID:', session.id);
