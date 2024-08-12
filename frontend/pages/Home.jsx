@@ -276,7 +276,7 @@ function Home() {
     padding: '0px',
     paddingTop: '100px',
     marginLeft: '',
-    display:'inline-block'
+    display:''
   };
   const fb1style= {
     height: '0%',
@@ -552,7 +552,7 @@ function Home() {
         <div style={tourPackagesStyle}>
 
           
-         <p style={{fontSize:'1.5em',fontFamily:'Agraham',width:'auto'}}><b>
+         <p style={{fontSize:'1em',fontFamily:'Agraham',width:'auto'}}><b>
           
           <p style={{fontSize:'2em',}}>Welcome to Lahiru Tours</p></b><br />
 <p>At Lahiru Tours, we pride ourselves on being more than just a travel agency. As a family-run business, we bring a personal touch and heartfelt dedication to every journey we plan. Our passion for travel and commitment to exceptional customer service stem from our deep love for Sri Lanka, and we are eager to share its wonders with you.</p>
@@ -682,15 +682,15 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
             </div><br />
 
             <div><br /><br />
-            <p><p style={{fontSize:'40px'}}> <b> Why Choose Lahiru Tours?</b></p><br />
-            <p style={{fontSize:'1.5em'}}>
+            <p><p style={{fontSize:'30px'}}> <b> Why Choose Lahiru Tours?</b></p><br />
+            <p style={{fontSize:'1.2em'}}>
 <b>Personal Touch:</b> As a family-run business, we treat every guest as an extension of our family. This means you receive personalized service and attention to detail that larger companies can't offer. <br />
 <b>Expert Knowledge:</b> Our extensive local knowledge allows us to craft unique itineraries that showcase the best of Sri Lanka. Whether it's hidden gems or popular landmarks, we ensure your experience is authentic and enriching.<br />
 <b>Passionate Team:</b> Our team consists of family members and close friends who share a passion for travel and hospitality. We are committed to providing warm, friendly, and professional service to make your trip unforgettable.<br />
 <b>Customized Experiences:</b> We understand that every traveler is unique. That's why we offer tailor-made tours that cater to your interests, preferences, and pace. Whether you're seeking adventure, relaxation, or cultural immersion, we design the perfect trip for you.<br />
 <b>Sustainable Tourism:</b> As locals, we are committed to preserving the natural beauty and cultural heritage of Sri Lanka. We support eco-friendly practices and promote responsible tourism to ensure that future generations can enjoy the wonders of our island.</p><br />
 <h1><b><p style={{fontSize:'30px'}}>Our Services</p></b></h1>
-<p style={{fontSize:'1.5em'}}><b>Custom Tours:</b> Personalized itineraries designed to suit your interests and needs. <br />
+<p style={{fontSize:'1.2em'}}><b>Custom Tours:</b> Personalized itineraries designed to suit your interests and needs. <br />
 <b>Cultural Excursions:</b> Explore Sri Lanka’s rich history and heritage with knowledgeable guides.<br />
 <b>Adventure Trips:</b> From surfing and hiking to wildlife safaris, experience thrilling adventures.<br />
 <b>Family Vacations:</b> Fun and engaging activities for travelers of all ages.<br />
@@ -698,7 +698,7 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
 Join the Lahiru Tours Family
 Embark on a journey with Lahiru Tours and discover the true essence of Sri Lanka. Let our family take care of yours, and create memories that will last a lifetime. We look forward to welcoming you to our beautiful island and providing you with an exceptional travel experience.</p>
 
-<br /><p style={{fontSize:'1.7em'}}>Contact Us Today
+<br /><p style={{fontSize:'1.3em'}}>Contact Us Today
 
 Lahiru Tours – Where Family, Passion, and Adventure Meet!</p></p>
             </div>
@@ -712,26 +712,27 @@ Tour PackagesWe offer flexible and engaging packages designed to help you enjoy 
 
 
           <br /><br /><br />
+          <div>
           <Link to="/BookingForm" style={{...bookbuttonstyle2,':hover':hoverStyle}}>
           Book Now !
             </Link> 
-            
+            </div>
             
             <div style={fb1style}>
-              <div>
+              
             <h1 style={{h0style , fontSize:'3em',top:'50px'}}>Our Facbook Rewiews</h1>
               <Link to="https://www.facebook.com/profile.php?id=100054495458742&mibextid=ZbWKwL" >
             
                   <img src="/src/Photos/FB.png" alt='Facebook Review Page'/>
             
               </Link>
-              </div>
-              <div>
+              
+              
             <br /><br /><br /><br /><br /><br /><br /><br />
               <h1 style={{h0style , fontSize:'3em',top:'50px'}}>Our Facbook Rewiews</h1>
               
               <img style={{width:'100%'}} src="/src/Photos/review.gif" alt="Our Customers Feedbacks" />
-              </div>
+              
             </div>
     
 
