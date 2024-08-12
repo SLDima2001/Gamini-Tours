@@ -456,7 +456,7 @@ function Days12() {
       <div style={navbarStyle2}>
   {/* Left Section: Logo */}
   <div>
-  <img src="/Photos/logo.gif" alt="Logo" style={logoImgStyle} />
+  <img src="/src/Photos/logo.gif" alt="Logo" style={logoImgStyle} />
   </div>
   
   {/* Center Section: Navigation Links */}
@@ -486,14 +486,14 @@ function Days12() {
         <div style={{packageStyle , display:'flex',gap:'20%'}}>
           <div>
             <img
-              src="/Photos/Day12.gif"
+              src="/src/Photos/Day12.gif"
               alt="Tour Image"
               style={{ ...photoStyle,objectFit:'cover' }}
             />
             </div>
             <div>
              <img
-              src="/Photos/Day 12.gif"
+              src="/src/Photos/Day 12.gif"
               alt="Tour Image"
               style={{ ...mapstyle }}
             />
@@ -541,7 +541,7 @@ function Days12() {
 •	Visit St. Mary’s Church and Angurukaramulla Temple: Discover the religious heritage of Negombo by visiting St. Mary’s Church and the Angurukaramulla Temple.<br />
 Enjoy your first day soaking in the vibrant culture and picturesque landscapes of Negombo!<br />
 
-<img style={photoStyle} src="/Photos/Negambo.jpg" alt="" />
+<img style={photoStyle} src="/src/Photos/Negambo.jpg" alt="" />
                     </p>
                   </div>
                 )}
@@ -583,7 +583,7 @@ Cap off your day with a delectable dinner buffet at a local restaurant, featurin
 •	Dinner Buffet: Delight in a grand buffet dinner featuring local Sri Lankan curries and dishes.<br />
 Your day in Sigiriya promises a blend of historical exploration, natural beauty, and delightful local experiences, setting the stage for the adventures that lie ahead on your Sri Lankan holiday.<br /><br />  
 
-<img style={photoStyle} src="/Photos/Sigiriya.jpg" alt="" />
+<img style={photoStyle} src="/src/Photos/Sigiriya.jpg" alt="" />
                     </p>
                   </div>
                 )}
@@ -630,7 +630,7 @@ Conclude your day with a delightful dinner at the hotel, featuring a variety of 
 •	Dinner: Indulge in a grand buffet dinner at the hotel.<br />
 •	Overnight: Stay in a comfortable hotel surrounded by the rural charm of Polonnaruwa.<br /><br />
 
-<img style={photoStyle} src="/Photos/Anuradhapura.jpg" alt="" />
+<img style={photoStyle} src="/src/Photos/Anuradhapura.jpg" alt="" />
                     </p>
                   </div>
                 )}
@@ -666,7 +666,7 @@ Conclude your day with a delightful dinner at the hotel, featuring a variety of 
 •	Enjoy your first Sri Lankan grand dinner buffet at the hotel: Savor a variety of local delicacies at the hotel buffet.<br />
 •	Take a walk around the Kandy Lake at night: End your day with a peaceful stroll around the picturesque Kandy Lake.<br />
 Enjoy your second day immersed in the cultural and historical richness of Kandy!<br />
-<img style={photoStyle} src="/Photos/Kandy.jpg" alt="" />
+<img style={photoStyle} src="/src/Photos/Kandy.jpg" alt="" />
                   </p>
                 </div>
                 )}
@@ -730,7 +730,7 @@ Highlights:<br />
 •	 Mountains<br /><br />
 
 
-<img style={photoStyle} src="/Photos/Ella.jpg" alt="" />
+<img style={photoStyle} src="/src/Photos/Ella.jpg" alt="" />
                     </p>
                     
                   </div>
@@ -767,7 +767,7 @@ Highlights:<br />
 •Return to the hotel and relax<br />
 •Walk around the village and interact with friendly locals<br />
 •Enjoy a fiery BBQ dinner at the hotel under the starry sky<br />
-<img style={photoStyle} src="/Photos/Yala.jpg" alt="" />
+<img style={photoStyle} src="/src/Photos/Yala.jpg" alt="" />
                   </p>
                 </div>
                 )}
@@ -823,7 +823,7 @@ Highlights of Your Day in Mirissa: <br />
 End of Day 8<br />
 Prepare for another day of exploration or relaxation as you continue your unforgettable Sri Lankan adventure!<br /><br />
 
-<img style={photoStyle} src="/Photos/Mirissa.jpg" alt="" />
+<img style={photoStyle} src="/src/Photos/Mirissa.jpg" alt="" />
                   </p>
                 </div>
                 )}
@@ -867,7 +867,7 @@ To end the day, unwind at your cozy rainforest retreat, reflecting on the day’
 •	Evening Relaxation: Spend the night at your cozy rainforest hotel, savoring the peaceful surroundings.<br />
 Enjoy your stay in Sinharaja, where every moment is a celebration of nature’s wonders and Sri Lankan heritage!<br />
 
-<img style={photoStyle} src="/Photos/Sinharajaya.jpg" alt="" />
+<img style={photoStyle} src="/src/Photos/Sinharajaya.jpg" alt="" />
                   </p>
                 </div>
                 )}
@@ -907,7 +907,7 @@ The next part of this exciting Sri Lanka tour package is a visit to Galle, a cit
 •Explore the historic Galle Fort<br />
 •Visit the iconic Galle Lighthouse<br />
 •Browse the unique boutiques on Peddler Street<br />
-<img style={photoStyle} src="/Photos/Hikkaduwa.png" alt="" />
+<img style={photoStyle} src="/src/Photos/Hikkaduwa.png" alt="" />
                  </p>
                  
                </div>
@@ -953,7 +953,7 @@ Welcome to Bentota, the jewel of Sri Lanka's southern coast and the ultimate des
 •	Enjoy a seafood BBQ dinner on the beach.<br />
 •	Witness the beauty of a sunset over the Indian Ocean.<br />
 This day in Bentota offers a perfect blend of relaxation, adventure, and cultural experiences, making it a highlight of your Sri Lankan getaway.<br /><br /><br />
-<img style={photoStyle}  src="/Photos/Bentota.jpg" alt="" />
+<img style={photoStyle}  src="/src/Photos/Bentota.jpg" alt="" />
                   </p>
                 </div>
                   

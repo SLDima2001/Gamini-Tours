@@ -330,7 +330,7 @@ function BookingForm() {
         
         <div>
           <img
-            src="/Photos/logo.gif"
+            src="/src/Photos/logo.gif"
             alt="Logo"
             style={styles.logoImg}
           />

@@ -335,7 +335,7 @@ function Afterfeedback() {
       <div style={navbarStyle2}>
   {/* Left Section: Logo */}
   <div>
-  <img src="/Photos/logo.gif" alt="Logo" style={logoImgStyle} />
+  <img src="/src/Photos/logo.gif" alt="Logo" style={logoImgStyle} />
   </div>
   
   {/* Center Section: Navigation Links */}
