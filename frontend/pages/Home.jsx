@@ -17,7 +17,10 @@ function Home() {
   const [message, setMessage] = useState('');
   const [isformvisible, setisformvisible] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
+
+  
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -231,7 +234,7 @@ function Home() {
   };
   const desstyle = {
     fontFamily:'Vinque',
-    fontSize: '2em',
+    fontSize: '1.2em',
     margin: '0px',
     color: '#333',
     padding: '10px',
@@ -263,7 +266,7 @@ function Home() {
     padding: '20px ',
     borderRadius: '20px',
     boxShadow: '0 4px 8px rgba(0, 1, 1, 1)',
-    width: 'auto',
+    width: isMobile ? '100%' : 'auto', // Adjust width for mobile and PC views
     height:'auto',
     borderColor:'',
   };
