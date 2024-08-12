@@ -16,6 +16,16 @@ function Home() {
   const [subject, setsubject] = useState('');
   const [message, setMessage] = useState('');
   const [isformvisible, setisformvisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -360,10 +370,7 @@ function Home() {
   };
 
   const bookbuttonstyle = {
-    display: 'block',
-  '@media (max-width: 768px)': {
-    display: 'none',
-  },
+    display: isMobile ? 'none' : 'block', // Hide on mobile
     backgroundColor: '#4682B4',
       color: 'white',
       padding: '20px 20px',
