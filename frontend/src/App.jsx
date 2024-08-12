@@ -3,7 +3,6 @@ import { Routes,Route } from 'react-router-dom'
 import Home from '/pages/Home.jsx'
 import About from '../pages/About'
 import ContactUS from '../pages/ContactUS'
-import Gallery from '../pages/Gallery'
 import Feedback from '../pages/Feedback'
 import TourPackages from '../pages/TourPackages'
 import BookingForm from '../pages/BookingForm'
@@ -28,17 +27,13 @@ const App = () => {
   return (
     
     <Routes>
-     
       <Route  path="/" element={<Home />} />
       <Route path="/About" element={<About />} />
       <Route path="/ContactUS" element={<ContactUS />} />
-      <Route path="/Gallery" element={<Gallery />} />
       <Route path="/Feedback" element={<Feedback />} />
       <Route path="/TourPackages" element={<TourPackages />} />
       <Route path="/BookingForm" element={<BookingForm />} />
       <Route path="/Afterfeedback" element={<Afterfeedback />} />
-
-
       <Route path="/Days6" element={<Days6 />} />
       <Route path="/Days8" element={<Days8 />} />
       <Route path="/Days10" element={<Days10 />} />
@@ -47,17 +42,9 @@ const App = () => {
       <Route path="/Days18" element={<Days18 />} />
       <Route path="/Days182" element={<Days182 />} />
       <Route path="/Days20" element={<Days20 />} />
-      
-
       <Route path="/PaymentSuccess" element={<PaymentSuccess />} />
       <Route path="/PaymentCancel" element={<PaymentCancel />} />
-    
-     
-      
-      
-
-      
-    </Routes>
+      </Routes>
     
   )
 }
