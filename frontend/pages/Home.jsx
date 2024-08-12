@@ -85,7 +85,7 @@ function Home() {
     textAlign: 'center',
     fontFamily: 'Arial, sans-serif',
     backgroundColor: 'white',
-    display: 'inline-block',
+    display: 'flex',
     flexDirection: 'column',
     minHeight: '100vh',
     overflow: 'hidden',
@@ -186,6 +186,7 @@ function Home() {
     justifyContent: 'center',
     padding: '20px',
     marginTop: '50px', // To compensate for fixed header height
+    width:'auto',
   };
 
   const tourPackagesStyle = {
@@ -194,7 +195,7 @@ function Home() {
     padding: '50px',
     borderRadius: '8px',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0)',
-    maxWidth: '70%',
+    maxWidth: '90%',
     transition: 'background-color 0.3s ease',
     
   };
@@ -225,7 +226,7 @@ function Home() {
     color: '#333',
     padding: '10px',
     borderRadius: '8px',
-    maxWidth: '100%',
+    maxWidth: 'auto',
     marginTop:'100px',
 
     
@@ -236,7 +237,7 @@ function Home() {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center',
-    gap: '20px',
+    gap: '30px',
     marginTop:'40px',
     //border:'2px solid blue',
     padding:'50px',
@@ -262,18 +263,18 @@ function Home() {
     width: '700px',
     borderRadius: '0px',
     justifyContent: 'center',
-    padding: '60px',
+    padding: '0px',
     paddingTop: '100px',
-    marginLeft: '30px',
+    marginLeft: '',
+    display:'inline-block'
   };
   const fb1style= {
     height: '0%',
-    width: '100%',
+    width: 'auto',
     borderRadius: '0px',
     justifyContent: 'center',
     padding: '0px',
     paddingTop: '100px',
-    
     display:'inline-block'
     
   };
@@ -304,7 +305,7 @@ function Home() {
     borderRadius: '',
     border: '2px solid #3498db',
     boxShadow: '0 4px 8px rgba(1, 1, 1, 1)',
-    maxWidth: '300px',
+    maxWidth: 'auto',
     fontFamily: 'Arial, sans-serif',
     position: 'fixed',
     top: '180px', // To align with the header
@@ -314,6 +315,13 @@ function Home() {
     zIndex: '999',
     maxHeight:'auto',
     marginRight: '103px',
+    '@media (max-width: 768px)': {
+      display: 'none',
+    },
+    '@media (max-height: auto)': {
+      display: 'none',
+    },
+    
   };
 
   const labelStyle = {
@@ -511,7 +519,7 @@ function Home() {
     <a href="/ContactUS" style={linkStyle}>Contact</a>
     <a href="/feedback" style={linkStyle}>FAQ</a>
   </div>
-  <div style={{ marginRight: '10px',marginTop:'19px' }}> {/* Right-aligned content */}
+  <div style={{ marginRight: '',marginTop:'',width:'auto' }}> {/* Right-aligned content */}
   <Link to="/BookingForm" style={bookbuttonstyle}>
   <b>Book Now</b>
             </Link> 
@@ -537,7 +545,7 @@ function Home() {
         <div style={tourPackagesStyle}>
 
           
-         <p style={{fontSize:'1.5em',fontFamily:'Agraham'}}><b>
+         <p style={{fontSize:'1.5em',fontFamily:'Agraham',width:'auto'}}><b>
           
           <p style={{fontSize:'2em',}}>Welcome to Lahiru Tours</p></b><br />
 <p>At Lahiru Tours, we pride ourselves on being more than just a travel agency. As a family-run business, we bring a personal touch and heartfelt dedication to every journey we plan. Our passion for travel and commitment to exceptional customer service stem from our deep love for Sri Lanka, and we are eager to share its wonders with you.</p>
@@ -703,16 +711,20 @@ Tour PackagesWe offer flexible and engaging packages designed to help you enjoy 
             
             
             <div style={fb1style}>
+              <div>
             <h1 style={{h0style , fontSize:'3em',top:'50px'}}>Our Facbook Rewiews</h1>
               <Link to="https://www.facebook.com/profile.php?id=100054495458742&mibextid=ZbWKwL" >
             
                   <img src="/src/Photos/FB.png" alt='Facebook Review Page'/>
             
               </Link>
+              </div>
+              <div>
             <br /><br /><br /><br /><br /><br /><br /><br />
               <h1 style={{h0style , fontSize:'3em',top:'50px'}}>Our Facbook Rewiews</h1>
               
               <img style={{width:'100%'}} src="/src/Photos/review.gif" alt="Our Customers Feedbacks" />
+              </div>
             </div>
     
 
