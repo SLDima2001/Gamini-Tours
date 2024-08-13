@@ -352,7 +352,7 @@ function BookingForm() {
         
         <div>
           <img
-            src="/src/Photos/logo.gif"
+            src="https://lahirutours.co.uk/photos/logo.gif"
             alt="Logo"
             style={styles.logoImg}
           />

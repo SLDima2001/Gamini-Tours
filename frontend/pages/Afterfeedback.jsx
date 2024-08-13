@@ -361,7 +361,7 @@ function Afterfeedback() {
       <div style={navbarStyle2}>
   {/* Left Section: Logo */}
   <div>
-  <img src="/src/Photos/logo.gif" alt="Logo" style={logoImgStyle} />
+  <img src="https://lahirutours.co.uk/photos/logo.gif" alt="Logo" style={logoImgStyle} />
   </div>
   
   {/* Center Section: Navigation Links */}

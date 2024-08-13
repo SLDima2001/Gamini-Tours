@@ -484,7 +484,7 @@ function Days6() {
       <div style={navbarStyle2}>
   {/* Left Section: Logo */}
   <div>
-  <img src="/src/Photos/logo.gif" alt="Logo" style={logoImgStyle} />
+  <img src="https://lahirutours.co.uk/photos/logo.gif" alt="Logo" style={logoImgStyle} />
   </div>
   
   {/* Center Section: Navigation Links */}
@@ -514,14 +514,14 @@ function Days6() {
           <div style={{packageStyle , display:'flex',gap:'20%'}}>
             <div>
             <img
-              src="/src/Photos/Day6.gif"
+              src="https://lahirutours.co.uk/photos/Day6.gif"
               alt="Tour Image"
               style={{ ...photoStyle,objectFit:'cover' }}
             />
             </div>
             <div>
              <img
-              src="/src/Photos/Day 6.gif"
+              src="https://lahirutours.co.uk/photos/Day 6.gif"
               alt="Tour Image"
               style={{ ...mapstyle }}
             />
@@ -529,7 +529,7 @@ function Days6() {
             </div>
             <div>
              <img
-              src="/src/Photos/Day 6.gif"
+              src="https://lahirutours.co.uk/photos/Day 6.gif"
               alt="Tour Image"
               style={{ ...mapstyle2 }}
             />
@@ -577,7 +577,7 @@ function Days6() {
 •	Visit St. Mary’s Church and Angurukaramulla Temple: Discover the religious heritage of Negombo by visiting St. Mary’s Church and the Angurukaramulla Temple.<br />
 Enjoy your first day soaking in the vibrant culture and picturesque landscapes of Negombo!<br />
 
-<img style={photoStyle} src="/src/Photos/Negambo.jpg" alt="" />
+<img style={photoStyle} src="https://lahirutours.co.uk/photos/Negambo.jpg" alt="" />
                     </p>
                   </div>
                 )}
@@ -607,7 +607,7 @@ Enjoy your first day soaking in the vibrant culture and picturesque landscapes 
 •	Enjoy your first Sri Lankan grand dinner buffet at the hotel: Savor a variety of local delicacies at the hotel buffet.<br />
 •	Take a walk around the Kandy Lake at night: End your day with a peaceful stroll around the picturesque Kandy Lake.<br />
 Enjoy your second day immersed in the cultural and historical richness of Kandy!<br />
-<img style={photoStyle} src="/src/Photos/Kandy.jpg" alt=""/>
+<img style={photoStyle} src="https://lahirutours.co.uk/photos/Kandy.jpg" alt=""/>
                     </p>
                   </div>
                 )}
@@ -641,7 +641,7 @@ Enjoy your second day immersed in the cultural and historical richness of Kand
 •	Check in at the cozy hotel in Nuwara Eliya and relax.<br />
 •	Visit Gregory Lake later to soak in the sunset.<br />
 •	Walk around chilly "Little England".<br />
-<img style={photoStyle} src="/src/Photos/Nuwaraeliya.jpg" alt="" />
+<img style={photoStyle} src="https://lahirutours.co.uk/photos/Nuwaraeliya.jpg" alt="" />
                     </p>
                   </div>
                 )}
@@ -675,7 +675,7 @@ Enjoy your second day immersed in the cultural and historical richness of Kand
 •Return to the hotel and relax<br />
 •Walk around the village and interact with friendly locals<br />
 •Enjoy a fiery BBQ dinner at the hotel under the starry sky<br />
-<img style={photoStyle} src="/src/Photos/Yala.jpg" alt="" />
+<img style={photoStyle} src="https://lahirutours.co.uk/photos/Yala.jpg" alt="" />
                     </p>
                   </div>
                 )}
@@ -715,7 +715,7 @@ The next part of this exciting Sri Lanka tour package is a visit to Galle, a cit
 •Explore the historic Galle Fort<br />
 •Visit the iconic Galle Lighthouse<br />
 •Browse the unique boutiques on Peddler Street<br />
-<img style={photoStyle} src="/src/Photos/Hikkaduwa.png" alt=""  />
+<img style={photoStyle} src="https://lahirutours.co.uk/photos/Hikkaduwa.png" alt=""  />
                     </p>
                     
                   </div>
@@ -754,7 +754,7 @@ From your luxurious hotel room, you’ll enjoy breathtaking views of the ocean a
 •Experience Colombo’s nightlife at popular local clubs<br />
 •End of Your Sri Lanka Journey<br />
 <br /> 
-<img style={photoStyle} src="/src/Photos/Colombo.jpg" alt="" />
+<img style={photoStyle} src="https://lahirutours.co.uk/photos/Colombo.jpg" alt="" />
 
                     </p>
                     

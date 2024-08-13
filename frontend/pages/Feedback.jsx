@@ -368,14 +368,14 @@ const Feedback = ({ backgroundImageUrl }) => {
     },
     bookbuttonstyle:{
       display: isMobile ? 'none' : 'block', // Hide on mobile
-      backgroundColor: '#4682B4',
-        color: 'white',
-        padding: '20px 20px',
-        border: 'none',
-        borderRadius: '4px',
-        cursor: 'pointer',
-        fontSize: '1.6em',
-        marginTop: '0px',
+    backgroundColor: '#4682B4',
+      color: 'white',
+      padding: '20px 20px',
+      border: 'none',
+      borderRadius: '4px',
+      cursor: 'pointer',
+      fontSize: '1.6em',
+      marginTop: '0px',
     },
   };
 
@@ -422,7 +422,7 @@ const Feedback = ({ backgroundImageUrl }) => {
       <div style={styles.navbarStyle2}>
   {/* Left Section: Logo */}
   <div>
-  <img src="/src/Photos/logo.gif" alt="Logo" style={styles.logoImgStyle} />
+  <img src="https://lahirutours.co.uk/photos/logo.gif" alt="Logo" style={styles.logoImgStyle} />
   </div>
   
   {/* Center Section: Navigation Links */}
@@ -433,9 +433,9 @@ const Feedback = ({ backgroundImageUrl }) => {
     <a href="/ContactUS" style={styles.linkStyle}>Contact</a>
     <a href="/feedback" style={styles.linkStyle}>FAQ</a>
   </div>
-  <div style={{ marginRight: '0px',marginTop:'19px' }}> {/* Right-aligned content */}
+  <div style={{ marginRight: '10px',marginTop:'19px' }}> {/* Right-aligned content */}
   <Link to="/BookingForm" style={styles.bookbuttonstyle}>
-          <b>Book Now</b>
+  <b>Book Now</b>
             </Link> 
   </div>
   

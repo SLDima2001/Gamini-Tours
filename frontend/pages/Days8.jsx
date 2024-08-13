@@ -488,7 +488,7 @@ function Days8() {
       <div style={navbarStyle2}>
   {/* Left Section: Logo */}
   <div>
-  <img src="/src/Photos/logo.gif" alt="Logo" style={logoImgStyle} />
+  <img src="https://lahirutours.co.uk/photos/logo.gif" alt="Logo" style={logoImgStyle} />
   </div>
   
   {/* Center Section: Navigation Links */}
@@ -520,14 +520,14 @@ function Days8() {
           <div style={{packageStyle , display:'flex',gap:'20%'}}>
             <div>
             <img
-              src="/src/Photos/Day8.gif"
+              src="https://lahirutours.co.uk/photos/Day8.gif"
               alt="Tour Image"
               style={{ ...photoStyle,objectFit:'cover' }}
             />
             </div>
             <div>
              <img
-              src="/src/Photos/Day 8.gif"
+              src="https://lahirutours.co.uk/photos/Day 8.gif"
               alt="Tour Image"
               style={{ ...mapstyle }}
             />
@@ -535,7 +535,7 @@ function Days8() {
             </div>
             <div>
              <img
-              src="/src/Photos/Day 6.gif"
+              src="https://lahirutours.co.uk/photos/Day 6.gif"
               alt="Tour Image"
               style={{ ...mapstyle2 }}
             />
@@ -581,7 +581,7 @@ function Days8() {
 •	Visit St. Mary’s Church and Angurukaramulla Temple: Discover the religious heritage of Negombo by visiting St. Mary’s Church and the Angurukaramulla Temple.<br />
 Enjoy your first day soaking in the vibrant culture and picturesque landscapes of Negombo!<br />
 
-<img style={photoStyle} src="/src/Photos/Negambo.jpg" alt="" />
+<img style={photoStyle} src="https://lahirutours.co.uk/photos/Negambo.jpg" alt="" />
                     </p>
                   </div>
                 )}
@@ -625,7 +625,7 @@ Evening: Village Walk and Dinner
 Enjoy this day of cultural discovery and natural beauty as you immerse yourself in the rich heritage of Sri Lanka!<br /><br />
 
 
-<img style={photoStyle} src="/src/Photos/Sigiriya.jpg" alt="" />
+<img style={photoStyle} src="https://lahirutours.co.uk/photos/Sigiriya.jpg" alt="" />
                     </p>
                   </div>
                 )}
@@ -657,7 +657,7 @@ Enjoy this day of cultural discovery and natural beauty as you immerse yourself 
 •	Enjoy the typical Sri Lankan grand dinner buffet at the hotel<br />
 •	Overnight stay in your calm hideaway in Anuradhapura<br />
 
-<img style={photoStyle} src="/src/Photos/Anuradhapura.jpg" alt="" />
+<img style={photoStyle} src="https://lahirutours.co.uk/photos/Anuradhapura.jpg" alt="" />
                     </p>
                   </div>
                 )}
@@ -688,7 +688,7 @@ Enjoy this day of cultural discovery and natural beauty as you immerse yourself 
 •	Enjoy your first Sri Lankan grand dinner buffet at the hotel: Savor a variety of local delicacies at the hotel buffet.<br />
 •	Take a walk around the Kandy Lake at night: End your day with a peaceful stroll around the picturesque Kandy Lake.<br />
 Enjoy your second day immersed in the cultural and historical richness of Kandy!<br />
-<img style={photoStyle} src="/src/Photos/Kandy.jpg" alt="" />
+<img style={photoStyle} src="https://lahirutours.co.uk/photos/Kandy.jpg" alt="" />
                   </p>
                 </div>
                 )}
@@ -722,7 +722,7 @@ Enjoy your second day immersed in the cultural and historical richness of Kand
 •	Check in at the cozy hotel in Nuwara Eliya and relax.<br />
 •	Visit Gregory Lake later to soak in the sunset.<br />
 •	Walk around chilly "Little England".<br />
-<img style={photoStyle} src="/src/Photos/Nuwaraeliya.jpg" alt="" />
+<img style={photoStyle} src="https://lahirutours.co.uk/photos/Nuwaraeliya.jpg" alt="" />
                   </p>
                 </div>
                 )}
@@ -756,7 +756,7 @@ Enjoy your second day immersed in the cultural and historical richness of Kand
 •Return to the hotel and relax<br />
 •Walk around the village and interact with friendly locals<br />
 •Enjoy a fiery BBQ dinner at the hotel under the starry sky<br />
-<img style={photoStyle} src="/src/Photos/Yala.jpg" alt="" />
+<img style={photoStyle} src="https://lahirutours.co.uk/photos/Yala.jpg" alt="" />
                   </p>
                 </div>
                 )}
@@ -789,7 +789,7 @@ Hikkaduwa is a charming seaside resort town in southwestern Sri Lanka, renowned 
 Galle<br /><br />
 
 
-<img style={photoStyle} src="/src/Photos/Hikkaduwa.png" alt="" />
+<img style={photoStyle} src="https://lahirutours.co.uk/photos/Hikkaduwa.png" alt="" />
                   </p>
                   
                 </div>
@@ -830,7 +830,7 @@ Welcome to Bentota, the jewel of Sri Lanka's southern coast and the ultimate des
 •	Enjoy a seafood BBQ dinner on the beach.<br />
 •	Witness the beauty of a sunset over the Indian Ocean.<br />
 This day in Bentota offers a perfect blend of relaxation, adventure, and cultural experiences, making it a highlight of your Sri Lankan getaway.<br /><br /><br />
-<img style={photoStyle} src="/src/Photos/Bentota.jpg" alt="" />
+<img style={photoStyle} src="https://lahirutours.co.uk/photos/Bentota.jpg" alt="" />
                   </p>
                 </div>
                   

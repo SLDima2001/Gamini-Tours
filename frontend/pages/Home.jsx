@@ -382,9 +382,9 @@ function Home() {
       cursor: 'pointer',
       fontSize: '1.6em',
       marginTop: '0px',
+      };
+
       
-    
-  };
   const bookbuttonstyle2 = {
     display: '',
     backgroundColor: '#4682B4',
@@ -513,23 +513,22 @@ function Home() {
       </div>
       
 
-      <div style={headerStyle}>
+      <section style={headerStyle}>
       <div style={navbarStyle2}>
   {/* Left Section: Logo */}
   <div>
-  <img src="/src/Photos/logo.gif" alt="Logo" style={logoImgStyle} />
+  <img src="https://lahirutours.co.uk/photos/logo.gif" alt="Logo" style={logoImgStyle} />
   </div>
   
   {/* Center Section: Navigation Links */}
   <div style={navLinksStyle}>
-    
     <a href="/" style={linkStyle}>Home</a>
     <a href="/About" style={linkStyle}>About Us</a>
     <a href="/TourPackages" style={linkStyle}>Tour Packages</a>
     <a href="/ContactUS" style={linkStyle}>Contact</a>
     <a href="/feedback" style={linkStyle}>FAQ</a>
   </div>
-  <div style={{ marginRight: '',marginTop:'',width:'auto' }}> {/* Right-aligned content */}
+  <div style={{ marginRight: '10px',marginTop:'19px' }}> {/* Right-aligned content */}
   <Link to="/BookingForm" style={bookbuttonstyle}>
   <b>Book Now</b>
             </Link> 
@@ -540,10 +539,10 @@ function Home() {
         
         
         
-      </div>
+      </section>
       
       <div>
-        <img style={bannerstyle} src="/src/Photos/banner.gif" alt="Banner Photo" />
+        <img style={bannerstyle} src="https://lahirutours.co.uk/photos/banner.gif" alt="Banner Photo" />
       </div>
       
 
@@ -572,7 +571,7 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
             
             <h4>Sri Lanka 6 Days Tour</h4> <br />
             
-              <img src="/src/Photos/Day6.gif" alt="Package 1" style={packageImgStyle} />
+              <img src="https://lahirutours.co.uk/photos/Day6.gif" alt="Package 1" style={packageImgStyle} />
               
               <h4 style={h42Style}>Days 6</h4>
               <div style={iconStyle}>
@@ -587,7 +586,7 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
             <a style={packageStyle} href="/Days8">
             
             <h4>Sri Lanka 8 Days Tour</h4><br />
-              <img src="/src/Photos/Day8.gif" alt="Package 2" style={packageImgStyle} />
+              <img src="https://lahirutours.co.uk/photos/Day8.gif" alt="Package 2" style={packageImgStyle} />
               <h4 style={h42Style}>Days 8</h4>
               <div style={iconStyle}>
               <FontAwesomeIcon  icon={faBed} size="1x" />
@@ -599,7 +598,7 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
 
             <a style={packageStyle} href="/Days10">
             <h4>Sri Lanka 10 Days Tour</h4><br />
-              <img src="/src/Photos/Day10.gif" alt="Package 3" style={packageImgStyle} />
+              <img src="https://lahirutours.co.uk/photos/Day10.gif" alt="Package 3" style={packageImgStyle} />
               <h4 style={h42Style}>Days 10</h4>
               <div style={iconStyle}>
               <FontAwesomeIcon  icon={faBed} size="1x" />
@@ -612,7 +611,7 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
             <a style={packageStyle} href="/Days12">
             
             <h4>Sri Lanka 12 Days Tour</h4><br />
-              <img src="/src/Photos/Day12.gif" alt="Package 4" style={packageImgStyle} />
+              <img src="https://lahirutours.co.uk/photos/Day12.gif" alt="Package 4" style={packageImgStyle} />
               <h4 style={h42Style}>Days 12</h4>
               <div style={iconStyle}>
               <FontAwesomeIcon  icon={faBed} size="1x" />
@@ -627,7 +626,7 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
             <a style={packageStyle} href="/Days15">
            
             <h4>Sri Lanka 15 Days Tour</h4><br />
-              <img src="/src/Photos/Day15.gif" alt="Package 5" style={packageImgStyle} />
+              <img src="https://lahirutours.co.uk/photos/Day15.gif" alt="Package 5" style={packageImgStyle} />
               <h4 style={h42Style}>Days 15</h4>
               <div style={iconStyle}>
               <FontAwesomeIcon  icon={faBed} size="1x" />
@@ -641,7 +640,7 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
             <a style={packageStyle} href="/Days18">
            
             <h4>Sri Lanka 18 Days Tour</h4><br />
-              <img src="/src/Photos/Day18.gif" alt="Package 6" style={packageImgStyle} />
+              <img src="https://lahirutours.co.uk/photos/Day18.gif" alt="Package 6" style={packageImgStyle} />
               <h4 style={h42Style}>Days 18</h4>
               <div style={iconStyle}>
               <FontAwesomeIcon  icon={faBed} size="1x" />
@@ -655,7 +654,7 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
             <a style={packageStyle} href="/Days182">
             
             <h4>Sri Lanka 18 Days North &South Round Tour</h4>
-              <img src="/src/Photos/Day18n.gif" alt="Package 7" style={packageImgStyle} />
+              <img src="https://lahirutours.co.uk/photos/Day18n.gif" alt="Package 7" style={packageImgStyle} />
               <h4 style={h42Style}>Days 18</h4>
               <div style={iconStyle}>
               <FontAwesomeIcon  icon={faBed} size="1x" />
@@ -669,7 +668,7 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
             <a style={packageStyle} href="/Days20">
             
             <h4>Sri Lanka 20 Days Tour</h4><br />
-              <img src="/src/Photos/Day20.gif" alt="Package 8" style={packageImgStyle} />
+              <img src="https://lahirutours.co.uk/photos/Day20.gif" alt="Package 8" style={packageImgStyle} />
               <h4 style={h42Style}>Days 20</h4>
               <div style={iconStyle}>
               <FontAwesomeIcon  icon={faBed} size="1x" />
@@ -726,7 +725,7 @@ Tour PackagesWe offer flexible and engaging packages designed to help you enjoy 
             <h1 style={{h0style , fontSize:'3em',top:'50px'}}>Our Facbook Rewiews</h1>
               <Link to="https://www.facebook.com/profile.php?id=100054495458742&mibextid=ZbWKwL" >
             
-                  <img src="/src/Photos/FB.png" alt='Facebook Review Page'/>
+                  <img src="https://lahirutours.co.uk/photos/FB.png" alt='Facebook Review Page'/>
             
               </Link>
               
@@ -734,7 +733,7 @@ Tour PackagesWe offer flexible and engaging packages designed to help you enjoy 
             <br /><br /><br /><br /><br /><br /><br /><br />
               <h1 style={{h0style , fontSize:'3em',top:'50px'}}>Our Facbook Rewiews</h1>
               
-              <img style={{width:'100%'}} src="/src/Photos/review.gif" alt="Our Customers Feedbacks" />
+              <img style={{width:'100%'}} src="https://lahirutours.co.uk/photos/review.gif" alt="Our Customers Feedbacks" />
               
             </div>
     
