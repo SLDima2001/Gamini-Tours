@@ -48,6 +48,20 @@ function Afterfeedback() {
       
     
   };
+  const bookbuttonstyle2 = {
+    display: isMobile ? 'block' : 'none', // Hide on mobile
+    backgroundColor: '#4682B4',
+      color: 'white',
+      padding: '20px 20px',
+      border: 'none',
+      borderRadius: '4px',
+      cursor: 'pointer',
+      fontSize: '1.6em',
+      marginTop: '0px',
+      marginBottom:'100px'
+      
+    
+  };
 
   const headerStyle = {
     justifyContent: 'center',
@@ -411,6 +425,9 @@ Lahiru Tours – Where Family, Passion, and Adventure Meet! <br />
 
 <br />
             </div>
+            <div>
+            <Link to="/BookingForm" style={bookbuttonstyle2}> <b>Book Now</b></Link>
+            </div>
         
       </main>
       
@@ -447,8 +464,7 @@ Lahiru Tours – Where Family, Passion, and Adventure Meet! <br />
             info@lahirutours.co.uk<br />
             admin@lahirutours.co.uk <br />
             payment@lahirutours.co.uk <br />
-            nipun_virajitha@lahirutours.co.uk <br />
-            gamini@lahirutours.co.uk <br /></u>
+           </u>
           </p>
         </div>
       </footer>

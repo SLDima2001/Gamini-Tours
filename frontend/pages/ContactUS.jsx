@@ -109,6 +109,20 @@ function ContactUS() {
       
     
   };
+  const bookbuttonstyle2 = {
+    display: isMobile ? 'block' : 'none', // Hide on pc
+    backgroundColor: '#4682B4',
+      color: 'white',
+      padding: '20px 20px',
+      border: 'none',
+      borderRadius: '4px',
+      cursor: 'pointer',
+      fontSize: '1.6em',
+      marginTop: '0px',
+      width:'80%'
+      
+    
+  };
   const buttonStyle = {
     backgroundColor: '#4682B4',
     color: 'white',
@@ -252,6 +266,7 @@ function ContactUS() {
     height: '100vh',
     display: 'flex',
     alignItems: 'center',
+    marginBottom:'100px',
     
   };
 
@@ -453,6 +468,9 @@ function ContactUS() {
         </form>
       </div>
       </div>
+      <Link to="/BookingForm" style={bookbuttonstyle2}>
+          <b>Book Now</b>
+            </Link> <br />
       
       <footer style={footerStyle}>
         <div style={footerSectionStyle}>
@@ -487,8 +505,7 @@ function ContactUS() {
             info@lahirutours.co.uk<br />
             admin@lahirutours.co.uk <br />
             payment@lahirutours.co.uk <br />
-            nipun_virajitha@lahirutours.co.uk <br />
-            gamini@lahirutours.co.uk <br /></u>
+            </u>
           </p>
         </div>
       </footer>

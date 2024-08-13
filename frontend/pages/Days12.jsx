@@ -344,7 +344,7 @@ function Days12() {
     borderRadius: '',
     border: '2px solid #3498db',
     boxShadow: '0 4px 8px rgba(1, 1, 1, 1)',
-    maxWidth: '300px',
+    maxWidth: 'auto',
     fontFamily: 'Arial, sans-serif',
     position: 'fixed',
     top: '180px', // To align with the header
@@ -352,8 +352,15 @@ function Days12() {
     display: isformvisible ? 'block' : 'none', // Show/hide based on state
     right: '20px',
     zIndex: '999',
-    maxHeight:'60%',
+    maxHeight:'auto',
     marginRight: '103px',
+    '@media (max-width: 768px)': {
+      display: 'none',
+    },
+    '@media (max-height: auto)': {
+      display: 'none',
+    },
+    
   };
   const labelStyle = {
     display: 'block',
@@ -381,15 +388,13 @@ function Days12() {
   };
 
   const buttonStyle = {
-    backgroundColor: '#00796b',
+    backgroundColor: '#4682B4',
     color: 'white',
     border: 'none',
     padding: '12px 20px',
-    borderRadius: '45%',
+    borderRadius: '',
     cursor: 'pointer',
     transition: 'background-color 0.3s ease',
-    marginLeft:'0px',
-    marginRight:'0px',
   };
   const h2Style = {
     fontSize: '2em',
@@ -1111,8 +1116,7 @@ This day in Bentota offers a perfect blend of relaxation, adventure, and cultura
             info@lahirutours.co.uk<br />
             admin@lahirutours.co.uk <br />
             payment@lahirutours.co.uk <br />
-            nipun_virajitha@lahirutours.co.uk <br />
-            gamini@lahirutours.co.uk <br /></u>
+            </u>
           </p>
         </div>
       </footer>

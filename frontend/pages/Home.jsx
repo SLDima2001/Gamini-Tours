@@ -854,8 +854,7 @@ Tour PackagesWe offer flexible and engaging packages designed to help you enjoy 
             info@lahirutours.co.uk<br />
             admin@lahirutours.co.uk <br />
             payment@lahirutours.co.uk <br />
-            nipun_virajitha@lahirutours.co.uk <br />
-            gamini@lahirutours.co.uk <br /></u>
+           </u>
           </p>
         </div>
       </footer>

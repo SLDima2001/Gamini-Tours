@@ -404,8 +404,7 @@ Hurry, this offer won't last long. Limited bookings available. Book your romanti
             info@lahirutours.co.uk<br />
             admin@lahirutours.co.uk <br />
             payment@lahirutours.co.uk <br />
-            nipun_virajitha@lahirutours.co.uk <br />
-            gamini@lahirutours.co.uk <br /></u>
+            </u>
           </p>
         </div>
       </footer>

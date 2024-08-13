@@ -55,6 +55,20 @@ function About() {
       
     
   };
+  const bookbuttonstyle2 = {
+    display: isMobile ? 'block' : 'none', // Hide on mobile
+    backgroundColor: '#4682B4',
+      color: 'white',
+      padding: '20px 20px',
+      border: 'none',
+      borderRadius: '4px',
+      cursor: 'pointer',
+      fontSize: '1.6em',
+      marginTop: '0px',
+      marginBottom:'100px'
+      
+    
+  };
 
   const headerStyle = {
     justifyContent: 'center',
@@ -70,27 +84,8 @@ function About() {
     marginTop: '0px',
   };
 
-  const h1Style = {
-    
-    fontSize: '4em',
-    margin: '0',
-    color: '#333', // Darken the color for better visibility
-    backgroundColor: '', // Light blue background color
-    padding: '10px', // Add padding for better visual appearance
-    borderRadius: '8px', // Rounded corners for the background
-    display: 'inline-block', // Ensures the background spans the content width
-    marginLeft: '-00px',
-    
-  };
-  const paraStyle = {
-    color: 'black',
-    marginLeft: '00px',
-  };
 
 
-  const contactInfoStyle = {
-    marginLeft: 'auto', // Pushes contact info to the right
-  };
 
   const navbarStyle = {
     backgroundColor: '',
@@ -143,23 +138,8 @@ function About() {
     gap: '0px', // Adds space between buttons
   };
   
-  const ulStyle = {
-    listStyleType: 'none',
-    padding: '0',
-    margin: '0', // Remove default margin
-  };
 
-  const liStyle = {
-    marginBottom: '10px',
-  };
 
-  const aStyle = {
-    display: 'block',
-    color: 'white',
-    padding: '14px 16px',
-    textDecoration: 'none',
-    transition: 'background-color 0.3s ease',
-  };
 
   const mainContentStyle = {
     flex: '1', // Allow main content to grow to fill remaining space
@@ -182,7 +162,7 @@ function About() {
     display: 'none',
   },
     color: '#4682B4',
-    fontSize:'4em',
+    fontSize:'2em',
     margin: '0',
     padding: '20px',
     borderRadius: '40px',
@@ -199,43 +179,21 @@ function About() {
   };
   const pStyle1 = {
     fontFamily:'Awesome Season Personal',
-    fontSize: '3em',
+    fontSize: '1em',
     color: '#333',
     textAlign:'center',
   };
   const pStyle2 = {
     fontFamily:'Great Vibes',
-    fontSize: '1em',
+    fontSize: '20px',
     color: '#333',
     textAlign:'center',
   };
 
-  const tourPackagesStyle = {
-    padding: '20px',
-    backgroundColor: '#e0f7fa',
-  };
 
-  const h3Style = {
-    color: '#00796b',
-  };
 
-  const packageOptionsStyle = {
-    display: 'flex',
-    justifyContent: 'space-around',
-    margin: '20px 0',
-  };
 
-  const packageStyle = {
-    textAlign: 'center',
-    backgroundColor: '#ffffff',
-    padding: '10px',
-    borderRadius: '8px',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-  };
 
-  const packageImgStyle = {
-    height: '100px',
-  };
 
   const photodesstyle = {
     fontSize:'40px',
@@ -278,10 +236,6 @@ function About() {
     marginBottom: '10px',
   };
 
-  const socialMediaStyle = {
-    display: 'flex',
-    gap: '10px',
-  };
 
   const socialLinkStyle = {
     color: 'white',
@@ -407,13 +361,13 @@ function About() {
         </div>
        
         <div style={{alignItems:'center'}}>
-        <p style={pStyle1}>
+        <p style={{pStyle1,fontSize:'40px'}}>
        <br /><br /><b> Welcome to Lahiru Tours: Your Gateway to Sri Lanka </b> <br /></p><br /><br />
       
-<p style={pStyle}><b>‘Where Family, Passion, and Adventure Meet’</b></p>
+<p style={{pStyle,fontSize:'30px'}}><b>‘Where Family, Passion, and Adventure Meet’</b></p><br />
 
-<p style={pStyle}>At Lahiru Tours, we believe that travel is more than just visiting new places—it's about creating unforgettable memories and experiencing the heart and soul of a destination. As a family-run travel agency with over two decades of experience, we bring a personal touch and deep local knowledge to every journey we plan.
-<br /><br /><br /><b><p style={{marginBottom:'20pxá',}}>Our Story</p></b><br />
+<p style={{pStyle , fontSize:'20px'}}>At Lahiru Tours, we believe that travel is more than just visiting new places—it's about creating unforgettable memories and experiencing the heart and soul of a destination. As a family-run travel agency with over two decades of experience, we bring a personal touch and deep local knowledge to every journey we plan.
+<br /><br /><br /><b><p style={{marginBottom:'20px',}}>Our Story</p></b><br />
 <div  style={{display:'flex',gap:'15%',width:'auto',height:'auto'}}>
   <div>
   <ScrollAnimation animateIn="bounceInLeft"  animateOut='fadeOut'>
@@ -443,8 +397,9 @@ function About() {
 </div>
 
 </div>
+<div style={{fontSize:'20px'}}>
 Founded in 1996 by Gamini, Lahiru Tours was born from a passion for showcasing the rich culture, history, and natural beauty of Sri Lanka. Our family has explored every corner of this stunning island, gaining unique insights and knowledge that we use to craft perfect travel itineraries for our guests.
-
+</div>
 
 <div style={{display:'flex',gap:'40%'}}>
 
@@ -491,6 +446,11 @@ Contact Us Today:
 
 
 </div>
+<div> {/* Right-aligned content */}
+  <Link to="/BookingForm" style={bookbuttonstyle2}>
+  <b>Book Now</b>
+            </Link> 
+  </div>
       </main>
       
       <footer style={footerStyle}>
@@ -526,8 +486,7 @@ Contact Us Today:
             info@lahirutours.co.uk<br />
             admin@lahirutours.co.uk <br />
             payment@lahirutours.co.uk <br />
-            nipun_virajitha@lahirutours.co.uk <br />
-            gamini@lahirutours.co.uk <br /></u>
+           </u>
           </p>
         </div>
       </footer>
