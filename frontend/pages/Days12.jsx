@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBed, faUtensils, faCar,faEnvelope,faEnvelopeOpen } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
@@ -33,6 +33,20 @@ function Days12() {
   const [message, setMessage] = useState('');
   const [isformvisible, setisformvisible] = useState(false);
   const [notification, setNotification] = useState(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+
+  
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
 
   const showAlert = () => {
     alert('Thank you for choosing Lahiru Tours! We are excited to assist you in planning your perfect Sri Lankan adventure. Our team will promptly get back to you within 24 hours with a customized itinerary tailored to your interests and needs.For any immediate questions or additional information, please feel free to contact us directly at info@lahirutours.co.uk.We look forward to making your travel dreams come true!Warm regards,The Lahiru Tours Team');
@@ -76,10 +90,7 @@ function Days12() {
     marginTop: '0px',
   }
   const bookbuttonstyle = {
-    display: 'block',
-  '@media (max-width: 768px)': {
-    display: 'none',
-  },
+    display: isMobile ? 'none' : 'block', // Hide on mobile
     backgroundColor: '#4682B4',
       color: 'white',
       padding: '20px 20px',
@@ -91,6 +102,20 @@ function Days12() {
       
     
   };
+  
+  const bookbuttonstyle2 = {
+    display: isMobile ? 'block' : 'none', // Hide on mobile
+    backgroundColor: '#4682B4',
+      color: 'white',
+      padding: '20px 20px',
+      border: 'none',
+      borderRadius: '4px',
+      cursor: 'pointer',
+      fontSize: '1.6em',
+      marginTop: '0px',
+       };
+
+
   const logoImgStyle = {
     height: '120px',
     width:'120px',
@@ -279,6 +304,16 @@ function Days12() {
   };
 
   const mapstyle = {
+    display: isMobile ? 'none' : 'block', // Hide on mobile
+    width: '700px',
+    height: '700px',
+    objectFit: 'cover',
+    borderRadius: '5%',
+    margin: '20px 100px',
+    marginLeft:'000px',
+  };
+  const mapstyle2 = {
+    display: isMobile ? 'block' : 'none', // Hide on pc
     width: '700px',
     height: '700px',
     objectFit: 'cover',
@@ -499,7 +534,13 @@ function Days12() {
             />
             </div>
             </div><br />
-           
+            <div>
+             <img
+              src="/src/Photos/Day 6.gif"
+              alt="Tour Image"
+              style={{ ...mapstyle2 }}
+            />
+            </div>
 
             <div style={{width:'40%',display:'',border:'2px solid blue',boxShadow: '0px 4px 8px rgba(1, 1, 1, 1)',borderRadius:'10px',padding:'20px', marginBottom:'50px'}}>
            <h1 style={{fontSize:'1em',textAlign:'left',fontFamily:'Ubuntu'}}> All our tour packages include the cost of tickets for all attractions during your travel. Additionally, all our packages include high-standard hotel stays with breakfast and dinner provided throughout your stay. </h1><br />
@@ -965,7 +1006,9 @@ This day in Bentota offers a perfect blend of relaxation, adventure, and cultura
               
             </div>
             
-          
+            <div>
+            <Link to="/BookingForm" style={bookbuttonstyle2}> <b>Book Now</b></Link>
+            </div>
           
         </section>
         

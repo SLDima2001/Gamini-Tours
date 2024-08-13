@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBed, faUtensils, faCar,faEnvelope,faEnvelopeOpen } from '@fortawesome/free-solid-svg-icons';
@@ -9,6 +9,20 @@ function TourPackages() {
   const [isNavbarVisible, setIsNavbarVisible] = useState(false);
   const [hoveredPackage, setHoveredPackage] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false); 
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+
+  
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
 
   const packages = [
     { id: 1, name: '6 Days', imgSrc: '/src/Photos/Day6.gif', link: '/Days6', price: 100, description: 'Enjoy a 6 Days tour exploring beautiful destinations.' },
@@ -45,10 +59,7 @@ function TourPackages() {
     marginTop: '0px',
   };
   const bookbuttonstyle = {
-    display: 'block',
-  '@media (max-width: 768px)': {
-    display: 'none',
-  },
+    display: isMobile ? 'none' : 'block', // Hide on mobile
     backgroundColor: '#4682B4',
       color: 'white',
       padding: '20px 20px',

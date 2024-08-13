@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import Axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
@@ -32,6 +32,20 @@ const Feedback = ({ backgroundImageUrl }) => {
   const [isNavbarVisible, setIsNavbarVisible] = useState(false);
   const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+
+  
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
 
   const handleSaveFeedback = () => {
     if (!isValidEmail(email)) {
@@ -353,18 +367,15 @@ const Feedback = ({ backgroundImageUrl }) => {
       textDecoration: 'none',
     },
     bookbuttonstyle:{
-      display: 'block',
-  '@media (max-width: 768px)': {
-    display: 'none',
-  },
-    backgroundColor: '#4682B4',
-      color: 'white',
-      padding: '20px 20px',
-      border: 'none',
-      borderRadius: '4px',
-      cursor: 'pointer',
-      fontSize: '1.6em',
-      marginTop: '0px',
+      display: isMobile ? 'none' : 'block', // Hide on mobile
+      backgroundColor: '#4682B4',
+        color: 'white',
+        padding: '20px 20px',
+        border: 'none',
+        borderRadius: '4px',
+        cursor: 'pointer',
+        fontSize: '1.6em',
+        marginTop: '0px',
     },
   };
 

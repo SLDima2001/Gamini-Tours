@@ -9,6 +9,21 @@ import { FaFacebook, FaInstagram,FaTiktok } from 'react-icons/fa';
 function Afterfeedback() {
   const [isNavbarVisible, setIsNavbarVisible] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+
+  
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  
 
   const appStyle = {
     textAlign: 'center',
@@ -21,10 +36,7 @@ function Afterfeedback() {
     
   };
   const bookbuttonstyle = {
-    display: 'block',
-  '@media (max-width: 768px)': {
-    display: 'none',
-  },
+    display: isMobile ? 'none' : 'block', // Hide on mobile
     backgroundColor: '#4682B4',
       color: 'white',
       padding: '20px 20px',
