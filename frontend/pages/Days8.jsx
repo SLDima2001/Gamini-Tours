@@ -334,7 +334,7 @@ function Days8() {
     maxWidth: 'auto',
     fontFamily: 'Arial, sans-serif',
     position: 'fixed',
-    top: '180px', // To align with the header
+    top:isMobile? '30px' : '180px', // To align with the header
     bottom:'10px',
     display: isformvisible ? 'block' : 'none', // Show/hide based on state
     right: '20px',
