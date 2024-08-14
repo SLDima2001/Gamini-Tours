@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 
 // Stripe public key
-const stripePromise = loadStripe("pk_test_51Pbr4uRtnVjVgi99iHowxWO26RwsmU19YoADm3iOdfGyPWb9a5whZprGuPv6xv5ssLLddiASMhGKq9YQJu5moFhC004UuUwkRR");
+const stripePromise = loadStripe("pk_live_51Pbr4uRtnVjVgi993ZciYWjx1iywV1NUylMT5xaWaI3nSC8ErGzc3IBE6bui0a7iFHBJaLI5bka44thuwYV3AkA2006e5ejYeZ");
 
 function BookingForm() {
   const [formData, setFormData] = useState({
@@ -31,7 +31,7 @@ function BookingForm() {
   const [timePeriod, setTimePeriod] = useState('');
   const [showTerms, setShowTerms] = useState(false);
   const modalRef = useRef(null);
-  const [isMobile, setIsMobile] = useState(window.innerWidth,window.innerHeight);
+  const [isMobile, setIsMobile] = useState(window.innerWidth);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
 
@@ -39,6 +39,7 @@ function BookingForm() {
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth);
+      setIsMobile(window.innerHeight);
     };
 
     window.addEventListener('resize', handleResize);
@@ -64,8 +65,9 @@ function BookingForm() {
       position: 'relative',
     },
     logoImg: {
-      height: '80px',
-      marginRight: '20px',
+      height: 'auto',
+      width:'120px',
+      marginTop: '0px',
     },
     h1: {
       fontSize: '2em',
@@ -159,7 +161,7 @@ function BookingForm() {
       width:''
     },
     modal: {
-      display: 'flex',
+     // display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
       position: isMobile? 'fixed':'none',
@@ -170,12 +172,29 @@ function BookingForm() {
       backgroundColor: 'rgba(0, 0, 0, 0.7)',
       zIndex: '1000',
       transition: 'opacity 0.3s ease',
+       display: isMobile ? 'flex' : 'block',
+      flexDirection: isMobile ? 'row' : 'column'
     },
+    modal1: {
+       display: isMobile ? 'block' : 'none', // Hide on pc
+       alignItems: 'center',
+       justifyContent: 'center',
+       position: isMobile? 'fixed':'none',
+       left: '0',
+       top: '0',
+       width: isMobile ? '100%' : '80%', // Adjust width for mobile and PC views
+       height:  isMobile ? '100%' : '80%',
+       backgroundColor: 'rgba(0, 0, 0, 0.7)',
+       zIndex: '1000',
+       transition: 'opacity 0.3s ease',
+
+       flexDirection: isMobile ? 'row' : 'column'
+     },
     modalContent: {
       backgroundColor: 'white',
       padding: '20px',
       borderRadius: '10px',
-      //width: isMobile? '80%':'50%',
+      height: isMobile? 'auto':'50%',
       maxWidth: isMobile? '900px':'500px',
       animation: 'fadeIn 0.5s ease-out',
       justifyContent: 'left',
@@ -217,12 +236,10 @@ function BookingForm() {
     },
     additional1:{
      display: isMobile ? 'block' : 'none', // Hide on mobile
+     height:isMobile?'400px':'600px',
+     fontSize: isMobile ?  '10px' : '40px',
     },
-    additional2:{
-      Maxwidth:'auto',
-      maxHeight:'70%',
-      display: isMobile ? 'none' : 'block', // Hide on pc
-    }
+   
 
   };
 
@@ -237,7 +254,7 @@ function BookingForm() {
   const makePayment = async () => {
     const stripe = await stripePromise;
 
-    const response = await fetch('http://localhost:5555/create-checkout-session', {
+    const response = await fetch('https://api.lahirutours.co.uk/create-checkout-session', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -265,7 +282,7 @@ function BookingForm() {
     }
 
     try {
-      const response = await fetch('http://localhost:5555/send-email/form2', {
+      const response = await fetch('https://api.lahirutours.co.uk/send-email/form2', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -534,50 +551,6 @@ Thank you for choosing Lahiru Tours. We look forward to making your travel exper
 </div>
 
 
-<div style={styles.additional2}>
-            <h3><u>Terms and Conditions</u></h3>
-            <p><b>1.Introduction
-Welcome to Lahiru Tours</b>. These Terms and Conditions ("Terms") govern your use of our website and services. By accessing our website and making a payment, you agree to comply with these Terms. Please read them carefully.
-</p><br />
-            <p><b>2.Booking and Payment</b>
-•	Payment Methods: We accept major credit and debit cards through our secure payment gateway, powered by Stripe.
-•	Payment Security: <b>All transactions are encrypted and securely processed through Stripe to ensure the protection of your payment details.
-•	Payment Confirmation: Upon successful payment, you will receive a confirmation email with your booking details.</b>
-</p><br />
-            
-            <p><b>3. Cancellations and Refunds</b>
-•	Cancellation Policy: Cancellations must be made in writing via email to <u>admin@lahirutours.co.uk</u>. The following cancellation fees apply:
-	30 days or more before the departure date: 95% refund minus any non-refundable expenses incurred.
-	15-29 days before the departure date: 50% refund.
-	Less than 15 days before the departure date: No refund.
-•	Refund Processing: Refunds will be processed within 14 business days of receiving the cancellation request.
-</p>
-            <p><b>4. Changes to Bookings</b>
-•	Amendments: Any changes to your booking must be requested in writing. We will do our best to accommodate your request but cannot guarantee availability. Additional charges may apply.
-•	Substitutions: In the event of unforeseen circumstances, Lahiru Tours reserves the right to substitute accommodations, activities, or other services with alternatives of equal or greater value.
-</p>
-            <p><b>5. Travel Insurance</b>
-•	Requirement: We strongly recommend that all travelers purchase comprehensive travel insurance covering cancellations, medical expenses, personal liability, and loss of personal belongings.
-</p>
-            <p><b>6.  Liability</b>
-•	Limitation of Liability: Lahiru Tours shall not be liable for any indirect, incidental, special, or consequential damages arising out of or in connection with your use of our services.
-•	Force Majeure: Lahiru Tours shall not be liable for any failure to perform its obligations where such failure results from circumstances beyond our control, including but not limited to natural disasters, war, or government restrictions.
-</p>
-<p><b>7.Travel Documentation</b>
-•	Passports and Visas: It is the traveler’s responsibility to ensure they have valid travel documentation, including passports and visas, if required.
-•	Health Requirements: Travelers are responsible for complying with any health requirements, including vaccinations, necessary for their destination.
-</p>
-<p><b>8.Contact Information</b>
-For any questions or concerns regarding these Terms, please contact us at:
-Lahiru Tours
-Email: <u>admin@lahirutours.co.uk</u>
-</p>
-<p><b>9.Amendments</b>
-Lahiru Tours reserves the right to amend these Terms at any time. Any changes will be posted on our website and will become effective immediately upon posting. Your continued use of our services after such amendments constitutes your acceptance of the new Terms.
-Thank you for choosing Lahiru Tours. We look forward to making your travel experience unforgettable.</p>
-</div>
-
-
 
 <br /><br />
             <label style={{fontSize:'2em',textAlign:'center'}}>
@@ -593,6 +566,11 @@ Thank you for choosing Lahiru Tours. We look forward to making your travel exper
           </div>
         </div>
       )}
+
+ 
+      
+
+      
     </div>
   );
 }

@@ -115,11 +115,11 @@ function Days18() {
       marginTop: '0px',
        };
 
-  const logoImgStyle = {
-    height: '120px',
-    width:'120px',
-    marginTop: '0px',
-  };
+       const logoImgStyle = {
+        height: 'auto',
+        width:'120px',
+        marginTop: '0px',
+      };
 
   const h1Style = {
    
@@ -145,28 +145,23 @@ function Days18() {
     zIndex: '1000',
   };
   const navbarStyle2 = {
-    fontSize:'20px',
+    fontSize:isMobile?'15px':'20px',
     backgroundColor: 'white',
     color: 'white',
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    position: '',
-    top: '0',
-    left: '0',
-    width: '100%',
+    width: 'auto',
     height: '120px',
     padding: '10px 0px 0px  ',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
-    transition: 'transform 0.3s ease',
-    transform: isNavbarVisible ? 'translateY(0)' : 'translateY()',
     zIndex: '1000',
   };
   
   const linkStyle = {
     color: 'black',
     textDecoration: 'none',
-    margin: '0 15px',
+    margin: '0 10px',
   };
   
   const navLinksStyle = {
@@ -240,7 +235,7 @@ function Days18() {
     margin: '20px 0',
     marginLeft:'px',
     borderRadius:'20px',
-    border:'5px solid #4682B4',
+    //border:'5px solid #4682B4',
   };
   const additionalDescriptionStyle = {
     fontFamily:'Forever Brush Script',
@@ -407,7 +402,7 @@ function Days18() {
     window.location.reload();
 
     try {
-      const response = await fetch(`http://localhost:5555/send-email/form1`, {
+      const response = await fetch('https://api.lahirutours.co.uk/send-email/form1', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -462,7 +457,7 @@ function Days18() {
       <div style={navbarStyle}>
       {/* Left Section: Logo */}
       <div>
-        <h1 style={{ margin: '0', padding: '0', fontSize: '2em' }}><b>info@lahirutours.co.uk</b></h1>
+        <h1 style={{ margin: '0', padding: '0', fontSize: '1em' }}><b>info@lahirutours.co.uk</b></h1>
       </div>
       
       {/* Center Section: Navigation Links */}
@@ -501,7 +496,7 @@ function Days18() {
   <div style={navLinksStyle}>
     <a href="/" style={linkStyle}>Home</a>
     <a href="/About" style={linkStyle}>About Us</a>
-    <a href="/TourPackages" style={linkStyle}>TourPackages</a>
+    <a href="/TourPackages" style={linkStyle}><b>Tour Packages</b></a>
     <a href="/ContactUS" style={linkStyle}>Contact</a>
     <a href="/feedback" style={linkStyle}>FAQ</a>
   </div>
@@ -544,7 +539,7 @@ function Days18() {
               style={{ ...mapstyle2 }}
             />
             </div>
-            <div style={{width:'40%',display:'',border:'2px solid blue',boxShadow: '0px 4px 8px rgba(1, 1, 1, 1)',borderRadius:'10px',padding:'20px', marginBottom:'50px'}}>
+            <div style={{width:isMobile?'auto':'40%',display:'',border:'2px solid blue',boxShadow: '0px 4px 8px rgba(1, 1, 1, 1)',borderRadius:'10px',padding:'20px'}}>
            <h1 style={{fontSize:'1em',textAlign:'left',fontFamily:'Ubuntu'}}> All our tour packages include the cost of tickets for all attractions during your travel. Additionally, all our packages include high-standard hotel stays with breakfast and dinner provided throughout your stay. </h1><br />
 
             <p style={{fontSize:'1.2em',textAlign:'left',fontFamily:'Oswald',color:'blue'}}><b>Please note:</b></p><h1 style={{fontSize:'1.3em',textAlign:'left',fontFamily:'Nanum Gothic'}}> Our travel packages do not include airline tickets. If you would like us to arrange your airline tickets, please contact our admin team through our contact form or at <u>admin@lahirutours.co.uk.</u></h1>

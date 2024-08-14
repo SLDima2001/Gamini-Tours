@@ -51,7 +51,7 @@ function Home() {
     window.location.reload();
 
     try {
-      const response = await fetch(`http://localhost:5555/send-email/form1`, {
+      const response = await fetch('https://api.lahirutours.co.uk/send-email/form1', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -98,11 +98,13 @@ function Home() {
     textAlign: 'center',
     fontFamily: 'Arial, sans-serif',
     backgroundColor: 'white',
-    display: 'flex',
-    flexDirection: 'column',
+    //display: 'flex',
+    //flexDirection: 'column',
     minHeight: '100vh',
     overflow: 'hidden',
-    width:'100%',
+    width:isMobile?'100%':'auto',
+     display: isMobile ? 'block' : 'flex',
+      flexDirection: isMobile ? 'row' : 'column'
     
   };
 
@@ -132,7 +134,7 @@ function Home() {
   };
 
   const logoImgStyle = {
-    height: '120px',
+    height: 'auto',
     width:'120px',
     marginTop: '0px',
   };
@@ -156,16 +158,13 @@ function Home() {
     zIndex: '1000',
   };
   const navbarStyle2 = {
-    fontSize:'20px',
+    fontSize:isMobile?'15px':'20px',
     backgroundColor: 'white',
     color: 'white',
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    position: '',
-    top: '0',
-    left: '0',
-    width: 'auto',
+    width:'auto',
     height: '120px',
     padding: '10px 0px 0px  ',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
@@ -175,7 +174,7 @@ function Home() {
   const linkStyle = {
     color: 'black',
     textDecoration: 'none',
-    margin: '0 15px',
+    margin: '0 10px',
   };
   
   const navLinksStyle = {
@@ -198,17 +197,16 @@ function Home() {
     display: 'flex',
     justifyContent: 'center',
     padding: '20px',
-    marginTop: '50px', // To compensate for fixed header height
-    width:'auto',
+    marginTop: '60px', // To compensate for fixed header height
+    width:isMobile?'100%':'auto',
   };
 
   const tourPackagesStyle = {
-    flex: '6',
-    backgroundColor: '',
-    padding: '50px',
+    flex: isMobile?'2':'6',
+    padding:isMobile? '10px' : '50px',
     borderRadius: '8px',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0)',
-    maxWidth: '90%',
+    maxWidth: isMobile?'100%':'80%',
     transition: 'background-color 0.3s ease',
     
   };
@@ -229,8 +227,8 @@ function Home() {
     padding: '20px',
     borderRadius: '40px',
     display: 'inline-block',
-    border:'2px solid blue',
-    boxShadow: '0px 4px 8px rgba(0, 0, 0, 1)',
+    //border:'2px solid blue',
+    //boxShadow: '0px 4px 8px rgba(0, 0, 0, 1)',
   };
   const desstyle = {
     fontFamily:'Vinque',
@@ -241,22 +239,20 @@ function Home() {
     borderRadius: '8px',
     maxWidth: 'auto',
     marginTop:'100px',
-
-    
-
+    textAlign:isMobile?'justify':'center',
   }
 
   const packageOptionsStyle = {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center',
-    gap: '30px',
-    marginTop:'40px',
+    gap:isMobile? '20px':'30px',
+    marginTop:isMobile?'10px':'40px',
     //border:'2px solid blue',
-    padding:'50px',
+    padding:isMobile?'10px':'50px',
     //boxShadow: '0px 4px 8px rgba(0, 0, 0, 1)',
-    borderRadius:'30px',
-    marginBottom:'50px',
+    borderRadius:isMobile?'10px':'30px',
+    marginBottom:isMobile?'100px':'50px',
   };
 
   const packageStyle = {
@@ -266,8 +262,8 @@ function Home() {
     padding: '20px ',
     borderRadius: '20px',
     boxShadow: '0 4px 8px rgba(0, 1, 1, 1)',
-    width: isMobile ? '100%' : 'auto', // Adjust width for mobile and PC views
-    height:'auto',
+    Width: isMobile ? '100%' : 'auto', // Adjust width for mobile and PC views
+    height:isMobile?'auto':'auto',
     borderColor:'',
   };
 
@@ -295,8 +291,8 @@ function Home() {
   
 
   const packageImgStyle = {
-    height: '250px',
-    width: '350px',
+    height: isMobile?'500px':'350px',
+    width: isMobile? '500px':'350px',
     padding:'',
     borderRadius: '5%',
     justifyContent: 'center',
@@ -389,7 +385,7 @@ function Home() {
     display: '',
     backgroundColor: '#4682B4',
       color: 'white',
-      padding: '20px 20px',
+      padding: '30px 30px',
       border: 'none',
       borderRadius: '4px',
       cursor: 'pointer',
@@ -455,7 +451,7 @@ function Home() {
     gap:'10px',
   };
   const bannerstyle= {
-    height: '500px',
+    height:isMobile? '200px':'500px',
     width: '100%',
     borderRadius: '0px',
   };
@@ -483,7 +479,7 @@ function Home() {
       <div style={navbarStyle}>
       {/* Left Section: Logo */}
       <div>
-        <h1 style={{ margin: '0', padding: '0', fontSize: '2em' }}> <b> info@lahirutours.co.uk</b></h1>
+        <h1 style={{ margin: '0', padding: '0', fontSize: '1em' }}> <b> info@lahirutours.co.uk</b></h1>
       </div>
       
       {/* Center Section: Navigation Links */}
@@ -522,7 +518,7 @@ function Home() {
   
   {/* Center Section: Navigation Links */}
   <div style={navLinksStyle}>
-    <a href="/" style={linkStyle}>Home</a>
+    <a href="/" style={linkStyle}><b>Home</b></a>
     <a href="/About" style={linkStyle}>About Us</a>
     <a href="/TourPackages" style={linkStyle}>Tour Packages</a>
     <a href="/ContactUS" style={linkStyle}>Contact</a>
@@ -574,12 +570,14 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
               <img src="https://lahirutours.co.uk/photos/Day6.gif" alt="Package 1" style={packageImgStyle} />
               
               <h4 style={h42Style}>Days 6</h4>
+              <div>
               <div style={iconStyle}>
               <FontAwesomeIcon  icon={faBed} size="1x" />
               <FontAwesomeIcon  icon={faUtensils} size="1x" />
               <FontAwesomeIcon  icon={faCar} size="1x" />  
               
               </div>  <h1 style={pricestyle}>Price £1,488 P\P</h1>
+              </div>
             
             </a>
 
@@ -683,7 +681,7 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
 
             </div><br />
 
-            <div><br /><br />
+            <div style={{textAlign:isMobile?'justify':'center'}}><br /><br />
             <p><p style={{fontSize:'30px'}}> <b> Why Choose Lahiru Tours?</b></p><br />
             <p style={{fontSize:'1.2em'}}>
 <b>Personal Touch:</b> As a family-run business, we treat every guest as an extension of our family. This means you receive personalized service and attention to detail that larger companies can't offer. <br />

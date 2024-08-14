@@ -79,7 +79,7 @@ function About() {
   };
 
   const logoImgStyle = {
-    height: '120px',
+    height: 'auto',
     width:'120px',
     marginTop: '0px',
   };
@@ -93,9 +93,6 @@ function About() {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    position: '',
-    top: '0',
-    left: '0',
     width: '100%',
     height: '70px',
     padding: '10px 20px',
@@ -104,28 +101,23 @@ function About() {
     zIndex: '1000',
   };
   const navbarStyle2 = {
-    fontSize:'20px',
+    fontSize:isMobile?'15px':'20px',
     backgroundColor: 'white',
     color: 'white',
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    position: '',
-    top: '0',
-    left: '0',
-    width: '100%',
+    width: 'auto',
     height: '120px',
     padding: '10px 0px 0px  ',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
-    transition: 'transform 0.3s ease',
-    transform: isNavbarVisible ? 'translateY(0)' : 'translateY()',
     zIndex: '1000',
   };
   
   const linkStyle = {
     color: 'black',
     textDecoration: 'none',
-    margin: '0 15px',
+    margin: '0 10px',
   };
   
   const navLinksStyle = {
@@ -166,8 +158,8 @@ function About() {
     margin: '0',
     padding: '20px',
     borderRadius: '40px',
-    border:'2px solid blue',
-    boxShadow: '0px 4px 8px rgba(0, 0, 0, 1)',
+    //border:'2px solid blue',
+    //boxShadow: '0px 4px 8px rgba(0, 0, 0, 1)',
     width:'25%',
   };
 
@@ -267,7 +259,7 @@ function About() {
       <div style={navbarStyle}>
       {/* Left Section: Logo */}
       <div>
-        <h1 style={{ margin: '0', padding: '0', fontSize: '2em' }}><b>info@lahirutours.co.uk</b></h1>
+        <h1 style={{ margin: '0', padding: '0', fontSize: '1em' }}><b>info@lahirutours.co.uk</b></h1>
       </div>
       
       {/* Center Section: Navigation Links */}
@@ -304,7 +296,7 @@ function About() {
   {/* Center Section: Navigation Links */}
   <div style={navLinksStyle}>
     <a href="/" style={linkStyle}>Home</a>
-    <a href="/About" style={linkStyle}>About Us</a>
+    <a href="/About" style={linkStyle}><b>About Us</b></a>
     <a href="/TourPackages" style={linkStyle}>Tour Packages</a>
     <a href="/ContactUS" style={linkStyle}>Contact</a>
     <a href="/feedback" style={linkStyle}>FAQ</a>
@@ -325,7 +317,7 @@ function About() {
       <main>
         <div style={mainContentStyle}>
           <div>
-        <h2 style={h2Style}><b>Lahiru Tours</b></h2><br /><br />
+        
         </div>
         <div style={{display:'flex',gap:'40%',alignContent:'center'}}>
 
@@ -334,10 +326,10 @@ function About() {
           
           
           <ScrollAnimation animateIn="bounceInLeft"  animateOut='fadeOut'>
-    <Shake duration={5} infinite>
-    <div> <img style={{height:'550px',marginLeft:'',alignContent:'center'}} src="https://lahirutours.co.uk/photos/Dad1.jpg" alt="" />
+   
+    <div> <img style={{height:'',marginLeft:'',alignContent:'center'}} src="https://lahirutours.co.uk/photos/Dad1.jpg" alt="" />
     <h1 style={photodesstyle}><b>Our begining in 1996</b></h1></div>
-  </Shake>
+  
 </ScrollAnimation>
           
        
@@ -348,10 +340,10 @@ function About() {
           
           
         <ScrollAnimation animateIn="bounceInLeft"  animateOut='fadeOut'>
-    <Shake duration={5} infinite>
-    <div> <img style={{height:'550px',alignContent:'center'}} src="https://lahirutours.co.uk/photos/Dad2.jpg" alt="" />
+    
+    <div> <img style={{alignContent:'center'}} src="https://lahirutours.co.uk/photos/Dad2.jpg" alt="" />
     <h1 style={photodesstyle}><b>Our begining in 1996</b></h1></div>
-  </Shake>
+ 
 </ScrollAnimation>
           
        
@@ -405,18 +397,18 @@ Founded in 1996 by Gamini, Lahiru Tours was born from a passion for showcasing t
 
 <div>
 <ScrollAnimation animateIn="FadeIn"  animateOut='fadeOut'>
-    <FadeIn duration={1} infinite>
+    
     <div><img src="https://lahirutours.co.uk/photos/4.jpg" alt="Photo" /></div>
-  </FadeIn>
+  
 </ScrollAnimation>
 </div>
 
 
 <div>
 <ScrollAnimation animateIn="FadeIn"  animateOut='fadeOut'>
-    <FadeIn duration={1} infinite>
+    
     <div><img src="https://lahirutours.co.uk/photos/5.jpg" alt="Photo" /></div>
-  </FadeIn>
+  
 </ScrollAnimation>
 </div>
 

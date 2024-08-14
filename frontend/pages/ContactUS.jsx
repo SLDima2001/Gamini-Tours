@@ -36,7 +36,7 @@ function ContactUS() {
     window.location.reload();
 
     try {
-      const response = await fetch(`http://localhost:5555/send-email/form1`, {
+      const response = await fetch(`https://api.lahirutours.co.uk/send-email/form1`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -110,7 +110,7 @@ function ContactUS() {
     
   };
   const bookbuttonstyle2 = {
-    display: isMobile ? 'block' : 'none', // Hide on pc
+    display: isMobile ? 'inline-block' : 'none', // Hide on pc
     backgroundColor: '#4682B4',
       color: 'white',
       padding: '20px 20px',
@@ -119,7 +119,9 @@ function ContactUS() {
       cursor: 'pointer',
       fontSize: '1.6em',
       marginTop: '0px',
-      width:'80%'
+      width:'100%',
+      
+    
       
     
   };
@@ -174,7 +176,7 @@ function ContactUS() {
   }
 
   const logoImgStyle = {
-    height: '120px',
+    height: 'auto',
     width:'120px',
     marginTop: '0px',
   };
@@ -205,29 +207,23 @@ function ContactUS() {
     zIndex: '1000',
   };
   const navbarStyle2 = {
-    fontSize:'20px',
+    fontSize:isMobile?'15px':'20px',
     backgroundColor: 'white',
     color: 'white',
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    position: '',
-    top: '0',
-    left: '0',
-    width: '100%',
+    width: 'auto',
     height: '120px',
     padding: '10px 0px 0px  ',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
-    transition: 'transform 0.3s ease',
-    transform: isNavbarVisible ? 'translateY(0)' : 'translateY()',
     zIndex: '1000',
   };
-
   
   const linkStyle = {
     color: 'black',
     textDecoration: 'none',
-    margin: '0 15px',
+    margin: '0 10px',
   };
   
   const navLinksStyle = {
@@ -362,7 +358,7 @@ function ContactUS() {
       <div style={navbarStyle}>
       {/* Left Section: Logo */}
       <div>
-        <h1 style={{ margin: '0', padding: '0', fontSize: '2em' }}> <b> info@lahirutours.co.uk</b></h1>
+        <h1 style={{ margin: '0', padding: '0', fontSize: '1em' }}> <b> info@lahirutours.co.uk</b></h1>
       </div>
       
       {/* Center Section: Navigation Links */}
@@ -401,7 +397,7 @@ function ContactUS() {
     <a href="/" style={linkStyle}>Home</a>
     <a href="/About" style={linkStyle}>About Us</a>
     <a href="/TourPackages" style={linkStyle}>Tour Packages</a>
-    <a href="/ContactUS" style={linkStyle}>Contact</a>
+    <a href="/ContactUS" style={linkStyle}><b>Contact</b></a>
     <a href="/feedback" style={linkStyle}>FAQ</a>
   </div>
   <div style={{ marginRight: '10px',marginTop:'19px' }}> {/* Right-aligned content */}
@@ -468,9 +464,10 @@ function ContactUS() {
         </form>
       </div>
       </div>
-      <Link to="/BookingForm" style={bookbuttonstyle2}>
-          <b>Book Now</b>
-            </Link> <br />
+      <a style={bookbuttonstyle2} href="/BookingForm"> <b>Book Now</b></a><br />
+      
+         
+           
       
       <footer style={footerStyle}>
         <div style={footerSectionStyle}>

@@ -75,7 +75,7 @@ const Feedback = ({ backgroundImageUrl }) => {
 
     setLoading(true);
 
-    Axios.post('http://localhost:5555/feedback', data)
+    Axios.post('https://api.lahirutours.co.uk/feedback', data)
       .then(() => {
         setLoading(false);
         navigate('/Afterfeedback');
@@ -121,7 +121,7 @@ const Feedback = ({ backgroundImageUrl }) => {
       marginTop: '0px',
     },
     logoImgStyle: {
-      height: '120px',
+      height: 'auto',
     width:'120px',
     marginTop: '0px',
     },
@@ -160,28 +160,23 @@ const Feedback = ({ backgroundImageUrl }) => {
       zIndex: '1000',
     },
     navbarStyle2 : {
-      fontSize:'20px',
-    backgroundColor: 'white',
-    color: 'white',
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    position: '',
-    top: '0',
-    left: '0',
-    width: '100%',
-    height: '120px',
-    padding: '10px 0px 0px  ',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
-    transition: 'transform 0.3s ease',
-    transform: isNavbarVisible ? 'translateY(0)' : 'translateY()',
-    zIndex: '1000',
+      fontSize:isMobile?'15px':'20px',
+      backgroundColor: 'white',
+      color: 'white',
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      width: 'auto',
+      height: '120px',
+      padding: '10px 0px 0px  ',
+      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
+      zIndex: '1000',
     },
     
     linkStyle : {
       color: 'black',
       textDecoration: 'none',
-      margin: '0 15px',
+      margin: '0 10px',
     },
     
     navLinksStyle : {
@@ -390,7 +385,7 @@ const Feedback = ({ backgroundImageUrl }) => {
       <div style={styles.navbarStyle}>
       {/* Left Section: Logo */}
       <div>
-        <h1 style={{ margin: '0', padding: '0', fontSize: '2em' }}><b>info@lahirutours.co.uk</b></h1>
+        <h1 style={{ margin: '0', padding: '0', fontSize: '1em' }}><b>info@lahirutours.co.uk</b></h1>
       </div>
       
       {/* Center Section: Navigation Links */}
@@ -431,7 +426,7 @@ const Feedback = ({ backgroundImageUrl }) => {
     <a href="/About" style={styles.linkStyle}>About Us</a>
     <a href="/TourPackages" style={styles.linkStyle}>Tour Packages</a>
     <a href="/ContactUS" style={styles.linkStyle}>Contact</a>
-    <a href="/feedback" style={styles.linkStyle}>FAQ</a>
+    <a href="/feedback" style={styles.linkStyle}><b>FAQ</b></a>
   </div>
   <div style={{ marginRight: '10px',marginTop:'19px' }}> {/* Right-aligned content */}
   <Link to="/BookingForm" style={styles.bookbuttonstyle}>

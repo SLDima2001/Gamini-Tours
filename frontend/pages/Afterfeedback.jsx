@@ -72,7 +72,7 @@ function Afterfeedback() {
   };
 
   const logoImgStyle = {
-    height: '120px',
+    height: 'auto',
     width:'120px',
     marginTop: '0px',
   };
@@ -116,28 +116,23 @@ function Afterfeedback() {
     zIndex: '1000',
   };
   const navbarStyle2 = {
-    fontSize:'20px',
+    fontSize:isMobile?'15px':'20px',
     backgroundColor: 'white',
     color: 'white',
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    position: '',
-    top: '0',
-    left: '0',
-    width: '100%',
+    width: 'auto',
     height: '120px',
     padding: '10px 0px 0px  ',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
-    transition: 'transform 0.3s ease',
-    transform: isNavbarVisible ? 'translateY(0)' : 'translateY()',
     zIndex: '1000',
   };
   
   const linkStyle = {
     color: 'black',
     textDecoration: 'none',
-    margin: '0 15px',
+    margin: '0 10px',
   };
   
   const navLinksStyle = {
@@ -330,7 +325,7 @@ function Afterfeedback() {
       <div style={navbarStyle}>
       {/* Left Section: Logo */}
       <div>
-        <h1 style={{ margin: '0', padding: '0', fontSize: '2em' }}><b>info@lahirutours.co.uk</b></h1>
+        <h1 style={{ margin: '0', padding: '0', fontSize: '1em' }}><b>info@lahirutours.co.uk</b></h1>
       </div>
       
       {/* Center Section: Navigation Links */}

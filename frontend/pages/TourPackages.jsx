@@ -54,7 +54,7 @@ function TourPackages() {
   };
 
   const logoImgStyle = {
-    height: '120px',
+    height: 'auto',
     width:'120px',
     marginTop: '0px',
   };
@@ -109,27 +109,22 @@ function TourPackages() {
     zIndex: '1000',
   };
   const navbarStyle2 = {
-    fontSize:'20px',
+    fontSize:isMobile?'15px':'20px',
     backgroundColor: 'white',
     color: 'white',
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    position: '',
-    top: '0',
-    left: '0',
-    width: '100%',
+    width: 'auto',
     height: '120px',
     padding: '10px 0px 0px  ',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
-    
-    transform: isNavbarVisible ? 'translateY(0)' : 'translateY()',
     zIndex: '1000',
   };
   const linkStyle = {
     color: 'black',
     textDecoration: 'none',
-    margin: '0 15px',
+    margin: '0 10px',
   };
   
   const navLinksStyle = {
@@ -169,18 +164,21 @@ function TourPackages() {
   };
 
   const tourPackagesStyle = {
+    display:isMobile?'relative':'inline-block',
     padding: '20px',
     backgroundColor: '',
     backgroundImage: 'url()',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
+    width:isMobile?'450px':'auto',
+height:'auto',
   };
 
   const packageOptionsStyle = {
-    display: 'flex',
+    display:isMobile? 'block':'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-around',
-    margin: '150px 0',
+    margin: '100px 0',
   };
 
   const packageStyle = (isHovered) => ({
@@ -191,10 +189,12 @@ function TourPackages() {
     borderRadius: '10px',
     boxShadow: '0 4px 8px rgba(10, 0, 0, 0.1)',
     margin: '10px',
-    transform: isHovered ? 'translateY(-10px)' : 'translateY(0)',
-    transition: 'transform 0.6s ease, box-shadow 1.5s ease',
-    zIndex: isHovered ? '2' : '1',
-    position: 'relative',
+    transform: isHovered ? 'translateY(-0px)' : 'translateY(0)',
+    transition: 'transform 1s ease, box-shadow 2s ease',
+    zIndex: isHovered ? '3' : '1',
+    position: 'flex',
+    flex:isMobile?'1':'4',
+    gap:isMobile?'100px' : '',
   });
 
   const blurredBackgroundStyle = {
@@ -270,7 +270,7 @@ function TourPackages() {
       <div style={navbarStyle}>
       {/* Left Section: Logo */}
       <div>
-        <h1 style={{ margin: '0', padding: '0', fontSize: '2em' }}> <b>info@lahirutours.co.uk</b></h1>
+        <h1 style={{ margin: '0', padding: '0', fontSize: '1em' }}> <b>info@lahirutours.co.uk</b></h1>
       </div>
       
       {/* Center Section: Navigation Links */}
@@ -308,7 +308,7 @@ function TourPackages() {
   <div style={navLinksStyle}>
     <a href="/" style={linkStyle}>Home</a>
     <a href="/About" style={linkStyle}>About Us</a>
-    <a href="/TourPackages" style={linkStyle}>Tour Packages</a>
+    <a href="/TourPackages" style={linkStyle}><b>Tour Packages</b></a>
     <a href="/ContactUS" style={linkStyle}>Contact</a>
     <a href="/feedback" style={linkStyle}>FAQ</a>
   </div>
@@ -349,7 +349,10 @@ function TourPackages() {
               </div>
             ))}
           </div>
-          <div style={{border:'none',justifyContent:'right',width:'60%',alignContent:'left',backgroundColor:'white',backgroundPosition:'center',marginLeft:'20%',}}>
+
+
+
+          <div style={{border:'none',justifyContent:'right',width:isMobile?'100%':'60%',alignContent:'left',backgroundColor:'white',backgroundPosition:'center',marginLeft:isMobile?'0%':'20%',textAlign:isMobile?'justify':'center'}}>
           <h1 style={{fontSize:'2em',color:'#4682B4'}}>Special Discount for Couples!</h1>
         
         <p>Enjoy an exclusive offer for couples with our special discount prices. Book now and make the most of this limited-time opportunity!</p>
@@ -365,7 +368,7 @@ One of our dedicated team members will contact you within 24 hours to validate y
 Enjoy your discounted rate and special perks!
 Hurry, this offer won't last long. Limited bookings available. Book your romantic getaway today!</p>
 <br /><br />
-<a style={{fontSize:'2.5em',border:'none',backgroundColor:'#4682B4',borderRadius:'4px',padding:'20px 20px',color:'white'}} href="/ContactUS">Contact Us</a><br /><br />
+<a style={{fontSize:'2.5em',border:'none',backgroundColor:'#4682B4',borderRadius:'4px',padding:'20px 20px',color:'white',alignContent:isMobile?'center':''}} href="/ContactUS">Contact Us</a><br /><br />
         </div>
         </section>
 
