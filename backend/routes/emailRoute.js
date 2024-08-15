@@ -7,7 +7,7 @@ const router = express.Router();
 
 // Route for the first form
 router.post('/form1', async (req, res) => {
-  const { name, email, phone,subject, message } = req.body;
+  const { name, email, phone, subject, message } = req.body;
 
   try {
     // Create a transporter
@@ -24,11 +24,13 @@ router.post('/form1', async (req, res) => {
       from: 'lahirutoursorg@gmail.com',
       to: 'dimalshapraveen2001@gmail.com', // Recipient email
       subject: 'Contact Form Submission',
-      text: `Name: ${name}\n
+      text: `
+      Name: ${name}\n
       Email: ${email}\n
       Phone: ${phone}\n
       subject: ${subject}\n
-      Message: ${message}`
+      Message: ${message}
+      `
     };
 
     // Send email

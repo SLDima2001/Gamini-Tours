@@ -166,28 +166,12 @@ function Days8() {
     alignItems: 'center',
     gap: '10px', // Adds space between buttons
   };
-  const ulStyle = {
-    listStyleType: 'none',
-    padding: '20px 0',
-    margin: '0',
-  };
 
-  const liStyle = {
-    marginBottom: '20px',
-  };
 
-  const aStyle = {
-    display: 'block',
-    color: 'white',
-    padding: '10px 20px',
-    textDecoration: 'none',
-    transition: 'background-color 0.3s ease',
-  };
 
   const mainContentStyle = {
     flex: '1',
     padding: '20px 40px',
-    marginLeft: isNavbarVisible ? '200px' : '0',
     transition: 'margin-left 0.3s ease',
     justifyContent: 'center',
     flexWrap: 'wrap',
@@ -208,21 +192,22 @@ function Days8() {
   };
 
   const packageDescriptionStyle = {
-    display: '',
+    //display:isMobile? 'inline-block':'',
     flexDirection: 'column',
     alignItems: 'center',
     backgroundColor: '#fff',
-    padding: '20px',
+    padding: isMobile?'0px':'20px',
     borderRadius: '10px',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0)',
     position: 'center',
-    textAlign: 'left',
-    maxWidth: '80%',
+    textAlign:isMobile? 'justify':'left',
+    maxWidth:isMobile? '100%':'80%',
   };
 
   const photoStyle = {
-    width: '900px',
-    height: '700px',
+    display:isMobile?'flex':'',
+    width:isMobile? '700px':'900px',
+    height: isMobile?'700px':'700px',
     objectFit: 'cover',
     justifyContent:'center',
     margin: '20px 0',
@@ -239,7 +224,6 @@ function Days8() {
     fontSize: '1.5em',
     textAlign: 'left',
   };
-
   const arrowButtonStyle = {
     cursor: 'pointer',
     border: 'none',
@@ -270,7 +254,8 @@ function Days8() {
     margin: '10px',   // Add margin around each icon
     color: '#007bff',  // Change the icon color
     marginRight: '00px',
-    marginTop:'-50px',
+    marginTop:'0px',
+    alignItems:'left'
   };
 
   const footerSectionStyle = {
@@ -292,7 +277,7 @@ function Days8() {
 
   const mapstyle = {
     display: isMobile ? 'none' : 'block', // Hide on mobile
-    width: '700px',
+    width: '900px',
     height: '700px',
     objectFit: 'cover',
     borderRadius: '5%',
@@ -318,28 +303,25 @@ function Days8() {
     textDecoration: 'none',
   };
 
-  const toggleNavbar = () => {
-    setIsNavbarVisible(!isNavbarVisible);
-  };
   const handleToggleForm = () => {
     setisformvisible(!isformvisible);
   };
   const formStyle = {
     flex: '1',
     backgroundColor: 'white',
-    padding: '30px',
+    padding:isMobile? '10px':'30px',
     borderRadius: '',
     border: '2px solid #3498db',
     boxShadow: '0 4px 8px rgba(1, 1, 1, 1)',
     maxWidth: 'auto',
     fontFamily: 'Arial, sans-serif',
     position: 'fixed',
-    top:isMobile? '30px' : '180px', // To align with the header
-    bottom:'10px',
+    top:isMobile? '200px' : '200px', // To align with the header
+    bottom:isMobile?'auto':'200px',
     display: isformvisible ? 'block' : 'none', // Show/hide based on state
     right: '20px',
     zIndex: '999',
-    maxHeight:'auto',
+    maxHeight:isMobile?'1200px':'auto',
     marginRight: '103px',
     '@media (max-width: 768px)': {
       display: 'none',
@@ -405,6 +387,7 @@ function Days8() {
           name,
           email,
           phone,
+          subject,
           message,
         }),
       });
@@ -530,7 +513,7 @@ function Days8() {
             </div>
             <div>
              <img
-              src="https://lahirutours.co.uk/photos/Day 6.gif"
+              src="https://lahirutours.co.uk/photos/Day 8.gif"
               alt="Tour Image"
               style={{ ...mapstyle2 }}
             />
@@ -803,7 +786,7 @@ Galle<br /><br />
                 </button>
                 {additionalDescriptions.day8 && (
                   <div>
-                  <p>
+                    <p>
                   <b>Bentota: A Tropical Paradise</b><br />
 Welcome to Bentota, the jewel of Sri Lanka's southern coast and the ultimate destination for ocean enthusiasts! As part of our Sri Lanka holiday package, Bentota offers an idyllic blend of sun, sea, and adventure that promises to make your tropical dreams come true.
 <br /><b>Morning:</b> <br />
@@ -826,7 +809,8 @@ Welcome to Bentota, the jewel of Sri Lanka's southern coast and the ultimate des
 •	Witness the beauty of a sunset over the Indian Ocean.<br />
 This day in Bentota offers a perfect blend of relaxation, adventure, and cultural experiences, making it a highlight of your Sri Lankan getaway.<br /><br /><br />
 <img style={photoStyle} src="https://lahirutours.co.uk/photos/Bentota.jpg" alt="" />
-                  </p>
+                  </p><br /><br />
+                  Proceed to the airport in time to connect with the departure flight.
                 </div>
                   
                   

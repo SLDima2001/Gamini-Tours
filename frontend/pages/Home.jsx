@@ -20,7 +20,12 @@ function Home() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
 
-  
+  const showAlert = () => {
+    alert('Thank you for choosing Lahiru Tours! We are excited to assist you in planning your perfect Sri Lankan adventure. Our team will promptly get back to you within 24 hours with a customized itinerary tailored to your interests and needs.For any immediate questions or additional information, please feel free to contact us directly at info@lahirutours.co.uk.We look forward to making your travel dreams come true!Warm regards,The Lahiru Tours Team');
+    setTimeout(() => {
+      setNotification(null);
+    }, 2000);
+  };
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth);
@@ -51,7 +56,7 @@ function Home() {
     window.location.reload();
 
     try {
-      const response = await fetch('https://api.lahirutours.co.uk/send-email/form1', {
+      const response = await fetch(`http://localhost:5555//send-email/form1`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -90,7 +95,7 @@ function Home() {
       }
     } catch (error) {
       console.alert(error);
-      alert('Successfully');
+      alert('Error');
     }
   };
 
@@ -232,7 +237,7 @@ function Home() {
   };
   const desstyle = {
     fontFamily:'Vinque',
-    fontSize: '1.2em',
+    fontSize:isMobile? '1.2em':'2em',
     margin: '0px',
     color: '#333',
     padding: '10px',
@@ -262,7 +267,7 @@ function Home() {
     padding: '20px ',
     borderRadius: '20px',
     boxShadow: '0 4px 8px rgba(0, 1, 1, 1)',
-    Width: isMobile ? '100%' : 'auto', // Adjust width for mobile and PC views
+    Width: isMobile ? 'auto' : 'auto', // Adjust width for mobile and PC views
     height:isMobile?'auto':'auto',
     borderColor:'',
   };
@@ -291,7 +296,7 @@ function Home() {
   
 
   const packageImgStyle = {
-    height: isMobile?'450px':'350px',
+    height: isMobile?'400px':'350px',
     width: isMobile? '500px':'350px',
     padding:'',
     borderRadius: '5%',
@@ -550,7 +555,7 @@ function Home() {
         <div style={tourPackagesStyle}>
 
           
-         <p style={{fontSize:'1em',fontFamily:'Agraham',width:'auto'}}><b>
+         <p style={{fontSize:isMobile?'1em':'2.5em',fontFamily:'Agraham',width:'auto'}}><b>
           
           <p style={{fontSize:'2em',}}>Welcome to Lahiru Tours</p></b><br />
 <p>At Lahiru Tours, we pride ourselves on being more than just a travel agency. As a family-run business, we bring a personal touch and heartfelt dedication to every journey we plan. Our passion for travel and commitment to exceptional customer service stem from our deep love for Sri Lanka, and we are eager to share its wonders with you.</p>
@@ -651,13 +656,13 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
 
             <a style={packageStyle} href="/Days182">
             
-            <h4>Sri Lanka 18 Days North &South Round Tour</h4>
+            <h4>Sri Lanka 18 Days North &South Round Tour</h4><br />
               <img src="https://lahirutours.co.uk/photos/Day18n.gif" alt="Package 7" style={packageImgStyle} />
               <h4 style={h42Style}>Days 18</h4>
               <div style={iconStyle}>
               <FontAwesomeIcon  icon={faBed} size="1x" />
               <FontAwesomeIcon  icon={faUtensils} size="1x" />
-              <FontAwesomeIcon  icon={faCar} size="1x" />  
+              <FontAwesomeIcon  icon={faCar} size="1x" /> 
               </div><h1 style={pricestyle}>Price £4,595 P\P</h1>
            
             </a>
@@ -676,21 +681,21 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
             
             </a>
             </div>
-            <div style={{fontSize:'2em',fontSmooth:'100px',backgroundColor:'',color:'#4682B4'}}>
-            Special Discount for Couples! <a style={{color:'#4682B4',fontSize:'1em'}} href="/TourPackages"><u>For more Info</u></a>
+            <div style={{fontSize:isMobile?'1.5em':'1.8em',fontSmooth:'100px',backgroundColor:'',color:'#4682B4'}}>
+            <p style={{color:'red',fontSize:'1.8em'}}>Special Discount</p> for Couples! <a style={{color:'#4682B4',fontSize:'1em'}} href="/TourPackages"><u>For more Info</u></a>
 
             </div><br />
 
             <div style={{textAlign:isMobile?'justify':'center'}}><br /><br />
-            <p><p style={{fontSize:'30px'}}> <b> Why Choose Lahiru Tours?</b></p><br />
-            <p style={{fontSize:'1.2em'}}>
+            <p><p style={{fontSize:isMobile?'25px':'1.5em'}}> <b> Why Choose Lahiru Tours?</b></p><br />
+            <p style={{fontSize:isMobile?'1.1em':'1.3em'}}>
 <b>Personal Touch:</b> As a family-run business, we treat every guest as an extension of our family. This means you receive personalized service and attention to detail that larger companies can't offer. <br />
 <b>Expert Knowledge:</b> Our extensive local knowledge allows us to craft unique itineraries that showcase the best of Sri Lanka. Whether it's hidden gems or popular landmarks, we ensure your experience is authentic and enriching.<br />
 <b>Passionate Team:</b> Our team consists of family members and close friends who share a passion for travel and hospitality. We are committed to providing warm, friendly, and professional service to make your trip unforgettable.<br />
 <b>Customized Experiences:</b> We understand that every traveler is unique. That's why we offer tailor-made tours that cater to your interests, preferences, and pace. Whether you're seeking adventure, relaxation, or cultural immersion, we design the perfect trip for you.<br />
 <b>Sustainable Tourism:</b> As locals, we are committed to preserving the natural beauty and cultural heritage of Sri Lanka. We support eco-friendly practices and promote responsible tourism to ensure that future generations can enjoy the wonders of our island.</p><br />
-<h1><b><p style={{fontSize:'30px'}}>Our Services</p></b></h1>
-<p style={{fontSize:'1.2em'}}><b>Custom Tours:</b> Personalized itineraries designed to suit your interests and needs. <br />
+<h1><b><p style={{fontSize:isMobile?'30px':'1.2em',marginBottom:'40px',marginTop:'20px'}}>Our Services</p></b></h1>
+<p style={{fontSize:isMobile?'1.2em':'1.5em'}}><b>Custom Tours:</b> Personalized itineraries designed to suit your interests and needs. <br />
 <b>Cultural Excursions:</b> Explore Sri Lanka’s rich history and heritage with knowledgeable guides.<br />
 <b>Adventure Trips:</b> From surfing and hiking to wildlife safaris, experience thrilling adventures.<br />
 <b>Family Vacations:</b> Fun and engaging activities for travelers of all ages.<br />
@@ -698,7 +703,7 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
 Join the Lahiru Tours Family
 Embark on a journey with Lahiru Tours and discover the true essence of Sri Lanka. Let our family take care of yours, and create memories that will last a lifetime. We look forward to welcoming you to our beautiful island and providing you with an exceptional travel experience.</p>
 
-<br /><p style={{fontSize:'1.3em'}}>Contact Us Today
+<br /><p style={{fontSize:isMobile?'1.3em':'1.2em'}}>Contact Us Today
 
 Lahiru Tours – Where Family, Passion, and Adventure Meet!</p></p>
             </div>
@@ -720,7 +725,7 @@ Tour PackagesWe offer flexible and engaging packages designed to help you enjoy 
             
             <div style={fb1style}>
               
-            <h1 style={{h0style , fontSize:'3em',top:'50px'}}>Our Facbook Rewiews</h1>
+            <h1 style={{h0style , fontSize:isMobile?'1.5em':'3em',top:'50px'}}>Our Facbook Rewiews</h1>
               <Link to="https://www.facebook.com/profile.php?id=100054495458742&mibextid=ZbWKwL" >
             
                   <img src="https://lahirutours.co.uk/photos/FB.png" alt='Facebook Review Page'/>
@@ -729,7 +734,7 @@ Tour PackagesWe offer flexible and engaging packages designed to help you enjoy 
               
               
             <br /><br /><br /><br /><br /><br /><br /><br />
-              <h1 style={{h0style , fontSize:'3em',top:'50px'}}>Our Facbook Rewiews</h1>
+              <h1 style={{h0style , fontSize:isMobile?'1.5em':'3em',top:'50px'}}>Our Facbook Rewiews</h1>
               
               <img style={{width:'100%'}} src="https://lahirutours.co.uk/photos/review.gif" alt="Our Customers Feedbacks" />
               
@@ -801,7 +806,7 @@ Tour PackagesWe offer flexible and engaging packages designed to help you enjoy 
             style={textareaStyle}
             required
           ></textarea>
-          <button type="submit" style={buttonStyle}>Inquiry</button>
+          <button onClick={showAlert} type="submit" style={buttonStyle}>Inquiry</button>
         </form> 
             
             </div> 

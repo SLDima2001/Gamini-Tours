@@ -236,7 +236,7 @@ function BookingForm() {
     },
     additional1:{
      display: isMobile ? 'block' : 'none', // Hide on mobile
-     height:isMobile?'400px':'600px',
+     height:isMobile?'auto':'600px',
      fontSize: isMobile ?  '10px' : '40px',
     },
    

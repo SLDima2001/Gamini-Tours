@@ -1,9 +1,6 @@
 import React, { useState,useEffect } from 'react';
 
 import { Link } from 'react-router-dom';
-import { useSpring, animated } from 'react-spring';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBed, faUtensils, faCar,faEnvelope,faEnvelopeOpen } from '@fortawesome/free-solid-svg-icons';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { FaFacebook, FaInstagram,FaTiktok } from 'react-icons/fa';
 function ContactUS() {
@@ -28,6 +25,12 @@ function ContactUS() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  const showAlert = () => {
+    alert('Thank you for choosing Lahiru Tours! We are excited to assist you in planning your perfect Sri Lankan adventure. Our team will promptly get back to you within 24 hours with a customized itinerary tailored to your interests and needs.For any immediate questions or additional information, please feel free to contact us directly at info@lahirutours.co.uk.We look forward to making your travel dreams come true!Warm regards,The Lahiru Tours Team');
+    setTimeout(() => {
+      setNotification(null);
+    }, 2000);
+  };
   
   const handleChange = (e) => setPhone(e.target.value.replace(/[^0-9]/g, ''));
 
@@ -36,7 +39,7 @@ function ContactUS() {
     window.location.reload();
 
     try {
-      const response = await fetch(`https://api.lahirutours.co.uk/send-email/form1`, {
+      const response = await fetch('https://api.lahirutours.co.uk/send-email/form1', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -45,6 +48,7 @@ function ContactUS() {
           name,
           email,
           phone,
+          subject,
           message,
         }),
       });
@@ -62,6 +66,7 @@ function ContactUS() {
           setName('');
           setEmail('');
           setPhone('');
+          setsubject('');
           setMessage('');
           window.location.reload(); // Reload the page
         } else {
@@ -73,7 +78,7 @@ function ContactUS() {
       }
     } catch (error) {
       console.alert(error);
-      alert('Successfully');
+      alert('error');
     }
   };
   
@@ -118,7 +123,7 @@ function ContactUS() {
       borderRadius: '4px',
       cursor: 'pointer',
       fontSize: '1.6em',
-      marginTop: '0px',
+      marginTop: '100px',
       width:'100%',
       
     
@@ -261,8 +266,9 @@ function ContactUS() {
     backgroundSize: 'cover',
     height: '100vh',
     display: 'flex',
+    top:isMobile?'200px':'',
     alignItems: 'center',
-    marginBottom:'100px',
+    marginBottom:isMobile?'200px':'100px',
     
   };
 
@@ -338,6 +344,7 @@ function ContactUS() {
     position: 'center',
     zIndex: '999',
     minHeight:'80vh',
+    marginTop:isMobile?'300px':'',
     marginLeft:'',
     alignItems: 'center',
     backgroundSize: 'cover',
@@ -460,7 +467,7 @@ function ContactUS() {
             style={textareaStyle}
             required
           ></textarea>
-          <button type="submit" style={buttonStyle}>Submit</button>
+          <button onClick={showAlert} type="submit" style={buttonStyle}>Submit</button>
         </form>
       </div>
       </div>

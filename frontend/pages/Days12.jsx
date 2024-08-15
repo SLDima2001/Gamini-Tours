@@ -174,28 +174,12 @@ function Days12() {
     alignItems: 'center',
     gap: '10px', // Adds space between buttons
   };
-  const ulStyle = {
-    listStyleType: 'none',
-    padding: '20px 0',
-    margin: '0',
-  };
 
-  const liStyle = {
-    marginBottom: '20px',
-  };
 
-  const aStyle = {
-    display: 'block',
-    color: 'white',
-    padding: '10px 20px',
-    textDecoration: 'none',
-    transition: 'background-color 0.3s ease',
-  };
 
   const mainContentStyle = {
     flex: '1',
     padding: '20px 40px',
-    marginLeft: isNavbarVisible ? '200px' : '0',
     transition: 'margin-left 0.3s ease',
     justifyContent: 'center',
     flexWrap: 'wrap',
@@ -216,21 +200,22 @@ function Days12() {
   };
 
   const packageDescriptionStyle = {
-    display: '',
+    //display:isMobile? 'inline-block':'',
     flexDirection: 'column',
     alignItems: 'center',
     backgroundColor: '#fff',
-    padding: '20px',
+    padding: isMobile?'0px':'20px',
     borderRadius: '10px',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0)',
     position: 'center',
-    textAlign: 'left',
-    maxWidth: '80%',
+    textAlign:isMobile? 'justify':'left',
+    maxWidth:isMobile? '100%':'80%',
   };
 
   const photoStyle = {
-    width: '900px',
-    height: '700px',
+    display:isMobile?'flex':'',
+    width:isMobile? '700px':'900px',
+    height: isMobile?'700px':'700px',
     objectFit: 'cover',
     justifyContent:'center',
     margin: '20px 0',
@@ -278,7 +263,8 @@ function Days12() {
     margin: '10px',   // Add margin around each icon
     color: '#007bff',  // Change the icon color
     marginRight: '00px',
-    marginTop:'-50px',
+    marginTop:'0px',
+    alignItems:'left'
   };
 
   const footerSectionStyle = {
@@ -300,7 +286,7 @@ function Days12() {
 
   const mapstyle = {
     display: isMobile ? 'none' : 'block', // Hide on mobile
-    width: '700px',
+    width: '900px',
     height: '700px',
     objectFit: 'cover',
     borderRadius: '5%',
@@ -326,28 +312,25 @@ function Days12() {
     textDecoration: 'none',
   };
 
-  const toggleNavbar = () => {
-    setIsNavbarVisible(!isNavbarVisible);
-  };
   const handleToggleForm = () => {
     setisformvisible(!isformvisible);
   };
   const formStyle = {
     flex: '1',
     backgroundColor: 'white',
-    padding: '30px',
+    padding:isMobile? '10px':'30px',
     borderRadius: '',
     border: '2px solid #3498db',
     boxShadow: '0 4px 8px rgba(1, 1, 1, 1)',
     maxWidth: 'auto',
     fontFamily: 'Arial, sans-serif',
     position: 'fixed',
-    top:isMobile? '30px' : '180px', // To align with the header
-    bottom:'10px',
+    top:isMobile? '200px' : '200px', // To align with the header
+    bottom:isMobile?'auto':'200px',
     display: isformvisible ? 'block' : 'none', // Show/hide based on state
     right: '20px',
     zIndex: '999',
-    maxHeight:'auto',
+    maxHeight:isMobile?'1200px':'auto',
     marginRight: '103px',
     '@media (max-width: 768px)': {
       display: 'none',
@@ -413,6 +396,7 @@ function Days12() {
           name,
           email,
           phone,
+          subject,
           message,
         }),
       });
@@ -536,7 +520,7 @@ function Days12() {
             </div><br />
             <div>
              <img
-              src="https://lahirutours.co.uk/photos/Day 6.gif"
+              src="https://lahirutours.co.uk/photos/Day 12.gif"
               alt="Tour Image"
               style={{ ...mapstyle2 }}
             />
@@ -972,30 +956,7 @@ The next part of this exciting Sri Lanka tour package is a visit to Galle, a cit
                 </button>
                 {additionalDescriptions.day10 && (
                   <div>
-                  <p>
-                  <b>Bentota: A Tropical Paradise</b><br />
-Welcome to Bentota, the jewel of Sri Lanka's southern coast and the ultimate destination for ocean enthusiasts! As part of our Sri Lanka holiday package, Bentota offers an idyllic blend of sun, sea, and adventure that promises to make your tropical dreams come true.
-<br /><b>Morning:</b> <br />
-•	Start your day with a refreshing cup of Ceylon tea as you gaze out at the Indian Ocean. <br />
-•	Indulge in a hearty breakfast featuring the freshest seafood from the Indian Ocean.<br />
-<b>Late Morning:</b><br />
-•	Embark on a captivating boat ride through Madu River’s mangrove forests, enjoying the serene natural beauty and diverse wildlife.<br />
-<b>Afternoon:</b><br />
-•	Take a leisurely swim in the warm, inviting waters of the Indian Ocean.<br />
-•	Relax on the beach, soaking up the sun and enjoying the tranquil seaside ambiance.<br />
-<b>Evening:</b><br />
-•	Don’t miss the breathtaking sunset over the horizon, a perfect end to your day in paradise.<br />
-<b>End of Day:</b><br />
-•	Relax at your beach hotel and prepare for the next leg of your Sri Lankan adventure.<br /><br />
-<b>Highlights of Your Bentota Experience</b><br />
-•	Explore the golden sands and crystal-clear waters of Bentota Beach.<br />
-•	Engage in thrilling water sports at Madu River.<br />
-•	Discover the traditional art of stilt fishing.<br />
-•	Enjoy a seafood BBQ dinner on the beach.<br />
-•	Witness the beauty of a sunset over the Indian Ocean.<br />
-This day in Bentota offers a perfect blend of relaxation, adventure, and cultural experiences, making it a highlight of your Sri Lankan getaway.<br /><br /><br />
-<img style={photoStyle}  src="https://lahirutours.co.uk/photos/Bentota.jpg" alt="" />
-                  </p>
+                 Proceed to the airport in time to connect with the departure flight.
                 </div>
                   
                   

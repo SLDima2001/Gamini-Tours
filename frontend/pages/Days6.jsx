@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { useSpring, animated } from 'react-spring';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { FaFacebook, FaInstagram,FaTiktok } from 'react-icons/fa';
+import { ToastContainer, toast } from 'react-toastify';
 
 
 function Days6() {
@@ -161,28 +162,12 @@ function Days6() {
     alignItems: 'center',
     gap: '10px', // Adds space between buttons
   };
-  const ulStyle = {
-    listStyleType: 'none',
-    padding: '20px 0',
-    margin: '0',
-  };
 
-  const liStyle = {
-    marginBottom: '20px',
-  };
 
-  const aStyle = {
-    display: 'block',
-    color: 'white',
-    padding: '10px 20px',
-    textDecoration: 'none',
-    transition: 'background-color 0.3s ease',
-  };
 
   const mainContentStyle = {
     flex: '1',
     padding: '20px 40px',
-    marginLeft: isNavbarVisible ? '200px' : '0',
     transition: 'margin-left 0.3s ease',
     justifyContent: 'center',
     flexWrap: 'wrap',
@@ -203,21 +188,22 @@ function Days6() {
   };
 
   const packageDescriptionStyle = {
-    display: '',
+    //display:isMobile? 'inline-block':'',
     flexDirection: 'column',
     alignItems: 'center',
     backgroundColor: '#fff',
-    padding: '20px',
+    padding: isMobile?'0px':'20px',
     borderRadius: '10px',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0)',
     position: 'center',
-    textAlign: 'left',
-    maxWidth: '80%',
+    textAlign:isMobile? 'justify':'left',
+    maxWidth:isMobile? '100%':'80%',
   };
 
   const photoStyle = {
-    width: '900px',
-    height: '700px',
+    display:isMobile?'flex':'',
+    width:isMobile? '700px':'900px',
+    height: isMobile?'700px':'700px',
     objectFit: 'cover',
     justifyContent:'center',
     margin: '20px 0',
@@ -288,7 +274,7 @@ function Days6() {
 
   const mapstyle = {
     display: isMobile ? 'none' : 'block', // Hide on mobile
-    width: '700px',
+    width: '900px',
     height: '700px',
     objectFit: 'cover',
     borderRadius: '5%',
@@ -314,28 +300,25 @@ function Days6() {
     textDecoration: 'none',
   };
 
-  const toggleNavbar = () => {
-    setIsNavbarVisible(!isNavbarVisible);
-  };
   const handleToggleForm = () => {
     setisformvisible(!isformvisible);
   };
   const formStyle = {
     flex: '1',
     backgroundColor: 'white',
-    padding: '30px',
+    padding:isMobile? '10px':'30px',
     borderRadius: '',
     border: '2px solid #3498db',
     boxShadow: '0 4px 8px rgba(1, 1, 1, 1)',
     maxWidth: 'auto',
     fontFamily: 'Arial, sans-serif',
     position: 'fixed',
-    top:isMobile? '30px' : '180px', // To align with the header
-    bottom:'10px',
+    top:isMobile? '200px' : '200px', // To align with the header
+    bottom:isMobile?'auto':'200px',
     display: isformvisible ? 'block' : 'none', // Show/hide based on state
     right: '20px',
     zIndex: '999',
-    maxHeight:'auto',
+    maxHeight:isMobile?'1200px':'auto',
     marginRight: '103px',
     '@media (max-width: 768px)': {
       display: 'none',
@@ -401,6 +384,7 @@ function Days6() {
           name,
           email,
           phone,
+          subject,
           message,
         }),
       });
@@ -729,29 +713,7 @@ The next part of this exciting Sri Lanka tour package is a visit to Galle, a cit
                 </button>
                 {additionalDescriptions.day6 && (
                   <div>
-                    
-                    <p>
-                    As you arrive in the bustling city of Colombo, you will be immersed in the vibrant local culture that defines Sri Lanka's capital. The lively streets, diverse vendors, and the stunning cityscape offer a unique blend of historical charm and modern energy. Colombo’s rich colonial heritage is evident in its magnificent architecture, while the warm hospitality of the Lankan people adds to the city's welcoming atmosphere.
-
-From your luxurious hotel room, you’ll enjoy breathtaking views of the ocean as you reflect on your journey through Sri Lanka. Sip on a warm cup of Ceylon tea and take in the scenic beauty around you. Our Sri Lanka tour packages are designed to give you an unforgettable experience of Colombo’s cultural and historical splendor.
-
-<br /><br />Activities:<br />
-
-•Wake up to the soothing sound of the sea waves<br />
-•Start your day with a delectable seafood breakfast buffet<br />
-•Engage in exciting water sports such as Jet Skiing, snorkeling, and kite surfing<br />
-•En route to Colombo, visit the turtle hatchery in Kosgoda<br />
-•Check in at your luxurious hotel and unwind<br />
-•Discover the best of Colombo on a city tour, exploring historical sites and local landmarks<br />
-•Shop at top boutiques and markets in the city<br />
-•Enjoy the evening at some of Colombo’s trendy local pubs<br />
-•Savor a sumptuous dinner buffet at the hotel<br />
-•Experience Colombo’s nightlife at popular local clubs<br />
-•End of Your Sri Lanka Journey<br />
-<br /> 
-<img style={photoStyle} src="https://lahirutours.co.uk/photos/Colombo.jpg" alt="" />
-
-                    </p>
+                    Proceed to the airport in time to connect with the departure flight.
                     
                   </div>
                   

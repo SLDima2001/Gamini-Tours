@@ -73,10 +73,6 @@ function TourPackages() {
   };
 
   
-  const paraStyle = {
-    color: 'black',
-    marginLeft: '-1600px',
-  };
   const header1style = {
     display:'flex',
     justifyContent: 'center',
@@ -136,49 +132,33 @@ function TourPackages() {
     alignItems: 'center',
     gap: '10px', // Adds space between buttons
   };
-  const ulStyle = {
-    listStyleType: 'none',
-    padding: '0',
-    margin: '0',
-  };
 
-  const liStyle = {
-    marginBottom: '20px',
-  };
 
-  const aStyle = {
-    display: 'block',
-    color: 'white',
-    padding: '14px 16px',
-    textDecoration: 'none',
-    transition: 'background-color 0.3s ease',
-  };
 
   const mainContentStyle = {
     flex: '1',
     padding: '20px',
     backgroundColor: '',
-    marginLeft: isNavbarVisible ? '200px' : '0',
     transition: 'margin-left 0.3s ease',
     position: 'relative',
   };
 
   const tourPackagesStyle = {
     display:isMobile?'relative':'inline-block',
-    padding: '20px',
-    backgroundColor: '',
-    backgroundImage: 'url()',
+    padding:isMobile? '0px':'20px',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    width:isMobile?'450px':'auto',
-height:'auto',
+    alignContent:'center',
+    width:isMobile?'auto':'auto',
+    height:'auto',
   };
 
   const packageOptionsStyle = {
-    display:isMobile? 'block':'flex',
+    display:isMobile? 'inline-block':'flex',
     flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    margin: '100px 0',
+    justifyContent: 'center',
+    margin: '00px 0',
+    alignContent:'center'
   };
 
   const packageStyle = (isHovered) => ({
@@ -189,16 +169,19 @@ height:'auto',
     borderRadius: '10px',
     boxShadow: '0 4px 8px rgba(10, 0, 0, 0.1)',
     margin: '10px',
-    transform: isHovered ? 'translateY(-0px)' : 'translateY(0)',
+    transform: isHovered ? 'translateY(-20px)' : 'translateY(0)',
     transition: 'transform 1s ease, box-shadow 2s ease',
     zIndex: isHovered ? '3' : '1',
-    position: 'flex',
+    //position: 'center',
     flex:isMobile?'1':'4',
-    gap:isMobile?'100px' : '',
+    gap:isMobile?'100px' : '20px',
+    width:isMobile?'200px':'auto',
+    alignItems:'center',
+    display:isMobile?'':'flex',
   });
 
   const blurredBackgroundStyle = {
-    filter: 'blur(5px)',
+    filter: 'blur(10px)',
     transition: 'filter 0.3s ease',
   };
 
@@ -206,6 +189,7 @@ height:'auto',
     height: '150px',
     width:'150px',
     borderRadius: '10px',
+    justifyContent:'center',
   };
 
   const h4Style = {
@@ -246,19 +230,12 @@ height:'auto',
     marginBottom: '10px',
   };
 
-  const socialMediaStyle = {
-    display: 'flex',
-    gap: '10px',
-  };
 
   const socialLinkStyle = {
     color: 'white',
     textDecoration: 'none',
   };
 
-  const toggleNavbar = () => {
-    setIsNavbarVisible(!isNavbarVisible);
-  };
 
   const handlePackageClick = (link) => {
     window.location.href = link;
@@ -326,7 +303,7 @@ height:'auto',
       </section>
       
       <main style={isNavbarVisible ? { ...mainContentStyle, ...blurredBackgroundStyle } : mainContentStyle}>
-      <div style={{ marginRight: '5%',marginTop:'19px' }}> {/* Right-aligned content */}
+      <div style={{ marginRight: '0%',marginTop:'19px' }}> {/* Right-aligned content */}
     
   
   </div>
@@ -352,13 +329,13 @@ height:'auto',
 
 
 
-          <div style={{border:'none',justifyContent:'right',width:isMobile?'100%':'60%',alignContent:'left',backgroundColor:'white',backgroundPosition:'center',marginLeft:isMobile?'0%':'20%',textAlign:isMobile?'justify':'center'}}>
+          <div style={{border:'none',justifyContent:'center',width:isMobile?'100%':'60%',alignContent:isMobile?'center':'left',backgroundColor:'white',backgroundPosition:'center',marginLeft:isMobile?'0%':'20%',textAlign:isMobile?'center':'center'}}>
           <h1 style={{fontSize:'2em',color:'#4682B4'}}>Special Discount for Couples!</h1>
         
         <p>Enjoy an exclusive offer for couples with our special discount prices. Book now and make the most of this limited-time opportunity!</p>
 <p style={{fontSize:'1.5em'}}>
 <b>Discount Details: </b><br />
-<b><p style={{fontSize:'2em'}}>25% off</p></b> on all couple bookings</p> <br />
+<b><p style={{fontSize:'2em',color:'red'}}>25% off</p></b> on all couple bookings</p> <br />
 <p style={{fontSize:'1.3em'}}>Valid for stays between 01/08/2024 and 31/12/2025 <br />
 Includes complimentary breakfast and late checkout </p><br /><br />
 <p style={{fontSize:'1.7em'}}>How to Redeem:</p> <br />

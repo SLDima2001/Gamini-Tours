@@ -15,10 +15,7 @@ const isValidEmail = (email) => {
   return regex.test(email);
 };
 
-const isValidPhoneNumber = (phoneNumber) => {
-  const regex = /^\d{10}$/;
-  return regex.test(phoneNumber);
-};
+
 
 const Feedback = ({ backgroundImageUrl }) => {
   const [firstname, setFirstname] = useState('');
@@ -53,10 +50,7 @@ const Feedback = ({ backgroundImageUrl }) => {
       return;
     }
 
-    if (!isValidPhoneNumber(phonenumber)) {
-      toast.error('Please enter a valid 10-digit phone number.');
-      return;
-    }
+   
 
     if (rating === 0) {
       toast.error('Please provide a rating.');
@@ -204,8 +198,9 @@ const Feedback = ({ backgroundImageUrl }) => {
       transition: 'background-color 0.3s ease',
     },
     container: {
-      padding: '20px',
-     
+      padding:isMobile? '10px':'30px',
+     marginTop:isMobile?'200px':'0px',
+     marginBottom:isMobile?'100px':'0px',
       backgroundSize: 'cover',
       height: '100vh',
       display: 'flex',

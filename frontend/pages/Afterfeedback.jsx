@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBed, faUtensils, faCar,faEnvelope,faEnvelopeOpen } from '@fortawesome/free-solid-svg-icons';
@@ -77,27 +77,8 @@ function Afterfeedback() {
     marginTop: '0px',
   };
 
-  const h1Style = {
-    
-    fontSize: '4em',
-    margin: '0',
-    color: '#333', // Darken the color for better visibility
-    backgroundColor: '', // Light blue background color
-    padding: '10px', // Add padding for better visual appearance
-    borderRadius: '8px', // Rounded corners for the background
-    display: 'inline-block', // Ensures the background spans the content width
-    marginLeft: '-00px',
-    
-  };
-  const paraStyle = {
-    color: 'black',
-    marginLeft: '00px',
-  };
 
 
-  const contactInfoStyle = {
-    marginLeft: 'auto', // Pushes contact info to the right
-  };
 
   const navbarStyle = {
     backgroundColor: '',
@@ -145,23 +126,8 @@ function Afterfeedback() {
     gap: '10px', // Adds space between buttons
   };
   
-  const ulStyle = {
-    listStyleType: 'none',
-    padding: '0',
-    margin: '0', // Remove default margin
-  };
 
-  const liStyle = {
-    marginBottom: '10px',
-  };
 
-  const aStyle = {
-    display: 'block',
-    color: 'white',
-    padding: '14px 16px',
-    textDecoration: 'none',
-    transition: 'background-color 0.3s ease',
-  };
 
   const mainContentStyle = {
     
@@ -170,10 +136,10 @@ function Afterfeedback() {
     transition: 'margin-left 0.3s ease', // Add transition for smooth adjustment
     justifyContent:'',
     display:'inline-block',
-    width:'80%',
+    width:isMobile?'100%':'80%',
     alignItems:'center',
-    border:'2px solid blue',
-    boxShadow: '0px 4px 8px rgba(0, 0, 0, 1)',
+    //border:'2px solid blue',
+    //boxShadow: '0px 4px 8px rgba(0, 0, 0, 1)',
     borderRadius:'10%',
     marginBottom:'50px',
     marginTop:'50px',
@@ -181,19 +147,6 @@ function Afterfeedback() {
 
   };
 
-  const h2Style = {
-    fontFamily:'Rockybilly',
-    display:'inline-block',
-    color: '#4682B4',
-    fontSize:'4em',
-    margin: '0',
-    padding: '20px',
-    borderRadius: '40px',
-    border:'2px solid blue',
-    boxShadow: '0px 4px 8px rgba(0, 0, 0, 1)',
-    width:'30%',
-    
-  };
 
   const pStyle = {
     fontFamily:'Pamega Script',
@@ -203,37 +156,11 @@ function Afterfeedback() {
     width:'100%',
   };
 
-  const tourPackagesStyle = {
-    padding: '20px',
-    backgroundColor: '#e0f7fa',
-  };
 
-  const h3Style = {
-    color: '#00796b',
-  };
 
-  const packageOptionsStyle = {
-    display: 'flex',
-    justifyContent: 'space-around',
-    margin: '20px 0',
-  };
 
-  const packageStyle = {
-    textAlign: 'center',
-    backgroundColor: '#ffffff',
-    padding: '10px',
-    borderRadius: '8px',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-  };
 
-  const packageImgStyle = {
-    height: '100px',
-  };
 
-  const h4Style = {
-    marginTop: '10px',
-    color: '#333',
-  };
 
   const footerStyle = {
     padding: '20px',
@@ -275,7 +202,7 @@ function Afterfeedback() {
     textDecoration: 'none',
   };
   const buttonS = {
-    marginTop: '20px',
+    marginTop: '50px',
       padding: '20px 50px',
       fontSize: '2em',
       color: 'white',
@@ -284,6 +211,7 @@ function Afterfeedback() {
       borderRadius: '5px',
       cursor: 'pointer',
       textDecoration: 'none',
+      top:'100px',
   };
   const aboutS = {
     fontFamily:'Great Vibes',
@@ -382,38 +310,19 @@ function Afterfeedback() {
      
       <main>
         <div style={mainContentStyle}>
-        <h2 style={h2Style}>Lahiru Tours</h2>
-        <p style={pStyle}>
-        <b style={aboutS}>Welcome to Lahiru Tours: A Family-Run Travel Agency </b><br /></p>
-        <p style={aboutp}>
-At Lahiru Tours, we pride ourselves on being more than just a travel agency. As a family-run business, we bring a personal touch and heartfelt dedication to every journey we plan. Our passion for travel and commitment to exceptional customer service stem from our deep love for Sri Lanka, and we are eager to share its wonders with you.</p>
+        <p style={{fontSize:isMobile?'1.3em':'2em',display:'inline-block',width:isMobile?'100%':'60%',textAlign:isMobile?'center':'center'}}>
+       <p style={{fontSize:isMobile?'1.3em':'2em'}}> Thank you for taking the time to provide feedback on your booking experience with Lahiru Tours.</p>
 
-<p style={aboutS}><b>Our Story</b></p>
-<p style={aboutp}>
-Lahiru Tours was founded in 1999 by Gamini with the vision of providing unique, memorable travel experiences that highlight the rich culture, history, and natural beauty of Sri Lanka. As Gamini’s family, we have explored every corner of this beautiful island, gaining insights and knowledge that we now use to create perfect travel itineraries for our guests.</p>
+<p>We are committed to delivering exceptional service and creating unforgettable travel experiences for our clients. Your input is invaluable to us, and we appreciate your thoughts on how we can continue to improve our services.</p>
 
-<b><p style={aboutS}>Why Choose Lahiru Tours?</p></b><br />
-<p style={aboutp}>
-<b>Personal Touch:</b> As a family-run business, we treat every guest as an extension of our family. This means you receive personalized service and attention to detail that larger companies can't offer. <br />
-Expert Knowledge: Our extensive local knowledge allows us to craft unique itineraries that showcase the best of Sri Lanka. Whether it's hidden gems or popular landmarks, we ensure your experience is authentic and enriching. <br />
-Passionate Team: Our team consists of family members and close friends who share a passion for travel and hospitality. We are committed to providing warm, friendly, and professional service to make your trip unforgettable. <br />
-Customized Experiences: We understand that every traveler is unique. That's why we offer tailor-made tours that cater to your interests, preferences, and pace. Whether you're seeking adventure, relaxation, or cultural immersion, we design the perfect trip for you. <br />
-Sustainable Tourism: As locals, we are committed to preserving the natural beauty and cultural heritage of Sri Lanka. We support eco-friendly practices and promote responsible tourism to ensure that future generations can enjoy the wonders of our island. <br /></p>
-<br /><b><p style={aboutS}>Our Services</p></b><br />
-<p style={aboutp}>
-<b>Custom Tours:</b> Personalized itineraries designed to suit your interests and needs. <br />
-<b>Cultural Excursions:</b> Explore Sri Lanka’s rich history and heritage with knowledgeable guides.<br />
-<b>Adventure Trips:</b> From surfing and hiking to wildlife safaris, experience thrilling adventures.<br />
-<b>Family Vacations:</b> Fun and engaging activities for travelers of all ages.<br />
-<b>Luxury Travel:</b> Enjoy the finest accommodations and exclusive experiences.<br /><br /><br />
-Join the <b>Lahiru Tours</b> Family
-Embark on a journey with Lahiru Tours and discover the true essence of Sri Lanka. Let our family take care of yours, and create memories that will last a lifetime. We look forward to welcoming you to our beautiful island and providing you with an exceptional travel experience.
+<p>If you have any additional comments or need further assistance, please feel free to reach out to us directly at customerservise@lahirutours.co.uk We’re here to help and ensure that every aspect of your travel experience meets your expectations.</p>
 
-Contact Us Today
+<p>Thank you once again for choosing Lahiru Tours. We look forward to serving you and making your journey with us truly remarkable!</p>
 
-Lahiru Tours – Where Family, Passion, and Adventure Meet! <br />
-</p>
-<br /><br />
+<p>Warm regards,</p>
+<p>The Lahiru Tours Team</p>
+        </p>
+       <br /><br />
 <Link to="/" style={buttonS}>
           Back To Home
             </Link> 

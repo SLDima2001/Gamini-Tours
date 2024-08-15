@@ -99,19 +99,6 @@ function Days10() {
     
   };
   
-  const bookbuttonstyle2 = {
-    display: isMobile ? 'block' : 'none', // Hide on mobile
-    backgroundColor: '#4682B4',
-      color: 'white',
-      padding: '20px 20px',
-      border: 'none',
-      borderRadius: '4px',
-      cursor: 'pointer',
-      fontSize: '1.6em',
-      marginTop: '0px',
-      
-    
-  };
 
   const logoImgStyle = {
     height: 'auto',
@@ -171,28 +158,12 @@ function Days10() {
     alignItems: 'center',
     gap: '10px', // Adds space between buttons
   };
-  const ulStyle = {
-    listStyleType: 'none',
-    padding: '20px 0',
-    margin: '0',
-  };
 
-  const liStyle = {
-    marginBottom: '20px',
-  };
 
-  const aStyle = {
-    display: 'block',
-    color: 'white',
-    padding: '10px 20px',
-    textDecoration: 'none',
-    transition: 'background-color 0.3s ease',
-  };
 
   const mainContentStyle = {
     flex: '1',
     padding: '20px 40px',
-    marginLeft: isNavbarVisible ? '200px' : '0',
     transition: 'margin-left 0.3s ease',
     justifyContent: 'center',
     flexWrap: 'wrap',
@@ -213,21 +184,22 @@ function Days10() {
   };
 
   const packageDescriptionStyle = {
-    display: '',
+    //display:isMobile? 'inline-block':'',
     flexDirection: 'column',
     alignItems: 'center',
     backgroundColor: '#fff',
-    padding: '20px',
+    padding: isMobile?'0px':'20px',
     borderRadius: '10px',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0)',
     position: 'center',
-    textAlign: 'left',
-    maxWidth: '80%',
+    textAlign:isMobile? 'justify':'left',
+    maxWidth:isMobile? '100%':'80%',
   };
 
   const photoStyle = {
-    width: '900px',
-    height: '700px',
+    display:isMobile?'flex':'',
+    width:isMobile? '700px':'900px',
+    height: isMobile?'700px':'700px',
     objectFit: 'cover',
     justifyContent:'center',
     margin: '20px 0',
@@ -235,7 +207,6 @@ function Days10() {
     borderRadius:'20px',
     //border:'5px solid #4682B4',
   };
-
   const additionalDescriptionStyle = {
     fontFamily:'Forever Brush Script',
     marginTop: '50px',
@@ -275,7 +246,8 @@ function Days10() {
     margin: '10px',   // Add margin around each icon
     color: '#007bff',  // Change the icon color
     marginRight: '00px',
-    marginTop:'-50px',
+    marginTop:'0px',
+    alignItems:'left'
   };
 
   const footerSectionStyle = {
@@ -297,7 +269,7 @@ function Days10() {
 
   const mapstyle = {
     display: isMobile ? 'none' : 'block', // Hide on mobile
-    width: '700px',
+    width: '900px',
     height: '700px',
     objectFit: 'cover',
     borderRadius: '5%',
@@ -322,28 +294,25 @@ function Days10() {
     textDecoration: 'none',
   };
 
-  const toggleNavbar = () => {
-    setIsNavbarVisible(!isNavbarVisible);
-  };
   const handleToggleForm = () => {
     setisformvisible(!isformvisible);
   };
   const formStyle = {
     flex: '1',
     backgroundColor: 'white',
-    padding: '30px',
+    padding:isMobile? '10px':'30px',
     borderRadius: '',
     border: '2px solid #3498db',
     boxShadow: '0 4px 8px rgba(1, 1, 1, 1)',
     maxWidth: 'auto',
     fontFamily: 'Arial, sans-serif',
     position: 'fixed',
-    top:isMobile? '30px' : '180px', // To align with the header
-    bottom:'10px',
+    top:isMobile? '200px' : '200px', // To align with the header
+    bottom:isMobile?'auto':'200px',
     display: isformvisible ? 'block' : 'none', // Show/hide based on state
     right: '20px',
     zIndex: '999',
-    maxHeight:'auto',
+    maxHeight:isMobile?'1200px':'auto',
     marginRight: '103px',
     '@media (max-width: 768px)': {
       display: 'none',
@@ -409,6 +378,7 @@ function Days10() {
           name,
           email,
           phone,
+          subject,
           message,
         }),
       });
@@ -517,14 +487,14 @@ function Days10() {
         <div style={{packageStyle , display:'flex',gap:'20%'}}>
           <div>
             <img
-              src="/src/Photos/Day10.gif"
+              src="https://lahirutours.co.uk/photos/Day10.gif"
               alt="Tour Image"
               style={{ ...photoStyle,objectFit:'cover' }}
             />
             </div>
             <div>
              <img
-              src="/src/Photos/Day 10.gif"
+              src="https://lahirutours.co.uk/photos/Day 10.gif"
               alt="Tour Image"
               style={{ ...mapstyle }}
             />
@@ -532,7 +502,7 @@ function Days10() {
             </div><br />
             <div>
              <img
-              src="/src/Photos/Day 6.gif"
+              src="https://lahirutours.co.uk/photos/Day 10.gif"
               alt="Tour Image"
               style={{ ...mapstyle2 }}
             />
@@ -818,27 +788,7 @@ This day in Bentota offers a perfect blend of relaxation, adventure, and cultura
                 {additionalDescriptions.day8 && (
                    <div>
                     
-                   <p>
-                   As you arrive in the bustling city of Colombo, you will be immersed in the vibrant local culture that defines Sri Lanka's capital. The lively streets, diverse vendors, and the stunning cityscape offer a unique blend of historical charm and modern energy. Colombo’s rich colonial heritage is evident in its magnificent architecture, while the warm hospitality of the Lankan people adds to the city's welcoming atmosphere.
-
-From your luxurious hotel room, you’ll enjoy breathtaking views of the ocean as you reflect on your journey through Sri Lanka. Sip on a warm cup of Ceylon tea and take in the scenic beauty around you. Our Sri Lanka tour packages are designed to give you an unforgettable experience of Colombo’s cultural and historical splendor.
-
-<br /><br />Activities:<br />
-
-•Wake up to the soothing sound of the sea waves<br />
-•Start your day with a delectable seafood breakfast buffet<br />
-•Engage in exciting water sports such as Jet Skiing, snorkeling, and kite surfing<br />
-•En route to Colombo, visit the turtle hatchery in Kosgoda<br />
-•Check in at your luxurious hotel and unwind<br />
-•Discover the best of Colombo on a city tour, exploring historical sites and local landmarks<br />
-•Shop at top boutiques and markets in the city<br />
-•Enjoy the evening at some of Colombo’s trendy local pubs<br />
-•Savor a sumptuous dinner buffet at the hotel<br />
-•Experience Colombo’s nightlife at popular local clubs<br />
-•End of Your Sri Lanka Journey<br />
-<br /> 
-<img style={photoStyle} src="https://lahirutours.co.uk/photos/Colombo.jpg" alt="" />
-                   </p>
+                    Proceed to the airport in time to connect with the departure flight.
                    
                  </div>
                   

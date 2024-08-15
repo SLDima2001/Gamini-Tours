@@ -1,12 +1,9 @@
 import React, { useState ,useEffect} from 'react';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBed, faUtensils, faCar,faEnvelope,faEnvelopeOpen } from '@fortawesome/free-solid-svg-icons';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { FaFacebook, FaInstagram,FaTiktok } from 'react-icons/fa';
 import "animate.css/animate.compat.css"
 import ScrollAnimation from 'react-animate-on-scroll';
-import { Bounce, Shake,FadeIn,Flash ,Jello} from 'react-motions'
 
 
 
@@ -177,7 +174,7 @@ function About() {
   };
   const pStyle2 = {
     fontFamily:'Great Vibes',
-    fontSize: '20px',
+    fontSize:isMobile? '20px':'25px',
     color: '#333',
     textAlign:'center',
   };
@@ -188,7 +185,7 @@ function About() {
 
 
   const photodesstyle = {
-    fontSize:'40px',
+    fontSize:'20px',
     marginTop: '10px',
     color: '#333',
     justifyContent:'center'
@@ -319,7 +316,7 @@ function About() {
           <div>
         
         </div>
-        <div style={{display:'flex',gap:isMobile?'10%':'40%',alignContent:'center'}}>
+        <div style={{display:isMobile?'inline-block':'flex',gap:isMobile?'10%':'50%',alignContent:'center',marginBottom:isMobile?'':'100px'}}>
 
 
           <div>
@@ -327,45 +324,41 @@ function About() {
           
           <ScrollAnimation animateIn="bounceInLeft"  animateOut='fadeOut'>
    
-    <div> <img style={{height:'',marginLeft:'',alignContent:'center'}} src="https://lahirutours.co.uk/photos/Dad1.jpg" alt="" />
-    <h1 style={photodesstyle}><b>Our begining in 1996</b></h1></div>
-  
-</ScrollAnimation>
-          
-       
+    <div>
+       <img  src="https://lahirutours.co.uk/photos/Dad1.jpg" alt="" />
+    <h1 style={photodesstyle}><b>Our begining in 1996</b></h1>
+    </div>
+    </ScrollAnimation>
         </div>
 
 
         <div>
-          
-          
         <ScrollAnimation animateIn="bounceInLeft"  animateOut='fadeOut'>
     
-    <div> <img style={{alignContent:'center'}} src="https://lahirutours.co.uk/photos/Dad2.jpg" alt="" />
-    <h1 style={photodesstyle}><b>Our begining in 1996</b></h1></div>
+    <div> <img  src="https://lahirutours.co.uk/photos/Dad2.jpg" alt="" />
+    <h1 style={photodesstyle}><b>Our begining in 1996</b></h1>
+    </div>
  
 </ScrollAnimation>
-          
-       
         </div>
     
 
         </div>
        
         <div style={{alignItems:'center'}}>
-        <p style={{pStyle1,fontSize:'40px'}}>
+        <p style={{pStyle1,fontSize:isMobile?'40px':'50px'}}>
        <br /><br /><b> Welcome to Lahiru Tours: Your Gateway to Sri Lanka </b> <br /></p><br /><br />
       
-<p style={{pStyle,fontSize:'30px'}}><b>‘Where Family, Passion, and Adventure Meet’</b></p><br />
+<p style={{pStyle,fontSize:isMobile?'30px':'40px'}}><b>‘Where Family, Passion, and Adventure Meet’</b></p><br />
 
-<p style={{pStyle , fontSize:'20px'}}>At Lahiru Tours, we believe that travel is more than just visiting new places—it's about creating unforgettable memories and experiencing the heart and soul of a destination. As a family-run travel agency with over two decades of experience, we bring a personal touch and deep local knowledge to every journey we plan.
+<p style={{pStyle , fontSize:isMobile?'20px':'28px'}}>At Lahiru Tours, we believe that travel is more than just visiting new places—it's about creating unforgettable memories and experiencing the heart and soul of a destination. As a family-run travel agency with over two decades of experience, we bring a personal touch and deep local knowledge to every journey we plan.
 <br /><br /><br /><b><p style={{marginBottom:'20px',}}>Our Story</p></b><br />
-<div  style={{display:'flex',gap:'15%',width:'auto',height:'auto'}}>
+<div  style={{display:isMobile?'inline-block':'flex',gap:'15%',width:'auto',height:'auto'}}>
   <div>
   <ScrollAnimation animateIn="bounceInLeft"  animateOut='fadeOut'>
-    <Bounce duration={5} infinite>
+    
     <div><img src="https://lahirutours.co.uk/photos/1.jpg" alt="Photo" /></div>
-  </Bounce>
+  
 </ScrollAnimation>
 
 </div>
@@ -373,30 +366,30 @@ function About() {
 
 <div>
 <ScrollAnimation animateIn="bounceInLeft"  animateOut='fadeOut'>
-    <Bounce duration={5} infinite>
+   
     <div><img src="https://lahirutours.co.uk/photos/2.jpg" alt="Photo" /></div>
-  </Bounce>
+  
 </ScrollAnimation>
 </div>
 
 
 <div>
 <ScrollAnimation animateIn="bounceInLeft"  animateOut='fadeOut'>
-    <Bounce duration={5} infinite>
+    
     <div><img src="https://lahirutours.co.uk/photos/3.jpg" alt="Photo" /></div>
-  </Bounce>
+ 
 </ScrollAnimation>
 </div>
 
 </div>
-<div style={{fontSize:'20px'}}>
+<div style={{fontSize:isMobile?'20px':'25px'}}>
 Founded in 1996 by Gamini, Lahiru Tours was born from a passion for showcasing the rich culture, history, and natural beauty of Sri Lanka. Our family has explored every corner of this stunning island, gaining unique insights and knowledge that we use to craft perfect travel itineraries for our guests.
 </div>
 
-<div style={{display:'flex',gap:'40%'}}>
+<div style={{display:isMobile?'inline-block':'flex',gap:'40%'}}>
 
 <div>
-<ScrollAnimation animateIn="FadeIn"  animateOut='fadeOut'>
+<ScrollAnimation animateIn="bounceInLeft"  animateOut='fadeOut'>
     
     <div><img src="https://lahirutours.co.uk/photos/4.jpg" alt="Photo" /></div>
   
@@ -405,7 +398,7 @@ Founded in 1996 by Gamini, Lahiru Tours was born from a passion for showcasing t
 
 
 <div>
-<ScrollAnimation animateIn="FadeIn"  animateOut='fadeOut'>
+<ScrollAnimation animateIn="bounceInLeft"  animateOut='fadeOut'>
     
     <div><img src="https://lahirutours.co.uk/photos/5.jpg" alt="Photo" /></div>
   
