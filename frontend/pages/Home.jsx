@@ -53,10 +53,10 @@ function Home() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    window.location.reload();
+    window.location.reload(); // Reload the page
 
     try {
-      const response = await fetch(`http://localhost:5555//send-email/form1`, {
+      const response = await fetch('https://api.lahirutours.co.uk/send-email/form1', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -85,7 +85,7 @@ function Home() {
           setPhone('');
           setsubject('');
           setMessage('');
-          window.location.reload(); // Reload the page
+          
         } else {
           alert('Failed to send email.');
         }
@@ -208,7 +208,7 @@ function Home() {
 
   const tourPackagesStyle = {
     flex: isMobile?'2':'6',
-    padding:isMobile? '10px' : '50px',
+    padding:isMobile? '10px' : '20px',
     borderRadius: '8px',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0)',
     maxWidth: isMobile?'100%':'80%',
@@ -772,7 +772,7 @@ Tour PackagesWe offer flexible and engaging packages designed to help you enjoy 
             style={inputStyle}
             required
           />
-          <label style={labelStyle} htmlFor="email">Email:</label>
+          <label style={labelStyle}>Email:</label>
           <input
             type="email"
             id="email"
@@ -781,7 +781,7 @@ Tour PackagesWe offer flexible and engaging packages designed to help you enjoy 
             style={inputStyle}
             required
           />
-          <label style={labelStyle} htmlFor="phone">Phone:</label>
+          <label style={labelStyle}>Phone:</label>
           <input
             type="tel"
             id="phone"
@@ -790,7 +790,7 @@ Tour PackagesWe offer flexible and engaging packages designed to help you enjoy 
             style={inputStyle}
             required
           />
-          <label style={labelStyle} htmlFor="subject">Subject:</label>
+          <label style={labelStyle}>Subject:</label>
           <textarea
             id="subject"
             value={subject}
@@ -798,7 +798,7 @@ Tour PackagesWe offer flexible and engaging packages designed to help you enjoy 
             style={inputStyle}
             required
           ></textarea>
-          <label style={labelStyle} htmlFor="message">Message:</label>
+          <label style={labelStyle}>Message:</label>
           <textarea
             id="message"
             value={message}
@@ -855,7 +855,7 @@ Tour PackagesWe offer flexible and engaging packages designed to help you enjoy 
           <p><u>
             info@lahirutours.co.uk<br />
             admin@lahirutours.co.uk <br />
-            payment@lahirutours.co.uk <br />
+            payments@lahirutours.co.uk <br />
            </u>
           </p>
         </div>

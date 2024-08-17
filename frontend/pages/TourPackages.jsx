@@ -25,14 +25,14 @@ function TourPackages() {
 
 
   const packages = [
-    { id: 1, name: '6 Days', imgSrc: 'https://lahirutours.co.uk/photos/Day6.gif', link: '/Days6', price: 100, description: 'Enjoy a 6 Days tour exploring beautiful destinations.' },
-    { id: 2, name: '8 Days', imgSrc: 'https://lahirutours.co.uk/photos/Day8.gif', link: '/Days8', price: 150, description: 'Experience an 8 Days adventure filled with fun and excitement.' },
-    { id: 3, name: '10 Days', imgSrc: 'https://lahirutours.co.uk/photos/Day10.gif', link: '/Days10', price: 200, description: 'Discover the wonders of a 10-days tour.' },
-    { id: 4, name: '12 Days', imgSrc: 'https://lahirutours.co.uk/photos/Day12.gif', link: '/Days12', price: 300, description: 'A 12 days journey to explore the best sights and sounds.' },
-    { id: 5, name: '15 Days', imgSrc: 'https://lahirutours.co.uk/photos/Day15.gif', link: '/Days15', price: 300, description: 'A 15 days journey to explore the best sights and sounds.' },
-    { id: 6, name: '18 Days', imgSrc: 'https://lahirutours.co.uk/photos/Day18.gif', link: '/Days18', price: 350, description: 'An 18 days tour to immerse yourself in rich culture and history.' },
-    { id: 7, name: '18 Days', imgSrc: 'https://lahirutours.co.uk/photos/Day18n.gif', link: '/Days182', price: 350, description: 'An 18 days North & South tour to immerse yourself in rich culture and history.' },
-    { id: 8, name: '20 Days', imgSrc: 'https://lahirutours.co.uk/photos/Day20.gif', link: '/Days20', price: 400, description: 'A 20 days expedition to experience everything.' },
+    { id: 1, name: '6 Days Sri Lanka Tour', imgSrc: 'https://lahirutours.co.uk/photos/Day6.gif', link: '/Days6', price: 100, description: 'Enjoy a 6 Days tour exploring beautiful destinations.' },
+    { id: 2, name: '8 Days Sri Lanka Tour', imgSrc: 'https://lahirutours.co.uk/photos/Day8.gif', link: '/Days8', price: 150, description: 'Experience an 8 Days adventure filled with fun and excitement.' },
+    { id: 3, name: '10 Days Sri Lanka Tour', imgSrc: 'https://lahirutours.co.uk/photos/Day10.gif', link: '/Days10', price: 200, description: 'Discover the wonders of a 10-days tour.' },
+    { id: 4, name: '12 Days Sri Lanka Tour', imgSrc: 'https://lahirutours.co.uk/photos/Day12.gif', link: '/Days12', price: 300, description: 'A 12 days journey to explore the best sights and sounds.' },
+    { id: 5, name: '15 Days Sri Lanka Tour', imgSrc: 'https://lahirutours.co.uk/photos/Day15.gif', link: '/Days15', price: 300, description: 'A 15 days journey to explore the best sights and sounds.' },
+    { id: 6, name: '18 Days Sri Lanka Tour', imgSrc: 'https://lahirutours.co.uk/photos/Day18.gif', link: '/Days18', price: 350, description: 'An 18 days tour to immerse yourself in rich culture and history.' },
+    { id: 7, name: '18 Days North & South Sri Lanka Tour', imgSrc: 'https://lahirutours.co.uk/photos/Day18n.gif', link: '/Days182', price: 350, description: 'An 18 days North & South tour to immerse yourself in rich culture and history.' },
+    { id: 8, name: '20 Days Sri Lanka Tour', imgSrc: 'https://lahirutours.co.uk/photos/Day20.gif', link: '/Days20', price: 400, description: 'A 20 days expedition to experience everything.' },
   ];
 
   const appStyle = {
@@ -383,7 +383,7 @@ Hurry, this offer won't last long. Limited bookings available. Book your romanti
           <p><u>
             info@lahirutours.co.uk<br />
             admin@lahirutours.co.uk <br />
-            payment@lahirutours.co.uk <br />
+            payments@lahirutours.co.uk <br />
             </u>
           </p>
         </div>

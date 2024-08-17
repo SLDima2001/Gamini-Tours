@@ -202,7 +202,7 @@ function Afterfeedback() {
     textDecoration: 'none',
   };
   const buttonS = {
-    marginTop: '50px',
+    marginTop: '100px',
       padding: '20px 50px',
       fontSize: '2em',
       color: 'white',
@@ -211,7 +211,7 @@ function Afterfeedback() {
       borderRadius: '5px',
       cursor: 'pointer',
       textDecoration: 'none',
-      top:'100px',
+      
   };
   const aboutS = {
     fontFamily:'Great Vibes',
@@ -310,8 +310,8 @@ function Afterfeedback() {
      
       <main>
         <div style={mainContentStyle}>
-        <p style={{fontSize:isMobile?'1.3em':'2em',display:'inline-block',width:isMobile?'100%':'60%',textAlign:isMobile?'center':'center'}}>
-       <p style={{fontSize:isMobile?'1.3em':'2em'}}> Thank you for taking the time to provide feedback on your booking experience with Lahiru Tours.</p>
+        <p style={{fontSize:isMobile?'1em':'1.4em',display:'inline-block',width:isMobile?'100%':'60%',textAlign:isMobile?'center':'center'}}>
+       <p style={{fontSize:isMobile?'1em':'1.2em'}}> Thank you for taking the time to provide feedback on your booking experience with Lahiru Tours.</p>
 
 <p>We are committed to delivering exceptional service and creating unforgettable travel experiences for our clients. Your input is invaluable to us, and we appreciate your thoughts on how we can continue to improve our services.</p>
 
@@ -322,16 +322,11 @@ function Afterfeedback() {
 <p>Warm regards,</p>
 <p>The Lahiru Tours Team</p>
         </p>
-       <br /><br />
-<Link to="/" style={buttonS}>
-          Back To Home
-            </Link> 
+       
 
 <br />
             </div>
-            <div>
-            <Link to="/BookingForm" style={bookbuttonstyle2}> <b>Book Now</b></Link>
-            </div>
+            
         
       </main>
       
@@ -367,7 +362,7 @@ function Afterfeedback() {
           <p><u>
             info@lahirutours.co.uk<br />
             admin@lahirutours.co.uk <br />
-            payment@lahirutours.co.uk <br />
+            payments@lahirutours.co.uk <br />
            </u>
           </p>
         </div>

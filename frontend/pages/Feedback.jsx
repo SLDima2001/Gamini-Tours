@@ -561,7 +561,7 @@ const Feedback = ({ backgroundImageUrl }) => {
           <p><u>
             info@lahirutours.co.uk<br />
             admin@lahirutours.co.uk <br />
-            payment@lahirutours.co.uk <br />
+            payments@lahirutours.co.uk <br />
            </u>
 
             

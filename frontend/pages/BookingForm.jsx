@@ -123,7 +123,7 @@ function BookingForm() {
       borderRadius: '4px',
     },
     button: {
-      backgroundColor: '#333',
+      backgroundColor: '#4682B4',
       color: 'white',
       padding: '15px 20px',
       border: 'none',

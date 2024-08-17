@@ -13,6 +13,7 @@ function ContactUS() {
   const [message, setMessage] = useState('');
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  
 
 
   
@@ -27,19 +28,17 @@ function ContactUS() {
 
   const showAlert = () => {
     alert('Thank you for choosing Lahiru Tours! We are excited to assist you in planning your perfect Sri Lankan adventure. Our team will promptly get back to you within 24 hours with a customized itinerary tailored to your interests and needs.For any immediate questions or additional information, please feel free to contact us directly at info@lahirutours.co.uk.We look forward to making your travel dreams come true!Warm regards,The Lahiru Tours Team');
-    setTimeout(() => {
-      setNotification(null);
-    }, 2000);
+    
   };
   
   const handleChange = (e) => setPhone(e.target.value.replace(/[^0-9]/g, ''));
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    window.location.reload();
+    window.location.reload(); // Reload the page
 
     try {
-      const response = await fetch('https://api.lahirutours.co.uk/send-email/form1', {
+      const response = await fetch(`https://api.lahirutours.co.uk/send-email/form1`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -68,7 +67,7 @@ function ContactUS() {
           setPhone('');
           setsubject('');
           setMessage('');
-          window.location.reload(); // Reload the page
+          
         } else {
           alert('Failed to send email.');
         }
@@ -78,7 +77,7 @@ function ContactUS() {
       }
     } catch (error) {
       console.alert(error);
-      alert('error');
+      alert('Error');
     }
   };
   
@@ -422,7 +421,7 @@ function ContactUS() {
       
       <div style={tourPackagesStyle}>
         <div style={wrapper}>
-      <form style={formStyle} onSubmit={handleSubmit}>
+        <form style={formStyle}  onSubmit={handleSubmit}>
           <h2 style={h2Style}>Contact Us</h2>
           <label style={labelStyle} htmlFor="name">Name:</label>
           <input
@@ -447,7 +446,7 @@ function ContactUS() {
             type="tel"
             id="phone"
             value={phone}
-            onChange={handleChange}
+            onChange={(e) => setPhone(e.target.value)}
             style={inputStyle}
             required
           />
@@ -467,8 +466,8 @@ function ContactUS() {
             style={textareaStyle}
             required
           ></textarea>
-          <button onClick={showAlert} type="submit" style={buttonStyle}>Submit</button>
-        </form>
+          <button onClick={showAlert} type="submit" style={buttonStyle}>Inquiry</button>
+        </form> 
       </div>
       </div>
       <a style={bookbuttonstyle2} href="/BookingForm"> <b>Book Now</b></a><br />
@@ -508,7 +507,7 @@ function ContactUS() {
           <p><u>
             info@lahirutours.co.uk<br />
             admin@lahirutours.co.uk <br />
-            payment@lahirutours.co.uk <br />
+            payments@lahirutours.co.uk <br />
             </u>
           </p>
         </div>

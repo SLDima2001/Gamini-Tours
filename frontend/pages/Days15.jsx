@@ -325,7 +325,7 @@ function Days15() {
     fontFamily: 'Arial, sans-serif',
     position: 'fixed',
     top:isMobile? '200px' : '200px', // To align with the header
-    bottom:isMobile?'auto':'200px',
+    bottom:isMobile?'auto':'auto',
     display: isformvisible ? 'block' : 'none', // Show/hide based on state
     right: '20px',
     zIndex: '999',
@@ -383,7 +383,7 @@ function Days15() {
   };
   const handleSubmit = async (event) => {
     event.preventDefault();
-    window.location.reload();
+    window.location.reload(); // Reload the page
 
     try {
       const response = await fetch('https://api.lahirutours.co.uk/send-email/form1', {
@@ -410,12 +410,12 @@ function Days15() {
 
         if (responseData.success) {
           alert('Email sent successfully!');
-          setName('');
-          setEmail('');
-          setPhone('');
-          setsubject('');
-          setMessage('');
-          window.location.reload(); // Reload the page
+          setName("");
+          setEmail("");
+          setPhone("");
+          setsubject("");
+          setMessage("");
+          
         } else {
           alert('Failed to send email.');
         }
@@ -425,10 +425,9 @@ function Days15() {
       }
     } catch (error) {
       console.alert(error);
-      alert('Success');
+      alert('Error');
     }
   };
-
   const toggleAdditionalDescription = (day) => {
     setAdditionalDescriptions((prevState) => ({
       ...prevState,
@@ -976,7 +975,7 @@ This day in Bentota offers a perfect blend of relaxation, adventure, and cultura
         >
           {isformvisible ? <FontAwesomeIcon  icon={faEnvelopeOpen} size="2x" /> : <FontAwesomeIcon  icon={faEnvelope} size="2x" />}<br /> Contact US
         </button>
-            <form style={formStyle} onSubmit={handleSubmit}>
+        <form style={formStyle}  onSubmit={handleSubmit}>
           <h2 style={h2Style}>Contact Us</h2>
           <label style={labelStyle} htmlFor="name">Name:</label>
           <input
@@ -987,7 +986,7 @@ This day in Bentota offers a perfect blend of relaxation, adventure, and cultura
             style={inputStyle}
             required
           />
-          <label style={labelStyle} htmlFor="email">Email:</label>
+          <label style={labelStyle}>Email:</label>
           <input
             type="email"
             id="email"
@@ -996,7 +995,7 @@ This day in Bentota offers a perfect blend of relaxation, adventure, and cultura
             style={inputStyle}
             required
           />
-          <label style={labelStyle} htmlFor="phone">Phone:</label>
+          <label style={labelStyle}>Phone:</label>
           <input
             type="tel"
             id="phone"
@@ -1005,7 +1004,7 @@ This day in Bentota offers a perfect blend of relaxation, adventure, and cultura
             style={inputStyle}
             required
           />
-          <label style={labelStyle} htmlFor="subject">Subject:</label>
+          <label style={labelStyle}>Subject:</label>
           <textarea
             id="subject"
             value={subject}
@@ -1013,7 +1012,7 @@ This day in Bentota offers a perfect blend of relaxation, adventure, and cultura
             style={inputStyle}
             required
           ></textarea>
-          <label style={labelStyle} htmlFor="message">Message:</label>
+          <label style={labelStyle}>Message:</label>
           <textarea
             id="message"
             value={message}
@@ -1022,8 +1021,7 @@ This day in Bentota offers a perfect blend of relaxation, adventure, and cultura
             required
           ></textarea>
           <button onClick={showAlert} type="submit" style={buttonStyle}>Inquiry</button>
-          
-        </form>
+        </form> 
       
         <footer style={footerStyle}>
         <div style={footerSectionStyle}>
@@ -1057,7 +1055,7 @@ This day in Bentota offers a perfect blend of relaxation, adventure, and cultura
           <p><u>
             info@lahirutours.co.uk<br />
             admin@lahirutours.co.uk <br />
-            payment@lahirutours.co.uk <br />
+            payments@lahirutours.co.uk <br />
             </u>
           </p>
         </div>
