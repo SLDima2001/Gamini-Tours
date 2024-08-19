@@ -323,23 +323,29 @@ function About() {
           
           
           <ScrollAnimation animateIn="bounceInLeft"  animateOut='fadeOut'>
-   
-    <div>
+              <div style={{display: isMobile ? 'block' : 'none',}}>
        <img  src="https://lahirutours.co.uk/photos/Dad1.jpg" alt="" />
     <h1 style={photodesstyle}><b>Our begining in 1996</b></h1>
-    </div>
-    </ScrollAnimation>
+              </div>
+          </ScrollAnimation>
+          <div style={{display: isMobile ? 'none' : 'block',}}>
+       <img  src="https://lahirutours.co.uk/photos/Dad1.jpg" alt="" />
+    <h1 style={photodesstyle}><b>Our begining in 1996</b></h1>
+              </div>
         </div>
 
 
         <div>
         <ScrollAnimation animateIn="bounceInLeft"  animateOut='fadeOut'>
     
-    <div> <img  src="https://lahirutours.co.uk/photos/Dad2.jpg" alt="" />
+    <div  style={{display: isMobile ? 'block' : 'none',}}> <img  src="https://lahirutours.co.uk/photos/Dad2.jpg" alt="" />
     <h1 style={photodesstyle}><b>Our begining in 1996</b></h1>
     </div>
  
 </ScrollAnimation>
+<div  style={{display: isMobile ? 'none' : 'block',}}> <img  src="https://lahirutours.co.uk/photos/Dad2.jpg" alt="" />
+    <h1 style={photodesstyle}><b>Our begining in 1996</b></h1>
+    </div>
         </div>
     
 
@@ -357,28 +363,30 @@ function About() {
   <div>
   <ScrollAnimation animateIn="bounceInLeft"  animateOut='fadeOut'>
     
-    <div><img src="https://lahirutours.co.uk/photos/1.jpg" alt="Photo" /></div>
+    <div style={{display: isMobile ? 'block' : 'none',}}><img src="https://lahirutours.co.uk/photos/1.jpg" alt="Photo" /></div>
   
 </ScrollAnimation>
-
+<div style={{display: isMobile ? 'none' : 'block',}}><img src="https://lahirutours.co.uk/photos/1.jpg" alt="Photo" /></div>
 </div>
 
 
 <div>
 <ScrollAnimation animateIn="bounceInLeft"  animateOut='fadeOut'>
    
-    <div><img src="https://lahirutours.co.uk/photos/2.jpg" alt="Photo" /></div>
+    <div style={{display: isMobile ? 'block' : 'none',}}><img src="https://lahirutours.co.uk/photos/2.jpg" alt="Photo" /></div>
   
 </ScrollAnimation>
+<div style={{display: isMobile ? 'none' : 'block',}}><img src="https://lahirutours.co.uk/photos/2.jpg" alt="Photo" /></div>
 </div>
 
 
 <div>
 <ScrollAnimation animateIn="bounceInLeft"  animateOut='fadeOut'>
     
-    <div><img src="https://lahirutours.co.uk/photos/3.jpg" alt="Photo" /></div>
+    <div style={{display: isMobile ? 'block' : 'none',}}><img src="https://lahirutours.co.uk/photos/3.jpg" alt="Photo" /></div>
  
 </ScrollAnimation>
+<div style={{display: isMobile ? 'none' : 'block',}}><img src="https://lahirutours.co.uk/photos/3.jpg" alt="Photo" /></div>
 </div>
 
 </div>
@@ -391,18 +399,20 @@ Founded in 1996 by Gamini, Lahiru Tours was born from a passion for showcasing t
 <div>
 <ScrollAnimation animateIn="bounceInLeft"  animateOut='fadeOut'>
     
-    <div><img src="https://lahirutours.co.uk/photos/4.jpg" alt="Photo" /></div>
+    <div style={{display: isMobile ? 'block' : 'none',}}><img src="https://lahirutours.co.uk/photos/4.jpg" alt="Photo" /></div>
   
 </ScrollAnimation>
+<div style={{display: isMobile ? 'none' : 'block',}}><img src="https://lahirutours.co.uk/photos/4.jpg" alt="Photo" /></div>
 </div>
 
 
 <div>
 <ScrollAnimation animateIn="bounceInLeft"  animateOut='fadeOut'>
     
-    <div><img src="https://lahirutours.co.uk/photos/5.jpg" alt="Photo" /></div>
+    <div style={{display: isMobile ? 'block' : 'none',}}><img src="https://lahirutours.co.uk/photos/5.jpg" alt="Photo" /></div>
   
 </ScrollAnimation>
+<div style={{display: isMobile ? 'none' : 'block',}} ><img src="https://lahirutours.co.uk/photos/5.jpg" alt="Photo" /></div>
 </div>
 
 

@@ -17,7 +17,7 @@ function BookingForm() {
   });
 
   const [packages, setPackages] = useState([
-    { id: 1, name: '6 Days', price: 10 },
+    { id: 1, name: '6 Days', price: 1488 },
     { id: 2, name: '8 Days', price: 2049 },
     { id: 3, name: '10 Days', price: 2514 },
     { id: 4, name: '12 Days', price: 3016 },
@@ -142,7 +142,7 @@ function BookingForm() {
       backgroundColor: '#f9f9f9',
       fontSize: '1.3em',
       marginBottom: '20%',
-      marginRight: '30%',
+      marginRight:isMobile?'auto': 'auto',
       border: '2px solid #3498db',
     },
     termsContainer: {
@@ -238,6 +238,9 @@ function BookingForm() {
      display: isMobile ? 'block' : 'none', // Hide on mobile
      height:isMobile?'auto':'600px',
      fontSize: isMobile ?  '10px' : '40px',
+    },
+    totalstyle:{
+fontSize:isMobile?'1.5em':'3em'
     },
    
 
@@ -481,6 +484,19 @@ function BookingForm() {
                 </button>
               </label>
             </div>
+            <div>
+              <p style={{color:'gray'}}>
+                Payment Security Notice
+Your security is our top priority. We use advanced encryption technology to ensure that your payment details are processed securely through Stripe’s global payment integration. Rest assured, all transactions are protected with the highest level of security.
+
+If you have any concerns or need assistance, please contact us at <br /><u>payments@lahirutours.co.uk.</u><br />
+
+Thank you for choosing Lahiru Tours. Your safety and privacy are paramount to us.
+
+Warm regards,
+The Lahiru Tours Team
+              </p>
+            </div>
 
             <button type="submit" style={styles.button}>
               Book Now
@@ -492,7 +508,7 @@ function BookingForm() {
           <h2>Summary</h2>
           <p>Time Period: {timePeriod}</p>
           <p>Total Amount: </p>
-          <p style={{fontSize:'2.5em'}}>£{totalAmount}</p>
+          <p style={styles.totalstyle}>£{totalAmount}</p>
         </div>
       </div>
 

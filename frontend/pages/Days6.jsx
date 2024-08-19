@@ -372,7 +372,7 @@ function Days6() {
   };
   const handleSubmit = async (event) => {
     event.preventDefault();
-    window.location.reload(); // Reload the page
+    
 
     try {
       const response = await fetch('https://api.lahirutours.co.uk/send-email/form1', {
@@ -398,7 +398,7 @@ function Days6() {
         const responseData = await response.json();
 
         if (responseData.success) {
-          alert('Email sent successfully!');
+         
           setName("");
           setEmail("");
           setPhone("");
@@ -409,13 +409,13 @@ function Days6() {
           alert('Failed to send email.');
         }
       } else {
-        const textResponse = await response.text();
-        alert(textResponse);
+       
       }
     } catch (error) {
       console.alert(error);
       alert('Error');
     }
+    window.location.reload(); // Reload the page
   };
 
   const toggleAdditionalDescription = (day) => {

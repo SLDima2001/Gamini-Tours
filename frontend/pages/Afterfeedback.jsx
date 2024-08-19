@@ -202,16 +202,18 @@ function Afterfeedback() {
     textDecoration: 'none',
   };
   const buttonS = {
-    marginTop: '100px',
+    display:'inline-block',
+    width:isMobile?'':'16%',
+    marginTop: '50px',
       padding: '20px 50px',
       fontSize: '2em',
       color: 'white',
-      backgroundColor: '#333',
+      backgroundColor: '#4682B4',
       border: 'none',
       borderRadius: '5px',
       cursor: 'pointer',
       textDecoration: 'none',
-      
+      marginBottom:'50px',
   };
   const aboutS = {
     fontFamily:'Great Vibes',
@@ -315,21 +317,26 @@ function Afterfeedback() {
 
 <p>We are committed to delivering exceptional service and creating unforgettable travel experiences for our clients. Your input is invaluable to us, and we appreciate your thoughts on how we can continue to improve our services.</p>
 
-<p>If you have any additional comments or need further assistance, please feel free to reach out to us directly at customerservise@lahirutours.co.uk We’re here to help and ensure that every aspect of your travel experience meets your expectations.</p>
+<p>If you have any additional comments or need further assistance, please feel free to reach out to us directly at <u>admin@lahirutours.co.uk</u> We’re here to help and ensure that every aspect of your travel experience meets your expectations.</p>
 
 <p>Thank you once again for choosing Lahiru Tours. We look forward to serving you and making your journey with us truly remarkable!</p>
 
 <p>Warm regards,</p>
 <p>The Lahiru Tours Team</p>
         </p>
-       
+      
 
 <br />
             </div>
+           
             
-        
+           
       </main>
-      
+      <div>
+      <a href="/" style={buttonS}>Back to Home</a>
+      </div>
+
+
       <footer style={footerStyle}>
         <div style={footerSectionStyle}>
           <h4 style={footerSectionTitleStyle}>Relaxing</h4>

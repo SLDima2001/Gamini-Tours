@@ -22,9 +22,7 @@ function Home() {
 
   const showAlert = () => {
     alert('Thank you for choosing Lahiru Tours! We are excited to assist you in planning your perfect Sri Lankan adventure. Our team will promptly get back to you within 24 hours with a customized itinerary tailored to your interests and needs.For any immediate questions or additional information, please feel free to contact us directly at info@lahirutours.co.uk.We look forward to making your travel dreams come true!Warm regards,The Lahiru Tours Team');
-    setTimeout(() => {
-      setNotification(null);
-    }, 2000);
+    
   };
   useEffect(() => {
     const handleResize = () => {
@@ -53,7 +51,7 @@ function Home() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    window.location.reload(); // Reload the page
+    
 
     try {
       const response = await fetch('https://api.lahirutours.co.uk/send-email/form1', {
@@ -79,24 +77,24 @@ function Home() {
         const responseData = await response.json();
 
         if (responseData.success) {
-          alert('Email sent successfully!');
           setName('');
           setEmail('');
           setPhone('');
           setsubject('');
           setMessage('');
           
+          
         } else {
           alert('Failed to send email.');
         }
       } else {
-        const textResponse = await response.text();
-        alert(textResponse);
+        
       }
     } catch (error) {
       console.alert(error);
       alert('Error');
     }
+    window.location.reload(); // Reload the page
   };
 
   const appStyle = {
@@ -207,11 +205,11 @@ function Home() {
   };
 
   const tourPackagesStyle = {
-    flex: isMobile?'2':'6',
+    flex: isMobile?'2':'4',
     padding:isMobile? '10px' : '20px',
     borderRadius: '8px',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0)',
-    maxWidth: isMobile?'100%':'80%',
+    maxWidth: isMobile?'100%':'100%',
     transition: 'background-color 0.3s ease',
     
   };
@@ -254,7 +252,7 @@ function Home() {
     gap:isMobile? '20px':'30px',
     marginTop:isMobile?'10px':'40px',
     //border:'2px solid blue',
-    padding:isMobile?'10px':'50px',
+    padding:isMobile?'10px':'20px',
     //boxShadow: '0px 4px 8px rgba(0, 0, 0, 1)',
     borderRadius:isMobile?'10px':'30px',
     marginBottom:isMobile?'100px':'50px',
@@ -555,9 +553,9 @@ function Home() {
         <div style={tourPackagesStyle}>
 
           
-         <p style={{fontSize:isMobile?'1em':'2.5em',fontFamily:'Agraham',width:'auto'}}><b>
+         <p style={{fontSize:isMobile?'1em':'1.5em',fontFamily:'Agraham',width:'auto'}}><b>
           
-          <p style={{fontSize:'2em',}}>Welcome to Lahiru Tours</p></b><br />
+          <p style={{fontSize:'1.2em',}}>Welcome to Lahiru Tours</p></b><br />
 <p>At Lahiru Tours, we pride ourselves on being more than just a travel agency. As a family-run business, we bring a personal touch and heartfelt dedication to every journey we plan. Our passion for travel and commitment to exceptional customer service stem from our deep love for Sri Lanka, and we are eager to share its wonders with you.</p>
 
 <p><br /><b>Our Story </b><br />
@@ -581,7 +579,9 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
               <FontAwesomeIcon  icon={faUtensils} size="1x" />
               <FontAwesomeIcon  icon={faCar} size="1x" />  
               
-              </div>  <h1 style={pricestyle}>Price £1,488 P\P</h1>
+              </div>  
+              <h1 style={{pricestyle , textDecoration: 'line-through'}}>Price £1,562 P\P</h1>
+              <h1 style={pricestyle}>Price £1,488 P\P</h1>
               </div>
             
             </a>
@@ -595,7 +595,9 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
               <FontAwesomeIcon  icon={faBed} size="1x" />
               <FontAwesomeIcon  icon={faUtensils} size="1x" />
               <FontAwesomeIcon  icon={faCar} size="1x" />  
-              </div><h1 style={pricestyle}>Price £2,049 P\P</h1>
+              </div>
+              <h1 style={{pricestyle , textDecoration: 'line-through'}}>Price £2,151 P\P</h1>
+              <h1 style={pricestyle}>Price £2,049 P\P</h1>
             
             </a>
 
@@ -607,7 +609,9 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
               <FontAwesomeIcon  icon={faBed} size="1x" />
               <FontAwesomeIcon  icon={faUtensils} size="1x" />
               <FontAwesomeIcon  icon={faCar} size="1x" />  
-              </div><h1 style={pricestyle}>Price £2,514 P\P</h1>
+              </div>
+              <h1 style={{pricestyle , textDecoration: 'line-through'}}>Price £2,639 P\P</h1>
+              <h1 style={pricestyle}>Price £2,514 P\P</h1>
             </a>
 
 
@@ -620,7 +624,9 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
               <FontAwesomeIcon  icon={faBed} size="1x" />
               <FontAwesomeIcon  icon={faUtensils} size="1x" />
               <FontAwesomeIcon  icon={faCar} size="1x" />  
-              </div><h1 style={pricestyle}>Price £3,016 P\P</h1>
+              </div>
+              <h1 style={{pricestyle , textDecoration: 'line-through'}}>Price £3,166 P\P</h1>
+              <h1 style={pricestyle}>Price £3,016 P\P</h1>
             
             </a>
 
@@ -635,7 +641,9 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
               <FontAwesomeIcon  icon={faBed} size="1x" />
               <FontAwesomeIcon  icon={faUtensils} size="1x" />
               <FontAwesomeIcon  icon={faCar} size="1x" />  
-              </div><h1 style={pricestyle}>Price £3,701 P\P</h1>
+              </div>
+              <h1 style={{pricestyle , textDecoration: 'line-through'}}>Price £3,886 P\P</h1>
+              <h1 style={pricestyle}>Price £3,701 P\P</h1>
             
             </a>
 
@@ -649,7 +657,9 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
               <FontAwesomeIcon  icon={faBed} size="1x" />
               <FontAwesomeIcon  icon={faUtensils} size="1x" />
               <FontAwesomeIcon  icon={faCar} size="1x" />  
-              </div><h1 style={pricestyle}>Price £4,425 P\P</h1>
+              </div>
+              <h1 style={{pricestyle , textDecoration: 'line-through'}}>Price £4,646 P\P</h1>
+              <h1 style={pricestyle}>Price £4,425 P\P</h1>
            
             </a>
 
@@ -663,7 +673,9 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
               <FontAwesomeIcon  icon={faBed} size="1x" />
               <FontAwesomeIcon  icon={faUtensils} size="1x" />
               <FontAwesomeIcon  icon={faCar} size="1x" /> 
-              </div><h1 style={pricestyle}>Price £4,595 P\P</h1>
+              </div>
+              <h1 style={{pricestyle , textDecoration: 'line-through'}}>Price £4,824 P\P</h1>
+              <h1 style={pricestyle}>Price £4,595 P\P</h1>
            
             </a>
 
@@ -677,12 +689,18 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
               <FontAwesomeIcon  icon={faBed} size="1x" />
               <FontAwesomeIcon  icon={faUtensils} size="1x" />
               <FontAwesomeIcon  icon={faCar} size="1x" />  
-              </div><h1 style={pricestyle}>Price £4,883 P\P</h1>
+              </div>
+              <h1 style={{pricestyle , textDecoration: 'line-through'}}>Price £4,989 P\P</h1>
+              <h1 style={pricestyle}>Price £4,883 P\P</h1>
             
             </a>
             </div>
             <div style={{fontSize:isMobile?'1.5em':'1.8em',fontSmooth:'100px',backgroundColor:'',color:'#4682B4'}}>
-            <p style={{color:'red',fontSize:'1.8em'}}>Special Discount</p> for Couples! <a style={{color:'#4682B4',fontSize:'1em'}} href="/TourPackages"><u>For more Info</u></a>
+            <p style={{color:'red',fontSize:'2em'}}>Special Discount</p> for Couples! 
+            <p style={{fontSize:'2em',color:''}}>
+  25% Off
+</p>
+            <a style={{color:'#4682B4',fontSize:'1em'}} href="/TourPackages"><u>For more Info</u></a>
 
             </div><br />
 
