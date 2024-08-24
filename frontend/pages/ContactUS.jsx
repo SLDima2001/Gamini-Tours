@@ -263,7 +263,7 @@ function ContactUS() {
     backgroundColor: 'rgba(255, 255, 255, 0.8)',
     justifyContent: 'center',
     backgroundSize: 'cover',
-    height: '100vh',
+    //height: '100vh',
     display: 'flex',
     top:isMobile?'200px':'',
     alignItems: 'center',
@@ -343,10 +343,12 @@ function ContactUS() {
     position: 'center',
     zIndex: '999',
     minHeight:'80vh',
-    marginTop:isMobile?'300px':'',
+    marginTop:isMobile?'300px':'400px',
+    marginBottom:isMobile?'auto':'300px',
     marginLeft:'',
     alignItems: 'center',
     backgroundSize: 'cover',
+    
   };
   const wrapper={
     backgroundColor: '',

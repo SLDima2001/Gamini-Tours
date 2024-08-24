@@ -82,7 +82,7 @@ function BookingForm() {
     },
     backButton: {
       position: '',
-      height:'50px',
+      height:'70px',
       width:'100px',
       top: '20px',
       left: '20px',
@@ -485,7 +485,7 @@ fontSize:isMobile?'1.5em':'3em'
               </label>
             </div>
             <div>
-              <p style={{color:'gray'}}>
+              <p style={{color:'gray',fontSize:'12px'}}>
                 Payment Security Notice
 Your security is our top priority. We use advanced encryption technology to ensure that your payment details are processed securely through Stripe’s global payment integration. Rest assured, all transactions are protected with the highest level of security.
 

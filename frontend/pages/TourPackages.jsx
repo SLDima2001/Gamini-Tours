@@ -43,6 +43,7 @@ function TourPackages() {
     flexDirection: 'column',
     minHeight: '100vh',
     overflow: 'hidden',
+    width:isMobile?'100%':'100%',
   };
 
   const headerStyle = {
@@ -150,7 +151,7 @@ function TourPackages() {
     backgroundPosition: 'center',
     alignContent:'center',
     width:isMobile?'auto':'auto',
-    height:'auto',
+    height:isMobile?'auto':'auto',
   };
 
   const packageOptionsStyle = {
@@ -173,7 +174,7 @@ function TourPackages() {
     transition: 'transform 1s ease, box-shadow 2s ease',
     zIndex: isHovered ? '3' : '1',
     //position: 'center',
-    flex:isMobile?'1':'4',
+    flex:isMobile?'1':'8',
     gap:isMobile?'100px' : '20px',
     width:isMobile?'200px':'auto',
     alignItems:'center',
@@ -337,7 +338,9 @@ function TourPackages() {
 <b>Discount Details: </b><br />
 <b><p style={{fontSize:'2em',color:'red'}}>25% off</p></b> on all couple bookings</p> <br />
 <p style={{fontSize:'1.3em'}}>Valid for stays between 01/08/2024 and 31/12/2025 <br />
-Includes complimentary breakfast and late checkout </p><br /><br />
+<p>
+Complimentary breakfast and dinner, as well as late checkout.
+</p></p><br /><br />
 <p style={{fontSize:'1.7em'}}>How to Redeem:</p> <br />
 <p style={{fontSize:'1.3em'}}>Visit our website and choose <a style={{fontSize:'1.5em',accentColor:'yellow',color:'blue',}} href="/ContactUS">‘Contact Us’</a>
 Enter your information and use promo code <p style={{color:'#4682B4'}}><b><u>COUPLE10</u></b></p> in the subject line and send us a message. <br />
@@ -346,6 +349,7 @@ Enjoy your discounted rate and special perks!
 Hurry, this offer won't last long. Limited bookings available. Book your romantic getaway today!</p>
 <br /><br />
 <a style={{fontSize:'2.5em',border:'none',backgroundColor:'#4682B4',borderRadius:'4px',padding:'20px 20px',color:'white',alignContent:isMobile?'center':''}} href="/ContactUS">Contact Us</a><br /><br />
+
         </div>
         </section>
 

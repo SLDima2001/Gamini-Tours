@@ -210,8 +210,8 @@ function Days182() {
 
   const photoStyle = {
     display:isMobile?'flex':'',
-    width:isMobile? '700px':'900px',
-    height: isMobile?'700px':'700px',
+    width:isMobile? '400px':'900px',
+    height: isMobile?'400px':'700px',
     objectFit: 'cover',
     justifyContent:'center',
     margin: '20px 0',
@@ -291,12 +291,12 @@ function Days182() {
   };
   const mapstyle2 = {
     display: isMobile ? 'block' : 'none', // Hide on pc
-    width: '700px',
-    height: '700px',
+    width: '400px',
+    height: '400px',
     objectFit: 'cover',
     borderRadius: '5%',
-    margin: '20px 100px',
-    marginLeft:'000px',
+    margin: '0px 00px',
+    
   };
 
   const footerListItemStyle = {
@@ -498,7 +498,7 @@ function Days182() {
       <h1 style={h1Style}><b>18 Days North & South Tour Package</b></h1>
       <main style={mainContentStyle}>
         <section style={tourPackagesStyle}>
-        <div style={{packageStyle , display:'flex',gap:'20%'}}>
+        <div style={{packageStyle , display:'flex',gap:isMobile?'0':'20%'}}>
         <div>
             <img
               src="https://lahirutours.co.uk/photos/Day18n.gif"

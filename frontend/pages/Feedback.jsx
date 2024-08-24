@@ -202,7 +202,7 @@ const Feedback = ({ backgroundImageUrl }) => {
      marginTop:isMobile?'200px':'0px',
      marginBottom:isMobile?'100px':'0px',
       backgroundSize: 'cover',
-      height: '100vh',
+      //height: '100vh',
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',

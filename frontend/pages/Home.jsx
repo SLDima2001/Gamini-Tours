@@ -101,13 +101,13 @@ function Home() {
     textAlign: 'center',
     fontFamily: 'Arial, sans-serif',
     backgroundColor: 'white',
-    //display: 'flex',
-    //flexDirection: 'column',
+    display: 'flex',
+    flexDirection: 'column',
     minHeight: '100vh',
     overflow: 'hidden',
-    width:isMobile?'100%':'auto',
-     display: isMobile ? 'block' : 'flex',
-      flexDirection: isMobile ? 'row' : 'column'
+    width:isMobile?'100%':'100%',
+    // display: isMobile ? 'block' : 'flex',
+     // flexDirection: isMobile ? 'row' : 'column'
     
   };
 
@@ -205,7 +205,7 @@ function Home() {
   };
 
   const tourPackagesStyle = {
-    flex: isMobile?'2':'4',
+    flex: isMobile?'2':'6',
     padding:isMobile? '10px' : '20px',
     borderRadius: '8px',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0)',
@@ -249,7 +249,7 @@ function Home() {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center',
-    gap:isMobile? '20px':'30px',
+    gap:isMobile? '20px':'50px',
     marginTop:isMobile?'10px':'40px',
     //border:'2px solid blue',
     padding:isMobile?'10px':'20px',
@@ -313,26 +313,24 @@ function Home() {
   const formStyle = {
     flex: '1',
     backgroundColor: 'white',
-    padding: '30px',
+    padding: '20px',
     borderRadius: '',
     border: '2px solid #3498db',
     boxShadow: '0 4px 8px rgba(1, 1, 1, 1)',
     maxWidth: 'auto',
     fontFamily: 'Arial, sans-serif',
     position: 'fixed',
-    top:isMobile? '30px' : '180px', // To align with the header
+    top:isMobile? '30px' : 'auto', // To align with the header
     bottom:'10px',
     display: isformvisible ? 'block' : 'none', // Show/hide based on state
-    right: '20px',
+    right: '40px',
     zIndex: '999',
-    maxHeight:'auto',
+    //height:isMobile?'auto':'auto',
     marginRight: '103px',
     '@media (max-width: 768px)': {
       display: 'none',
     },
-    '@media (max-height: auto)': {
-      display: 'none',
-    },
+   minHeight:isMobile?'auto':'80%',
     
   };
 
@@ -345,7 +343,7 @@ function Home() {
   const inputStyle = {
     width: '100%',
     padding: '10px',
-    marginBottom: '15px',
+    marginBottom: '0px',
     borderRadius: '5px',
     border: '1px solid #ccc',
     boxSizing: 'border-box',
@@ -354,11 +352,11 @@ function Home() {
   const textareaStyle = {
     width: '100%',
     padding: '10px',
-    marginBottom: '15px',
+    marginBottom: '0px',
     borderRadius: '5px',
     border: '1px solid #ccc',
     boxSizing: 'border-box',
-    minHeight: '120px',
+    minHeight: 'auto',
   };
 
   const buttonStyle = {
@@ -697,7 +695,7 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
             </div>
             <div style={{fontSize:isMobile?'1.5em':'1.8em',fontSmooth:'100px',backgroundColor:'',color:'#4682B4'}}>
             <p style={{color:'red',fontSize:'2em'}}>Special Discount</p> for Couples! 
-            <p style={{fontSize:'2em',color:''}}>
+            <p style={{fontSize:'2em',color:'red'}}>
   25% Off
 </p>
             <a style={{color:'#4682B4',fontSize:'1em'}} href="/TourPackages"><u>For more Info</u></a>
@@ -790,7 +788,7 @@ Tour PackagesWe offer flexible and engaging packages designed to help you enjoy 
             style={inputStyle}
             required
           />
-          <label style={labelStyle}>Email:</label>
+          <label style={labelStyle} htmlFor="email">Email:</label>
           <input
             type="email"
             id="email"
@@ -799,7 +797,7 @@ Tour PackagesWe offer flexible and engaging packages designed to help you enjoy 
             style={inputStyle}
             required
           />
-          <label style={labelStyle}>Phone:</label>
+          <label style={labelStyle} htmlFor="phone">Phone:</label>
           <input
             type="tel"
             id="phone"
@@ -808,7 +806,7 @@ Tour PackagesWe offer flexible and engaging packages designed to help you enjoy 
             style={inputStyle}
             required
           />
-          <label style={labelStyle}>Subject:</label>
+          <label style={labelStyle} htmlFor="subject">Subject:</label>
           <textarea
             id="subject"
             value={subject}
@@ -816,7 +814,7 @@ Tour PackagesWe offer flexible and engaging packages designed to help you enjoy 
             style={inputStyle}
             required
           ></textarea>
-          <label style={labelStyle}>Message:</label>
+          <label style={labelStyle} htmlFor="message">Message:</label>
           <textarea
             id="message"
             value={message}
