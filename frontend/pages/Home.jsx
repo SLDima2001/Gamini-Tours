@@ -101,13 +101,13 @@ function Home() {
     textAlign: 'center',
     fontFamily: 'Arial, sans-serif',
     backgroundColor: 'white',
-    display: 'flex',
-    flexDirection: 'column',
+    //display: 'flex',
+    //flexDirection: 'column',
     minHeight: '100vh',
     overflow: 'hidden',
     width:isMobile?'100%':'100%',
-    // display: isMobile ? 'block' : 'flex',
-     // flexDirection: isMobile ? 'row' : 'column'
+    display: isMobile ? 'block' : 'flex',
+     flexDirection: isMobile ? 'row' : 'column'
     
   };
 
@@ -161,7 +161,7 @@ function Home() {
     zIndex: '1000',
   };
   const navbarStyle2 = {
-    fontSize:isMobile?'15px':'20px',
+    fontSize:isMobile?'15px':'auto',
     backgroundColor: 'white',
     color: 'white',
     display: 'flex',
@@ -205,12 +205,13 @@ function Home() {
   };
 
   const tourPackagesStyle = {
-    flex: isMobile?'2':'6',
+    flex: isMobile?'2':'4',
     padding:isMobile? '10px' : '20px',
     borderRadius: '8px',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0)',
     maxWidth: isMobile?'100%':'100%',
     transition: 'background-color 0.3s ease',
+    width:'100%',
     
   };
 
@@ -235,7 +236,7 @@ function Home() {
   };
   const desstyle = {
     fontFamily:'Vinque',
-    fontSize:isMobile? '1.2em':'2em',
+    fontSize:isMobile? '1.2em':'1.5em',
     margin: '0px',
     color: '#333',
     padding: '10px',
@@ -287,15 +288,15 @@ function Home() {
     justifyContent: 'center',
     padding: '0px',
     paddingTop: '100px',
-    display:'inline-block'
+    display:'inline-block',
     
   };
   
   
 
   const packageImgStyle = {
-    height: isMobile?'400px':'350px',
-    width: isMobile? '500px':'350px',
+    height: isMobile?'400px':'200px',
+    width: isMobile? '500px':'200px',
     padding:'',
     borderRadius: '5%',
     justifyContent: 'center',
@@ -323,7 +324,7 @@ function Home() {
     top:isMobile? '30px' : 'auto', // To align with the header
     bottom:'10px',
     display: isformvisible ? 'block' : 'none', // Show/hide based on state
-    right: '40px',
+    right: '20px',
     zIndex: '999',
     //height:isMobile?'auto':'auto',
     marginRight: '103px',
@@ -452,7 +453,7 @@ function Home() {
     gap:'10px',
   };
   const bannerstyle= {
-    height:isMobile? '200px':'500px',
+    height:isMobile? '200px':'auto',
     width: '100%',
     borderRadius: '0px',
   };
@@ -664,7 +665,7 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
 
             <a style={packageStyle} href="/Days182">
             
-            <h4>Sri Lanka 18 Days North &South Round Tour</h4><br />
+            <h4>Sri Lanka 18 Days North &South</h4><br />
               <img src="https://lahirutours.co.uk/photos/Day18n.gif" alt="Package 7" style={packageImgStyle} />
               <h4 style={h42Style}>Days 18</h4>
               <div style={iconStyle}>
@@ -694,10 +695,8 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
             </a>
             </div>
             <div style={{fontSize:isMobile?'1.5em':'1.8em',fontSmooth:'100px',backgroundColor:'',color:'#4682B4'}}>
-            <p style={{color:'red',fontSize:'2em'}}>Special Discount</p> for Couples! 
-            <p style={{fontSize:'2em',color:'red'}}>
-  25% Off
-</p>
+            <p style={{color:'red',fontSize:'1.5em'}}>Special Discount</p> for Couples! 
+            <p style={{fontSize:'1.5em',color:'red'}}>25% Off</p>
             <a style={{color:'#4682B4',fontSize:'1em'}} href="/TourPackages"><u>For more Info</u></a>
 
             </div><br />
@@ -741,18 +740,18 @@ Tour PackagesWe offer flexible and engaging packages designed to help you enjoy 
             
             <div style={fb1style}>
               
-            <h1 style={{h0style , fontSize:isMobile?'1.5em':'3em',top:'50px'}}>Our Facbook Rewiews</h1>
+            <h1 style={{h0style , fontSize:isMobile?'1.5em':'auto',top:'50px'}}><b>Our Facbook Rewiews</b></h1>
               <Link to="https://www.facebook.com/profile.php?id=100054495458742&mibextid=ZbWKwL" >
             
-                  <img src="https://lahirutours.co.uk/photos/FB.png" alt='Facebook Review Page'/>
+                  <img style={{width:isMobile?'100%':'70%',display:'inline-block',marginTop:'50px',}} src="https://lahirutours.co.uk/photos/FB.png" alt='Facebook Review Page'/>
             
               </Link>
               
               
             <br /><br /><br /><br /><br /><br /><br /><br />
-              <h1 style={{h0style , fontSize:isMobile?'1.5em':'3em',top:'50px'}}>Our Facbook Rewiews</h1>
+              <h1 style={{h0style , fontSize:isMobile?'1.5em':'auto',top:'50px'}}><b>Our Facbook Rewiews</b></h1>
               
-              <img style={{width:'100%'}} src="https://lahirutours.co.uk/photos/review.gif" alt="Our Customers Feedbacks" />
+              <img style={{width:'auto',display:'inline-block'}} src="https://lahirutours.co.uk/photos/review.gif" alt="Our Customers Feedbacks" />
               
             </div>
     

@@ -31,7 +31,7 @@ function TourPackages() {
     { id: 4, name: '12 Days Sri Lanka Tour', imgSrc: 'https://lahirutours.co.uk/photos/Day12.gif', link: '/Days12', price: 300, description: 'A 12 days journey to explore the best sights and sounds.' },
     { id: 5, name: '15 Days Sri Lanka Tour', imgSrc: 'https://lahirutours.co.uk/photos/Day15.gif', link: '/Days15', price: 300, description: 'A 15 days journey to explore the best sights and sounds.' },
     { id: 6, name: '18 Days Sri Lanka Tour', imgSrc: 'https://lahirutours.co.uk/photos/Day18.gif', link: '/Days18', price: 350, description: 'An 18 days tour to immerse yourself in rich culture and history.' },
-    { id: 7, name: '18 Days North & South Sri Lanka Tour', imgSrc: 'https://lahirutours.co.uk/photos/Day18n.gif', link: '/Days182', price: 350, description: 'An 18 days North & South tour to immerse yourself in rich culture and history.' },
+    { id: 7, name: '18 Days North & South Tour', imgSrc: 'https://lahirutours.co.uk/photos/Day18n.gif', link: '/Days182', price: 350, description: 'An 18 days North & South tour to immerse yourself in rich culture and history.' },
     { id: 8, name: '20 Days Sri Lanka Tour', imgSrc: 'https://lahirutours.co.uk/photos/Day20.gif', link: '/Days20', price: 400, description: 'A 20 days expedition to experience everything.' },
   ];
 
@@ -106,7 +106,7 @@ function TourPackages() {
     zIndex: '1000',
   };
   const navbarStyle2 = {
-    fontSize:isMobile?'15px':'20px',
+    fontSize:isMobile?'15px':'auto',
     backgroundColor: 'white',
     color: 'white',
     display: 'flex',
@@ -145,13 +145,14 @@ function TourPackages() {
   };
 
   const tourPackagesStyle = {
-    display:isMobile?'relative':'inline-block',
+    display:isMobile?'relative':'',
     padding:isMobile? '0px':'20px',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     alignContent:'center',
     width:isMobile?'auto':'auto',
     height:isMobile?'auto':'auto',
+    flex:isMobile?'1':'4',
   };
 
   const packageOptionsStyle = {
@@ -159,7 +160,7 @@ function TourPackages() {
     flexWrap: 'wrap',
     justifyContent: 'center',
     margin: '00px 0',
-    alignContent:'center'
+    alignContent:'center',
   };
 
   const packageStyle = (isHovered) => ({
@@ -174,7 +175,7 @@ function TourPackages() {
     transition: 'transform 1s ease, box-shadow 2s ease',
     zIndex: isHovered ? '3' : '1',
     //position: 'center',
-    flex:isMobile?'1':'8',
+    flex:isMobile?'1':'4',
     gap:isMobile?'100px' : '20px',
     width:isMobile?'200px':'auto',
     alignItems:'center',
@@ -187,6 +188,8 @@ function TourPackages() {
   };
 
   const packageImgStyle = {
+    marginTop:'20px',
+    marginBottom:'20px',
     height: '150px',
     width:'150px',
     borderRadius: '10px',
@@ -320,7 +323,7 @@ function TourPackages() {
               >
                 <a href={pkg.link}>
                   <img src={pkg.imgSrc} alt={pkg.name} style={packageImgStyle} />
-                  <h4 style={h4Style}>{pkg.name}</h4>
+                  <h4 style={h4Style}><br />{pkg.name}</h4>
                   
                   {hoveredPackage === pkg.id && <p>{pkg.description}</p>}
                 </a>

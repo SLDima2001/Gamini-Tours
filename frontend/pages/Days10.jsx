@@ -130,7 +130,7 @@ function Days10() {
     zIndex: '1000',
   };
   const navbarStyle2 = {
-    fontSize:isMobile?'15px':'20px',
+    fontSize:isMobile?'15px':'auto',
     backgroundColor: 'white',
     color: 'white',
     display: 'flex',

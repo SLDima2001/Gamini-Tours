@@ -211,7 +211,7 @@ function ContactUS() {
     zIndex: '1000',
   };
   const navbarStyle2 = {
-    fontSize:isMobile?'15px':'20px',
+    fontSize:isMobile?'15px':'auto',
     backgroundColor: 'white',
     color: 'white',
     display: 'flex',
@@ -343,8 +343,8 @@ function ContactUS() {
     position: 'center',
     zIndex: '999',
     minHeight:'80vh',
-    marginTop:isMobile?'300px':'400px',
-    marginBottom:isMobile?'auto':'300px',
+    marginTop:isMobile?'300px':'100px',
+    marginBottom:isMobile?'auto':'100px',
     marginLeft:'',
     alignItems: 'center',
     backgroundSize: 'cover',

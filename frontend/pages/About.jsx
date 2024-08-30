@@ -98,7 +98,7 @@ function About() {
     zIndex: '1000',
   };
   const navbarStyle2 = {
-    fontSize:isMobile?'15px':'20px',
+    fontSize:isMobile?'15px':'auto',
     backgroundColor: 'white',
     color: 'white',
     display: 'flex',
@@ -352,10 +352,10 @@ function About() {
         </div>
        
         <div style={{alignItems:'center'}}>
-        <p style={{pStyle1,fontSize:isMobile?'40px':'50px'}}>
+        <p style={{pStyle1,fontSize:isMobile?'40px':'40px'}}>
        <br /><br /><b> Welcome to Lahiru Tours: Your Gateway to Sri Lanka </b> <br /></p><br /><br />
       
-<p style={{pStyle,fontSize:isMobile?'30px':'40px'}}><b>‘Where Family, Passion, and Adventure Meet’</b></p><br />
+<p style={{pStyle,fontSize:isMobile?'30px':'30px'}}><b>‘Where Family, Passion, and Adventure Meet’</b></p><br />
 
 <p style={{pStyle , fontSize:isMobile?'20px':'28px'}}>At Lahiru Tours, we believe that travel is more than just visiting new places—it's about creating unforgettable memories and experiencing the heart and soul of a destination. As a family-run travel agency with over two decades of experience, we bring a personal touch and deep local knowledge to every journey we plan.
 <br /><br /><br /><b><p style={{marginBottom:'20px',}}>Our Story</p></b><br />
