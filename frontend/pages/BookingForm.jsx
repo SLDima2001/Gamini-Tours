@@ -17,14 +17,14 @@ function BookingForm() {
   });
 
   const [packages, setPackages] = useState([
-    { id: 1, name: '6 Days', price: 1488 },
-    { id: 2, name: '8 Days', price: 2049 },
-    { id: 3, name: '10 Days', price: 2514 },
-    { id: 4, name: '12 Days', price: 3016 },
-    { id: 5, name: '15 Days', price: 3701 },
-    { id: 6, name: '18 Days', price: 4425 },
-    { id: 7, name: '18 Days North &South', price: 4595 },
-    { id: 8, name: '20 Days', price: 4883 },
+    { id: 1, name: '6 Days', price: 1100 },
+    { id: 2, name: '8 Days', price: 1400 },
+    { id: 3, name: '10 Days', price: 1650 },
+    { id: 4, name: '12 Days', price: 1800 },
+    { id: 5, name: '15 Days', price: 2049 },
+    { id: 6, name: '18 Days', price: 2449 },
+    { id: 7, name: '18 Days North &South', price: 2449 },
+    { id: 8, name: '20 Days', price: 2689 },
   ]);
 
   const [totalAmount, setTotalAmount] = useState(0);
@@ -434,7 +434,7 @@ fontSize:isMobile?'1.5em':'3em'
               <option value="">Select Package</option>
               {packages.map((pkg) => (
                 <option key={pkg.id} value={pkg.id}>
-                  {pkg.name} - £{pkg.price}
+                  {pkg.name} - ${pkg.price}
                 </option>
               ))}
             </select>
@@ -508,7 +508,7 @@ The Lahiru Tours Team
           <h2>Summary</h2>
           <p>Time Period: {timePeriod}</p>
           <p>Total Amount: </p>
-          <p style={styles.totalstyle}>£{totalAmount}</p>
+          <p style={styles.totalstyle}>${totalAmount}</p>
         </div>
       </div>
 

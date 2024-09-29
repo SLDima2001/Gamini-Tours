@@ -124,7 +124,7 @@ function About() {
   const buttonContainerStyle = {
     display: 'flex',
     alignItems: 'center',
-    gap: '0px', // Adds space between buttons
+    gap: '10px', // Adds space between buttons
   };
   
 
@@ -313,43 +313,8 @@ function About() {
      
       <main>
         <div style={mainContentStyle}>
-          <div>
+          
         
-        </div>
-        <div style={{display:isMobile?'inline-block':'flex',gap:isMobile?'10%':'50%',alignContent:'center',marginBottom:isMobile?'':'100px'}}>
-
-
-          <div>
-          
-          
-          <ScrollAnimation animateIn="bounceInLeft"  animateOut='fadeOut'>
-              <div style={{display: isMobile ? 'block' : 'none',}}>
-       <img  src="https://lahirutours.co.uk/photos/Dad1.jpg" alt="" />
-    <h1 style={photodesstyle}><b>Our begining in 1996</b></h1>
-              </div>
-          </ScrollAnimation>
-          <div style={{display: isMobile ? 'none' : 'block',}}>
-       <img  src="https://lahirutours.co.uk/photos/Dad1.jpg" alt="" />
-    <h1 style={photodesstyle}><b>Our begining in 1996</b></h1>
-              </div>
-        </div>
-
-
-        <div>
-        <ScrollAnimation animateIn="bounceInLeft"  animateOut='fadeOut'>
-    
-    <div  style={{display: isMobile ? 'block' : 'none',}}> <img  src="https://lahirutours.co.uk/photos/Dad2.jpg" alt="" />
-    <h1 style={photodesstyle}><b>Our begining in 1996</b></h1>
-    </div>
- 
-</ScrollAnimation>
-<div  style={{display: isMobile ? 'none' : 'block',}}> <img  src="https://lahirutours.co.uk/photos/Dad2.jpg" alt="" />
-    <h1 style={photodesstyle}><b>Our begining in 1996</b></h1>
-    </div>
-        </div>
-    
-
-        </div>
        
         <div style={{alignItems:'center'}}>
         <p style={{pStyle1,fontSize:isMobile?'40px':'40px'}}>
@@ -359,61 +324,17 @@ function About() {
 
 <p style={{pStyle , fontSize:isMobile?'20px':'28px'}}>At Lahiru Tours, we believe that travel is more than just visiting new places—it's about creating unforgettable memories and experiencing the heart and soul of a destination. As a family-run travel agency with over two decades of experience, we bring a personal touch and deep local knowledge to every journey we plan.
 <br /><br /><br /><b><p style={{marginBottom:'20px',}}>Our Story</p></b><br />
-<div  style={{display:isMobile?'inline-block':'flex',gap:'15%',width:'auto',height:'auto'}}>
-  <div>
-  <ScrollAnimation animateIn="bounceInLeft"  animateOut='fadeOut'>
-    
-    <div style={{display: isMobile ? 'block' : 'none',}}><img src="https://lahirutours.co.uk/photos/1.jpg" alt="Photo" /></div>
-  
-</ScrollAnimation>
-<div style={{display: isMobile ? 'none' : 'block',}}><img src="https://lahirutours.co.uk/photos/1.jpg" alt="Photo" /></div>
-</div>
 
-
-<div>
-<ScrollAnimation animateIn="bounceInLeft"  animateOut='fadeOut'>
-   
-    <div style={{display: isMobile ? 'block' : 'none',}}><img src="https://lahirutours.co.uk/photos/2.jpg" alt="Photo" /></div>
-  
-</ScrollAnimation>
-<div style={{display: isMobile ? 'none' : 'block',}}><img src="https://lahirutours.co.uk/photos/2.jpg" alt="Photo" /></div>
-</div>
-
-
-<div>
-<ScrollAnimation animateIn="bounceInLeft"  animateOut='fadeOut'>
-    
-    <div style={{display: isMobile ? 'block' : 'none',}}><img src="https://lahirutours.co.uk/photos/3.jpg" alt="Photo" /></div>
- 
-</ScrollAnimation>
-<div style={{display: isMobile ? 'none' : 'block',}}><img src="https://lahirutours.co.uk/photos/3.jpg" alt="Photo" /></div>
-</div>
-
-</div>
 <div style={{fontSize:isMobile?'20px':'25px'}}>
 Founded in 1996 by Gamini, Lahiru Tours was born from a passion for showcasing the rich culture, history, and natural beauty of Sri Lanka. Our family has explored every corner of this stunning island, gaining unique insights and knowledge that we use to craft perfect travel itineraries for our guests.
 </div>
 
 <div style={{display:isMobile?'inline-block':'flex',gap:'40%'}}>
 
-<div>
-<ScrollAnimation animateIn="bounceInLeft"  animateOut='fadeOut'>
-    
-    <div style={{display: isMobile ? 'block' : 'none',}}><img src="https://lahirutours.co.uk/photos/4.jpg" alt="Photo" /></div>
-  
-</ScrollAnimation>
-<div style={{display: isMobile ? 'none' : 'block',}}><img src="https://lahirutours.co.uk/photos/4.jpg" alt="Photo" /></div>
-</div>
 
 
-<div>
-<ScrollAnimation animateIn="bounceInLeft"  animateOut='fadeOut'>
-    
-    <div style={{display: isMobile ? 'block' : 'none',}}><img src="https://lahirutours.co.uk/photos/5.jpg" alt="Photo" /></div>
-  
-</ScrollAnimation>
-<div style={{display: isMobile ? 'none' : 'block',}} ><img src="https://lahirutours.co.uk/photos/5.jpg" alt="Photo" /></div>
-</div>
+
+
 
 
 </div>

@@ -169,11 +169,11 @@ function TourPackages() {
     border:'2px solid #4682B4',
     padding: '20px',
     borderRadius: '10px',
-    boxShadow: '0 4px 8px rgba(10, 0, 0, 0.1)',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
     margin: '10px',
-    transform: isHovered ? 'translateY(-20px)' : 'translateY(0)',
-    transition: 'transform 1s ease, box-shadow 2s ease',
-    zIndex: isHovered ? '3' : '1',
+    transform: isHovered ? 'translateY(-20px)' : 'translateY(10px)',
+    transition: 'transform 3s ease, box-shadow 2s ease',
+    //zIndex: isHovered ? '1' : '5',
     //position: 'center',
     flex:isMobile?'1':'4',
     gap:isMobile?'100px' : '20px',
@@ -324,8 +324,9 @@ function TourPackages() {
                 <a href={pkg.link}>
                   <img src={pkg.imgSrc} alt={pkg.name} style={packageImgStyle} />
                   <h4 style={h4Style}><br />{pkg.name}</h4>
-                  
+                 
                   {hoveredPackage === pkg.id && <p>{pkg.description}</p>}
+                  <p style={{color:'blue'}}><u>Click For More....</u></p>
                 </a>
               </div>
             ))}

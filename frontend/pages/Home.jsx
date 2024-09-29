@@ -18,7 +18,7 @@ function Home() {
   const [isformvisible, setisformvisible] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
+  const [borderColor, setBorderColor] = useState('#3498db'); // Initial color (blue)
 
   const showAlert = () => {
     alert('Thank you for choosing Lahiru Tours! We are excited to assist you in planning your perfect Sri Lankan adventure. Our team will promptly get back to you within 24 hours with a customized itinerary tailored to your interests and needs.For any immediate questions or additional information, please feel free to contact us directly at info@lahirutours.co.uk.We look forward to making your travel dreams come true!Warm regards,The Lahiru Tours Team');
@@ -97,6 +97,16 @@ function Home() {
     window.location.reload(); // Reload the page
   };
 
+  const handleMouseEnter = () => {
+    setBorderColor('#e74c3c'); // Red when hovering
+  };
+
+  const handleMouseLeave = () => {
+    setBorderColor('#3498db'); // Reset to blue when not hovering
+  };
+
+
+
   const appStyle = {
     textAlign: 'center',
     fontFamily: 'Arial, sans-serif',
@@ -171,7 +181,7 @@ function Home() {
     height: '120px',
     padding: '10px 0px 0px  ',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
-    zIndex: '1000',
+    //zIndex: '2000',
   };
   
   const linkStyle = {
@@ -187,7 +197,7 @@ function Home() {
   const buttonContainerStyle = {
     display: 'flex',
     alignItems: 'center',
-    gap: '0px', // Adds space between buttons
+    gap: '10px', // Adds space between buttons
   };
   
   
@@ -202,6 +212,9 @@ function Home() {
     padding: '20px',
     marginTop: '60px', // To compensate for fixed header height
     width:isMobile?'100%':'auto',
+    //backgroundImage: 'url("https://images.unsplash.com/photo-1470790376778-a9fbc86d70e2?q=80&w=2008&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
+    backgroundSize: 'cover', // ensures the image covers the entire element
+    backgroundPosition: 'center', // centers the image
   };
 
   const tourPackagesStyle = {
@@ -269,6 +282,9 @@ function Home() {
     Width: isMobile ? 'auto' : 'auto', // Adjust width for mobile and PC views
     height:isMobile?'auto':'auto',
     borderColor:'',
+   // flexWrap: 'wrap',
+   // flex:isMobile?'': '0 1 calc(25% - 10px)',
+   
   };
 
   const fbstyle= {
@@ -322,16 +338,16 @@ function Home() {
     fontFamily: 'Arial, sans-serif',
     position: 'fixed',
     top:isMobile? '30px' : 'auto', // To align with the header
-    bottom:'10px',
+    bottom:'0px',
     display: isformvisible ? 'block' : 'none', // Show/hide based on state
     right: '20px',
-    zIndex: '999',
-    //height:isMobile?'auto':'auto',
+    zIndex: '10000',
+    height:isMobile?'auto':'auto',
     marginRight: '103px',
     '@media (max-width: 768px)': {
       display: 'none',
     },
-   minHeight:isMobile?'auto':'80%',
+   minHeight:isMobile?'auto':'auto',
     
   };
 
@@ -451,6 +467,7 @@ function Home() {
     marginRight: '-120px',
     marginTop:'-20px',
     gap:'10px',
+    
   };
   const bannerstyle= {
     height:isMobile? '200px':'auto',
@@ -470,13 +487,65 @@ function Home() {
  
   const pricestyle = {
    fontSize:'1.4em',
-
+    color:'red',
     
   };
   
  
   return (
     <div style={appStyle}>
+
+
+<form style={formStyle}  onSubmit={handleSubmit}>
+          <h2 style={h2Style}>Contact Us</h2>
+          <label style={labelStyle} htmlFor="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            style={inputStyle}
+            required
+          />
+          <label style={labelStyle} htmlFor="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            style={inputStyle}
+            required
+          />
+          <label style={labelStyle} htmlFor="phone">Phone:</label>
+          <input
+            type="tel"
+            id="phone"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            style={inputStyle}
+            required
+          />
+          <label style={labelStyle} htmlFor="subject">Subject:</label>
+          <textarea
+            id="subject"
+            value={subject}
+            onChange={(e) => setsubject(e.target.value)}
+            style={inputStyle}
+            required
+          ></textarea>
+          <label style={labelStyle} htmlFor="message">Message:</label>
+          <textarea
+            id="message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            style={textareaStyle}
+            required
+          ></textarea>
+          <button onClick={showAlert} type="submit" style={buttonStyle}>Inquiry</button>
+        </form>
+
+
+
       <div style={header1style} >
       <div style={navbarStyle}>
       {/* Left Section: Logo */}
@@ -552,7 +621,7 @@ function Home() {
         <div style={tourPackagesStyle}>
 
           
-         <p style={{fontSize:isMobile?'1em':'1.5em',fontFamily:'Agraham',width:'auto'}}><b>
+         <p style={{fontSize:isMobile?'1em':'1.5em',fontFamily:'Agraham',width:'auto',backgroundColor:'',}}><b>
           
           <p style={{fontSize:'1.2em',}}>Welcome to Lahiru Tours</p></b><br />
 <p>At Lahiru Tours, we pride ourselves on being more than just a travel agency. As a family-run business, we bring a personal touch and heartfelt dedication to every journey we plan. Our passion for travel and commitment to exceptional customer service stem from our deep love for Sri Lanka, and we are eager to share its wonders with you.</p>
@@ -579,10 +648,10 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
               <FontAwesomeIcon  icon={faCar} size="1x" />  
               
               </div>  
-              <h1 style={{pricestyle , textDecoration: 'line-through'}}>Price £1,562 P\P</h1>
-              <h1 style={pricestyle}>Price £1,488 P\P</h1>
+              <h1 style={{pricestyle , textDecoration: 'line-through'}}>Price $1,500 P\P</h1>
+              <h1 style={pricestyle}><b>Price $1,100 P\P</b></h1>
               </div>
-            
+             
             </a>
 
             <a style={packageStyle} href="/Days8">
@@ -595,8 +664,8 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
               <FontAwesomeIcon  icon={faUtensils} size="1x" />
               <FontAwesomeIcon  icon={faCar} size="1x" />  
               </div>
-              <h1 style={{pricestyle , textDecoration: 'line-through'}}>Price £2,151 P\P</h1>
-              <h1 style={pricestyle}>Price £2,049 P\P</h1>
+              <h1 style={{pricestyle , textDecoration: 'line-through'}}>Price $1,800 P\P</h1>
+              <h1 style={pricestyle}><b>Price $1,400 P\P</b></h1>
             
             </a>
 
@@ -609,8 +678,8 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
               <FontAwesomeIcon  icon={faUtensils} size="1x" />
               <FontAwesomeIcon  icon={faCar} size="1x" />  
               </div>
-              <h1 style={{pricestyle , textDecoration: 'line-through'}}>Price £2,639 P\P</h1>
-              <h1 style={pricestyle}>Price £2,514 P\P</h1>
+              <h1 style={{pricestyle , textDecoration: 'line-through'}}>Price $2,100 P\P</h1>
+              <h1 style={pricestyle}><b>Price $1,650 P\P</b></h1>
             </a>
 
 
@@ -624,8 +693,8 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
               <FontAwesomeIcon  icon={faUtensils} size="1x" />
               <FontAwesomeIcon  icon={faCar} size="1x" />  
               </div>
-              <h1 style={{pricestyle , textDecoration: 'line-through'}}>Price £3,166 P\P</h1>
-              <h1 style={pricestyle}>Price £3,016 P\P</h1>
+              <h1 style={{pricestyle , textDecoration: 'line-through'}}>Price $2,300 P\P</h1>
+              <h1 style={pricestyle}><b>Price $1,800 P\P</b></h1>
             
             </a>
 
@@ -641,8 +710,8 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
               <FontAwesomeIcon  icon={faUtensils} size="1x" />
               <FontAwesomeIcon  icon={faCar} size="1x" />  
               </div>
-              <h1 style={{pricestyle , textDecoration: 'line-through'}}>Price £3,886 P\P</h1>
-              <h1 style={pricestyle}>Price £3,701 P\P</h1>
+              <h1 style={{pricestyle , textDecoration: 'line-through'}}>Price $2,400 P\P</h1>
+              <h1 style={pricestyle}><b>Price $2,049 P\P</b></h1>
             
             </a>
 
@@ -657,8 +726,8 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
               <FontAwesomeIcon  icon={faUtensils} size="1x" />
               <FontAwesomeIcon  icon={faCar} size="1x" />  
               </div>
-              <h1 style={{pricestyle , textDecoration: 'line-through'}}>Price £4,646 P\P</h1>
-              <h1 style={pricestyle}>Price £4,425 P\P</h1>
+              <h1 style={{pricestyle , textDecoration: 'line-through'}}>Price $2,700 P\P</h1>
+              <h1 style={pricestyle}><b>Price $2,449 P\P</b></h1>
            
             </a>
 
@@ -673,8 +742,8 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
               <FontAwesomeIcon  icon={faUtensils} size="1x" />
               <FontAwesomeIcon  icon={faCar} size="1x" /> 
               </div>
-              <h1 style={{pricestyle , textDecoration: 'line-through'}}>Price £4,824 P\P</h1>
-              <h1 style={pricestyle}>Price £4,595 P\P</h1>
+              <h1 style={{pricestyle , textDecoration: 'line-through'}}>Price $2,750 P\P</h1>
+              <h1 style={pricestyle}><b>Price $2,449 P\P</b></h1>
            
             </a>
 
@@ -689,8 +758,8 @@ Lahiru Tours was founded in <b>1996</b> by Gamini with the vision of providing u
               <FontAwesomeIcon  icon={faUtensils} size="1x" />
               <FontAwesomeIcon  icon={faCar} size="1x" />  
               </div>
-              <h1 style={{pricestyle , textDecoration: 'line-through'}}>Price £4,989 P\P</h1>
-              <h1 style={pricestyle}>Price £4,883 P\P</h1>
+              <h1 style={{pricestyle , textDecoration: 'line-through'}}>Price $2,990 P\P</h1>
+              <h1 style={pricestyle}><b>Price $2,689 P\P</b></h1>
             
             </a>
             </div>
@@ -776,53 +845,7 @@ Tour PackagesWe offer flexible and engaging packages designed to help you enjoy 
           
           {isformvisible ? <FontAwesomeIcon  icon={faEnvelopeOpen} size="2x" /> : <FontAwesomeIcon  icon={faEnvelope} size="2x" />} <br /> Contact US
         </button>
-          <form style={formStyle}  onSubmit={handleSubmit}>
-          <h2 style={h2Style}>Contact Us</h2>
-          <label style={labelStyle} htmlFor="name">Name:</label>
-          <input
-            type="text"
-            id="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            style={inputStyle}
-            required
-          />
-          <label style={labelStyle} htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            style={inputStyle}
-            required
-          />
-          <label style={labelStyle} htmlFor="phone">Phone:</label>
-          <input
-            type="tel"
-            id="phone"
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-            style={inputStyle}
-            required
-          />
-          <label style={labelStyle} htmlFor="subject">Subject:</label>
-          <textarea
-            id="subject"
-            value={subject}
-            onChange={(e) => setsubject(e.target.value)}
-            style={inputStyle}
-            required
-          ></textarea>
-          <label style={labelStyle} htmlFor="message">Message:</label>
-          <textarea
-            id="message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            style={textareaStyle}
-            required
-          ></textarea>
-          <button onClick={showAlert} type="submit" style={buttonStyle}>Inquiry</button>
-        </form> 
+           
             
             </div> 
            
@@ -834,6 +857,7 @@ Tour PackagesWe offer flexible and engaging packages designed to help you enjoy 
 
         
       </div>
+      
       
       
       

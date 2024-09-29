@@ -318,28 +318,27 @@ function Days12() {
   const formStyle = {
     flex: '1',
     backgroundColor: 'white',
-    padding:isMobile? '10px':'30px',
+    padding: '20px',
     borderRadius: '',
     border: '2px solid #3498db',
     boxShadow: '0 4px 8px rgba(1, 1, 1, 1)',
     maxWidth: 'auto',
     fontFamily: 'Arial, sans-serif',
     position: 'fixed',
-    top:isMobile? '200px' : '200px', // To align with the header
-    bottom:isMobile?'auto':'auto',
+    top:isMobile? '30px' : 'auto', // To align with the header
+    bottom:'10px',
     display: isformvisible ? 'block' : 'none', // Show/hide based on state
     right: '20px',
     zIndex: '999',
-    maxHeight:isMobile?'1200px':'auto',
+    //height:isMobile?'auto':'auto',
     marginRight: '103px',
     '@media (max-width: 768px)': {
       display: 'none',
     },
-    '@media (max-height: auto)': {
-      display: 'none',
-    },
+   minHeight:isMobile?'auto':'80%',
     
   };
+
   const labelStyle = {
     display: 'block',
     marginBottom: '5px',
@@ -527,9 +526,9 @@ function Days12() {
             </div>
 
             <div style={{width:isMobile?'auto':'40%',display:'',border:'2px solid blue',boxShadow: '0px 4px 8px rgba(1, 1, 1, 1)',borderRadius:'10px',padding:'20px'}}>
-           <h1 style={{fontSize:'1em',textAlign:'left',fontFamily:'Ubuntu'}}> All our tour packages include the cost of tickets for all attractions during your travel. Additionally, all our packages include high-standard hotel stays with breakfast and dinner provided throughout your stay. </h1><br />
+           <h1 style={{fontSize:'1em',textAlign:'left',fontFamily:'Ubuntu'}}>All our tour packages include travel to all attractions during your travel. Additionally, all our packages include high standard hotel stays with breakfast and dinner provided throughout your stay</h1><br />
 
-            <p style={{fontSize:'1.2em',textAlign:'left',fontFamily:'Oswald',color:'blue'}}><b>Please note:</b></p><h1 style={{fontSize:'1.3em',textAlign:'left',fontFamily:'Nanum Gothic'}}> Our travel packages do not include airline tickets. If you would like us to arrange your airline tickets, please contact our admin team through our contact form or at <u>admin@lahirutours.co.uk.</u></h1>
+            <p style={{fontSize:'1.2em',textAlign:'left',fontFamily:'Oswald',color:'blue'}}><b>Note:</b></p><h1 style={{fontSize:'1.3em',textAlign:'left',fontFamily:'Nanum Gothic'}}> Our travel packages do not include airline tickets. If you would like us to arrange your airline tickets, please contact our admin team through our contact form or at <u>admin@lahirutours.co.uk.</u></h1>
             </div>
 
             <div style={{ ...packageDescriptionStyle, textAlign: 'left', alignItems: 'center' }}>
